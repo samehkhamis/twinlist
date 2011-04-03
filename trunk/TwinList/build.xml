@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project name="TwinList" basedir="." default="build">
+	<property name="APP_NAME" value="TwinList"/>
+	<property name="FLEX_HOME" value="C:/Programs/flex"/>
+	
+	<taskdef resource="flexTasks.tasks"
+		classpath="libs/flexTasks.jar"/>
+	
+	<target name="build" depends="debug" />
+	
+	<target name="release">
+		<mxmlc file="src/twinlist/${APP_NAME}.mxml"
+			output="bin-release/${APP_NAME}.swf"
+			keep-generated-actionscript="false"
+			incremental="true">
+			<load-config filename="${FLEX_HOME}/frameworks/flex-config.xml"/>
+			<source-path path-element="src"/>
+			<source-path path-element="${FLEX_HOME}/frameworks"/>
+		</mxmlc>
+		<html-wrapper
+			title="${APP_NAME}"
+			file="${APP_NAME}.html"
+			height="100%"
+			width="100%"
+			bgcolor="0xFFFFFF"
+			application="${APP_NAME}"
+			swf="${APP_NAME}"
+			history="true"
+			express-install="true"
+			output="bin-release"/>
+	</target>
+	
+	<target name="debug">
+		<mxmlc file="src/twinlist/${APP_NAME}.mxml"
+			output="bin-debug/${APP_NAME}.swf"
+			keep-generated-actionscript="false"
+			incremental="true"
+			debug="true">
+			<load-config filename="${FLEX_HOME}/frameworks/flex-config.xml"/>
+			<source-path path-element="src"/>
+			<source-path path-element="${FLEX_HOME}/frameworks"/>
+		</mxmlc>
+		<html-wrapper
+			title="${APP_NAME}"
+			file="${APP_NAME}.html"
+			height="100%"
+			width="100%"
+			bgcolor="0xFFFFFF"
+			application="${APP_NAME}"
+			swf="${APP_NAME}"
+			history="true"
+			express-install="true"
+			output="bin-debug"/>
+	</target>
+	
+	<target name="clean">
+		<delete dir="bin-release/generated" />
+		<delete dir="bin-debug/generated" />
+		<delete>
+			<fileset dir="bin-release" includes="${APP_NAME}.swf" />
+			<fileset dir="bin-release" includes="${APP_NAME}.html" />
+			<fileset dir="bin-debug" includes="${APP_NAME}.swf" />
+			<fileset dir="bin-debug" includes="${APP_NAME}.html" />
+		</delete>
+	</target>
+</project>
