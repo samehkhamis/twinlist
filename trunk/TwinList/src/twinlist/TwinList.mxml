@@ -3,6 +3,7 @@
 	xmlns:fx="http://ns.adobe.com/mxml/2009" 
 	xmlns:s="library://ns.adobe.com/flex/spark" 
 	xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns:flex="flare.flex.vis.*"
 	xmlns:twinlist="twinlist.*"
 	minWidth="1024" minHeight="768" pageTitle="TwinList"
 	>
@@ -15,18 +16,19 @@
 		</s:layout>
 		<mx:HDividedBox width="100%" height="100%">
 			<s:Group width="70%" height="100%">
-				<twinlist:ListViewer/>
+				<!-- <twinlist:ListViewer/> -->
+				<flex:FlareCanvas id="flare" backgroundColor="0xffffff" initialize="onInitialize(event)"/>
 			</s:Group>
 			<s:Group width="30%" height="100%">
 				<mx:VDividedBox width="100%" height="100%">
 					<s:Group width="100%" height="100%">
-						<twinlist:TabDock/>					
+						<twinlist:TabDock/>
 					</s:Group>
 					<s:Group width="100%" height="100%">
-						<twinlist:DetailPanel/>					
+						<twinlist:DetailPanel/>
 					</s:Group>
 				</mx:VDividedBox>
 			</s:Group>
-		</mx:HDividedBox>		
+		</mx:HDividedBox>
 	</s:Group>
 </twinlist:TwinListClass>
