@@ -9,7 +9,9 @@ package twinlist
 		private static var instance:Model = new Model();		
 		private var lists:Array = null;
 		private var listViewerData:ArrayCollection = null;
+		private var listItemAttributes:Array = null;
 		private var actionListItems:ArrayCollection = null;
+		private var actionListData:ArrayCollection = null;
 		private var selectedItem:ListItem = null;
 		
 		public function Model()
@@ -19,8 +21,10 @@ package twinlist
 			
 			// init
 			lists = loadListData();
+			listItemAttributes = DetectAttributes(lists);
 			listViewerData = ReconcileLists(lists["list1"], lists["list2"]);
 			actionListItems = new ArrayCollection();
+			actionListData = new ArrayCollection();
 		}
 		
 		public static function get Instance():Model
@@ -38,6 +42,35 @@ package twinlist
 			return actionListItems;
 		}
 		
+		public function get ActionListData():ArrayCollection
+		{
+			return actionListData;
+		}
+		
+		public function AddActionListItem(item:ListItem):void
+		{
+			if (actionListItems.contains(item))
+				return;
+			var itemArray:Array = new Array();
+			itemArray["Name"] = item.Name;
+			for each (var attr:ListItemAttribute in item.Attributes) {
+				itemArray[attr.Name] = attr.Value;
+			}
+			actionListItems.addItem(item);
+			actionListData.addItem(itemArray);
+		}
+		public function DelActionListItem(item:ListItem):void
+		{
+			var itemArray:Array = new Array();
+			itemArray["Name"] = item.Name;
+			for each (var attr:ListItemAttribute in item.Attributes) {
+				itemArray[attr.Name] = attr.Value;
+			}
+			var idx:int = actionListItems.getItemIndex(item);
+			actionListItems.removeItemAt(idx);
+			actionListData.removeItemAt(idx);
+		}
+		
 		public function get SelectedItem():ListItem
 		{
 			return selectedItem;
@@ -45,6 +78,11 @@ package twinlist
 		public function set SelectedItem(listItem:ListItem):void
 		{
 			selectedItem = listItem;
+		}
+		
+		public function get ListItemAttributes():Array
+		{
+			return listItemAttributes;
 		}
 		
 		private function loadListData():Array
@@ -163,6 +201,21 @@ package twinlist
 			list2.addItem(item)
 			lists["list2"] = list2;
 			return lists;
+		}
+		
+		private function DetectAttributes(listData:Array):Array
+		{
+			var attrKeys:Array = new Array();
+			for each (var list:ArrayCollection in listData) {
+				for each (var item:ListItem in list) {
+					for each (var attr:ListItemAttribute in item.Attributes) {
+						if (!(attr.Name in attrKeys)) {
+							attrKeys[attr.Name] = attr.Name;
+						}
+					}
+				}
+			}
+			return attrKeys;
 		}
 		
 		private function ReconcileLists(list1:ArrayCollection, list2:ArrayCollection):ArrayCollection
