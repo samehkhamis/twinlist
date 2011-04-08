@@ -17,7 +17,7 @@
 			dataProvider="{model.ListViewerData}" itemClick="OnItemClick(event);"
 			selectionMode="singleCell" editable="false" borderVisible="false" verticalGridLines="false"
 			doubleClickEnabled="true" sortableColumns="false" itemDoubleClick="OnItemDoubleClick(event);"
-			>
+			><!--itemRenderer="twinlist.ListViewerItemRenderer">-->
 			<mx:columns>
 				<mx:AdvancedDataGridColumn headerText="L1 - Unique" dataField="L1Unique" backgroundColor="#ffcfcf"/>
 				<mx:AdvancedDataGridColumn headerText="L1 - Similar" dataField="L1Similar" backgroundColor="#ffecd5"/>
@@ -25,6 +25,6 @@
 				<mx:AdvancedDataGridColumn headerText="L2 - Similar" dataField="L2Similar" backgroundColor="#ffecd5"/>
 				<mx:AdvancedDataGridColumn headerText="L2 - Unique" dataField="L2Unique" backgroundColor="#ffcfcf"/>
 			</mx:columns>
-		</mx:AdvancedDataGrid>	
+		</mx:AdvancedDataGrid>
 	</s:Group>
 </twinlist:ListViewerClass>
