@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<twinlist:ActionListClass
+<twinlist:ControlsPanelClass
 	xmlns:fx="http://ns.adobe.com/mxml/2009" 
 	xmlns:s="library://ns.adobe.com/flex/spark" 
 	xmlns:mx="library://ns.adobe.com/flex/mx"
@@ -9,9 +9,6 @@
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
 	<twinlist:layout>
-		<s:VerticalLayout paddingLeft="10" paddingRight="10" paddingTop="10" paddingBottom="10"/>		
+		<s:HorizontalLayout paddingLeft="20" paddingRight="20" paddingTop="20" paddingBottom="20"/>
 	</twinlist:layout>
-	<s:Label text="Action List" fontSize="24" />
-	<mx:AdvancedDataGrid id="dataGrid" height="100%" width="100%" borderVisible="false"
-				 dataProvider="{this.model.ActionListData}"/>
-</twinlist:ActionListClass>
+</twinlist:ControlsPanelClass>
