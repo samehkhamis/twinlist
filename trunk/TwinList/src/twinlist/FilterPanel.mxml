@@ -8,11 +8,9 @@
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
-	<s:Group>
-		<s:layout>
-			<s:HorizontalLayout paddingLeft="20" paddingRight="20" paddingTop="20" paddingBottom="20"/>
-		</s:layout>
-		<s:TextInput id="searchInput" width="100%"/>
-		<s:Button label="Search"/>
-	</s:Group>	
+	<twinlist:layout>
+		<s:HorizontalLayout paddingLeft="20" paddingRight="20" paddingTop="20" paddingBottom="20"/>
+	</twinlist:layout>
+	<s:TextInput id="searchInput" width="100%"/>
+	<s:Button label="Search"/>
 </twinlist:FilterPanelClass>

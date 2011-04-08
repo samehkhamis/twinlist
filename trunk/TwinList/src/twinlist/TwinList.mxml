@@ -10,32 +10,30 @@
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
-	<s:Group width="100%" height="100%" horizontalCenter="0" verticalCenter="0">
-		<s:layout>
-			<s:HorizontalLayout/>
-		</s:layout>
-		<mx:HDividedBox width="100%" height="100%">
-			<s:Group width="70%" height="100%">
-				<!--<flex:FlareCanvas id="flare" backgroundColor="0xffffff" initialize="onInitialize(event)">/-->
-				<mx:VDividedBox width="100%" height="100%">
-					<s:Group width="100%" height="60%">
-						<twinlist:ListViewer/>
-					</s:Group>
-					<s:Group width="100%" height="40%">
-						<twinlist:ActionList/>
-					</s:Group>
-				</mx:VDividedBox>
-			</s:Group>
-			<s:Group width="30%" height="100%">
-				<mx:VDividedBox width="100%" height="100%">
-					<s:Group width="100%" height="50%">
-						<twinlist:TabDock/>
-					</s:Group>
-					<s:Group width="100%" height="50%">
-						<twinlist:DetailPanel/>
-					</s:Group>
-				</mx:VDividedBox>
-			</s:Group>
-		</mx:HDividedBox>
-	</s:Group>
+	<twinlist:layout>
+		<s:HorizontalLayout/>
+	</twinlist:layout>
+	<mx:HDividedBox width="100%" height="100%">
+		<s:Group width="70%" height="100%">
+			<!--<flex:FlareCanvas id="flare" backgroundColor="0xffffff" initialize="onInitialize(event)">/-->
+			<mx:VDividedBox width="100%" height="100%">
+				<s:Group width="100%" height="60%">
+					<twinlist:ListViewer/>
+				</s:Group>
+				<s:Group width="100%" height="40%">
+					<twinlist:ActionList/>
+				</s:Group>
+			</mx:VDividedBox>
+		</s:Group>
+		<s:Group width="30%" height="100%">
+			<mx:VDividedBox width="100%" height="100%">
+				<s:Group width="100%" height="50%">
+					<twinlist:TabDock/>
+				</s:Group>
+				<s:Group width="100%" height="50%">
+					<twinlist:DetailPanel/>
+				</s:Group>
+			</mx:VDividedBox>
+		</s:Group>
+	</mx:HDividedBox>
 </twinlist:TwinListClass>
