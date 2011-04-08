@@ -1,6 +1,10 @@
 package twinlist
 {
 	import spark.components.Group;
+	import flash.display.Sprite;
+	import flare.display.TextSprite;
+	import flare.flex.vis.FlareCanvas;
+	import mx.events.FlexEvent;
 	
 	public class ListViewerFlareClass extends Group
 	{
