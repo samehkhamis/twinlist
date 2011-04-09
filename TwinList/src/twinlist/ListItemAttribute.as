@@ -4,12 +4,12 @@ package twinlist
 	public class ListItemAttribute
 	{
 		private var name:String;
-		private var value:Object;
+		private var values:Array;
 		
-		public function ListItemAttribute(name:String = "", value:Object = null)
+		public function ListItemAttribute(name:String = "", value:Array = null)
 		{
 			this.name = name;
-			this.value = value;
+			this.values = value;
 		}
 		
 		public function get Name():String
@@ -21,20 +21,26 @@ package twinlist
 			this.name = name;
 		}
 		
-		public function get Value():Object
+		public function get Values():Array
 		{
-			return value;
+			return values;
 		}
-		public function set Value(value:Object):void
+		public function set Values(values:Array):void
 		{
-			this.value = value;
+			this.values = values;
 		}
 		
 		public function Equals(rhs:ListItemAttribute):Boolean
 		{
-			if ((this.Name == rhs.Name) && (this.Value == rhs.Value))
-				return true;
-			return false;
+			if (this.Name != rhs.Name)
+				return false;
+			if (this.Values.length != rhs.Values.length)
+				return false;
+			for each (var val:Object in this.Values) {
+				if (rhs.Values.indexOf(val) == -1)
+					return false;
+			}
+			return true;
 		}
 	}
 }
