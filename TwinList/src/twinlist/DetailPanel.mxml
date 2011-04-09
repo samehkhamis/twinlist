@@ -13,7 +13,7 @@
 	</twinlist:layout>
 	<s:Label text="Item Detail: {model.SelectedItem.Name}" fontSize="14"/>
 	<mx:AdvancedDataGrid borderVisible="false" width="100%" height="100%" selectable="false"
-				 dataProvider="{model.SelectedItem.Attributes}">
+				 dataProvider="{GetAttributes(model.SelectedItem)}">
 		<mx:columns>
 			<mx:AdvancedDataGridColumn headerText="Attribute" dataField="Name" resizable="true" sortable="true"/>
 			<mx:AdvancedDataGridColumn headerText="Value" dataField="Values" resizable="true" sortable="true"/>

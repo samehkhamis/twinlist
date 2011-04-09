@@ -15,7 +15,7 @@
 	<mx:AdvancedDataGrid id="dataGrid" width="100%" height="100%" dataProvider="{model.ListViewerData}"
 		selectionMode="singleCell" editable="false" borderVisible="false" verticalGridLines="false" designViewDataType="flat"
 		doubleClickEnabled="true" sortableColumns="false" itemClick="OnItemClick(event);" itemDoubleClick="OnItemDoubleClick(event);"
-		><!--itemRenderer="twinlist.ListViewerItemRenderer">-->
+		>
 		<mx:columns>
 			<mx:AdvancedDataGridColumn headerText="L1 - Unique" dataField="L1Unique" backgroundColor="#ffcfcf"/>
 			<mx:AdvancedDataGridColumn headerText="L1 - Similar" dataField="L1Similar" backgroundColor="#ffecd5"/>

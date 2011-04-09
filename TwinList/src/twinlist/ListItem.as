@@ -7,7 +7,7 @@ package twinlist
 	{
 		private var id:String;
 		private var name:String;
-		private var attributes:ArrayCollection = new ArrayCollection();
+		private var attributes:Object = new Object();
 		
 		public function ListItem(id:String, name:String = "")
 		{
@@ -33,20 +33,11 @@ package twinlist
 			this.name = name;
 		}
 		
-		public function get Attributes():ArrayCollection
+		public function get Attributes():Object
 		{
 			return attributes;
 		}
-		
-		public function GetAttribute(name:String):ListItemAttribute
-		{
-			for each (var attr:ListItemAttribute in attributes) {
-				if (attr.Name == name)
-					return attr;
-			}
-			return null;
-		}
-		
+				
 		public function toString():String
 		{
 			var string:String = Name;
@@ -58,20 +49,21 @@ package twinlist
 		
 		public function Equals(rhs:ListItem):Boolean
 		{
-			if (this.Attributes.length != rhs.Attributes.length)
+			if (this.name != rhs.name)
 				return false;
-			var identical:Boolean = true;
-			for each (var attr1:ListItemAttribute in this.Attributes) {
-				var found:Boolean = false;
-				for each (var attr2:ListItemAttribute in rhs.Attributes) {
-					if (attr1.Equals(attr2)) {
-						found = true;
-						break;
-					}
-				}
-				identical &&= found;
+			var attr1:ListItemAttribute = null;
+			var attr2:ListItemAttribute = null;
+			for each (attr1 in this.attributes) {
+				attr2 = rhs.attributes[attr1.Name];
+				if (attr2 == null || !attr1.Equals(attr2))
+					return false;
 			}
-			return identical;
+			for each (attr1 in rhs.attributes) {
+				attr2 = this.attributes[attr1.Name];
+				if (attr2 == null || !attr1.Equals(attr2))
+					return false;
+			}
+			return true;
 		}
 	}
 }

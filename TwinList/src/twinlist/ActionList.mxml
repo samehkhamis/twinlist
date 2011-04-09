@@ -13,5 +13,5 @@
 	</twinlist:layout>
 	<s:Label text="Action List" fontSize="24" />
 	<mx:AdvancedDataGrid id="dataGrid" height="100%" width="100%" borderVisible="false"
-				 dataProvider="{this.model.ActionListData}"/>
+				 dataProvider="{this.model.ActionListItems}"/>
 </twinlist:ActionListClass>
