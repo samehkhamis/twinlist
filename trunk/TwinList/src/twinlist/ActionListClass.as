@@ -4,6 +4,8 @@ package twinlist
 	
 	import mx.controls.AdvancedDataGrid;
 	import mx.controls.advancedDataGridClasses.AdvancedDataGridColumn;
+	import mx.controls.advancedDataGridClasses.MXAdvancedDataGridItemRenderer;
+	import mx.core.ClassFactory;
 	import mx.events.FlexEvent;
 	import mx.events.ListEvent;
 	
@@ -26,11 +28,15 @@ package twinlist
 			this.removeEventListener(FlexEvent.CREATION_COMPLETE, onInitComplete);
 			var columns:Array = dataGrid.columns;
 			var col:AdvancedDataGridColumn = new AdvancedDataGridColumn("Name");
-			col.dataField = "Name";
+			var factory:ClassFactory = new ClassFactory(ActionListItemRenderer);
+			factory.properties = {ColumnName:"Name"};
+			col.itemRenderer = factory;
 			columns.push(col);
 			for each (var attr:String in model.ListItemAttributes) {
 				col = new AdvancedDataGridColumn(attr);
-				col.dataField = attr;
+				factory = new ClassFactory(ActionListItemRenderer);
+				factory.properties = {ColumnName:attr};
+				col.itemRenderer = factory;
 				columns.push(col);
 			}			
 			dataGrid.columns = columns;

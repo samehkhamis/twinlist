@@ -15,5 +15,14 @@ package twinlist
 		{
 			super();
 		}
+		
+		protected function GetAttributes(item:ListItem):ArrayCollection
+		{
+			var array:ArrayCollection = new ArrayCollection();
+			for each (var attr:ListItemAttribute in item.Attributes) {
+				array.addItem(attr);
+			}
+			return array;
+		}
 	}	
 }
