@@ -9,7 +9,7 @@ package twinlist
 		private static var instance:Model = new Model();		
 		private var lists:Object = null;
 		private var listViewerData:ArrayCollection = null;
-		private var listItemAttributes:Object = null;
+		private var listItemAttributes:ArrayCollection = null;
 		private var actionListItems:ArrayCollection = null;
 		private var selectedItem:ListItem = null;
 		
@@ -78,7 +78,7 @@ package twinlist
 			selectedItem = listItem;
 		}
 		
-		public function get ListItemAttributes():Object
+		public function get ListItemAttributes():ArrayCollection
 		{
 			return listItemAttributes;
 		}
@@ -201,19 +201,21 @@ package twinlist
 			return lists;
 		}
 		
-		private function DetectAttributes(listData:Object):Object
+		private function DetectAttributes(listData:Object):ArrayCollection
 		{
 			var attrKeys:Object = new Object();
+			var attributes:ArrayCollection = new ArrayCollection();
 			for each (var list:ArrayCollection in listData) {
 				for each (var item:ListItem in list) {
 					for each (var attr:ListItemAttribute in item.Attributes) {
 						if (!(attr.Name in attrKeys)) {
 							attrKeys[attr.Name] = attr.Name;
+							attributes.addItem(attr.Name);
 						}
 					}
 				}
 			}
-			return attrKeys;
+			return attributes;
 		}
 		
 		private function ReconcileLists(list1:ArrayCollection, list2:ArrayCollection):ArrayCollection
