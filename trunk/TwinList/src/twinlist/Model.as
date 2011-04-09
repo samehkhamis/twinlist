@@ -59,7 +59,7 @@ package twinlist
 			var itemArray:Array = new Array();
 			itemArray["Name"] = item.Name;
 			for each (var attr:ListItemAttribute in item.Attributes) {
-				itemArray[attr.Name] = attr.Value;
+				itemArray[attr.Name] = attr.Values.toString();
 			}
 			actionListItems.addItem(item);
 			actionListData.addItem(itemArray);
@@ -69,7 +69,7 @@ package twinlist
 			var itemArray:Array = new Array();
 			itemArray["Name"] = item.Name;
 			for each (var attr:ListItemAttribute in item.Attributes) {
-				itemArray[attr.Name] = attr.Value;
+				itemArray[attr.Name] = attr.Values.toString();
 			}
 			var idx:int = actionListItems.getItemIndex(item);
 			actionListItems.removeItemAt(idx);
@@ -97,112 +97,112 @@ package twinlist
 			// list 1
 			var list1:ArrayCollection = new ArrayCollection();
 			var item:ListItem = new ListItem("list1id1", "Calcitrol");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "0.25mcg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "Daily"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["0.25mcg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["Daily"]));
 			list1.addItem(item)
 			item = new ListItem("list1id2", "Darbepoetin");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "60mcg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "SC"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "qFriday"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["60mcg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["SC"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["qFriday"]));
 			list1.addItem(item)
 			item = new ListItem("list1id3", "Docusate Sodium");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "100mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "BID"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["100mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["BID"]));
 			list1.addItem(item)
 			item = new ListItem("list1id4", "Ramipril");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "5mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "Daily"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["5mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["Daily"]));
 			list1.addItem(item)
 			item = new ListItem("list1id5", "Acetaminophen");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "325mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "q4h"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["325mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["q4h"]));
 			list1.addItem(item)
 			item = new ListItem("list1id6", "Calcium Carbonate");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "500mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "TID CC"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["500mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["TID CC"]));
 			list1.addItem(item)
 			item = new ListItem("list1id7", "Atorvistatin");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "40mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "Daily"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["40mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["Daily"]));
 			list1.addItem(item)
 			item = new ListItem("list1id8", "Metoprolol");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "50mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "Daily"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["50mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["Daily"]));
 			list1.addItem(item)
 			item = new ListItem("list1id9", "Aspirin");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "81mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "Daily"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["81mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["Daily"]));
 			list1.addItem(item)
 			item = new ListItem("list1id10", "Meloxicam");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "7.5mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "Daily"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["7.5mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["Daily"]));
 			list1.addItem(item)
 			lists["list1"] = list1;
 			// list 2
 			var list2:ArrayCollection = new ArrayCollection();
 			item = new ListItem("list2id1", "Calcitrol");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "0.25mcg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "Daily"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["0.25mcg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["Daily"]));
 			list2.addItem(item)
 			item = new ListItem("list2id2", "Darbepoetin");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "60mcg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "SC"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "qFriday"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["60mcg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["SC"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["qFriday"]));
 			list2.addItem(item)
 			item = new ListItem("list2id3", "Docusate Sodium");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "100mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "BID"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["100mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["BID"]));
 			list2.addItem(item)
 			item = new ListItem("list2id4", "Ramipril");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "5mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "Daily"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["5mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["Daily"]));
 			list2.addItem(item)
 			item = new ListItem("list2id5", "Acetaminophen");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "325mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "q4h"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["325mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["q4h"]));
 			list2.addItem(item)
 			item = new ListItem("list2id6", "Calcium Carbonate");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "1000mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "TID CC"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["1000mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["TID CC"]));
 			list2.addItem(item)
 			item = new ListItem("list2id7", "Atorvistatin");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "60mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "Daily"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["60mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["Daily"]));
 			list2.addItem(item)
 			item = new ListItem("list2id8", "Metoprolol");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "100mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "BID"));			
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["100mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["BID"]));			
 			list2.addItem(item)
 			item = new ListItem("list2id9", "Ferrous Gloconate");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "300mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "TID"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["300mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["TID"]));
 			list2.addItem(item)
 			item = new ListItem("list2id10", "Omeprazole");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "40mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "Daily"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["40mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["Daily"]));
 			list2.addItem(item)
 			item = new ListItem("list2id11", "Ciproflaxocin");
-			item.Attributes.addItem(new ListItemAttribute("Dosage", "500mg"));
-			item.Attributes.addItem(new ListItemAttribute("Form", "PO"));
-			item.Attributes.addItem(new ListItemAttribute("Frequency", "Daily"));
+			item.Attributes.addItem(new ListItemAttribute("Dosage", ["500mg"]));
+			item.Attributes.addItem(new ListItemAttribute("Form", ["PO"]));
+			item.Attributes.addItem(new ListItemAttribute("Frequency", ["Daily"]));
 			list2.addItem(item)
 			lists["list2"] = list2;
 			return lists;

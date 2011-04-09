@@ -16,7 +16,7 @@
 				 dataProvider="{model.SelectedItem.Attributes}">
 		<mx:columns>
 			<mx:AdvancedDataGridColumn headerText="Attribute" dataField="Name" resizable="true" sortable="true"/>
-			<mx:AdvancedDataGridColumn headerText="Value" dataField="Value" resizable="true" sortable="true"/>
+			<mx:AdvancedDataGridColumn headerText="Value" dataField="Values" resizable="true" sortable="true"/>
 		</mx:columns>
 	</mx:AdvancedDataGrid>
 </twinlist:DetailPanelClass>
