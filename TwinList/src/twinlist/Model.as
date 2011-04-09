@@ -7,9 +7,9 @@ package twinlist
 	public final class Model
 	{
 		private static var instance:Model = new Model();		
-		private var lists:Array = null;
+		private var lists:Object = null;
 		private var listViewerData:ArrayCollection = null;
-		private var listItemAttributes:Array = null;
+		private var listItemAttributes:Object = null;
 		private var actionListItems:ArrayCollection = null;
 		private var actionListData:ArrayCollection = null;
 		private var selectedItem:ListItem = null;
@@ -30,6 +30,11 @@ package twinlist
 		public static function get Instance():Model
 		{
 			return instance;
+		}
+		
+		public function get Lists():Object
+		{
+			return lists;
 		}
 		
 		public function get ListViewerData():ArrayCollection
@@ -80,7 +85,7 @@ package twinlist
 			selectedItem = listItem;
 		}
 		
-		public function get ListItemAttributes():Array
+		public function get ListItemAttributes():Object
 		{
 			return listItemAttributes;
 		}
@@ -203,9 +208,9 @@ package twinlist
 			return lists;
 		}
 		
-		private function DetectAttributes(listData:Array):Array
+		private function DetectAttributes(listData:Object):Object
 		{
-			var attrKeys:Array = new Array();
+			var attrKeys:Object = new Object();
 			for each (var list:ArrayCollection in listData) {
 				for each (var item:ListItem in list) {
 					for each (var attr:ListItemAttribute in item.Attributes) {
