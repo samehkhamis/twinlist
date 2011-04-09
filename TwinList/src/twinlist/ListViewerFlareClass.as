@@ -4,12 +4,16 @@ package twinlist
 	import flare.animate.Sequence;
 	import flare.animate.Tween;
 	import flare.display.TextSprite;
-	import flare.flex.vis.FlareCanvas;
+	import flare.display.RectSprite;
 	import flare.vis.Visualization;
+	import flare.vis.data.DataSprite;
+	import flare.vis.data.Data;
 	
-	import flash.display.Sprite;
+	import flash.events.MouseEvent;
+	import flash.geom.Rectangle;
 	
-	import mx.events.FlexEvent;
+	import mx.controls.Alert;
+	import mx.collections.ArrayCollection;
 	
 	import spark.components.Group;
 	
@@ -20,6 +24,8 @@ package twinlist
 		[Bindable]
 		protected var vis:Visualization;
 		
+		private var textLists:Object = null;
+		
 		public function ListViewerFlareClass()
 		{
 			super();
@@ -28,42 +34,58 @@ package twinlist
 		
 		protected function OnInitialize(event:Event):void
 		{
-			vis.addChild(CreateCircles());
-			vis.addChild(CreateRectangle("Whaddup, bitches!"));
-		}
-		
-		protected function SpinIt(event:Event):void
-		{
-			RotateAndStretch(Sprite(vis.getChildByName("circles")));
-		}
-		
-		private function CreateCircles():Sprite
-		{
-			var container:Sprite = new Sprite();
-			container.name = "circles";
-			container.x = 300;
-			container.y = 200;
-			for (var i:int = 0; i < 10; i++) {
-				var x:Number = (i/5<1 ? 1 : -1) * (13 + 26 * (i%5));
-				var circle:Sprite = CreateCircle(x, 0);
-				circle.alpha = 1.0 - i * 0.05;
-				container.addChild(circle);
+			var columnLength:int = 0;
+			var columnWidth:int = 0;
+			var textHeight:int = 24;
+			
+			textLists = new Object();
+			for (var list:* in model.Lists)
+			{
+				if (model.Lists[list].length > columnLength)
+					columnLength = model.Lists[list].length;
+				
+				textLists[list] = new ArrayCollection();
+				for each (var item:ListItem in model.Lists[list])
+				{
+					var text:TextSprite = new TextSprite(item.Name);
+					text.color = 0xff0000ff;
+					text.size = textHeight;
+					text.buttonMode = true;
+					text.addEventListener(MouseEvent.CLICK,
+						function(event:MouseEvent):void { Alert.show(event.currentTarget.text); }
+					);
+					
+					if (text.width > columnWidth)
+						columnWidth = text.width;
+					textLists[list].addItem(text);
+				}
 			}
-			return container;
+			
+			var columnHeight:int = columnLength * textHeight * 2;
+			vis.bounds = new Rectangle(0, 0, 5 * columnWidth, columnHeight);
+			
+			var x:int = columnWidth;
+			var y:int = 0;
+			for (var list:* in textLists)
+			{
+				var rect:RectSprite = new RectSprite(x, 0, columnWidth, columnHeight);
+				rect.fillColor = rect.lineColor = 0xffcccccc;
+				vis.addChild(rect);
+				
+				for each (var text:TextSprite in textLists[list])
+				{
+					text.x = x;
+					text.y = y;
+					vis.addChild(text);
+					
+					y += textHeight * 2;
+				}
+				x += columnWidth * 2;
+				y = 0;
+			}
 		}
 		
-		private function CreateCircle(x:Number, y:Number):Sprite
-		{
-			var sprite:Sprite = new Sprite();
-			sprite.graphics.beginFill(0xcccccc, 0.5);
-			sprite.graphics.lineStyle(1, 0x000000);
-			sprite.graphics.drawCircle(0, 0, 10);
-			sprite.x = x;
-			sprite.y = y;
-			return sprite;
-		}
-		
-		private function RotateAndStretch(sprite:Sprite):void
+		private function RotateAndStretch(sprite:DataSprite):void
 		{
 			var rot:Tween = new Tween(sprite, 1, {rotation:360});
 			var t1:Tween = new Tween(sprite, 1, {y:200});
@@ -74,25 +96,7 @@ package twinlist
 				new Parallel(t1, t2, rot),
 				new Parallel(t3, t4, rot)
 			);
-			seq.play();		
-		}
-		
-		private function CreateRectangle(string:String):Sprite
-		{
-			var round:Sprite = new Sprite();
-			round.name = "rectangle";
-			round.graphics.beginFill(0x0000cc, 0.25);
-			round.graphics.lineStyle(1, 0x000000);
-			round.graphics.drawRoundRect(20, 50, 100, 100, 5, 5);
-			
-			var text:TextSprite = new TextSprite(string);
-			text.color = 0xffff0000;
-			text.size = 32;
-			text.x = 40;
-			text.y = 100;
-			round.addChild(text);
-			
-			return round;
+			seq.play();	
 		}
 	}
 }
