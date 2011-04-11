@@ -1,8 +1,12 @@
 package twinlist
 {
+	import flash.events.Event;
 	import flash.events.MouseEvent;
+	
+	import mx.events.CollectionEvent;
 	import mx.events.ListEvent;
 	import mx.managers.ToolTipManager;
+	
 	import spark.components.Group;
 	
 	public class ListViewerClass extends Group
@@ -45,6 +49,11 @@ package twinlist
 				case 4: item = row.L2Unique; break;
 			}
 			return item;			
+		}
+		
+		private function OnDataChange(event:Event):void
+		{
+			
 		}
 	}
 }
