@@ -7,12 +7,13 @@ package twinlist
 	{
 		private var id:String;
 		private var name:String;
-		private var attributes:Object = new Object();
+		private var attributes:Object;
 		
 		public function ListItem(id:String, name:String = "")
 		{
 			this.id = id;
 			this.name = name;
+			this.attributes = new Object();
 		}
 		
 		public function get Id():String

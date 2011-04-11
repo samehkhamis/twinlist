@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list id="patient" name="Patient">
+	<item id="patientItem1" name="Calcitrol">
+		<attribute name="Dosage" type="Categorical">
+			<value value="0.25mg"/>
+		</attribute>
+		<attribute name="Form" type="Categorical">
+			<value value="PO"/>
+		</attribute>
+		<attribute name="Frequency" type="Categorical">
+			<value value="daily"/>
+		</attribute>
+	</item>
+	<item id="patientItem2" name="Darbepoetin">
+		<attribute name="Dosage" type="Categorical">
+			<value value="60mg"/>
+		</attribute>
+		<attribute name="Form" type="Categorical">
+			<value value="SC"/>
+		</attribute>
+		<attribute name="Frequency" type="Categorical">
+			<value value="qFriday"/>
+		</attribute>
+	</item>
+	<item id="patientItem3" name="Docusate Sodium">
+		<attribute name="Dosage" type="Categorical">
+			<value value="100mg"/>
+		</attribute>
+		<attribute name="Form" type="Categorical">
+			<value value="PO"/>
+		</attribute>
+		<attribute name="Frequency" type="Categorical">
+			<value value="BID"/>
+		</attribute>
+	</item>
+	<item id="patientItem4" name="Ramipril">
+		<attribute name="Dosage" type="Categorical">
+			<value value="5mg"/>
+		</attribute>
+		<attribute name="Form" type="Categorical">
+			<value value="PO"/>
+		</attribute>
+		<attribute name="Frequency" type="Categorical">
+			<value value="daily"/>
+		</attribute>
+	</item>
+	<item id="patientItem5" name="Acetaminophen">
+		<attribute name="Dosage" type="Categorical">
+			<value value="325mg"/>
+		</attribute>
+		<attribute name="Form" type="Categorical">
+			<value value="PO"/>
+		</attribute>
+		<attribute name="Frequency" type="Categorical">
+			<value value="q4h"/>
+		</attribute>
+	</item>
+	<item id="patientItem6" name="Calcium Carbonate">
+		<attribute name="Dosage" type="Categorical">
+			<value value="500mg"/>
+		</attribute>
+		<attribute name="Form" type="Categorical">
+			<value value="PO"/>
+		</attribute>
+		<attribute name="Frequency" type="Categorical">
+			<value value="TID CC"/>
+		</attribute>
+	</item>
+	<item id="patientItem7" name="Atorvistatin">
+		<attribute name="Dosage" type="Categorical">
+			<value value="40mg"/>
+		</attribute>
+		<attribute name="Form" type="Categorical">
+			<value value="PO"/>
+		</attribute>
+		<attribute name="Frequency" type="Categorical">
+			<value value="daily"/>
+		</attribute>
+	</item>
+	<item id="patientItem8" name="Metoprolol">
+		<attribute name="Dosage" type="Categorical">
+			<value value="50mg"/>
+		</attribute>
+		<attribute name="Form" type="Categorical">
+			<value value="PO"/>
+		</attribute>
+		<attribute name="Frequency" type="Categorical">
+			<value value="daily"/>
+		</attribute>
+	</item>
+	<item id="patientItem9" name="Aspirin">
+		<attribute name="Dosage" type="Categorical">
+			<value value="81mg"/>
+		</attribute>
+		<attribute name="Form" type="Categorical">
+			<value value="PO"/>
+		</attribute>
+		<attribute name="Frequency" type="Categorical">
+			<value value="daily"/>
+		</attribute>
+	</item>
+	<item id="patientItem10" name="Meloxicam">
+		<attribute name="Dosage" type="Categorical">
+			<value value="7.5mg"/>
+		</attribute>
+		<attribute name="Form" type="Categorical">
+			<value value="PO"/>
+		</attribute>
+		<attribute name="Frequency" type="Categorical">
+			<value value="daily"/>
+		</attribute>
+	</item>
+</list>

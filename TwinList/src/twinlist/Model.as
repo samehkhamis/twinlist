@@ -1,17 +1,32 @@
 package twinlist
-{
+{	
+	import flash.events.Event;
+	import flash.net.URLLoader;
+	import flash.net.URLLoaderDataFormat;
+	import flash.net.URLRequest;
+	
 	import mx.collections.ArrayCollection;
-	import mx.utils.ObjectUtil;
+	import mx.collections.Sort;
+	import mx.events.CollectionEvent;
 
 	[Bindable]
 	public final class Model
 	{
-		private static var instance:Model = new Model();		
-		private var lists:Object = null;
-		private var listViewerData:ArrayCollection = null;
-		private var listItemAttributes:ArrayCollection = null;
-		private var actionListItems:ArrayCollection = null;
-		private var selectedItem:ListItem = null;
+		// model
+		private static var instance:Model = new Model();
+		// sorting
+		private static var defaultSort:Sort;
+		// list info
+		private var lists:ArrayCollection;
+		private var listIdx:Object;
+		private var visibleListIds:Array;
+		private var listViewerData:ArrayCollection;
+		private var listItemAttributes:ArrayCollection;
+		private var actionListItems:ArrayCollection;
+		// publicly set variables
+		private var selectedItem:ListItem;
+		private var sortByAttribute:String;
+		private var groupByAttribute:String;
 		
 		public function Model()
 		{
@@ -19,10 +34,17 @@ package twinlist
 				throw new Error("Model can only be accessed via Model.Instance()");
 			
 			// init
-			lists = loadListData();
-			listItemAttributes = DetectAttributes(lists);
-			listViewerData = ReconcileLists(lists["list1"], lists["list2"]);
+			lists = new ArrayCollection();
+			listIdx = new Object();
+			defaultSort = new Sort();
+			groupByAttribute = "Name";
+			sortByAttribute = "Name";
 			actionListItems = new ArrayCollection();
+			visibleListIds = new Array(2);
+			// load data
+			LoadCannedData();
+//			ReadXml("../data/list1.xml");
+//			ReadXml("../data/list2.xml");
 		}
 		
 		public static function get Instance():Model
@@ -30,9 +52,14 @@ package twinlist
 			return instance;
 		}
 		
-		public function get Lists():Object
+		public function get Lists():ArrayCollection
 		{
 			return lists;
+		}
+		
+		public function get ListIndices():Object
+		{
+			return listIdx;
 		}
 		
 		public function get ListViewerData():ArrayCollection
@@ -83,19 +110,150 @@ package twinlist
 			return listItemAttributes;
 		}
 		
-		private function loadListData():Array
+		public function get SortBy():String
 		{
-			var lists:Array = new Array();
+			return sortByAttribute;
+		}
+		public function set SortBy(attributeName:String):void
+		{
+			sortByAttribute = attributeName;
+			SortListViewerData();
+		}
+		
+		public function get GroupBy():String
+		{
+			return groupByAttribute;
+		}
+		public function set GroupBy(attributeName:String):void
+		{
+			groupByAttribute = attributeName;
+			SortListViewerData();
+		}
+		
+		public function get VisibleListIds():Array
+		{
+			return visibleListIds;
+		}
+		
+		public function SetVisibleLists(id1:String, id2:String):void
+		{
+			ReconcileLists(lists[listIdx[id1]], lists[listIdx[id2]]);
+			visibleListIds[0] = id1;
+			visibleListIds[1] = id2;
+		}
+		
+		private function SortListViewerData():void
+		{
+			var sort:Sort = new Sort();
+			sort.compareFunction = SortFunction;
+			sort.sort(listViewerData.source);
+		}
+		
+		private function SortFunction(a:Object, b:Object, fields:Array):int
+		{
+			var item1:ListItem = GetListItemToSortOn(a as ListViewerItem);
+			var item2:ListItem = GetListItemToSortOn(b as ListViewerItem);
+			var val1:Object;
+			var val2:Object;
+			if (groupByAttribute == "Name") {
+				val1 = item1.Name;
+				val2 = item2.Name;		
+			}
+			else {
+				val1 = item1.Attributes[groupByAttribute].Values[0];
+				val2 = item2.Attributes[groupByAttribute].Values[0];		
+			}
+			var sortVal:int = defaultSort.compareFunction.call(null, val1, val2, fields);
+			if (sortVal != 0)
+				return sortVal;
+			if (sortByAttribute == "Name") {
+				val1 = item1.Name;
+				val2 = item2.Name;		
+			}
+			else {
+				val1 = item1.Attributes[sortByAttribute].Values[0];
+				val2 = item2.Attributes[sortByAttribute].Values[0];		
+			}
+			sortVal = defaultSort.compareFunction.call(null, val1, val2, fields);
+			return sortVal;
+		}
+		
+		private function GetListItemToSortOn(listViewerItem:ListViewerItem):ListItem
+		{
+			if (listViewerItem.Identical != null)
+				return listViewerItem.Identical;
+			else if (listViewerItem.L1Similar != null)
+				return listViewerItem.L1Similar;
+			else if (listViewerItem.L1Unique != null)
+				return listViewerItem.L1Unique;
+			else
+				return listViewerItem.L2Unique;
+		}
+		
+		private function ReadXml(filePath:String):void
+		{
+			var urlReq:URLRequest = new URLRequest(filePath);
+			var loader:URLLoader = new URLLoader(urlReq);
+			loader.dataFormat = URLLoaderDataFormat.TEXT;
+			loader.addEventListener(Event.COMPLETE, function(event:Event):void {
+				OnReadXmlComplete(loader);
+			});
+		}
+		
+		private function OnReadXmlComplete(loader:URLLoader):void
+		{
+			var xml:XML = XML(loader.data);
+			var listId:String = xml.attribute("id");
+			var listName:String = xml.attribute("name");
+			var list:List = new List(listId, listName);
+			for each (var itemXml:XML in xml.children()) {
+				var itemId:String = itemXml.attribute("id");
+				var itemName:String = itemXml.attribute("name");
+				var item:ListItem = new ListItem(itemId, itemName);
+				for each (var attrXml:XML in itemXml.children()) {
+					var attrName:String = attrXml.attribute("name");
+					var attrType:uint = attrXml.attribute("type") == "Categorical" ? ListItemAttribute.TYPE_CATEGORICAL : ListItemAttribute.TYPE_NUMBER;
+					var attr:ListItemAttribute = new ListItemAttribute(attrName);
+					attr.Type = attrType;
+					attr.Values = new Array();
+					for each (var valXml:XML in attrXml.children()) {
+						var value:Object;
+						if (attrType == ListItemAttribute.TYPE_CATEGORICAL) {
+							value = valXml.attribute("value");
+						}
+						else {
+							value = parseFloat(valXml.attribute("value"));
+						}
+						attr.Values.push(value);					}
+					item.Attributes[attr.Name] = attr;
+				}
+				list.addItem(item);
+			}
+			listIdx[list.Id] = lists.length;
+			lists.addItem(list);
+			if (lists.length >= 2)
+				FinishInit();
+		}
+		
+		private function FinishInit():void
+		{
+			SetVisibleLists(lists[0].Id, lists[1].Id);
+			DetectAttributes();
+			SortListViewerData();
+		}
+
+		private function LoadCannedData():void
+		{
 			// CANNED DATA
 			// list 1
-			var list1:ArrayCollection = new ArrayCollection();
+			var list1:List = new List("list1", "Patient");
 			var item:ListItem = new ListItem("list1id1", "Calcitrol");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["0.25mcg"]);
+			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["0.25mg"]);
 			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
 			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["Daily"]);
 			list1.addItem(item);
 			item = new ListItem("list1id2", "Darbepoetin");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["60mcg"]);
+			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["60mg"]);
 			item.Attributes["Form"] = new ListItemAttribute("Form", ["SC"]);
 			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["qFriday"]);
 			list1.addItem(item);
@@ -139,16 +297,17 @@ package twinlist
 			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
 			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["Daily"]);
 			list1.addItem(item);
-			lists["list1"] = list1;
+			listIdx[list1.Id] = lists.length;
+			lists.addItem(list1);
 			// list 2
-			var list2:ArrayCollection = new ArrayCollection();
+			var list2:List = new List("list2", "Hospital");
 			item = new ListItem("list2id1", "Calcitrol");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["0.25mcg"]);
+			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["0.25mg"]);
 			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
 			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["Daily"]);
 			list2.addItem(item);
 			item = new ListItem("list2id2", "Darbepoetin");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["60mcg"]);
+			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["60mg"]);
 			item.Attributes["Form"] = new ListItemAttribute("Form", ["SC"]);
 			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["qFriday"]);
 			list2.addItem(item);
@@ -197,30 +356,30 @@ package twinlist
 			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
 			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["Daily"]);
 			list2.addItem(item);
-			lists["list2"] = list2;
-			return lists;
+			listIdx[list2.Id] = lists.length;
+			lists.addItem(list2);
+			FinishInit();
 		}
 		
-		private function DetectAttributes(listData:Object):ArrayCollection
+		private function DetectAttributes():void
 		{
 			var attrKeys:Object = new Object();
-			var attributes:ArrayCollection = new ArrayCollection();
-			for each (var list:ArrayCollection in listData) {
+			listItemAttributes = new ArrayCollection();
+			for each (var list:ArrayCollection in lists) {
 				for each (var item:ListItem in list) {
 					for each (var attr:ListItemAttribute in item.Attributes) {
 						if (!(attr.Name in attrKeys)) {
 							attrKeys[attr.Name] = attr.Name;
-							attributes.addItem(attr.Name);
+							listItemAttributes.addItem(attr.Name);
 						}
 					}
 				}
 			}
-			return attributes;
 		}
 		
-		private function ReconcileLists(list1:ArrayCollection, list2:ArrayCollection):ArrayCollection
+		private function ReconcileLists(list1:List, list2:List):void
 		{
-			var listViewerData:ArrayCollection = new ArrayCollection();
+			listViewerData = new ArrayCollection();
 			var maxLen:int = Math.max(list1.length, list2.length);
 			var iter1:int = 0;
 			var iter2:int = 0;
@@ -256,7 +415,6 @@ package twinlist
 					}
 				}
 			}
-			return listViewerData;
 		}
 		
 		private function AreIdentical(item1:ListItem, item2:ListItem):Boolean
