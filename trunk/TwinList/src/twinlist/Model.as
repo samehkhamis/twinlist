@@ -147,6 +147,7 @@ package twinlist
 			var sort:Sort = new Sort();
 			sort.compareFunction = SortFunction;
 			sort.sort(listViewerData.source);
+			listViewerData.refresh();
 		}
 		
 		private function SortFunction(a:Object, b:Object, fields:Array):int
@@ -224,15 +225,18 @@ package twinlist
 						else {
 							value = parseFloat(valXml.attribute("value"));
 						}
-						attr.Values.push(value);					}
+						attr.Values.push(value);
+					}
 					item.Attributes[attr.Name] = attr;
 				}
 				list.addItem(item);
 			}
 			listIdx[list.Id] = lists.length;
 			lists.addItem(list);
-			if (lists.length >= 2)
+			if (lists.length >= 2) {
 				FinishInit();
+				SetVisibleLists(lists[2], lists[3]);
+			}
 		}
 		
 		private function FinishInit():void
@@ -365,6 +369,7 @@ package twinlist
 		{
 			var attrKeys:Object = new Object();
 			listItemAttributes = new ArrayCollection();
+			listItemAttributes.addItem("Name");
 			for each (var list:ArrayCollection in lists) {
 				for each (var item:ListItem in list) {
 					for each (var attr:ListItemAttribute in item.Attributes) {

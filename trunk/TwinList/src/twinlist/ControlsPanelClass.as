@@ -2,6 +2,11 @@ package twinlist
 {
 	import com.carlcalderon.arthropod.Debug;
 	
+	import flash.events.Event;
+	
+	import mx.collections.ArrayCollection;
+	import mx.events.CollectionEvent;
+	
 	import spark.components.DropDownList;
 	import spark.components.Group;
 	import spark.events.IndexChangeEvent;
@@ -19,15 +24,15 @@ package twinlist
 		protected function OnChange(event:IndexChangeEvent):void {
 
 			// Based on selected control will set the SortBy, GroupBy or ... of the model and refresh the list view.
-			var dd:DropDownList=event.target as DropDownList;
+			var dd:DropDownList = event.target as DropDownList;
 			switch (dd.id) {
-				case "SortByList":
-					model.SortBy=model.ListItemAttributes.getItemAt(event.newIndex).toString();
-					Debug.log("SortByList");
-					break;
-				case "GroupByList":
+				case "groupByList":
 					Debug.log("GroupByList");
-					model.GroupBy=model.ListItemAttributes.getItemAt(event.newIndex).toString();
+					model.GroupBy = model.ListItemAttributes[event.newIndex];
+					break;
+				case "sortByList":
+					model.SortBy = model.ListItemAttributes[event.newIndex];
+					Debug.log("SortByList");
 					break;
 				/*
 				case "ColorByList":
@@ -36,8 +41,6 @@ package twinlist
 					break;
 				*/
 			}
-				
 		}
-			
 	}
 }
