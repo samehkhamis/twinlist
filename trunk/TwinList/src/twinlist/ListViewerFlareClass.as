@@ -39,13 +39,13 @@ package twinlist
 			var textHeight:int = 24;
 			
 			textLists = new Object();
-			for (var list:* in model.Lists)
+			for each (var list:List in model.Lists)
 			{
-				if (model.Lists[list].length > columnLength)
-					columnLength = model.Lists[list].length;
+				if (list.length > columnLength)
+					columnLength = list.length;
 				
-				textLists[list] = new ArrayCollection();
-				for each (var item:ListItem in model.Lists[list])
+				textLists[list.Id] = new ArrayCollection();
+				for each (var item:ListItem in list)
 				{
 					var text:TextSprite = new TextSprite(item.Name);
 					text.color = 0xff0000ff;
@@ -57,7 +57,7 @@ package twinlist
 					
 					if (text.width > columnWidth)
 						columnWidth = text.width;
-					textLists[list].addItem(text);
+					textLists[list.Id].addItem(text);
 				}
 			}
 			
@@ -66,17 +66,17 @@ package twinlist
 			
 			var x:int = columnWidth;
 			var y:int = 0;
-			for (var list:* in textLists)
+			for (var id:* in textLists)
 			{
 				var rect:RectSprite = new RectSprite(x, 0, columnWidth, columnHeight);
 				rect.fillColor = rect.lineColor = 0xffcccccc;
 				vis.addChild(rect);
 				
-				for each (var text:TextSprite in textLists[list])
+				for each (var t:TextSprite in textLists[id])
 				{
-					text.x = x;
-					text.y = y;
-					vis.addChild(text);
+					t.x = x;
+					t.y = y;
+					vis.addChild(t);
 					
 					y += textHeight * 2;
 				}

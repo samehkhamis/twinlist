@@ -15,7 +15,7 @@ package twinlist
 	{
 		[Bindable]
 		protected var model:Model = Model.Instance;
-		public var dataGrid:AdvancedDataGrid = null;
+		public var dataGrid:AdvancedDataGrid;
 		
 		public function ActionListClass()
 		{
