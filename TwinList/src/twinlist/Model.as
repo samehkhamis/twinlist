@@ -27,6 +27,8 @@ package twinlist
 		private var actionListItems:ArrayCollection;
 		// publicly set variables
 		private var selectedItem:ListItem;
+		private var sizeByAttribute:String;
+		private var colorByAttribute:String;
 		private var sortByAttribute:String;
 		private var groupByAttribute:String;
 		private var filterByString:String;
@@ -121,14 +123,22 @@ package twinlist
 			return listItemAttributes;
 		}
 		
-		public function get SortBy():String
+		public function get SizeBy():String
 		{
-			return sortByAttribute;
+			return sizeByAttribute;
 		}
-		public function set SortBy(attributeName:String):void
+		public function set SizeBy(attributeName:String):void
 		{
-			sortByAttribute = attributeName;
-			SortListViewerData();
+			sizeByAttribute = attributeName;
+		}
+		
+		public function get ColorBy():String
+		{
+			return colorByAttribute;
+		}
+		public function set ColorBy(attributeName:String):void
+		{
+			colorByAttribute = attributeName;
 		}
 		
 		public function get GroupBy():String
@@ -138,6 +148,16 @@ package twinlist
 		public function set GroupBy(attributeName:String):void
 		{
 			groupByAttribute = attributeName;
+			SortListViewerData();
+		}
+		
+		public function get SortBy():String
+		{
+			return sortByAttribute;
+		}
+		public function set SortBy(attributeName:String):void
+		{
+			sortByAttribute = attributeName;
 			SortListViewerData();
 		}
 		
