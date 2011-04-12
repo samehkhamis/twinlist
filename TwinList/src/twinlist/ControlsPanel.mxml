@@ -15,14 +15,12 @@
 		<s:Label text="Group by:" paddingTop="5" width="80"/>
 		<s:DropDownList id="groupByList" width="100%"
 						dataProvider="{model.ListItemAttributes}" change="OnChange(event)"
-						selectedIndex="0"
 						/>
 	</s:HGroup>
 	<s:HGroup>
 		<s:Label text="Sort by:" paddingTop="5" width="80"/>
 		<s:DropDownList id="sortByList" width="100%"
 						dataProvider="{model.ListItemAttributes}" change="OnChange(event)"
-						selectedIndex="0"
 						/>
 	</s:HGroup>
 </twinlist:ControlsPanelClass>

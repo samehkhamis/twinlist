@@ -3,6 +3,7 @@ package twinlist
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	
+	import mx.controls.AdvancedDataGrid;
 	import mx.events.CollectionEvent;
 	import mx.events.ListEvent;
 	import mx.managers.ToolTipManager;
@@ -13,6 +14,7 @@ package twinlist
 	{
 		[Bindable]
 		protected var model:Model = Model.Instance;
+		public var dataGrid:AdvancedDataGrid;
 		
 		public function ListViewerClass()
 		{
@@ -49,11 +51,6 @@ package twinlist
 				case 4: item = row.L2Unique; break;
 			}
 			return item;			
-		}
-		
-		private function OnDataChange(event:Event):void
-		{
-			
 		}
 	}
 }

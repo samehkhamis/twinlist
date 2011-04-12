@@ -36,15 +36,18 @@ package twinlist
 			// init
 			lists = new ArrayCollection();
 			listIdx = new Object();
-			defaultSort = new Sort();
-			groupByAttribute = "Name";
-			sortByAttribute = "Name";
-			actionListItems = new ArrayCollection();
 			visibleListIds = new Array(2);
+			listViewerData = new ArrayCollection();
+			listItemAttributes = new ArrayCollection();
+			actionListItems = new ArrayCollection();
+			defaultSort = new Sort();
+			selectedItem = null;
+			groupByAttribute = null;
+			sortByAttribute = null;
 			// load data
-			LoadCannedData();
-//			ReadXml("../data/list1.xml");
-//			ReadXml("../data/list2.xml");
+			//LoadCannedData();
+			ReadXml("../data/list1.xml");
+			ReadXml("../data/list2.xml");
 		}
 		
 		public static function get Instance():Model
@@ -156,26 +159,31 @@ package twinlist
 			var item2:ListItem = GetListItemToSortOn(b as ListViewerItem);
 			var val1:Object;
 			var val2:Object;
-			if (groupByAttribute == "Name") {
-				val1 = item1.Name;
-				val2 = item2.Name;		
+			var sortVal:int = 0;
+			if (groupByAttribute != null) {
+				if (groupByAttribute == "Name") {
+					val1 = item1.Name;
+					val2 = item2.Name;		
+				}
+				else {
+					val1 = item1.Attributes[groupByAttribute].Values[0];
+					val2 = item2.Attributes[groupByAttribute].Values[0];		
+				}
+				sortVal = defaultSort.compareFunction.call(null, val1, val2, fields);
 			}
-			else {
-				val1 = item1.Attributes[groupByAttribute].Values[0];
-				val2 = item2.Attributes[groupByAttribute].Values[0];		
-			}
-			var sortVal:int = defaultSort.compareFunction.call(null, val1, val2, fields);
 			if (sortVal != 0)
 				return sortVal;
-			if (sortByAttribute == "Name") {
-				val1 = item1.Name;
-				val2 = item2.Name;		
+			if (sortByAttribute != null) {
+				if (sortByAttribute == "Name") {
+					val1 = item1.Name;
+					val2 = item2.Name;		
+				}
+				else {
+					val1 = item1.Attributes[sortByAttribute].Values[0];
+					val2 = item2.Attributes[sortByAttribute].Values[0];		
+				}
+				sortVal = defaultSort.compareFunction.call(null, val1, val2, fields);
 			}
-			else {
-				val1 = item1.Attributes[sortByAttribute].Values[0];
-				val2 = item2.Attributes[sortByAttribute].Values[0];		
-			}
-			sortVal = defaultSort.compareFunction.call(null, val1, val2, fields);
 			return sortVal;
 		}
 		
@@ -220,10 +228,10 @@ package twinlist
 					for each (var valXml:XML in attrXml.children()) {
 						var value:Object;
 						if (attrType == ListItemAttribute.TYPE_CATEGORICAL) {
-							value = valXml.attribute("value");
+							value = valXml.attribute("value").toString();
 						}
 						else {
-							value = parseFloat(valXml.attribute("value"));
+							value = parseFloat(valXml.attribute("value").toString());
 						}
 						attr.Values.push(value);
 					}
@@ -235,7 +243,6 @@ package twinlist
 			lists.addItem(list);
 			if (lists.length >= 2) {
 				FinishInit();
-				SetVisibleLists(lists[2], lists[3]);
 			}
 		}
 		
@@ -243,7 +250,7 @@ package twinlist
 		{
 			SetVisibleLists(lists[0].Id, lists[1].Id);
 			DetectAttributes();
-			SortListViewerData();
+			//SortListViewerData();
 		}
 
 		private function LoadCannedData():void
@@ -368,7 +375,7 @@ package twinlist
 		private function DetectAttributes():void
 		{
 			var attrKeys:Object = new Object();
-			listItemAttributes = new ArrayCollection();
+			listItemAttributes.removeAll();
 			listItemAttributes.addItem("Name");
 			for each (var list:ArrayCollection in lists) {
 				for each (var item:ListItem in list) {
@@ -384,7 +391,7 @@ package twinlist
 		
 		private function ReconcileLists(list1:List, list2:List):void
 		{
-			listViewerData = new ArrayCollection();
+			listViewerData.removeAll();
 			var maxLen:int = Math.max(list1.length, list2.length);
 			var iter1:int = 0;
 			var iter2:int = 0;
