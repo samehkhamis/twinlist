@@ -141,13 +141,17 @@ package twinlist
 			SortListViewerData();
 		}
 		
-		public function set FilterByString(filterString:String):void {
+		public function get FilterByString():String
+		{
+			return filterByString;
+		}
+		public function set FilterByString(filterString:String):void
+		{
 			filterByString=filterString;
 			Debug.log(filterString);
 			// Here a function will be call to filter the rows of the list viewer and refresh it.
 			//FilterListViewerData();
-		}
-		
+		}	
 		
 		public function get VisibleListIds():Array
 		{
