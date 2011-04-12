@@ -1,5 +1,7 @@
 package twinlist
 {	
+	import com.carlcalderon.arthropod.Debug;
+	
 	import flash.events.Event;
 	import flash.net.URLLoader;
 	import flash.net.URLLoaderDataFormat;
@@ -27,6 +29,8 @@ package twinlist
 		private var selectedItem:ListItem;
 		private var sortByAttribute:String;
 		private var groupByAttribute:String;
+		private var filterByString:String;
+		
 		
 		public function Model()
 		{
@@ -48,6 +52,10 @@ package twinlist
 			//LoadCannedData();
 			ReadXml("../data/list1.xml");
 			ReadXml("../data/list2.xml");
+
+			// Reset filter by string.
+			filterByString = null;
+
 		}
 		
 		public static function get Instance():Model
@@ -132,6 +140,14 @@ package twinlist
 			groupByAttribute = attributeName;
 			SortListViewerData();
 		}
+		
+		public function set FilterByString(filterString:String):void {
+			filterByString=filterString;
+			Debug.log(filterString);
+			// Here a function will be call to filter the rows of the list viewer and refresh it.
+			//FilterListViewerData();
+		}
+		
 		
 		public function get VisibleListIds():Array
 		{
