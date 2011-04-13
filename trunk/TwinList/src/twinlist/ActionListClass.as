@@ -32,7 +32,7 @@ package twinlist
 			var columns:Array = dataGrid.columns;
 			var col:AdvancedDataGridColumn;
 			var factory:ClassFactory;
-			for each (var attr:String in model.ListItemAttributes) {
+			for each (var attr:String in model.DataAttributes) {
 				col = new AdvancedDataGridColumn(attr);
 				factory = new ClassFactory(ActionListItemRenderer);
 				factory.properties = {ColumnName:attr};

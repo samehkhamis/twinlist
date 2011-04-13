@@ -23,8 +23,11 @@ package twinlist
 		private var listIdx:Object;
 		private var visibleListIds:Array;
 		private var listViewerData:ArrayCollection;
-		private var listItemAttributes:ArrayCollection;
 		private var actionListItems:ArrayCollection;
+		// attributes
+		private var dataAttributes:ArrayCollection;
+		private var categoricalAttributes:ArrayCollection;
+		private var numericalAttributes:ArrayCollection;
 		// publicly set variables
 		private var selectedItem:ListItem;
 		private var sizeByAttribute:String;
@@ -44,8 +47,10 @@ package twinlist
 			listIdx = new Object();
 			visibleListIds = new Array(2);
 			listViewerData = new ArrayCollection();
-			listItemAttributes = new ArrayCollection();
 			actionListItems = new ArrayCollection();
+			dataAttributes = new ArrayCollection();
+			categoricalAttributes = new ArrayCollection();
+			numericalAttributes = new ArrayCollection();
 			defaultSort = new Sort();
 			selectedItem = null;
 			groupByAttribute = null;
@@ -118,9 +123,19 @@ package twinlist
 			selectedItem = listItem;
 		}
 		
-		public function get ListItemAttributes():ArrayCollection
+		public function get DataAttributes():ArrayCollection
 		{
-			return listItemAttributes;
+			return dataAttributes;
+		}
+		
+		public function get CategoricalAttributes():ArrayCollection
+		{
+			return categoricalAttributes;
+		}
+		
+		public function get NumericalAttributes():ArrayCollection
+		{
+			return numericalAttributes;
 		}
 		
 		public function get SizeBy():String
@@ -261,17 +276,20 @@ package twinlist
 				var item:ListItem = new ListItem(itemId, itemName);
 				for each (var attrXml:XML in itemXml.children()) {
 					var attrName:String = attrXml.attribute("name");
-					var attrType:uint = attrXml.attribute("type") == "Categorical" ? ListItemAttribute.TYPE_CATEGORICAL : ListItemAttribute.TYPE_NUMBER;
 					var attr:ListItemAttribute = new ListItemAttribute(attrName);
-					attr.Type = attrType;
+					switch (attrXml.attribute("type").toString()) {
+						case "Categorical": attr.Type = ListItemAttribute.TYPE_CATEGORICAL; break;
+						case "Numerical": attr.Type = ListItemAttribute.TYPE_NUMERICAL; break;
+						default : attr.Type = ListItemAttribute.TYPE_GENERAL; break;
+					}
 					attr.Values = new Array();
 					for each (var valXml:XML in attrXml.children()) {
 						var value:Object;
-						if (attrType == ListItemAttribute.TYPE_CATEGORICAL) {
-							value = valXml.attribute("value").toString();
+						if (attr.Type == ListItemAttribute.TYPE_NUMERICAL) {
+							value = parseFloat(valXml.attribute("value").toString());
 						}
 						else {
-							value = parseFloat(valXml.attribute("value").toString());
+							value = valXml.attribute("value").toString();
 						}
 						attr.Values.push(value);
 					}
@@ -414,15 +432,24 @@ package twinlist
 		
 		private function DetectAttributes():void
 		{
+			// empty current collections
+			dataAttributes.removeAll();
+			categoricalAttributes.removeAll();
+			numericalAttributes.removeAll();
+			// add name field
+			dataAttributes.addItem("Name");
+			// iterate over all lists, items and detect attributes
 			var attrKeys:Object = new Object();
-			listItemAttributes.removeAll();
-			listItemAttributes.addItem("Name");
 			for each (var list:ArrayCollection in lists) {
 				for each (var item:ListItem in list) {
 					for each (var attr:ListItemAttribute in item.Attributes) {
 						if (!(attr.Name in attrKeys)) {
 							attrKeys[attr.Name] = attr.Name;
-							listItemAttributes.addItem(attr.Name);
+							dataAttributes.addItem(attr.Name);
+							switch (attr.Type) {
+								case ListItemAttribute.TYPE_CATEGORICAL: categoricalAttributes.addItem(attr.Name); break;
+								case ListItemAttribute.TYPE_NUMERICAL: numericalAttributes.addItem(attr.Name); break;
+							}
 						}
 					}
 				}

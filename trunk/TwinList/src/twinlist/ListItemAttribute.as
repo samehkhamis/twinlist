@@ -3,8 +3,9 @@ package twinlist
 	[Bindable]
 	public class ListItemAttribute
 	{
-		public static const TYPE_CATEGORICAL:uint = 0;
-		public static const TYPE_NUMBER:uint = 1;
+		public static const TYPE_GENERAL:uint = 0;
+		public static const TYPE_CATEGORICAL:uint = 1;
+		public static const TYPE_NUMERICAL:uint = 2;
 		
 		private var name:String;
 		private var values:Array;
@@ -12,9 +13,9 @@ package twinlist
 		
 		public function ListItemAttribute(name:String = "", values:Array = null, type:uint = TYPE_CATEGORICAL)
 		{
-			this.name = name;
-			this.values = values;
-			this.type = type;
+			Name = name;
+			Values = values;
+			Type = type;
 		}
 		
 		public function get Name():String
@@ -41,7 +42,7 @@ package twinlist
 		}
 		public function set Type(type:uint):void
 		{
-			if (type > 1)
+			if (type > 2)
 				throw new Error("Invalid ListItemAttribute type " + type);
 			this.type = type;
 		}
