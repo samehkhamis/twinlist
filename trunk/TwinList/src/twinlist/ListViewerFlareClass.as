@@ -7,6 +7,7 @@ package twinlist
 	import flare.display.RectSprite;
 	import flare.vis.Visualization;
 	import flare.vis.data.DataSprite;
+	import flare.vis.data.NodeSprite;
 	import flare.vis.data.Data;
 	
 	import flash.events.MouseEvent;
@@ -24,7 +25,12 @@ package twinlist
 		[Bindable]
 		protected var vis:Visualization;
 		
-		private var textLists:Object = null;
+		private var visList:ArrayCollection;
+		private var columnWidth:int = 0;
+		private var columnHeight:int = 0;
+		private var textHeight:int = 24;
+		private var textSpacing:int = 12;
+		private var reconciled:Boolean = false;
 		
 		public function ListViewerFlareClass()
 		{
@@ -34,69 +40,128 @@ package twinlist
 		
 		protected function OnInitialize(event:Event):void
 		{
-			var columnLength:int = 0;
-			var columnWidth:int = 0;
-			var textHeight:int = 24;
+			// TODO: Fix this when we settle on multi-list reconciliation
+			var l1y:int = textSpacing;
+			var l2y:int = textSpacing;
+			var ry:int = textSpacing;
+			var rowHeight = textHeight + textSpacing;
 			
-			textLists = new Object();
-			for each (var list:List in model.Lists)
+			visList = new ArrayCollection();
+			for each (var item:ListViewerItem in model.ListViewerData)
 			{
-				if (list.length > columnLength)
-					columnLength = list.length;
-				
-				textLists[list.Id] = new ArrayCollection();
-				for each (var item:ListItem in list)
+				if (item.Identical)
 				{
-					var text:TextSprite = new TextSprite(item.Name);
-					text.color = 0xff0000ff;
-					text.size = textHeight;
-					text.buttonMode = true;
-					text.addEventListener(MouseEvent.CLICK,
-						function(event:MouseEvent):void { Alert.show(event.currentTarget.text); }
-					);
-					
-					if (text.width > columnWidth)
-						columnWidth = text.width;
-					textLists[list.Id].addItem(text);
+					visList.addItem(CreateItemSprite(item.Identical, {x1: 1, y1: l1y, x2: 2, y2: ry}));
+					visList.addItem(CreateItemSprite(item.Identical, {x1: 3, y1: l2y, x2: 2, y2: ry}));
+					l1y += rowHeight;
+					l2y += rowHeight;
+					ry += rowHeight;
+				}
+				else if (item.L1Similar)
+				{
+					visList.addItem(CreateItemSprite(item.L1Similar, {x1: 1, y1: l1y, x2: 1, y2: ry}));
+					visList.addItem(CreateItemSprite(item.L2Similar, {x1: 3, y1: l2y, x2: 3, y2: ry}));
+					l1y += rowHeight;
+					l2y += rowHeight;
+					ry += rowHeight;
+				}
+				else if (item.L1Unique)
+				{
+					visList.addItem(CreateItemSprite(item.L1Unique, {x1: 1, y1: l1y, x2: 0, y2: ry}));
+					l1y += rowHeight;
+					ry += rowHeight;
+				}
+				else if (item.L2Unique)
+				{
+					visList.addItem(CreateItemSprite(item.L2Unique, {x1: 3, y1: l2y, x2: 4, y2: ry}));
+					l2y += rowHeight;
+					ry += rowHeight;
 				}
 			}
 			
-			var columnHeight:int = columnLength * textHeight * 2;
+			// Calculate column width
+			for each (var sprite:DataSprite in visList)
+				if (sprite.getChildAt(0).width > columnWidth)
+					columnWidth = sprite.getChildAt(0).width;
+			
+			// Set up the visualization
+			columnHeight = model.ListViewerData.length * rowHeight;
 			vis.bounds = new Rectangle(0, 0, 5 * columnWidth, columnHeight);
 			
-			var x:int = columnWidth;
-			var y:int = 0;
-			for (var id:* in textLists)
+			for (var x:int = 1; x <= 3; x += 2)
 			{
-				var rect:RectSprite = new RectSprite(x, 0, columnWidth, columnHeight);
+				var rect:RectSprite = new RectSprite(x * columnWidth, 0, columnWidth, columnHeight);
 				rect.fillColor = rect.lineColor = 0xffcccccc;
 				vis.addChild(rect);
-				
-				for each (var t:TextSprite in textLists[id])
-				{
-					t.x = x;
-					t.y = y;
-					vis.addChild(t);
-					
-					y += textHeight * 2;
-				}
-				x += columnWidth * 2;
-				y = 0;
+			}
+			
+			// Fix x values and draw sprites
+			for each (var sprite:DataSprite in visList)
+			{
+				sprite.data.properties.x1 *= columnWidth;
+				sprite.data.properties.x2 *= columnWidth;
+				sprite.x = sprite.data.properties.x1;
+				sprite.y = sprite.data.properties.y1;
+				vis.addChild(sprite);
 			}
 		}
 		
-		private function RotateAndStretch(sprite:DataSprite):void
+		private function CreateItemSprite(item:ListItem, properties:Object):DataSprite
 		{
-			var rot:Tween = new Tween(sprite, 1, {rotation:360});
-			var t1:Tween = new Tween(sprite, 1, {y:200});
-			var t2:Tween = new Tween(sprite, 1, {scaleX:2});
-			var t3:Tween = new Tween(sprite, 1, {y:300});
-			var t4:Tween = new Tween(sprite, 1, {scaleX:1});
-			var seq:Sequence = new Sequence(
-				new Parallel(t1, t2, rot),
-				new Parallel(t3, t4, rot)
-			);
-			seq.play();	
+			var text:TextSprite = new TextSprite(item.Name);
+			text.color = 0xff0000ff;
+			text.size = textHeight;
+			
+			var sprite:DataSprite = new DataSprite();
+			sprite.renderer = null;
+			sprite.data = {properties: properties, item: item};
+			sprite.buttonMode = true;
+			sprite.addEventListener(MouseEvent.CLICK, ItemClick);
+			sprite.addEventListener(MouseEvent.ROLL_OVER, ItemRollOver);
+			sprite.addEventListener(MouseEvent.ROLL_OUT, ItemRollOut);
+			sprite.addChild(text);
+			
+			return sprite;
+		}
+		
+		private function ItemClick(event:MouseEvent):void
+		{
+			//Alert.show(event.currentTarget.data.item.Name);
+			
+			var animation:Parallel = new Parallel();
+			if (reconciled)
+			{
+				for each (var sprite:DataSprite in visList)
+				{
+					animation.add(new Tween(sprite, 1, {x: sprite.data.properties.x1}));
+					animation.add(new Tween(sprite, 1, {y: sprite.data.properties.y1}));
+				}
+				reconciled = false;
+			}
+			else
+			{
+				for each (var sprite:DataSprite in visList)
+				{
+					animation.add(new Tween(sprite, 1, {x: sprite.data.properties.x2}));
+					animation.add(new Tween(sprite, 1, {y: sprite.data.properties.y2}));
+				}
+				reconciled = true;
+			}
+			animation.play();
+		}
+		
+		private function ItemRollOver(event:MouseEvent):void
+		{
+			var sprite:DataSprite = event.currentTarget as DataSprite;
+			var text:TextSprite = sprite.getChildAt(0) as TextSprite;
+			text.color = 0xffff0000;
+		}
+		
+		private function ItemRollOut(event:MouseEvent):void
+		{
+			var sprite:DataSprite = event.currentTarget as DataSprite;
+			var text:TextSprite = sprite.getChildAt(0) as TextSprite;
+			text.color = 0xff0000ff;
 		}
 	}
 }
