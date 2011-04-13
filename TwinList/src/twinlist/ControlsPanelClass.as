@@ -26,20 +26,22 @@ package twinlist
 			// Based on selected control will set the SortBy, GroupBy or ... of the model and refresh the list view.
 			var dd:DropDownList = event.target as DropDownList;
 			switch (dd.id) {
+				case "SizeByList":
+					//Debug.log("ColorByList");
+					model.SizeBy = model.NumericalAttributes[event.newIndex];
+					break;
+				case "ColorByList":
+					//Debug.log("ColorByList");
+					model.ColorBy = model.CategoricalAttributes[event.newIndex];
+					break;
 				case "groupByList":
-					Debug.log("GroupByList");
-					model.GroupBy = model.ListItemAttributes[event.newIndex];
+					//Debug.log("GroupByList");
+					model.GroupBy = model.CategoricalAttributes[event.newIndex];
 					break;
 				case "sortByList":
-					model.SortBy = model.ListItemAttributes[event.newIndex];
-					Debug.log("SortByList");
+					//Debug.log("SortByList");
+					model.SortBy = model.DataAttributes[event.newIndex];
 					break;
-				/*
-				case "ColorByList":
-					Debug.log("ColorByList");
-					model.ColorBy=model.ListItemAttributes.getItemAt(event.newIndex).toString();
-					break;
-				*/
 			}
 		}
 	}
