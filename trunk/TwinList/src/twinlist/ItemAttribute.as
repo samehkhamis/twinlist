@@ -3,8 +3,9 @@ package twinlist
 	import mx.collections.ArrayCollection;
 
 	[Bindable]
-	public class ListItemAttribute
+	public class ItemAttribute
 	{
+		// type constants
 		public static const TYPE_GENERAL:uint = 0;
 		public static const TYPE_CATEGORICAL:uint = 1;
 		public static const TYPE_NUMERICAL:uint = 2;
@@ -13,7 +14,7 @@ package twinlist
 		private var values:Array;
 		private var type:uint;
 		
-		public function ListItemAttribute(name:String = "", values:Array = null, type:uint = TYPE_CATEGORICAL)
+		public function ItemAttribute(name:String = "", values:Array = null, type:uint = TYPE_GENERAL)
 		{
 			Name = name;
 			Values = new Array();
@@ -51,7 +52,7 @@ package twinlist
 			this.type = type;
 		}
 		
-		public function Equals(rhs:ListItemAttribute):Boolean
+		public function Equals(rhs:ItemAttribute):Boolean
 		{
 			if (this.Name != rhs.Name)
 				return false;
@@ -62,6 +63,11 @@ package twinlist
 					return false;
 			}
 			return true;
+		}
+		
+		public function toString():String
+		{
+			return name;
 		}
 	}
 }

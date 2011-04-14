@@ -10,6 +10,7 @@ package twinlist
 		public function TwinListClass()
 		{
 			super();
+			var x:Number = 10;
 		}
 	}
 }

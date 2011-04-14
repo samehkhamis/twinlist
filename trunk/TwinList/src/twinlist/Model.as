@@ -37,13 +37,12 @@ package twinlist
 		private var numericalAttributes:ArrayCollection;
 		// publicly set variables
 		private var selectedItem:ListItem;
-		private var sizeByAttribute:String;
-		private var colorByAttribute:String;
-		private var sortByAttribute:String;
-		private var groupByAttribute:String;
+		private var sizeByAttribute:AttributeDescriptor;
+		private var colorByAttribute:AttributeDescriptor;
+		private var sortByAttribute:AttributeDescriptor;
+		private var groupByAttribute:AttributeDescriptor;
 		private var filterByString:String;
 		private var filterList:ArrayCollection;
-		
 		
 		public function Model()
 		{
@@ -144,39 +143,39 @@ package twinlist
 			return numericalAttributes;
 		}
 		
-		public function get SizeBy():String
+		public function get SizeBy():AttributeDescriptor
 		{
 			return sizeByAttribute;
 		}
-		public function set SizeBy(attributeName:String):void
+		public function set SizeBy(attributeName:AttributeDescriptor):void
 		{
 			sizeByAttribute = attributeName;
 		}
 		
-		public function get ColorBy():String
+		public function get ColorBy():AttributeDescriptor
 		{
 			return colorByAttribute;
 		}
-		public function set ColorBy(attributeName:String):void
+		public function set ColorBy(attributeName:AttributeDescriptor):void
 		{
 			colorByAttribute = attributeName;
 		}
 		
-		public function get GroupBy():String
+		public function get GroupBy():AttributeDescriptor
 		{
 			return groupByAttribute;
 		}
-		public function set GroupBy(attributeName:String):void
+		public function set GroupBy(attributeName:AttributeDescriptor):void
 		{
 			groupByAttribute = attributeName;
 			SortListViewerData();
 		}
 		
-		public function get SortBy():String
+		public function get SortBy():AttributeDescriptor
 		{
 			return sortByAttribute;
 		}
-		public function set SortBy(attributeName:String):void
+		public function set SortBy(attributeName:AttributeDescriptor):void
 		{
 			sortByAttribute = attributeName;
 			SortListViewerData();
@@ -252,26 +251,26 @@ package twinlist
 			var val2:Object;
 			var sortVal:int = 0;
 			if (groupByAttribute != null) {
-				if (groupByAttribute == "Name") {
+				if (groupByAttribute.Name == "Name") {
 					val1 = item1.Name;
 					val2 = item2.Name;		
 				}
 				else {
-					val1 = item1.Attributes[groupByAttribute].Values[0];
-					val2 = item2.Attributes[groupByAttribute].Values[0];		
+					val1 = item1.Attributes[groupByAttribute.Name].Values[0];
+					val2 = item2.Attributes[groupByAttribute.Name].Values[0];		
 				}
 				sortVal = defaultSort.compareFunction.call(null, val1, val2, fields);
 			}
 			if (sortVal != 0)
 				return sortVal;
-			if (sortByAttribute != null) {
-				if (sortByAttribute == "Name") {
+			if (sortByAttribute.Name != null) {
+				if (sortByAttribute.Name == "Name") {
 					val1 = item1.Name;
 					val2 = item2.Name;		
 				}
 				else {
-					val1 = item1.Attributes[sortByAttribute].Values[0];
-					val2 = item2.Attributes[sortByAttribute].Values[0];		
+					val1 = item1.Attributes[sortByAttribute.Name].Values[0];
+					val2 = item2.Attributes[sortByAttribute.Name].Values[0];		
 				}
 				sortVal = defaultSort.compareFunction.call(null, val1, val2, fields);
 			}
@@ -312,16 +311,16 @@ package twinlist
 				var item:ListItem = new ListItem(itemId, itemName);
 				for each (var attrXml:XML in itemXml.children()) {
 					var attrName:String = attrXml.attribute("name");
-					var attr:ListItemAttribute = new ListItemAttribute(attrName);
+					var attr:ItemAttribute = new ItemAttribute(attrName);
 					switch (attrXml.attribute("type").toString()) {
-						case "Categorical": attr.Type = ListItemAttribute.TYPE_CATEGORICAL; break;
-						case "Numerical": attr.Type = ListItemAttribute.TYPE_NUMERICAL; break;
-						default : attr.Type = ListItemAttribute.TYPE_GENERAL; break;
+						case "Categorical": attr.Type = ItemAttribute.TYPE_CATEGORICAL; break;
+						case "Numerical": attr.Type = ItemAttribute.TYPE_NUMERICAL; break;
+						default : attr.Type = ItemAttribute.TYPE_GENERAL; break;
 					}
 					attr.Values = new Array();
 					for each (var valXml:XML in attrXml.children()) {
 						var value:Object;
-						if (attr.Type == ListItemAttribute.TYPE_NUMERICAL) {
+						if (attr.Type == ItemAttribute.TYPE_NUMERICAL) {
 							value = parseFloat(valXml.attribute("value").toString());
 						}
 						else {
@@ -354,113 +353,113 @@ package twinlist
 			// list 1
 			var list1:List = new List("list1", "Patient");
 			var item:ListItem = new ListItem("list1id1", "Calcitrol");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["0.25mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["Daily"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["0.25mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
 			list1.addItem(item);
 			item = new ListItem("list1id2", "Darbepoetin");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["60mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["SC"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["qFriday"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["60mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["SC"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["qFriday"]);
 			list1.addItem(item);
 			item = new ListItem("list1id3", "Docusate Sodium");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["100mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["BID"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["100mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["BID"]);
 			list1.addItem(item);
 			item = new ListItem("list1id4", "Ramipril");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["5mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["Daily"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["5mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
 			list1.addItem(item);
 			item = new ListItem("list1id5", "Acetaminophen");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["325mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["q4h"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["325mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["q4h"]);
 			list1.addItem(item);
 			item = new ListItem("list1id6", "Calcium Carbonate");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["500mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["TID CC"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["500mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["TID CC"]);
 			list1.addItem(item);
 			item = new ListItem("list1id7", "Atorvistatin");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["40mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["Daily"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["40mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
 			list1.addItem(item);
 			item = new ListItem("list1id8", "Metoprolol");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["50mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["Daily"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["50mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
 			list1.addItem(item);
 			item = new ListItem("list1id9", "Aspirin");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["81mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["Daily"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["81mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
 			list1.addItem(item);
 			item = new ListItem("list1id10", "Meloxicam");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["7.5mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["Daily"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["7.5mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
 			list1.addItem(item);
 			listIdx[list1.Id] = lists.length;
 			lists.addItem(list1);
 			// list 2
 			var list2:List = new List("list2", "Hospital");
 			item = new ListItem("list2id1", "Calcitrol");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["0.25mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["Daily"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["0.25mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
 			list2.addItem(item);
 			item = new ListItem("list2id2", "Darbepoetin");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["60mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["SC"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["qFriday"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["60mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["SC"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["qFriday"]);
 			list2.addItem(item);
 			item = new ListItem("list2id3", "Docusate Sodium");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["100mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["BID"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["100mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["BID"]);
 			list2.addItem(item);
 			item = new ListItem("list2id4", "Ramipril");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["5mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["Daily"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["5mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
 			list2.addItem(item);
 			item = new ListItem("list2id5", "Acetaminophen");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["325mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["q4h"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["325mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["q4h"]);
 			list2.addItem(item);
 			item = new ListItem("list2id6", "Calcium Carbonate");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["1000mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["TID CC"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["1000mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["TID CC"]);
 			list2.addItem(item);
 			item = new ListItem("list2id7", "Atorvistatin");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["60mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["Daily"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["60mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
 			list2.addItem(item);
 			item = new ListItem("list2id8", "Metoprolol");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["100mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["BID"]);			
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["100mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["BID"]);			
 			list2.addItem(item);
 			item = new ListItem("list2id9", "Ferrous Gloconate");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["300mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["TID"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["300mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["TID"]);
 			list2.addItem(item);
 			item = new ListItem("list2id10", "Omeprazole");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["40mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["Daily"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["40mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
 			list2.addItem(item);
 			item = new ListItem("list2id11", "Ciproflaxocin");
-			item.Attributes["Dosage"] = new ListItemAttribute("Dosage", ["500mg"]);
-			item.Attributes["Form"] = new ListItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ListItemAttribute("Frequency", ["Daily"]);
+			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["500mg"]);
+			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
+			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
 			list2.addItem(item);
 			listIdx[list2.Id] = lists.length;
 			lists.addItem(list2);
@@ -469,27 +468,52 @@ package twinlist
 		
 		private function DetectAttributes():void
 		{
+			// local vars
+			var added:Object = new Object();
+			var attrNames:Array = new Array();
+			// add name field
+			added["Name"] = new AttributeDescriptor("Name", ItemAttribute.TYPE_GENERAL);
+			attrNames.push("Name");
+			// iterate over all lists, items and detect attributes
+			for (var i:int = 0; i < 2; i++) {
+				var list:ArrayCollection = lists[listIdx[visibleListIds[i]]];
+				for each (var item:ListItem in list) {
+					for each (var a:ItemAttribute in item.Attributes) {
+						if (!(a.Name in added)) {
+							added[a.Name] = new AttributeDescriptor(a.Name, a.Type);
+							attrNames.push(a.Name);
+						}
+						if (a.Type == ItemAttribute.TYPE_NUMERICAL) {
+							var minVal:Number = added[a.Name].Properties[AttributeDescriptor.PROP_MINVAL];
+							var maxVal:Number = added[a.Name].Properties[AttributeDescriptor.PROP_MAXVAL];
+							for each (var val:Number in a.Values) {
+								if (isNaN(minVal) || minVal > val)
+									minVal = val;
+								if (isNaN(maxVal) || maxVal < val)
+									maxVal = val;
+							}
+							added[a.Name].Properties[AttributeDescriptor.PROP_MINVAL] = minVal;
+							added[a.Name].Properties[AttributeDescriptor.PROP_MAXVAL] = maxVal;
+						}
+						else {
+							added[a.Name].Properties[AttributeDescriptor.PROP_VALUES][val.toString()] = val;
+						}
+					}
+				}
+			}
 			// empty current collections
 			dataAttributes.removeAll();
 			categoricalAttributes.removeAll();
 			numericalAttributes.removeAll();
-			// add name field
-			dataAttributes.addItem("Name");
-			// iterate over all lists, items and detect attributes
-			var attrKeys:Object = new Object();
-			for each (var list:ArrayCollection in lists) {
-				for each (var item:ListItem in list) {
-					for each (var attr:ListItemAttribute in item.Attributes) {
-						if (!(attr.Name in attrKeys)) {
-							attrKeys[attr.Name] = attr.Name;
-							dataAttributes.addItem(attr.Name);
-							switch (attr.Type) {
-								case ListItemAttribute.TYPE_CATEGORICAL: categoricalAttributes.addItem(attr.Name); break;
-								case ListItemAttribute.TYPE_NUMERICAL: numericalAttributes.addItem(attr.Name); break;
-							}
-						}
-					}
-				}
+			// add attributes to collections
+			// (using attrNames array to preserve ordering)
+			for each (var name:String in attrNames) {
+				var ad:AttributeDescriptor = added[name];
+				dataAttributes.addItem(ad);
+				switch (ad.Type) {
+					case ItemAttribute.TYPE_CATEGORICAL: categoricalAttributes.addItem(ad); break;
+					case ItemAttribute.TYPE_NUMERICAL: numericalAttributes.addItem(ad); break;
+				}			
 			}
 		}
 		

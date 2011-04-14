@@ -1,5 +1,9 @@
 package twinlist.filter
 {
+	import twinlist.ListItem;
+	import twinlist.ItemAttribute;
+	
+	[Bindable]
 	public class GeneralAttributeFilter implements IFilter
 	{
 		private var attrName:String;
