@@ -1,19 +1,16 @@
 package twinlist
 {
 	import flare.animate.Parallel;
-	import flare.animate.Sequence;
 	import flare.animate.Tween;
-	import flare.display.TextSprite;
 	import flare.display.RectSprite;
+	import flare.display.TextSprite;
 	import flare.vis.Visualization;
 	import flare.vis.data.DataSprite;
-	import flare.vis.data.NodeSprite;
-	import flare.vis.data.Data;
 	
+	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.geom.Rectangle;
 	
-	import mx.controls.Alert;
 	import mx.collections.ArrayCollection;
 	
 	import spark.components.Group;
@@ -36,6 +33,7 @@ package twinlist
 		{
 			super();
 			vis = new Visualization();
+			model.addEventListener(Model.DATA_LOADED, OnInitialize);
 		}
 		
 		protected function OnInitialize(event:Event):void
@@ -104,6 +102,8 @@ package twinlist
 				sprite.y = sprite.data.properties.y1;
 				vis.addChild(sprite);
 			}
+			
+			vis.update();
 		}
 		
 		private function CreateItemSprite(item:ListItem, properties:Object):DataSprite

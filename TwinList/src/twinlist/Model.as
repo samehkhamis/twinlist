@@ -3,17 +3,24 @@ package twinlist
 	import com.carlcalderon.arthropod.Debug;
 	
 	import flash.events.Event;
+	import flash.events.EventDispatcher;
 	import flash.net.URLLoader;
 	import flash.net.URLLoaderDataFormat;
 	import flash.net.URLRequest;
 	
 	import mx.collections.ArrayCollection;
 	import mx.collections.Sort;
+	import mx.core.IFactory;
 	import mx.events.CollectionEvent;
+	
+	import twinlist.filter.IFilter;
 
 	[Bindable]
-	public final class Model
+	public final class Model extends EventDispatcher
 	{
+		// event strings
+		public static const DATA_LOADED:String = "DataLoaded";
+		public static const VIEW_UPDATED:String = "ViewUpdated";
 		// model
 		private static var instance:Model = new Model();
 		// sorting
@@ -35,6 +42,7 @@ package twinlist
 		private var sortByAttribute:String;
 		private var groupByAttribute:String;
 		private var filterByString:String;
+		private var filterList:ArrayCollection;
 		
 		
 		public function Model()
@@ -55,14 +63,12 @@ package twinlist
 			selectedItem = null;
 			groupByAttribute = null;
 			sortByAttribute = null;
+			filterByString = null;
+			filterList = new ArrayCollection();
 			// load data
 			//LoadCannedData();
 			ReadXml("../data/list1.xml");
 			ReadXml("../data/list2.xml");
-
-			// Reset filter by string.
-			filterByString = null;
-
 		}
 		
 		public static function get Instance():Model
@@ -90,26 +96,26 @@ package twinlist
 			return actionListItems;
 		}
 		
-		public function ActionListContains(item:ListItem):Boolean
+		public function ActionListContains(item:ListItem):int
 		{
-			for each (var i:ListItem in actionListItems) {
-				if (i.Id == item.Id)
-					return true;
+			for (var idx:int = 0; idx < actionListItems.length; idx++) {
+				if (actionListItems[idx].Id == item.Id)
+					return idx;
 			}
-			return false;
+			return -1;
 		}
 		
 		public function AddActionListItem(item:ListItem):void
 		{
-			if (ActionListContains(item))
+			if (ActionListContains(item) >= 0)
 				return;
 			actionListItems.addItem(item);
 		}
 		
 		public function DelActionListItem(item:ListItem):void
 		{
-			var idx:int = actionListItems.getItemIndex(item);
-			if (idx != -1) {
+			var idx:int = ActionListContains(item);
+			if (idx >= 0) {
 				actionListItems.removeItemAt(idx);
 			}
 		}
@@ -186,7 +192,36 @@ package twinlist
 			Debug.log(filterString);
 			// Here a function will be call to filter the rows of the list viewer and refresh it.
 			//FilterListViewerData();
-		}	
+		}
+		
+		public function get Filters():ArrayCollection
+		{
+			return filterList;
+		}
+		
+		public function FilterListContains(filter:IFilter):int
+		{
+			for (var idx:int = 0; idx < filterList.length; idx++) {
+				if (filterList[idx].AttributeName == filter.AttributeName)
+					return idx;
+			}
+			return -1;
+		}
+		
+		public function AddFilter(filter:IFilter):void
+		{
+			if (FilterListContains(filter) >= 0)
+				return;
+			filterList.addItem(filter);
+		}
+		
+		public function DelFilter(filter:IFilter):void
+		{
+			var idx:int = FilterListContains(filter);
+			if (idx >= 0) {
+				filterList.removeItemAt(idx);
+			}
+		}
 		
 		public function get VisibleListIds():Array
 		{
@@ -309,6 +344,7 @@ package twinlist
 			SetVisibleLists(lists[0].Id, lists[1].Id);
 			DetectAttributes();
 			//SortListViewerData();
+			this.dispatchEvent(new Event(DATA_LOADED));
 		}
 
 		private function LoadCannedData():void
