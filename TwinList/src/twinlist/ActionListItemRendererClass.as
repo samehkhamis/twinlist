@@ -25,7 +25,7 @@ package twinlist
 				return;
 			if (colName == "Name")
 				label = item.Name;
-			var attr:ListItemAttribute = item.Attributes[colName];
+			var attr:ItemAttribute = item.Attributes[colName];
 			if (attr != null)
 				label = attr.Values.toString();
 		}

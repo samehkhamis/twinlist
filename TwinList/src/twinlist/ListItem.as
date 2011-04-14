@@ -42,7 +42,7 @@ package twinlist
 		public function toString():String
 		{
 			var string:String = Name;
-			for each (var attr:ListItemAttribute in attributes) {
+			for each (var attr:ItemAttribute in attributes) {
 				string += " " + attr.Values.toString();
 			}
 			return string;
@@ -52,8 +52,8 @@ package twinlist
 		{
 			if (this.name != rhs.name)
 				return false;
-			var attr1:ListItemAttribute = null;
-			var attr2:ListItemAttribute = null;
+			var attr1:ItemAttribute = null;
+			var attr2:ItemAttribute = null;
 			for each (attr1 in this.attributes) {
 				attr2 = rhs.attributes[attr1.Name];
 				if (attr2 == null || !attr1.Equals(attr2))

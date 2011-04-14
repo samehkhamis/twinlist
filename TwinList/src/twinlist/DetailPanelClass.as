@@ -19,7 +19,7 @@ package twinlist
 		protected function GetAttributes(item:ListItem):ArrayCollection
 		{
 			var array:ArrayCollection = new ArrayCollection();
-			for each (var attr:ListItemAttribute in item.Attributes) {
+			for each (var attr:ItemAttribute in item.Attributes) {
 				array.addItem(attr);
 			}
 			return array;

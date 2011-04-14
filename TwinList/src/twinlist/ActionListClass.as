@@ -32,16 +32,16 @@ package twinlist
 			var columns:Array = dataGrid.columns;
 			var col:AdvancedDataGridColumn;
 			var factory:ClassFactory;
-			for each (var attr:String in model.DataAttributes) {
-				col = new AdvancedDataGridColumn(attr);
+			for each (var attr:AttributeDescriptor in model.DataAttributes) {
+				col = new AdvancedDataGridColumn(attr.Name);
 				factory = new ClassFactory(ActionListItemRenderer);
-				factory.properties = {ColumnName:attr};
+				factory.properties = {ColumnName:attr.Name};
 				col.itemRenderer = factory;
-				if (attr != "Name") {
+				if (attr.Name != "Name") {
 					col.sortable = false;
 //					col.sortCompareFunction = function(a:Object, b:Object, fields:Array):int {
-//						var val1:Object = (a as ListItem).Attributes[attr][0];
-//						var val2:Object = (b as ListItem).Attributes[attr][0];
+//						var val1:Object = (a as ListItem).Attributes[attr.Name][0];
+//						var val2:Object = (b as ListItem).Attributes[attr.Name][0];
 //						return defaultSort.compareFunction.call(null, val1, val2, null);
 //					};
 				}
