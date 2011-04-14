@@ -34,6 +34,7 @@ package twinlist
 			super();
 			vis = new Visualization();
 			model.addEventListener(Model.DATA_LOADED, OnInitialize);
+			model.addEventListener(Model.VIEW_UPDATED, OnViewUpdate);
 		}
 		
 		protected function OnInitialize(event:Event):void
@@ -104,6 +105,11 @@ package twinlist
 			}
 			
 			vis.update();
+		}
+		
+		private function OnViewUpdate(event:Event):void
+		{
+			// TODO: view updating code goes here
 		}
 		
 		private function CreateItemSprite(item:ListItem, properties:Object):DataSprite

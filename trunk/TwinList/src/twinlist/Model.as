@@ -241,6 +241,7 @@ package twinlist
 			sort.compareFunction = SortFunction;
 			sort.sort(listViewerData.source);
 			listViewerData.refresh();
+			dispatchEvent(new Event(VIEW_UPDATED));
 		}
 		
 		private function SortFunction(a:Object, b:Object, fields:Array):int
@@ -344,7 +345,7 @@ package twinlist
 			SetVisibleLists(lists[0].Id, lists[1].Id);
 			DetectAttributes();
 			//SortListViewerData();
-			this.dispatchEvent(new Event(DATA_LOADED));
+			dispatchEvent(new Event(DATA_LOADED));
 		}
 
 		private function LoadCannedData():void
