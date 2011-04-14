@@ -1,16 +1,18 @@
 package twinlist
 {
+	import mx.collections.ArrayCollection;
+
 	[Bindable]
 	public class AttributeDescriptor
 	{
 		// property keys
-		public static const PROP_VALUES:String = "Values";
 		public static const PROP_MINVAL:String = "MinValue";
 		public static const PROP_MAXVAL:String = "MaxValue";
 
 		private var name:String;
 		private var type:uint;
 		private var properties:Object;
+		private var values:ArrayCollection;
 		
 		public function AttributeDescriptor(name:String = "", type:uint = -1, properties:Object = null)
 		{
@@ -27,9 +29,8 @@ package twinlist
 					Properties[PROP_MINVAL] = Number.NaN;
 					Properties[PROP_MAXVAL] = Number.NaN;
 				}
-				else
-					Properties[PROP_VALUES] = new Object();
 			}
+			Values = new ArrayCollection();
 		}
 		
 		public function get Name():String
@@ -59,6 +60,15 @@ package twinlist
 		public function set Properties(properties:Object):void
 		{
 			this.properties = properties;
+		}
+		
+		public function get Values():ArrayCollection
+		{
+			return values;
+		}
+		public function set Values(values:ArrayCollection):void
+		{
+			this.values = values;
 		}
 		
 		public function toString():String
