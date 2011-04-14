@@ -478,6 +478,8 @@ package twinlist
 			for (var i:int = 0; i < 2; i++) {
 				var list:ArrayCollection = lists[listIdx[visibleListIds[i]]];
 				for each (var item:ListItem in list) {
+					if (!added["Name"].Values.contains(item.Name))
+						added["Name"].Values.addItem(item.Name);
 					for each (var a:ItemAttribute in item.Attributes) {
 						if (!(a.Name in added)) {
 							added[a.Name] = new AttributeDescriptor(a.Name, a.Type);
@@ -495,8 +497,9 @@ package twinlist
 							added[a.Name].Properties[AttributeDescriptor.PROP_MINVAL] = minVal;
 							added[a.Name].Properties[AttributeDescriptor.PROP_MAXVAL] = maxVal;
 						}
-						else {
-							added[a.Name].Properties[AttributeDescriptor.PROP_VALUES][val.toString()] = val;
+						for each (var obj:Object in a.Values) {
+							if (!added[a.Name].Values.contains(obj))
+								added[a.Name].Values.addItem(obj);
 						}
 					}
 				}

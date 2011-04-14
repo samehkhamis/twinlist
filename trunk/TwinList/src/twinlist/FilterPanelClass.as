@@ -1,9 +1,5 @@
 package twinlist {
 	
-	import com.carlcalderon.arthropod.Debug;
-	
-	import mx.events.FlexEvent;
-	
 	import spark.components.Group;
 
 	public class FilterPanelClass extends Group
@@ -20,6 +16,5 @@ package twinlist {
 			// Triggers a filtering op in the list view based on string in "text"
 			model.FilterByString = text;
 		}
-		
 	}
 }
