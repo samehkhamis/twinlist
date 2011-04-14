@@ -1,5 +1,7 @@
 package twinlist
 {
+	import mx.collections.ArrayCollection;
+
 	[Bindable]
 	public class ListItemAttribute
 	{
@@ -14,7 +16,9 @@ package twinlist
 		public function ListItemAttribute(name:String = "", values:Array = null, type:uint = TYPE_CATEGORICAL)
 		{
 			Name = name;
-			Values = values;
+			Values = new Array();
+			if (values != null)
+				Values.push(values);
 			Type = type;
 		}
 		

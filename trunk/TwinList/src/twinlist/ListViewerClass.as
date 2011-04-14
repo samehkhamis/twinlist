@@ -31,7 +31,7 @@ package twinlist
 			var item:ListItem = GetClickedItem(event);
 			if (item == null)
 				return;
-			if (model.ActionListContains(item))
+			if (model.ActionListContains(item) >= 0)
 				model.DelActionListItem(item);
 			else
 				model.AddActionListItem(item);
