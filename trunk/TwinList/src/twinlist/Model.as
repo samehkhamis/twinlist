@@ -229,9 +229,10 @@ package twinlist
 		
 		public function SetVisibleLists(id1:String, id2:String):void
 		{
-			ReconcileLists(lists[listIdx[id1]], lists[listIdx[id2]]);
 			visibleListIds[0] = id1;
 			visibleListIds[1] = id2;
+			ReconcileLists(lists[listIdx[id1]], lists[listIdx[id2]]);
+			DetectAttributes();
 		}
 		
 		private function SortListViewerData():void
@@ -342,7 +343,6 @@ package twinlist
 		private function FinishInit():void
 		{
 			SetVisibleLists(lists[0].Id, lists[1].Id);
-			DetectAttributes();
 			//SortListViewerData();
 			dispatchEvent(new Event(DATA_LOADED));
 		}
