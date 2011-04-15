@@ -23,9 +23,8 @@ package twinlist
 			var minVal:Number = attribute.Properties[AttributeDescriptor.PROP_MINVAL];
 			var maxVal:Number = attribute.Properties[AttributeDescriptor.PROP_MAXVAL];
 			var vg:VGroup = new VGroup();
-			var lbl:Label;
 			vg.minWidth = 200;
-			lbl = new Label();
+			var lbl:Label = new Label();
 			lbl.text = "Bounds";
 			vg.addElement(lbl);
 			slider = new HSlider();
