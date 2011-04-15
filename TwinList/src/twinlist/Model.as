@@ -221,7 +221,6 @@ package twinlist
 			visibleListIds[1] = id2;
 			ReconcileLists(lists[listIdx[id1]], lists[listIdx[id2]]);
 			DetectAttributes();
-			SortListViewerData();
 		}
 		
 		public function FilterListViewerData():void
@@ -240,7 +239,12 @@ package twinlist
 				}
 			}
 			ReconcileLists(newLists[0], newLists[1]);
-			SortListViewerData();
+			if (SortBy != null || GroupBy != null)
+				SortListViewerData();
+			else {
+				listViewerData.refresh();
+				dispatchEvent(new Event(VIEW_UPDATED));
+			}
 		}
 		
 		private function SortListViewerData():void

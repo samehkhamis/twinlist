@@ -38,7 +38,7 @@ package twinlist.filter
 		
 		public function Apply(item:ListItem):Boolean
 		{
-			if (Values == null || Values.length == 0)
+			if (Values == null)
 				return true;
 			if (AttributeName == "Name") {
 				for each (var name:String in Values) {

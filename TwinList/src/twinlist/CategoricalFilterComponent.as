@@ -35,14 +35,14 @@ package twinlist
 				allIdx[i] = i;
 			}
 			lb.selectedIndices = allIdx;
-			model.FilterListViewerData();
+			(filter as CategoricalAttributeFilter).Values = Attribute.Values.toArray();
 			super.SelectAll();
 		}
 		
 		override public function ClearAll():void
 		{
 			lb.selectedIndex = -1;
-			(filter as CategoricalAttributeFilter).Values = null;
+			(filter as CategoricalAttributeFilter).Values = new Array();
 			super.ClearAll();
 		}
 		
