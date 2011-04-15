@@ -20,7 +20,7 @@ package twinlist
 		{
 			var array:ArrayCollection = new ArrayCollection();
 			for each (var attr:ItemAttribute in item.Attributes) {
-				array.addItem(attr);
+				array.addItem({Name:attr.toString(), Values:attr.Values});
 			}
 			return array;
 		}

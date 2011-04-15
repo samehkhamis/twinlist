@@ -8,6 +8,7 @@ package twinlist
 		// property keys
 		public static const PROP_MINVAL:String = "MinValue";
 		public static const PROP_MAXVAL:String = "MaxValue";
+		public static const PROP_UNIT:String = "Unit";
 
 		private var name:String;
 		private var type:uint;
@@ -73,7 +74,10 @@ package twinlist
 		
 		public function toString():String
 		{
-			return name;
+			var str:String = name;
+			if (Type == ItemAttribute.TYPE_NUMERICAL && Properties[PROP_UNIT] != null)
+				str += " (" + Properties[PROP_UNIT] + ")";
+			return str;
 		}
 	}
 }

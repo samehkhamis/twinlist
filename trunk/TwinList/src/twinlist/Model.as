@@ -324,19 +324,24 @@ package twinlist
 					var attrName:String = attrXml.attribute("name");
 					var attr:ItemAttribute = new ItemAttribute(attrName);
 					switch (attrXml.attribute("type").toString()) {
-						case "Categorical": attr.Type = ItemAttribute.TYPE_CATEGORICAL; break;
-						case "Numerical": attr.Type = ItemAttribute.TYPE_NUMERICAL; break;
-						default : attr.Type = ItemAttribute.TYPE_GENERAL; break;
+						case "Categorical":
+							attr.Type = ItemAttribute.TYPE_CATEGORICAL;
+							break;
+						case "Numerical":
+							attr.Type = ItemAttribute.TYPE_NUMERICAL;
+							attr.Unit = attrXml.attribute("unit").toString();
+							break;
+						default:
+							attr.Type = ItemAttribute.TYPE_GENERAL;
+							break;
 					}
 					attr.Values = new Array();
 					for each (var valXml:XML in attrXml.children()) {
 						var value:Object;
-						if (attr.Type == ItemAttribute.TYPE_NUMERICAL) {
+						if (attr.Type == ItemAttribute.TYPE_NUMERICAL)
 							value = parseFloat(valXml.attribute("value").toString());
-						}
-						else {
+						else
 							value = valXml.attribute("value").toString();
-						}
 						attr.Values.push(value);
 					}
 					item.Attributes[attr.Name] = attr;
@@ -493,6 +498,7 @@ package twinlist
 					for each (var a:ItemAttribute in item.Attributes) {
 						if (!(a.Name in added)) {
 							added[a.Name] = new AttributeDescriptor(a.Name, a.Type);
+							added[a.Name].Properties[AttributeDescriptor.PROP_UNIT] = a.Unit;
 							attrNames.push(a.Name);
 						}
 						if (a.Type == ItemAttribute.TYPE_NUMERICAL) {

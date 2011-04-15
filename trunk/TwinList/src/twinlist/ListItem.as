@@ -43,7 +43,7 @@ package twinlist
 		{
 			var string:String = Name;
 			for each (var attr:ItemAttribute in attributes) {
-				string += " " + attr.Values.toString();
+				string += " " + attr.ValuesString();
 			}
 			return string;
 		}
