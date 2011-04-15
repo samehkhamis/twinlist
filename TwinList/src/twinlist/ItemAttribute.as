@@ -13,6 +13,7 @@ package twinlist
 		private var name:String;
 		private var values:Array;
 		private var type:uint;
+		private var unit:String;
 		
 		public function ItemAttribute(name:String = "", values:Array = null, type:uint = TYPE_GENERAL)
 		{
@@ -21,6 +22,7 @@ package twinlist
 			if (values != null)
 				Values.push(values);
 			Type = type;
+			Unit = null;
 		}
 		
 		public function get Name():String
@@ -52,6 +54,15 @@ package twinlist
 			this.type = type;
 		}
 		
+		public function get Unit():String
+		{
+			return unit;
+		}
+		public function set Unit(unit:String):void
+		{
+			this.unit = unit;
+		}
+		
 		public function Equals(rhs:ItemAttribute):Boolean
 		{
 			if (this.Name != rhs.Name)
@@ -67,7 +78,18 @@ package twinlist
 		
 		public function toString():String
 		{
-			return name;
+			var str:String = name;
+			if (Type == TYPE_NUMERICAL && Unit != null)
+				str += " (" + Unit + ")";
+			return str;
+		}
+		
+		public function ValuesString():String
+		{
+			var string:String = Values.toString();
+			if (Type == TYPE_NUMERICAL && Unit != null)
+				string += " " + Unit;
+			return string;
 		}
 	}
 }

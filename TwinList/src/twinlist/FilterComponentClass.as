@@ -38,7 +38,7 @@ package twinlist {
 		public function set Attribute(attribute:AttributeDescriptor):void
 		{
 			this.attribute = attribute;
-			lbl.text = attribute.Name;
+			lbl.text = attribute.toString();
 		}
 		
 		public function get Checked():Boolean {

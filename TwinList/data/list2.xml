@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <list id="er" name="E.R.">
 	<item id="erItem1" name="Calcitrol">
-		<attribute name="Dosage" type="General">
-			<value value="0.25mg"/>
+		<attribute name="Dosage" type="Numerical" unit="mg">
+			<value value="0.25"/>
 		</attribute>
 		<attribute name="Form" type="Categorical">
 			<value value="PO"/>
@@ -12,8 +12,8 @@
 		</attribute>
 	</item>
 	<item id="erItem2" name="Darbepoetin">
-		<attribute name="Dosage" type="General">
-			<value value="60mg"/>
+		<attribute name="Dosage" type="Numerical" unit="mg">
+			<value value="60"/>
 		</attribute>
 		<attribute name="Form" type="Categorical">
 			<value value="SC"/>
@@ -23,8 +23,8 @@
 		</attribute>
 	</item>
 	<item id="erItem3" name="Docusate Sodium">
-		<attribute name="Dosage" type="General">
-			<value value="100mg"/>
+		<attribute name="Dosage" type="Numerical" unit="mg">
+			<value value="100"/>
 		</attribute>
 		<attribute name="Form" type="Categorical">
 			<value value="PO"/>
@@ -34,8 +34,8 @@
 		</attribute>
 	</item>
 	<item id="erItem4" name="Ramipril">
-		<attribute name="Dosage" type="General">
-			<value value="5mg"/>
+		<attribute name="Dosage" type="Numerical" unit="mg">
+			<value value="5"/>
 		</attribute>
 		<attribute name="Form" type="Categorical">
 			<value value="PO"/>
@@ -45,8 +45,8 @@
 		</attribute>
 	</item>
 	<item id="erItem5" name="Acetaminophen">
-		<attribute name="Dosage" type="General">
-			<value value="325mg"/>
+		<attribute name="Dosage" type="Numerical" unit="mg">
+			<value value="325"/>
 		</attribute>
 		<attribute name="Form" type="Categorical">
 			<value value="PO"/>
@@ -56,8 +56,8 @@
 		</attribute>
 	</item>
 	<item id="erItem6" name="Calcium Carbonate">
-		<attribute name="Dosage" type="General">
-			<value value="1000mg"/>
+		<attribute name="Dosage" type="Numerical" unit="mg">
+			<value value="1000"/>
 		</attribute>
 		<attribute name="Form" type="Categorical">
 			<value value="PO"/>
@@ -67,8 +67,8 @@
 		</attribute>
 	</item>
 	<item id="erItem7" name="Atorvistatin">
-		<attribute name="Dosage" type="General">
-			<value value="60mg"/>
+		<attribute name="Dosage" type="Numerical" unit="mg">
+			<value value="60"/>
 		</attribute>
 		<attribute name="Form" type="Categorical">
 			<value value="PO"/>
@@ -78,8 +78,8 @@
 		</attribute>
 	</item>
 	<item id="erItem8" name="Metoprolol">
-		<attribute name="Dosage" type="General">
-			<value value="100mg"/>
+		<attribute name="Dosage" type="Numerical" unit="mg">
+			<value value="100"/>
 		</attribute>
 		<attribute name="Form" type="Categorical">
 			<value value="PO"/>
@@ -89,8 +89,8 @@
 		</attribute>
 	</item>
 	<item id="erItem9" name="Ferrous Gloconate">
-		<attribute name="Dosage" type="General">
-			<value value="300mg"/>
+		<attribute name="Dosage" type="Numerical" unit="mg">
+			<value value="300"/>
 		</attribute>
 		<attribute name="Form" type="Categorical">
 			<value value="PO"/>
@@ -100,8 +100,8 @@
 		</attribute>
 	</item>
 	<item id="erItem10" name="Omeprazole">
-		<attribute name="Dosage" type="General">
-			<value value="40mg"/>
+		<attribute name="Dosage" type="Numerical" unit="mg">
+			<value value="40"/>
 		</attribute>
 		<attribute name="Form" type="Categorical">
 			<value value="PO"/>
@@ -111,8 +111,8 @@
 		</attribute>
 	</item>
 	<item id="erItem11" name="Ciproflaxocin">
-		<attribute name="Dosage" type="General">
-			<value value="500mg"/>
+		<attribute name="Dosage" type="Numerical" unit="mg">
+			<value value="500"/>
 		</attribute>
 		<attribute name="Form" type="Categorical">
 			<value value="PO"/>

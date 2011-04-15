@@ -12,7 +12,7 @@ package twinlist.filter
 
 		public function NumericalFilter(attrName:String, minVal:Number = Number.NaN, maxVal:Number = Number.NaN)
 		{
-			Name = attrName;
+			AttributeName = attrName;
 			MinValue = minValue;
 			MaxValue = maxValue;
 		}
@@ -41,12 +41,12 @@ package twinlist.filter
 		}
 		public function set MaxValue(value:Number):void
 		{
-			this.maxValue = maxValue;
+			this.maxValue = value;
 		}
 		
 		public function Apply(item:ListItem):Boolean
 		{
-			if (isNaN(MinVal) && isNaN(MaxVal))
+			if (isNaN(MinValue) && isNaN(MaxValue))
 				return true;
 			var attr:ItemAttribute = item.Attributes[AttributeName];
 			if (attr.Type != ItemAttribute.TYPE_NUMERICAL)
@@ -54,9 +54,9 @@ package twinlist.filter
 			if (attr == null || attr.Values == null)
 				return false;
 			for each (var val:Object in attr.Values) {
-				if (!isNaN(MinVal) && val < MinValue)
+				if (!isNaN(MinValue) && val < MinValue)
 					return false;
-				if (!isNaN(MaxVal) && val > MaxValue)
+				if (!isNaN(MaxValue) && val > MaxValue)
 					return false;
 			}
 			return true;

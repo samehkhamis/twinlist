@@ -34,6 +34,7 @@ package twinlist
 			var factory:ClassFactory;
 			for each (var attr:AttributeDescriptor in model.ItemAttributes) {
 				col = new AdvancedDataGridColumn(attr.Name);
+				col.headerText = attr.toString();
 				factory = new ClassFactory(ActionListItemRenderer);
 				factory.properties = {ColumnName:attr.Name};
 				col.itemRenderer = factory;
