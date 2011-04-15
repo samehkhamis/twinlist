@@ -28,6 +28,8 @@ package twinlist
 		private var textHeight:int = 24;
 		private var textSpacing:int = 12;
 		private var reconciled:Boolean = false;
+		private var animation1:Parallel;
+		private var animation2:Parallel;
 		
 		public function ListViewerFlareClass()
 		{
@@ -43,7 +45,7 @@ package twinlist
 			var l1y:int = textSpacing;
 			var l2y:int = textSpacing;
 			var ry:int = textSpacing;
-			var rowHeight = textHeight + textSpacing;
+			var rowHeight:int = textHeight + textSpacing;
 			
 			visList = new ArrayCollection();
 			for each (var item:ListViewerItem in model.ListViewerData)
@@ -84,15 +86,14 @@ package twinlist
 					columnWidth = sprite.getChildAt(0).width;
 			
 			// Set up the visualization
-			columnHeight = model.ListViewerData.length * rowHeight;
+			columnHeight = model.ListViewerData.length * rowHeight + textSpacing;
 			vis.bounds = new Rectangle(0, 0, 5 * columnWidth, columnHeight);
 			
-			for (var x:int = 1; x <= 3; x += 2)
-			{
-				var rect:RectSprite = new RectSprite(x * columnWidth, 0, columnWidth, columnHeight);
-				rect.fillColor = rect.lineColor = 0xffcccccc;
-				vis.addChild(rect);
-			}
+			vis.addChild(CreateColumn(0, 0xffffcfcf));
+			vis.addChild(CreateColumn(1, 0xffffecd5));
+			vis.addChild(CreateColumn(2, 0xffb3fec5));
+			vis.addChild(CreateColumn(3, 0xffffecd5));
+			vis.addChild(CreateColumn(4, 0xffffcfcf));
 			
 			// Fix x values and draw sprites
 			for each (var sprite:DataSprite in visList)
@@ -104,6 +105,17 @@ package twinlist
 				vis.addChild(sprite);
 			}
 			
+			// Create the two animation sequences
+			animation1 = new Parallel();
+			animation2 = new Parallel();
+			for each (var sprite:DataSprite in visList)
+			{
+				animation1.add(new Tween(sprite, 1, {x: sprite.data.properties.x1}));
+				animation1.add(new Tween(sprite, 1, {y: sprite.data.properties.y1}));
+				animation2.add(new Tween(sprite, 1, {x: sprite.data.properties.x2}));
+				animation2.add(new Tween(sprite, 1, {y: sprite.data.properties.y2}));
+			}
+			
 			vis.update();
 		}
 		
@@ -112,10 +124,17 @@ package twinlist
 			// TODO: view updating code goes here
 		}
 		
+		private function CreateColumn(index:int, color:int):RectSprite
+		{
+			var rect:RectSprite = new RectSprite(index * columnWidth, 0, columnWidth, columnHeight);
+			rect.fillColor = rect.lineColor = color;
+			return rect;
+		}
+		
 		private function CreateItemSprite(item:ListItem, properties:Object):DataSprite
 		{
 			var text:TextSprite = new TextSprite(item.Name);
-			text.color = 0xff0000ff;
+			text.color = 0xff000000;
 			text.size = textHeight;
 			
 			var sprite:DataSprite = new DataSprite();
@@ -133,41 +152,30 @@ package twinlist
 		private function ItemClick(event:MouseEvent):void
 		{
 			//Alert.show(event.currentTarget.data.item.Name);
-			
-			var animation:Parallel = new Parallel();
 			if (reconciled)
 			{
-				for each (var sprite:DataSprite in visList)
-				{
-					animation.add(new Tween(sprite, 1, {x: sprite.data.properties.x1}));
-					animation.add(new Tween(sprite, 1, {y: sprite.data.properties.y1}));
-				}
+				animation1.play();
 				reconciled = false;
 			}
 			else
 			{
-				for each (var sprite:DataSprite in visList)
-				{
-					animation.add(new Tween(sprite, 1, {x: sprite.data.properties.x2}));
-					animation.add(new Tween(sprite, 1, {y: sprite.data.properties.y2}));
-				}
+				animation2.play();
 				reconciled = true;
 			}
-			animation.play();
 		}
 		
 		private function ItemRollOver(event:MouseEvent):void
 		{
 			var sprite:DataSprite = event.currentTarget as DataSprite;
 			var text:TextSprite = sprite.getChildAt(0) as TextSprite;
-			text.color = 0xffff0000;
+			text.color = 0xff0000ff;
 		}
 		
 		private function ItemRollOut(event:MouseEvent):void
 		{
 			var sprite:DataSprite = event.currentTarget as DataSprite;
 			var text:TextSprite = sprite.getChildAt(0) as TextSprite;
-			text.color = 0xff0000ff;
+			text.color = 0xff000000;
 		}
 	}
 }
