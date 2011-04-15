@@ -40,7 +40,7 @@ package twinlist
 					break;
 				case "sortByList":
 					//Debug.log("SortByList");
-					model.SortBy = model.DataAttributes[event.newIndex];
+					model.SortBy = model.ItemAttributes[event.newIndex];
 					break;
 			}
 		}

@@ -23,16 +23,16 @@ package twinlist
 		{
 			super();
 			defaultSort = new Sort();
-			this.addEventListener(FlexEvent.CREATION_COMPLETE, onInitComplete);
+			this.addEventListener(FlexEvent.CREATION_COMPLETE, OnInitComplete);
 		}
 		
-		private function onInitComplete(event:Event):void
+		private function OnInitComplete(event:Event):void
 		{
-			this.removeEventListener(FlexEvent.CREATION_COMPLETE, onInitComplete);
+			this.removeEventListener(FlexEvent.CREATION_COMPLETE, OnInitComplete);
 			var columns:Array = dataGrid.columns;
 			var col:AdvancedDataGridColumn;
 			var factory:ClassFactory;
-			for each (var attr:AttributeDescriptor in model.DataAttributes) {
+			for each (var attr:AttributeDescriptor in model.ItemAttributes) {
 				col = new AdvancedDataGridColumn(attr.Name);
 				factory = new ClassFactory(ActionListItemRenderer);
 				factory.properties = {ColumnName:attr.Name};

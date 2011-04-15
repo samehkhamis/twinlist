@@ -1,7 +1,7 @@
 package twinlist.filter
 {
-	import twinlist.ListItem;
 	import twinlist.ItemAttribute;
+	import twinlist.ListItem;
 
 	[Bindable]
 	public class CategoricalAttributeFilter implements IFilter
@@ -38,6 +38,14 @@ package twinlist.filter
 		
 		public function Apply(item:ListItem):Boolean
 		{
+			if (Values == null || Values.length == 0)
+				return true;
+			if (AttributeName == "Name") {
+				for each (var name:String in Values) {
+					if (item.Name == name)
+						return true;
+				}
+			}
 			var attr:ItemAttribute = item.Attributes[AttributeName];
 			if (attr == null || attr.Values == null)
 				return false;

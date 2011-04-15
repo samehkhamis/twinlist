@@ -32,7 +32,7 @@ package twinlist
 		private var listViewerData:ArrayCollection;
 		private var actionListItems:ArrayCollection;
 		// attributes
-		private var dataAttributes:ArrayCollection;
+		private var itemAttributes:ArrayCollection;
 		private var categoricalAttributes:ArrayCollection;
 		private var numericalAttributes:ArrayCollection;
 		// publicly set variables
@@ -41,7 +41,6 @@ package twinlist
 		private var colorByAttribute:AttributeDescriptor;
 		private var sortByAttribute:AttributeDescriptor;
 		private var groupByAttribute:AttributeDescriptor;
-		private var filterByString:String;
 		private var filterList:ArrayCollection;
 		
 		public function Model()
@@ -55,14 +54,13 @@ package twinlist
 			visibleListIds = new Array(2);
 			listViewerData = new ArrayCollection();
 			actionListItems = new ArrayCollection();
-			dataAttributes = new ArrayCollection();
+			itemAttributes = new ArrayCollection();
 			categoricalAttributes = new ArrayCollection();
 			numericalAttributes = new ArrayCollection();
 			defaultSort = new Sort();
 			selectedItem = null;
 			groupByAttribute = null;
 			sortByAttribute = null;
-			filterByString = null;
 			filterList = new ArrayCollection();
 			// load data
 			//LoadCannedData();
@@ -128,9 +126,9 @@ package twinlist
 			selectedItem = listItem;
 		}
 		
-		public function get DataAttributes():ArrayCollection
+		public function get ItemAttributes():ArrayCollection
 		{
-			return dataAttributes;
+			return itemAttributes;
 		}
 		
 		public function get CategoricalAttributes():ArrayCollection
@@ -181,18 +179,6 @@ package twinlist
 			SortListViewerData();
 		}
 		
-		public function get FilterByString():String
-		{
-			return filterByString;
-		}
-		public function set FilterByString(filterString:String):void
-		{
-			filterByString=filterString;
-			Debug.log(filterString);
-			// Here a function will be call to filter the rows of the list viewer and refresh it.
-			//FilterListViewerData();
-		}
-		
 		public function get Filters():ArrayCollection
 		{
 			return filterList;
@@ -212,6 +198,7 @@ package twinlist
 			if (FilterListContains(filter) >= 0)
 				return;
 			filterList.addItem(filter);
+			FilterListViewerData();
 		}
 		
 		public function DelFilter(filter:IFilter):void
@@ -220,6 +207,7 @@ package twinlist
 			if (idx >= 0) {
 				filterList.removeItemAt(idx);
 			}
+			FilterListViewerData();
 		}
 		
 		public function get VisibleListIds():Array
@@ -233,10 +221,32 @@ package twinlist
 			visibleListIds[1] = id2;
 			ReconcileLists(lists[listIdx[id1]], lists[listIdx[id2]]);
 			DetectAttributes();
+			SortListViewerData();
+		}
+		
+		public function FilterListViewerData():void
+		{
+			var newLists:Array = new Array(2);
+			for (var i:int = 0; i < 2; i++) {
+				var list:List = lists[listIdx[visibleListIds[i]]];
+				newLists[i] = new List(list.Id, list.Name);
+				for each (var item:ListItem in list) {
+					var keep:Boolean = true;
+					for each (var f:IFilter in Filters) {
+						keep &&= f.Apply(item);
+					}
+					if (keep)
+						newLists[i].addItem(item);
+				}
+			}
+			ReconcileLists(newLists[0], newLists[1]);
+			SortListViewerData();
 		}
 		
 		private function SortListViewerData():void
 		{
+			if (SortBy == null && GroupBy == null)
+				return;
 			var sort:Sort = new Sort();
 			sort.compareFunction = SortFunction;
 			sort.sort(listViewerData.source);
@@ -264,7 +274,7 @@ package twinlist
 			}
 			if (sortVal != 0)
 				return sortVal;
-			if (sortByAttribute.Name != null) {
+			if (sortByAttribute != null) {
 				if (sortByAttribute.Name == "Name") {
 					val1 = item1.Name;
 					val2 = item2.Name;		
@@ -476,7 +486,7 @@ package twinlist
 			attrNames.push("Name");
 			// iterate over all lists, items and detect attributes
 			for (var i:int = 0; i < 2; i++) {
-				var list:ArrayCollection = lists[listIdx[visibleListIds[i]]];
+				var list:List = lists[listIdx[visibleListIds[i]]];
 				for each (var item:ListItem in list) {
 					if (!added["Name"].Values.contains(item.Name))
 						added["Name"].Values.addItem(item.Name);
@@ -505,14 +515,14 @@ package twinlist
 				}
 			}
 			// empty current collections
-			dataAttributes.removeAll();
+			itemAttributes.removeAll();
 			categoricalAttributes.removeAll();
 			numericalAttributes.removeAll();
 			// add attributes to collections
 			// (using attrNames array to preserve ordering)
 			for each (var name:String in attrNames) {
 				var ad:AttributeDescriptor = added[name];
-				dataAttributes.addItem(ad);
+				itemAttributes.addItem(ad);
 				switch (ad.Type) {
 					case ItemAttribute.TYPE_CATEGORICAL: categoricalAttributes.addItem(ad); break;
 					case ItemAttribute.TYPE_NUMERICAL: numericalAttributes.addItem(ad); break;
