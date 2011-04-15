@@ -26,7 +26,7 @@ package twinlist
 			var lbl:Label;
 			vg.minWidth = 200;
 			lbl = new Label();
-			lbl.text = "Lower Bound";
+			lbl.text = "Bounds";
 			vg.addElement(lbl);
 			slider = new HSlider();
 			slider.width = 200;
