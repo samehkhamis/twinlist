@@ -44,12 +44,18 @@ package twinlist
 		override public function SelectAll():void
 		{
 			slider.values = [slider.minimum, slider.maximum];
+			var f:NumericalFilter = filter as NumericalFilter;
+			f.MinValue = slider.minimum;
+			f.MaxValue = slider.maximum;
 			super.SelectAll();
 		}
 		
 		override public function ClearAll():void
 		{
 			slider.values = [slider.minimum, slider.maximum];
+			var f:NumericalFilter = filter as NumericalFilter;
+			f.MinValue = slider.minimum;
+			f.MaxValue = slider.maximum;
 			super.ClearAll();
 		}
 		
