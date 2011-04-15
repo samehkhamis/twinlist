@@ -10,9 +10,4 @@
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
-	<twinlist:layout>
-		<s:HorizontalLayout paddingLeft="20" paddingRight="20" paddingTop="20" paddingBottom="20"/>
-	</twinlist:layout>
-	<s:TextInput id="searchInput" width="100%"/>
-	<s:Button id="filterButton" label="Filter" buttonDown="OnButtonDown(searchInput.text)"/>
 </twinlist:FilterPanelClass>
