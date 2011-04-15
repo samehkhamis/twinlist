@@ -35,7 +35,11 @@ package twinlist.filter
 		
 		public function Apply(item:ListItem):Boolean
 		{
-			var attr:ListItemAttribute = item.Attributes[AttributeName];
+			if (filterString == null || filterString == "")
+				return true;
+			if (AttributeName == "Name")
+				return item.Name == filterString;
+			var attr:ItemAttribute = item.Attributes[AttributeName];
 			if (attr == null || attr.Values == null)
 				return false;
 			for each (var val:Object in attr.Values) {
