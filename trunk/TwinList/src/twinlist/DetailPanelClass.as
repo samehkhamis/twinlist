@@ -5,6 +5,8 @@ package twinlist
 	
 	import spark.components.Group;
 	import spark.components.List;
+	import twinlist.list.ItemAttribute;
+	import twinlist.list.ListItem;
 
 	public class DetailPanelClass extends Group
 	{

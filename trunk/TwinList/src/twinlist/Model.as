@@ -1,19 +1,17 @@
 package twinlist
 {	
-	import com.carlcalderon.arthropod.Debug;
-	
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
-	import flash.net.URLLoader;
-	import flash.net.URLLoaderDataFormat;
-	import flash.net.URLRequest;
 	
 	import mx.collections.ArrayCollection;
 	import mx.collections.Sort;
-	import mx.core.IFactory;
-	import mx.events.CollectionEvent;
 	
 	import twinlist.filter.IFilter;
+	import twinlist.xml.XmlListLoader;
+	import twinlist.list.AttributeDescriptor;
+	import twinlist.list.ItemAttribute;
+	import twinlist.list.List;
+	import twinlist.list.ListItem;
 
 	[Bindable]
 	public final class Model extends EventDispatcher
@@ -39,8 +37,8 @@ package twinlist
 		private var selectedItem:ListItem;
 		private var sizeByAttribute:AttributeDescriptor;
 		private var colorByAttribute:AttributeDescriptor;
-		private var sortByAttribute:AttributeDescriptor;
 		private var groupByAttribute:AttributeDescriptor;
+		private var sortByAttribute:AttributeDescriptor;
 		private var filterList:ArrayCollection;
 		
 		public function Model()
@@ -59,13 +57,15 @@ package twinlist
 			numericalAttributes = new ArrayCollection();
 			defaultSort = new Sort();
 			selectedItem = null;
+			sizeByAttribute = null;
+			colorByAttribute = null;
 			groupByAttribute = null;
 			sortByAttribute = null;
 			filterList = new ArrayCollection();
 			// load data
 			//LoadCannedData();
-			ReadXml("../data/list1.xml");
-			ReadXml("../data/list2.xml");
+			new XmlListLoader("../data/list1.xml", OnReadXmlComplete);
+			new XmlListLoader("../data/list2.xml", OnReadXmlComplete);
 		}
 		
 		public static function get Instance():Model
@@ -304,54 +304,8 @@ package twinlist
 				return listViewerItem.L2Unique;
 		}
 		
-		private function ReadXml(filePath:String):void
+		private function OnReadXmlComplete(list:List):void
 		{
-			var urlReq:URLRequest = new URLRequest(filePath);
-			var loader:URLLoader = new URLLoader(urlReq);
-			loader.dataFormat = URLLoaderDataFormat.TEXT;
-			loader.addEventListener(Event.COMPLETE, function(event:Event):void {
-				OnReadXmlComplete(loader);
-			});
-		}
-		
-		private function OnReadXmlComplete(loader:URLLoader):void
-		{
-			var xml:XML = XML(loader.data);
-			var listId:String = xml.attribute("id");
-			var listName:String = xml.attribute("name");
-			var list:List = new List(listId, listName);
-			for each (var itemXml:XML in xml.children()) {
-				var itemId:String = itemXml.attribute("id");
-				var itemName:String = itemXml.attribute("name");
-				var item:ListItem = new ListItem(itemId, itemName);
-				for each (var attrXml:XML in itemXml.children()) {
-					var attrName:String = attrXml.attribute("name");
-					var attr:ItemAttribute = new ItemAttribute(attrName);
-					switch (attrXml.attribute("type").toString()) {
-						case "Categorical":
-							attr.Type = ItemAttribute.TYPE_CATEGORICAL;
-							break;
-						case "Numerical":
-							attr.Type = ItemAttribute.TYPE_NUMERICAL;
-							attr.Unit = attrXml.attribute("unit").toString();
-							break;
-						default:
-							attr.Type = ItemAttribute.TYPE_GENERAL;
-							break;
-					}
-					attr.Values = new Array();
-					for each (var valXml:XML in attrXml.children()) {
-						var value:Object;
-						if (attr.Type == ItemAttribute.TYPE_NUMERICAL)
-							value = parseFloat(valXml.attribute("value").toString());
-						else
-							value = valXml.attribute("value").toString();
-						attr.Values.push(value);
-					}
-					item.Attributes[attr.Name] = attr;
-				}
-				list.addItem(item);
-			}
 			listIdx[list.Id] = lists.length;
 			lists.addItem(list);
 			if (lists.length >= 2) {
@@ -365,7 +319,112 @@ package twinlist
 			//SortListViewerData();
 			dispatchEvent(new Event(DATA_LOADED));
 		}
-
+		
+		private function DetectAttributes():void
+		{
+			// local vars
+			var added:Object = new Object();
+			var attrNames:Array = new Array();
+			// add name field
+			added["Name"] = new AttributeDescriptor("Name", ItemAttribute.TYPE_GENERAL);
+			attrNames.push("Name");
+			// iterate over all lists, items and detect attributes
+			for (var i:int = 0; i < 2; i++) {
+				var list:List = lists[listIdx[visibleListIds[i]]];
+				for each (var item:ListItem in list) {
+					if (!added["Name"].Values.contains(item.Name))
+						added["Name"].Values.addItem(item.Name);
+					for each (var a:ItemAttribute in item.Attributes) {
+						if (!(a.Name in added)) {
+							added[a.Name] = new AttributeDescriptor(a.Name, a.Type);
+							added[a.Name].Properties[AttributeDescriptor.PROP_UNIT] = a.Unit;
+							attrNames.push(a.Name);
+						}
+						if (a.Type == ItemAttribute.TYPE_NUMERICAL) {
+							var minVal:Number = added[a.Name].Properties[AttributeDescriptor.PROP_MINVAL];
+							var maxVal:Number = added[a.Name].Properties[AttributeDescriptor.PROP_MAXVAL];
+							for each (var val:Number in a.Values) {
+								if (isNaN(minVal) || minVal > val)
+									minVal = val;
+								if (isNaN(maxVal) || maxVal < val)
+									maxVal = val;
+							}
+							added[a.Name].Properties[AttributeDescriptor.PROP_MINVAL] = minVal;
+							added[a.Name].Properties[AttributeDescriptor.PROP_MAXVAL] = maxVal;
+						}
+						for each (var obj:Object in a.Values) {
+							if (!added[a.Name].Values.contains(obj))
+								added[a.Name].Values.addItem(obj);
+						}
+					}
+				}
+			}
+			// empty current collections
+			itemAttributes.removeAll();
+			categoricalAttributes.removeAll();
+			numericalAttributes.removeAll();
+			// add attributes to collections
+			// (using attrNames array to preserve ordering)
+			for each (var name:String in attrNames) {
+				var ad:AttributeDescriptor = added[name];
+				itemAttributes.addItem(ad);
+				switch (ad.Type) {
+					case ItemAttribute.TYPE_CATEGORICAL: categoricalAttributes.addItem(ad); break;
+					case ItemAttribute.TYPE_NUMERICAL: numericalAttributes.addItem(ad); break;
+				}			
+			}
+		}
+		
+		private function ReconcileLists(list1:List, list2:List):void
+		{
+			listViewerData.removeAll();
+			var maxLen:int = Math.max(list1.length, list2.length);
+			var iter1:int = 0;
+			var iter2:int = 0;
+			while ((iter1 < list1.length) || (iter2 < list2.length)) {
+				var item1:ListItem = null;
+				if (iter1 < list1.length)
+					item1 = list1.getItemAt(iter1) as ListItem;
+				++iter1;
+				var item2:ListItem = null;
+				if (iter2 < list2.length)
+					item2 = list2.getItemAt(iter2) as ListItem;
+				++iter2;
+				if ((item1 != null) && (item2 != null)) {
+					var listViewerItem:ListViewerItem;
+					if (AreIdentical(item1, item2)) {
+						listViewerItem = new ListViewerItem();
+						listViewerItem.Identical = item1;
+						listViewerData.addItem(listViewerItem);
+					}
+					else if (AreSimilar(item1, item2)) {
+						listViewerItem = new ListViewerItem();
+						listViewerItem.L1Similar = item1;
+						listViewerItem.L2Similar = item2;
+						listViewerData.addItem(listViewerItem);
+					}
+					else {
+						listViewerItem = new ListViewerItem();
+						listViewerItem.L1Unique = item1;
+						listViewerData.addItem(listViewerItem);						
+						listViewerItem = new ListViewerItem();
+						listViewerItem.L2Unique = item2;
+						listViewerData.addItem(listViewerItem);						
+					}
+				}
+			}
+		}
+		
+		private function AreIdentical(item1:ListItem, item2:ListItem):Boolean
+		{
+			return item1.Equals(item2);
+		}
+		
+		private function AreSimilar(item1:ListItem, item2:ListItem):Boolean
+		{
+			return item1.Name == item2.Name;
+		}
+		
 		private function LoadCannedData():void
 		{
 			// CANNED DATA
@@ -484,110 +543,5 @@ package twinlist
 			lists.addItem(list2);
 			FinishInit();
 		}
-		
-		private function DetectAttributes():void
-		{
-			// local vars
-			var added:Object = new Object();
-			var attrNames:Array = new Array();
-			// add name field
-			added["Name"] = new AttributeDescriptor("Name", ItemAttribute.TYPE_GENERAL);
-			attrNames.push("Name");
-			// iterate over all lists, items and detect attributes
-			for (var i:int = 0; i < 2; i++) {
-				var list:List = lists[listIdx[visibleListIds[i]]];
-				for each (var item:ListItem in list) {
-					if (!added["Name"].Values.contains(item.Name))
-						added["Name"].Values.addItem(item.Name);
-					for each (var a:ItemAttribute in item.Attributes) {
-						if (!(a.Name in added)) {
-							added[a.Name] = new AttributeDescriptor(a.Name, a.Type);
-							added[a.Name].Properties[AttributeDescriptor.PROP_UNIT] = a.Unit;
-							attrNames.push(a.Name);
-						}
-						if (a.Type == ItemAttribute.TYPE_NUMERICAL) {
-							var minVal:Number = added[a.Name].Properties[AttributeDescriptor.PROP_MINVAL];
-							var maxVal:Number = added[a.Name].Properties[AttributeDescriptor.PROP_MAXVAL];
-							for each (var val:Number in a.Values) {
-								if (isNaN(minVal) || minVal > val)
-									minVal = val;
-								if (isNaN(maxVal) || maxVal < val)
-									maxVal = val;
-							}
-							added[a.Name].Properties[AttributeDescriptor.PROP_MINVAL] = minVal;
-							added[a.Name].Properties[AttributeDescriptor.PROP_MAXVAL] = maxVal;
-						}
-						for each (var obj:Object in a.Values) {
-							if (!added[a.Name].Values.contains(obj))
-								added[a.Name].Values.addItem(obj);
-						}
-					}
-				}
-			}
-			// empty current collections
-			itemAttributes.removeAll();
-			categoricalAttributes.removeAll();
-			numericalAttributes.removeAll();
-			// add attributes to collections
-			// (using attrNames array to preserve ordering)
-			for each (var name:String in attrNames) {
-				var ad:AttributeDescriptor = added[name];
-				itemAttributes.addItem(ad);
-				switch (ad.Type) {
-					case ItemAttribute.TYPE_CATEGORICAL: categoricalAttributes.addItem(ad); break;
-					case ItemAttribute.TYPE_NUMERICAL: numericalAttributes.addItem(ad); break;
-				}			
-			}
-		}
-		
-		private function ReconcileLists(list1:List, list2:List):void
-		{
-			listViewerData.removeAll();
-			var maxLen:int = Math.max(list1.length, list2.length);
-			var iter1:int = 0;
-			var iter2:int = 0;
-			while ((iter1 < list1.length) || (iter2 < list2.length)) {
-				var item1:ListItem = null;
-				if (iter1 < list1.length)
-					item1 = list1.getItemAt(iter1) as ListItem;
-				++iter1;
-				var item2:ListItem = null;
-				if (iter2 < list2.length)
-					item2 = list2.getItemAt(iter2) as ListItem;
-				++iter2;
-				if ((item1 != null) && (item2 != null)) {
-					var listViewerItem:ListViewerItem;
-					if (AreIdentical(item1, item2)) {
-						listViewerItem = new ListViewerItem();
-						listViewerItem.Identical = item1;
-						listViewerData.addItem(listViewerItem);
-					}
-					else if (AreSimilar(item1, item2)) {
-						listViewerItem = new ListViewerItem();
-						listViewerItem.L1Similar = item1;
-						listViewerItem.L2Similar = item2;
-						listViewerData.addItem(listViewerItem);
-					}
-					else {
-						listViewerItem = new ListViewerItem();
-						listViewerItem.L1Unique = item1;
-						listViewerData.addItem(listViewerItem);						
-						listViewerItem = new ListViewerItem();
-						listViewerItem.L2Unique = item2;
-						listViewerData.addItem(listViewerItem);						
-					}
-				}
-			}
-		}
-		
-		private function AreIdentical(item1:ListItem, item2:ListItem):Boolean
-		{
-			return item1.Equals(item2);
-		}
-		
-		private function AreSimilar(item1:ListItem, item2:ListItem):Boolean
-		{
-			return item1.Name == item2.Name;
-		}
-	}
+	}		
 }

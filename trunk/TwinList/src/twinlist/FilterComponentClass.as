@@ -13,6 +13,7 @@ package twinlist {
 	import spark.components.Label;
 	
 	import twinlist.filter.IFilter;
+	import twinlist.list.AttributeDescriptor;
 
 	public class FilterComponentClass extends Group
 	{

@@ -11,6 +11,7 @@ package twinlist
 	import mx.events.ListEvent;
 	
 	import spark.components.Group;
+	import twinlist.list.AttributeDescriptor;
 	
 	public class ActionListClass extends Group
 	{

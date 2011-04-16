@@ -14,6 +14,7 @@ package twinlist
 	import mx.collections.ArrayCollection;
 	
 	import spark.components.Group;
+	import twinlist.list.ListItem;
 	
 	public class ListViewerFlareClass extends Group
 	{
