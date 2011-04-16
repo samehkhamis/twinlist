@@ -7,11 +7,11 @@ package twinlist
 	import mx.collections.Sort;
 	
 	import twinlist.filter.IFilter;
-	import twinlist.xml.XmlListLoader;
 	import twinlist.list.AttributeDescriptor;
 	import twinlist.list.ItemAttribute;
 	import twinlist.list.List;
 	import twinlist.list.ListItem;
+	import twinlist.xml.XmlListLoader;
 
 	[Bindable]
 	public final class Model extends EventDispatcher
@@ -365,8 +365,10 @@ package twinlist
 			numericalAttributes.removeAll();
 			// add attributes to collections
 			// (using attrNames array to preserve ordering)
+			var sort:Sort = new Sort();
 			for each (var name:String in attrNames) {
 				var ad:AttributeDescriptor = added[name];
+				sort.sort(ad.Values.source);
 				itemAttributes.addItem(ad);
 				switch (ad.Type) {
 					case ItemAttribute.TYPE_CATEGORICAL: categoricalAttributes.addItem(ad); break;
@@ -378,51 +380,54 @@ package twinlist
 		private function ReconcileLists(list1:List, list2:List):void
 		{
 			listViewerData.removeAll();
-			var maxLen:int = Math.max(list1.length, list2.length);
-			var iter1:int = 0;
-			var iter2:int = 0;
-			while ((iter1 < list1.length) || (iter2 < list2.length)) {
-				var item1:ListItem = null;
-				if (iter1 < list1.length)
-					item1 = list1.getItemAt(iter1) as ListItem;
-				++iter1;
-				var item2:ListItem = null;
-				if (iter2 < list2.length)
-					item2 = list2.getItemAt(iter2) as ListItem;
-				++iter2;
-				if ((item1 != null) && (item2 != null)) {
-					var listViewerItem:ListViewerItem;
-					if (AreIdentical(item1, item2)) {
-						listViewerItem = new ListViewerItem();
-						listViewerItem.Identical = item1;
-						listViewerData.addItem(listViewerItem);
-					}
-					else if (AreSimilar(item1, item2)) {
-						listViewerItem = new ListViewerItem();
-						listViewerItem.L1Similar = item1;
-						listViewerItem.L2Similar = item2;
-						listViewerData.addItem(listViewerItem);
-					}
-					else {
-						listViewerItem = new ListViewerItem();
+			var map:Object = new Object();
+			var arr:Array;
+			for each (var item:ListItem in list1) {
+				map[item.Name] = new Array(2);
+				map[item.Name][0] = item;
+			}
+			for each (var item:ListItem in list2) {
+				if (!(item.Name in map))
+					map[item.Name] = new Array(2);
+				map[item.Name][1] = item;
+			}
+			for each (var pair:Array in map) {
+				var item1:ListItem = pair[0] as ListItem;
+				var item2:ListItem = pair[1] as ListItem;
+				var sim:Number = GetSimilarity(item1, item2);
+				var listViewerItem:ListViewerItem;
+				if (sim == 1) {
+					// identical
+					listViewerItem = new ListViewerItem();
+					listViewerItem.Identical = item1;
+					listViewerData.addItem(listViewerItem);
+				}
+				else if (sim >= 0) {
+					// similar
+					listViewerItem = new ListViewerItem();
+					listViewerItem.L1Similar = item1;
+					listViewerItem.L2Similar = item2;
+					listViewerData.addItem(listViewerItem);
+				}
+				else {
+					// unique
+					listViewerItem = new ListViewerItem();
+					if (item1 != null)
 						listViewerItem.L1Unique = item1;
-						listViewerData.addItem(listViewerItem);						
-						listViewerItem = new ListViewerItem();
+					else
 						listViewerItem.L2Unique = item2;
-						listViewerData.addItem(listViewerItem);						
-					}
+					listViewerData.addItem(listViewerItem);						
 				}
 			}
 		}
 		
-		private function AreIdentical(item1:ListItem, item2:ListItem):Boolean
+		private function GetSimilarity(item1:ListItem, item2:ListItem):Number
 		{
-			return item1.Equals(item2);
-		}
-		
-		private function AreSimilar(item1:ListItem, item2:ListItem):Boolean
-		{
-			return item1.Name == item2.Name;
+			if (item1 == null || item2 == null)
+				return -1;
+			if (item1.Equals(item2))
+				return 1;
+			return 0;
 		}
 		
 		private function LoadCannedData():void
