@@ -2,6 +2,8 @@ package twinlist
 {
 	import mx.controls.advancedDataGridClasses.MXAdvancedDataGridItemRenderer;
 	import mx.core.IFactory;
+	import twinlist.list.ItemAttribute;
+	import twinlist.list.ListItem;
 	
 	[Bindable]
 	public class ActionListItemRendererClass extends MXAdvancedDataGridItemRenderer implements IFactory

@@ -9,6 +9,7 @@ package twinlist
 	import mx.managers.ToolTipManager;
 	
 	import spark.components.Group;
+	import twinlist.list.ListItem;
 	
 	public class ListViewerClass extends Group
 	{

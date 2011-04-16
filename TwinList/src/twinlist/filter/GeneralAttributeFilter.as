@@ -1,7 +1,7 @@
 package twinlist.filter
 {
-	import twinlist.ListItem;
-	import twinlist.ItemAttribute;
+	import twinlist.list.ListItem;
+	import twinlist.list.ItemAttribute;
 	
 	[Bindable]
 	public class GeneralAttributeFilter implements IFilter

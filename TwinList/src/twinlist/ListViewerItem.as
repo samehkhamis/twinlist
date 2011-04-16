@@ -1,5 +1,7 @@
 package twinlist
 {
+	import twinlist.list.ListItem;
+
 	public class ListViewerItem
 	{
 		private var l1_unique:ListItem;

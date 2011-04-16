@@ -1,6 +1,6 @@
 package twinlist.filter
 {
-	import twinlist.ListItem;
+	import twinlist.list.ListItem;
 	
 	public interface IFilter
 	{

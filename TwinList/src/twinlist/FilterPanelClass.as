@@ -5,6 +5,8 @@ package twinlist {
 	import mx.events.FlexEvent;
 	
 	import spark.components.*;
+	import twinlist.list.AttributeDescriptor;
+	import twinlist.list.ItemAttribute;
 	
 	public class FilterPanelClass extends Group
 	{

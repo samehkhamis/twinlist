@@ -7,6 +7,7 @@ package twinlist
 	import spark.layouts.VerticalLayout;
 	
 	import twinlist.filter.CategoricalAttributeFilter;
+	import twinlist.list.AttributeDescriptor;
 
 	public class CategoricalFilterComponent extends FilterComponent
 	{

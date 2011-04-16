@@ -1,4 +1,4 @@
-package twinlist
+package twinlist.list
 {
 	import mx.collections.ArrayCollection;
 	

@@ -9,6 +9,8 @@ package twinlist
 	import spark.components.VGroup;
 	
 	import twinlist.filter.NumericalFilter;
+	import twinlist.list.AttributeDescriptor;
+	import twinlist.list.ItemAttribute;
 
 	public class NumericalFilterComponent extends FilterComponent
 	{
