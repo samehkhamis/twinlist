@@ -48,6 +48,15 @@ package twinlist.list
 			return string;
 		}
 		
+		public function AttributesString():String
+		{
+			var string:String = "";
+			for each (var attr:ItemAttribute in attributes) {
+				string += " " + attr.ValuesString();
+			}
+			return string;
+		}
+		
 		public function Equals(rhs:ListItem):Boolean
 		{
 			if (this.name != rhs.name)

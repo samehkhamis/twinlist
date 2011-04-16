@@ -52,17 +52,20 @@ package twinlist {
 		
 		public function SelectAll():void
 		{
-			model.FilterListViewerData();
+			if (Checked)
+				model.FilterListViewerData();
 		}
 		
 		public function ClearAll():void
 		{
-			model.FilterListViewerData();
+			if (Checked)
+				model.FilterListViewerData();
 		}
 		
 		protected function OnChange(event:Event):void
 		{
-			model.FilterListViewerData();
+			if (Checked)
+				model.FilterListViewerData();
 		}
 		
 		private function OnInitComplete(event:Event):void

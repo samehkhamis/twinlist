@@ -27,6 +27,7 @@ package twinlist
 		private var lists:ArrayCollection;
 		private var listIdx:Object;
 		private var visibleListIds:Array;
+		private var visibleItemIds:Object;
 		private var listViewerData:ArrayCollection;
 		private var actionListItems:ArrayCollection;
 		// attributes
@@ -50,6 +51,7 @@ package twinlist
 			lists = new ArrayCollection();
 			listIdx = new Object();
 			visibleListIds = new Array(2);
+			visibleItemIds = new Object();
 			listViewerData = new ArrayCollection();
 			actionListItems = new ArrayCollection();
 			itemAttributes = new ArrayCollection();
@@ -213,6 +215,11 @@ package twinlist
 		public function get VisibleListIds():Array
 		{
 			return visibleListIds;
+		}
+		
+		public function get VisibleItemIds():Object
+		{
+			return visibleItemIds;
 		}
 		
 		public function SetVisibleLists(id1:String, id2:String):void
@@ -379,9 +386,10 @@ package twinlist
 		
 		private function ReconcileLists(list1:List, list2:List):void
 		{
+			visibleItemIds = new Object();
 			listViewerData.removeAll();
+			// use name hashing to find "similar" items (HACK)
 			var map:Object = new Object();
-			var arr:Array;
 			for each (var item:ListItem in list1) {
 				map[item.Name] = new Array(2);
 				map[item.Name][0] = item;
@@ -391,6 +399,7 @@ package twinlist
 					map[item.Name] = new Array(2);
 				map[item.Name][1] = item;
 			}
+			// reconcile lists
 			for each (var pair:Array in map) {
 				var item1:ListItem = pair[0] as ListItem;
 				var item2:ListItem = pair[1] as ListItem;
@@ -401,6 +410,7 @@ package twinlist
 					listViewerItem = new ListViewerItem();
 					listViewerItem.Identical = item1;
 					listViewerData.addItem(listViewerItem);
+					visibleItemIds[item1.Id] = item1;
 				}
 				else if (sim >= 0) {
 					// similar
@@ -408,14 +418,20 @@ package twinlist
 					listViewerItem.L1Similar = item1;
 					listViewerItem.L2Similar = item2;
 					listViewerData.addItem(listViewerItem);
+					visibleItemIds[item1.Id] = item1;
+					visibleItemIds[item2.Id] = item2;
 				}
 				else {
 					// unique
 					listViewerItem = new ListViewerItem();
-					if (item1 != null)
+					if (item1 != null) {
 						listViewerItem.L1Unique = item1;
-					else
+						visibleItemIds[item1.Id] = item1;
+					}
+					else {
 						listViewerItem.L2Unique = item2;
+						visibleItemIds[item2.Id] = item2;
+					}
 					listViewerData.addItem(listViewerItem);						
 				}
 			}
