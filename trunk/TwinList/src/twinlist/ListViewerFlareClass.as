@@ -130,6 +130,7 @@ package twinlist
 			
 			// create transition animation
 			var animUpdate:Parallel = new Parallel();
+			
 			// fade out old sprites
 			for each (sprite in visList) {
 				animUpdate.add(new Tween(sprite, 0.5, {alpha: 0}));
@@ -167,10 +168,9 @@ package twinlist
 		
 		private function CreateVisList(data:ArrayCollection, rowHeight:int):ArrayCollection
 		{
-			// TODO: Fix this when we settle on multi-list reconciliation
-			var l1y:int = HeaderHeight;//textSpacing + rowHeight;
-			var l2y:int = HeaderHeight;//textSpacing + rowHeight;
-			var ry:int = HeaderHeight;//textSpacing + rowHeight;
+			var l1y:int = HeaderHeight;
+			var l2y:int = HeaderHeight;
+			var ry:int = HeaderHeight;
 			
 			var visList:ArrayCollection = new ArrayCollection();
 			for each (var item:ListViewerItem in data)
@@ -219,7 +219,6 @@ package twinlist
 			header.x = columnWidth / 2;
 			header.y = 0;
 			header.buttonMode = true;
-			header.addEventListener(MouseEvent.CLICK, HeaderClick);
 			
 			var rect:RectSprite = new RectSprite(index * columnWidth, 0, columnWidth, columnHeight);
 			rect.fillColor = rect.lineColor = color;
@@ -330,10 +329,6 @@ package twinlist
 				btn.label = "Separate";
 				reconciled = true;
 			}
-		}
-		
-		private function HeaderClick(event:MouseEvent):void
-		{
 		}
 		
 		private function ItemClick(event:MouseEvent):void
