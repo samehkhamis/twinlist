@@ -71,7 +71,7 @@ package twinlist
 				if (sprite.getChildAt(0).width > calculatedColumnWidth)
 					calculatedColumnWidth = sprite.getChildAt(0).width;
 			}
-			columnWidth = 180;//Math.max(calculatedColumnWidth, 180);
+			columnWidth = 180;//calculatedColumnWidth;
 			columnHeight = HeaderHeight + model.ListViewerData.length * RowHeight + textSpacing;
 			
 			// Set up the visualization
@@ -214,11 +214,10 @@ package twinlist
 			header.size = textHeight;
 			header.font = fontString;
 			header.bold = true;
-			header.letterSpacing = 4;
+			header.letterSpacing = 3;
 			header.horizontalAnchor = TextSprite.CENTER;
 			header.x = columnWidth / 2;
 			header.y = 0;
-			header.buttonMode = true;
 			
 			var rect:RectSprite = new RectSprite(index * columnWidth, 0, columnWidth, columnHeight);
 			rect.fillColor = rect.lineColor = color;
@@ -302,16 +301,16 @@ package twinlist
 			animReconcile.add(new Tween(columnList[4], 1, {fillColor: 0xffffffff, lineColor: 0xffffffff}));
 			
 			// Animate the column headers
-			animSeparate.add(new Tween(columnList[0].getChildAt(0), 1, {text: model.VisibleLists[0].Name + ' - Unique', font: fontString}));
-			animSeparate.add(new Tween(columnList[1].getChildAt(0), 1, {text: model.VisibleLists[0].Name + ' - Similar', font: fontString}));
-			animSeparate.add(new Tween(columnList[2].getChildAt(0), 1, {text: 'Identical', font: fontString}));
-			animSeparate.add(new Tween(columnList[3].getChildAt(0), 1, {text: model.VisibleLists[1].Name + ' - Similar', font: fontString}));
-			animSeparate.add(new Tween(columnList[4].getChildAt(0), 1, {text: model.VisibleLists[1].Name + ' - Unique', font: fontString}));
+			animSeparate.add(new Tween(columnList[0].getChildAt(0), 1, {text: model.VisibleLists[0].Name + ' - Unique'}));
+			animSeparate.add(new Tween(columnList[1].getChildAt(0), 1, {text: model.VisibleLists[0].Name + ' - Similar'}));
+			animSeparate.add(new Tween(columnList[2].getChildAt(0), 1, {text: 'Identical'}));
+			animSeparate.add(new Tween(columnList[3].getChildAt(0), 1, {text: model.VisibleLists[1].Name + ' - Similar'}));
+			animSeparate.add(new Tween(columnList[4].getChildAt(0), 1, {text: model.VisibleLists[1].Name + ' - Unique'}));
 			
 			animReconcile.add(new Tween(columnList[0].getChildAt(0), 1, {text: ''}));
-			animReconcile.add(new Tween(columnList[1].getChildAt(0), 1, {text: model.VisibleLists[0].Name, font: fontString}));
+			animReconcile.add(new Tween(columnList[1].getChildAt(0), 1, {text: model.VisibleLists[0].Name}));
 			animReconcile.add(new Tween(columnList[2].getChildAt(0), 1, {text: ''}));
-			animReconcile.add(new Tween(columnList[3].getChildAt(0), 1, {text: model.VisibleLists[1].Name, font: fontString}));
+			animReconcile.add(new Tween(columnList[3].getChildAt(0), 1, {text: model.VisibleLists[1].Name}));
 			animReconcile.add(new Tween(columnList[4].getChildAt(0), 1, {text: ''}));
 		}
 		
