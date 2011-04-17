@@ -20,6 +20,7 @@ package twinlist
 	
 	import spark.components.Button;
 	import spark.components.Group;
+	import spark.components.Scroller;
 	
 	import twinlist.list.ListItem;
 	
@@ -31,6 +32,8 @@ package twinlist
 		protected var vis:Visualization;
 		[Bindable]
 		public var btn:Button;
+		[Bindable]
+		public var scroller:Scroller;
 		
 		private var visList:ArrayCollection;
 		private var columnList:ArrayCollection;
@@ -61,7 +64,7 @@ package twinlist
 		private function OnDataLoaded(event:Event):void
 		{
 			// Get visList
-			visList = CreateVisList(model.ListViewerData, RowHeight);
+			visList = CreateVisList(model.ListViewerData);
 			
 			var sprite:DataSprite;
 			
@@ -95,11 +98,26 @@ package twinlist
 				vis.addChild(sprite);
 			}
 			
-			// Create the popup sprite
+			// Create the popup sprite and its timer
+			CreatePopup();
+			
+			// Make the scrolling faster
+			scroller.addEventListener(MouseEvent.MOUSE_WHEEL, function(event:MouseEvent):void {
+				event.delta *= 10;
+			}, true);
+			
+			// Create the two animation sequences
+			UpdateButtonAnimations();
+		}
+		
+		private function CreatePopup():void
+		{
+			// Create the sprite
 			var acceptBtn:TextSprite = new TextSprite("Accept?");
 			acceptBtn.size = textHeight;
 			acceptBtn.color = 0xffff0000;
 			acceptBtn.buttonMode = true;
+			
 			var rejectBtn:TextSprite = new TextSprite("Reject?");
 			rejectBtn.size = textHeight;
 			rejectBtn.color = 0xffff0000;
@@ -116,15 +134,12 @@ package twinlist
 			// Create the timer
 			timer = new Timer(250);
 			timer.addEventListener(TimerEvent.TIMER, ClickTimer);
-			
-			// Create the two animation sequences
-			UpdateButtonAnimations();
 		}
 		
 		private function OnViewUpdate(event:Event):void
 		{
 			// Get new visList
-			var newVisList:ArrayCollection = CreateVisList(model.ListViewerData, RowHeight);
+			var newVisList:ArrayCollection = CreateVisList(model.ListViewerData);
 			
 			var sprite:DataSprite;
 			
@@ -166,7 +181,7 @@ package twinlist
 			UpdateButtonAnimations();
 		}
 		
-		private function CreateVisList(data:ArrayCollection, rowHeight:int):ArrayCollection
+		private function CreateVisList(data:ArrayCollection):ArrayCollection
 		{
 			var l1y:int = HeaderHeight;
 			var l2y:int = HeaderHeight;
@@ -179,29 +194,29 @@ package twinlist
 				{
 					visList.addItem(CreateItemSprite(item.Identical, {x1: 1, y1: l1y, x2: 2, y2: ry}));
 					visList.addItem(CreateItemSprite(item.Identical, {x1: 3, y1: l2y, x2: 2, y2: ry}));
-					l1y += rowHeight;
-					l2y += rowHeight;
-					ry += rowHeight;
+					l1y += RowHeight;
+					l2y += RowHeight;
+					ry += RowHeight;
 				}
 				else if (item.L1Similar)
 				{
 					visList.addItem(CreateItemSprite(item.L1Similar, {x1: 1, y1: l1y, x2: 1, y2: ry}));
 					visList.addItem(CreateItemSprite(item.L2Similar, {x1: 3, y1: l2y, x2: 3, y2: ry}));
-					l1y += rowHeight;
-					l2y += rowHeight;
-					ry += rowHeight;
+					l1y += RowHeight;
+					l2y += RowHeight;
+					ry += RowHeight;
 				}
 				else if (item.L1Unique)
 				{
 					visList.addItem(CreateItemSprite(item.L1Unique, {x1: 1, y1: l1y, x2: 0, y2: ry}));
-					l1y += rowHeight;
-					ry += rowHeight;
+					l1y += RowHeight;
+					ry += RowHeight;
 				}
 				else if (item.L2Unique)
 				{
 					visList.addItem(CreateItemSprite(item.L2Unique, {x1: 3, y1: l2y, x2: 4, y2: ry}));
-					l2y += rowHeight;
-					ry += rowHeight;
+					l2y += RowHeight;
+					ry += RowHeight;
 				}
 			}
 			return visList;
@@ -253,7 +268,7 @@ package twinlist
 			attrText.size = textHeight - 4;
 			attrText.font = fontString;
 			attrText.doubleClickEnabled = true;
-			attrText.y = nameText.y + textHeight;
+			attrText.y = textHeight;
 			
 			var sprite:DataSprite = new DataSprite();
 			sprite.addChild(nameText);
@@ -352,8 +367,8 @@ package twinlist
 		{
 			var sprite:DataSprite = event.currentTarget as DataSprite;
 			selectedSprite = sprite;
-			popup.x = sprite.x + event.localX;
-			popup.y = sprite.y + event.localY;
+			popup.x = sprite.x + event.localX - popup.width / 2;
+			popup.y = sprite.y + event.localY - popup.height / 2;
 			timer.start();
 		}
 		
@@ -383,12 +398,6 @@ package twinlist
 		private function ItemRollOver(event:MouseEvent):void
 		{
 			var sprite:DataSprite = event.currentTarget as DataSprite;
-			if (sprite != selectedSprite)
-			{
-				timer.reset();
-				popup.alpha = 0;
-			}
-			
 			for (var i:int = 0; i < sprite.numChildren; i++) {
 				var text:TextSprite = sprite.getChildAt(i) as TextSprite;
 				text.color = 0xff0000ff;
