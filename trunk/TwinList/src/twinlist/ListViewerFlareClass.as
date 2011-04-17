@@ -35,7 +35,7 @@ package twinlist
 		private var columnList:ArrayCollection;
 		
 		private var selectedSprite:DataSprite = null;
-		private var tooltip:RectSprite;
+		private var popup:RectSprite;
 		private var timer:Timer;
 		
 		private var columnWidth:int = 0;
@@ -92,7 +92,7 @@ package twinlist
 				vis.addChild(sprite);
 			}
 			
-			// Create the tooltip sprite
+			// Create the popup sprite
 			var acceptBtn:TextSprite = new TextSprite("Accept?");
 			acceptBtn.size = textHeight;
 			acceptBtn.color = 0xffff0000;
@@ -103,12 +103,12 @@ package twinlist
 			rejectBtn.buttonMode = true;
 			rejectBtn.x = acceptBtn.width;
 			
-			tooltip = new RectSprite(0, 0, rejectBtn.x + rejectBtn.width, rejectBtn.height);
-			tooltip.fillColor = tooltip.lineColor = 0x55ffffff;
-			tooltip.alpha = 0;
-			tooltip.addChild(acceptBtn);
-			tooltip.addChild(rejectBtn);
-			vis.addChild(tooltip);
+			popup = new RectSprite(0, 0, rejectBtn.x + rejectBtn.width, rejectBtn.height);
+			popup.fillColor = popup.lineColor = 0x55ffffff;
+			popup.alpha = 0;
+			popup.addChild(acceptBtn);
+			popup.addChild(rejectBtn);
+			vis.addChild(popup);
 			
 			// Create the timer
 			timer = new Timer(250);
@@ -350,8 +350,8 @@ package twinlist
 		{
 			var sprite:DataSprite = event.currentTarget as DataSprite;
 			selectedSprite = sprite;
-			tooltip.x = sprite.x + event.localX;
-			tooltip.y = sprite.y + event.localY;
+			popup.x = sprite.x + event.localX;
+			popup.y = sprite.y + event.localY;
 			timer.start();
 		}
 		
@@ -359,21 +359,21 @@ package twinlist
 		{
 			var sprite:DataSprite = event.currentTarget as DataSprite;
 			timer.reset();
-			tooltip.alpha = 0;
+			popup.alpha = 0;
 		}
 		
 		private function ItemMouseMove(event:MouseEvent):void
 		{
 			var sprite:DataSprite = event.currentTarget as DataSprite;
 			timer.reset();
-			tooltip.alpha = 0;
+			popup.alpha = 0;
 		}
 		
 		private function ClickTimer(event:TimerEvent):void
 		{
-			if (tooltip.alpha == 0)
+			if (popup.alpha == 0)
 			{
-				var tween:Tween = new Tween(tooltip, 0.5, {alpha: 1});
+				var tween:Tween = new Tween(popup, 0.5, {alpha: 1});
 				tween.play();
 			}
 		}
@@ -384,7 +384,7 @@ package twinlist
 			if (sprite != selectedSprite)
 			{
 				timer.reset();
-				tooltip.alpha = 0;
+				popup.alpha = 0;
 			}
 			
 			for (var i:int = 0; i < sprite.numChildren; i++) {
