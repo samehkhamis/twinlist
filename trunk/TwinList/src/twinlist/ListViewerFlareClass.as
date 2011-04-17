@@ -306,8 +306,8 @@ package twinlist
 			animSeparate.add(new Tween(columnList[0].getChildAt(0), 1, {text: model.VisibleLists[0].Name + ' - Unique', font: fontString}));
 			animSeparate.add(new Tween(columnList[1].getChildAt(0), 1, {text: model.VisibleLists[0].Name + ' - Similar', font: fontString}));
 			animSeparate.add(new Tween(columnList[2].getChildAt(0), 1, {text: 'Identical', font: fontString}));
-			animSeparate.add(new Tween(columnList[3].getChildAt(0), 1, {text: model.VisibleLists[0].Name + ' - Similar', font: fontString}));
-			animSeparate.add(new Tween(columnList[4].getChildAt(0), 1, {text: model.VisibleLists[0].Name + ' - Unique', font: fontString}));
+			animSeparate.add(new Tween(columnList[3].getChildAt(0), 1, {text: model.VisibleLists[1].Name + ' - Similar', font: fontString}));
+			animSeparate.add(new Tween(columnList[4].getChildAt(0), 1, {text: model.VisibleLists[1].Name + ' - Unique', font: fontString}));
 			
 			animReconcile.add(new Tween(columnList[0].getChildAt(0), 1, {text: ''}));
 			animReconcile.add(new Tween(columnList[1].getChildAt(0), 1, {text: model.VisibleLists[0].Name, font: fontString}));
