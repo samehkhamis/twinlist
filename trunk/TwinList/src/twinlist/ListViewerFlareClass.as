@@ -3,15 +3,16 @@ package twinlist
 	import flare.animate.Parallel;
 	import flare.animate.TransitionEvent;
 	import flare.animate.Tween;
+	import flare.display.LineSprite;
 	import flare.display.RectSprite;
 	import flare.display.TextSprite;
-	import flare.display.LineSprite;
 	import flare.vis.Visualization;
 	import flare.vis.data.DataSprite;
 	
+	import flash.display.Sprite;
 	import flash.events.Event;
-	import flash.events.TimerEvent;
 	import flash.events.MouseEvent;
+	import flash.events.TimerEvent;
 	import flash.geom.Rectangle;
 	import flash.utils.Timer;
 	
@@ -42,6 +43,7 @@ package twinlist
 		private var columnHeight:int = 0;
 		private var textHeight:int = 16;
 		private var textSpacing:int = 12;
+		private var fontString:String = "Sans Serif";
 		
 		private var reconciled:Boolean;
 		private var animReconcile:Parallel;
@@ -59,31 +61,32 @@ package twinlist
 		private function OnDataLoaded(event:Event):void
 		{
 			// Get visList
-			var rowHeight:int = textHeight + textSpacing;
-			visList = CreateVisList(model.ListViewerData, rowHeight);
+			visList = CreateVisList(model.ListViewerData, RowHeight);
+			
+			var sprite:DataSprite;
 			
 			// Calculate column dimensions
 			var calculatedColumnWidth:int = 0;
-			for each (var sprite:DataSprite in visList) {
+			for each (sprite in visList) {
 				if (sprite.getChildAt(0).width > calculatedColumnWidth)
 					calculatedColumnWidth = sprite.getChildAt(0).width;
 			}
-			columnWidth = Math.max(calculatedColumnWidth, 180);
-			columnHeight = (model.ListViewerData.length + 1) * rowHeight + textSpacing;
+			columnWidth = 180;//Math.max(calculatedColumnWidth, 180);
+			columnHeight = HeaderHeight + model.ListViewerData.length * RowHeight + textSpacing;
 			
 			// Set up the visualization
 			vis.bounds = new Rectangle(0, 0, 5 * columnWidth, columnHeight);
 			columnList = new ArrayCollection();
 			vis.addChild(CreateColumn(0, 0xffffffff, ''));
-			vis.addChild(CreateColumn(1, 0xffdddddd, 'List1'));
+			vis.addChild(CreateColumn(1, 0xffdddddd, model.VisibleLists[0].Name));
 			vis.addChild(CreateColumn(2, 0xffffffff, ''));
-			vis.addChild(CreateColumn(3, 0xffdddddd, 'List2'));
+			vis.addChild(CreateColumn(3, 0xffdddddd, model.VisibleLists[1].Name));
 			vis.addChild(CreateColumn(4, 0xffffffff, ''));
 			vis.addChild(CreateHorizontalLine(1));
-			vis.addChild(CreateHorizontalLine(rowHeight));
+			vis.addChild(CreateHorizontalLine(textHeight + textSpacing));
 			
 			// Fix x values and draw sprites
-			for each (var sprite:DataSprite in visList)
+			for each (sprite in visList)
 			{
 				sprite.data.properties.x1 *= columnWidth;
 				sprite.data.properties.x2 *= columnWidth;
@@ -121,17 +124,18 @@ package twinlist
 		private function OnViewUpdate(event:Event):void
 		{
 			// Get new visList
-			var rowHeight:int = textHeight + textSpacing;
-			var newVisList = CreateVisList(model.ListViewerData, rowHeight);
+			var newVisList:ArrayCollection = CreateVisList(model.ListViewerData, RowHeight);
+			
+			var sprite:DataSprite;
 			
 			// create transition animation
 			var animUpdate:Parallel = new Parallel();
 			// fade out old sprites
-			for each (var sprite:DataSprite in visList) {
+			for each (sprite in visList) {
 				animUpdate.add(new Tween(sprite, 0.5, {alpha: 0}));
 			}
 			// fade in new sprites
-			for each (var sprite:DataSprite in newVisList) {
+			for each (sprite in newVisList) {
 				sprite.data.properties.x1 *= columnWidth;
 				sprite.data.properties.x2 *= columnWidth;
 				sprite.x = reconciled ? sprite.data.properties.x2 : sprite.data.properties.x1;
@@ -164,9 +168,9 @@ package twinlist
 		private function CreateVisList(data:ArrayCollection, rowHeight:int):ArrayCollection
 		{
 			// TODO: Fix this when we settle on multi-list reconciliation
-			var l1y:int = textSpacing + rowHeight;
-			var l2y:int = textSpacing + rowHeight;
-			var ry:int = textSpacing + rowHeight;
+			var l1y:int = HeaderHeight;//textSpacing + rowHeight;
+			var l2y:int = HeaderHeight;//textSpacing + rowHeight;
+			var ry:int = HeaderHeight;//textSpacing + rowHeight;
 			
 			var visList:ArrayCollection = new ArrayCollection();
 			for each (var item:ListViewerItem in data)
@@ -208,6 +212,7 @@ package twinlist
 			var header:TextSprite = new TextSprite(title);
 			header.color = 0xff000000;
 			header.size = textHeight;
+			header.font = fontString;
 			header.bold = true;
 			header.letterSpacing = 4;
 			header.horizontalAnchor = TextSprite.CENTER;
@@ -239,19 +244,22 @@ package twinlist
 		
 		private function CreateItemSprite(item:ListItem, properties:Object):DataSprite
 		{
-			var nameText:TextSprite = new TextSprite(item.toString());// new TextSprite(item.Name);
+			var nameText:TextSprite = new TextSprite(item.Name);
 			nameText.color = 0xff000000;
 			nameText.size = textHeight;
+			nameText.font = fontString;
 			nameText.doubleClickEnabled = true;
 			
-//			var attrText:TextSprite = new TextSprite(item.AttributesString());
-//			attrText.color = 0xff000000;
-//			attrText.size = textHeight - 4;
-//			attrText.doubleClickEnabled = true;
+			var attrText:TextSprite = new TextSprite(item.AttributesString());
+			attrText.color = 0xff000000;
+			attrText.size = textHeight - 4;
+			attrText.font = fontString;
+			attrText.doubleClickEnabled = true;
+			attrText.y = nameText.y + textHeight;
 			
 			var sprite:DataSprite = new DataSprite();
 			sprite.addChild(nameText);
-//			sprite.addChild(attrText);
+			sprite.addChild(attrText);
 			sprite.renderer = null;
 			sprite.data = {properties: properties, item: item};
 			sprite.buttonMode = true;
@@ -295,16 +303,16 @@ package twinlist
 			animReconcile.add(new Tween(columnList[4], 1, {fillColor: 0xffffffff, lineColor: 0xffffffff}));
 			
 			// Animate the column headers
-			animSeparate.add(new Tween(columnList[0].getChildAt(0), 1, {text: 'List1 - Unique'}));
-			animSeparate.add(new Tween(columnList[1].getChildAt(0), 1, {text: 'List1 - Similar'}));
-			animSeparate.add(new Tween(columnList[2].getChildAt(0), 1, {text: 'Identical'}));
-			animSeparate.add(new Tween(columnList[3].getChildAt(0), 1, {text: 'List2 - Similar'}));
-			animSeparate.add(new Tween(columnList[4].getChildAt(0), 1, {text: 'List2 - Unique'}));
+			animSeparate.add(new Tween(columnList[0].getChildAt(0), 1, {text: 'L1 - Unique', font: fontString}));
+			animSeparate.add(new Tween(columnList[1].getChildAt(0), 1, {text: 'L1 - Similar', font: fontString}));
+			animSeparate.add(new Tween(columnList[2].getChildAt(0), 1, {text: 'Identical', font: fontString}));
+			animSeparate.add(new Tween(columnList[3].getChildAt(0), 1, {text: 'L2 - Similar', font: fontString}));
+			animSeparate.add(new Tween(columnList[4].getChildAt(0), 1, {text: 'L2 - Unique', font: fontString}));
 			
 			animReconcile.add(new Tween(columnList[0].getChildAt(0), 1, {text: ''}));
-			animReconcile.add(new Tween(columnList[1].getChildAt(0), 1, {text: 'List1'}));
+			animReconcile.add(new Tween(columnList[1].getChildAt(0), 1, {text: model.VisibleLists[0].Name, font: fontString}));
 			animReconcile.add(new Tween(columnList[2].getChildAt(0), 1, {text: ''}));
-			animReconcile.add(new Tween(columnList[3].getChildAt(0), 1, {text: 'List2'}));
+			animReconcile.add(new Tween(columnList[3].getChildAt(0), 1, {text: model.VisibleLists[1].Name, font: fontString}));
 			animReconcile.add(new Tween(columnList[4].getChildAt(0), 1, {text: ''}));
 		}
 		
@@ -400,6 +408,16 @@ package twinlist
 				var text:TextSprite = sprite.getChildAt(i) as TextSprite;
 				text.color = 0xff000000;
 			}
+		}
+		
+		private function get HeaderHeight():int
+		{
+			return textHeight + 2 * textSpacing;
+		}
+		
+		private function get RowHeight():int
+		{
+			return 2 * textHeight - 4 + textSpacing;
 		}
 	}
 }

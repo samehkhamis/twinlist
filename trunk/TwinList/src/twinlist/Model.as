@@ -212,9 +212,9 @@ package twinlist
 			FilterListViewerData();
 		}
 		
-		public function get VisibleListIds():Array
+		public function get VisibleLists():Array
 		{
-			return visibleListIds;
+			return [lists[listIdx[visibleListIds[0]]], lists[listIdx[visibleListIds[1]]]];
 		}
 		
 		public function get VisibleItemIds():Object
@@ -390,11 +390,12 @@ package twinlist
 			listViewerData.removeAll();
 			// use name hashing to find "similar" items (HACK)
 			var map:Object = new Object();
-			for each (var item:ListItem in list1) {
+			var item:ListItem;
+			for each (item in list1) {
 				map[item.Name] = new Array(2);
 				map[item.Name][0] = item;
 			}
-			for each (var item:ListItem in list2) {
+			for each (item in list2) {
 				if (!(item.Name in map))
 					map[item.Name] = new Array(2);
 				map[item.Name][1] = item;
