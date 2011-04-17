@@ -12,7 +12,7 @@
 		<s:HorizontalLayout/>		
 	</twinlist:layout>
 	<s:VGroup>
-		<s:Label id="lbl"/>
+		<s:Label id="lbl" fontWeight="bold"/>
 		<s:CheckBox id="cb" label="Enable"/>
 		<s:Button id="selectAllBtn" label="Select All" width="80"/>
 		<s:Button id="clearAllBtn" label="Clear All" width="80"/>
