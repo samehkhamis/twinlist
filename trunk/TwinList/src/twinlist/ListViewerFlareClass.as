@@ -115,21 +115,26 @@ package twinlist
 			// Create the sprite
 			var acceptBtn:TextSprite = new TextSprite("Accept?");
 			acceptBtn.size = textHeight;
-			acceptBtn.color = 0xffff0000;
+			acceptBtn.color = 0xff330000;
 			acceptBtn.buttonMode = true;
+			acceptBtn.addEventListener(MouseEvent.MOUSE_OVER, ButtonRollOver);
+			acceptBtn.addEventListener(MouseEvent.MOUSE_OUT, ButtonRollOut);
+			acceptBtn.addEventListener(MouseEvent.MOUSE_UP, AcceptClick);
 			
 			var rejectBtn:TextSprite = new TextSprite("Reject?");
 			rejectBtn.size = textHeight;
-			rejectBtn.color = 0xffff0000;
+			rejectBtn.color = 0xff330000;
 			rejectBtn.buttonMode = true;
 			rejectBtn.x = acceptBtn.width;
+			rejectBtn.addEventListener(MouseEvent.MOUSE_OVER, ButtonRollOver);
+			rejectBtn.addEventListener(MouseEvent.MOUSE_OUT, ButtonRollOut);
+			rejectBtn.addEventListener(MouseEvent.MOUSE_UP, RejectClick);
 			
 			popup = new RectSprite(0, 0, rejectBtn.x + rejectBtn.width, rejectBtn.height);
 			popup.fillColor = popup.lineColor = 0x55ffffff;
 			popup.alpha = 0;
 			popup.addChild(acceptBtn);
 			popup.addChild(rejectBtn);
-			vis.addChild(popup);
 			
 			// Create the timer
 			timer = new Timer(250);
@@ -277,7 +282,6 @@ package twinlist
 			sprite.data = {properties: properties, item: item};
 			sprite.buttonMode = true;
 			sprite.doubleClickEnabled = true;
-			sprite.addEventListener(MouseEvent.CLICK, ItemClick);
 			sprite.addEventListener(MouseEvent.DOUBLE_CLICK, ItemDoubleClick);
 			sprite.addEventListener(MouseEvent.MOUSE_DOWN, ItemMouseDown);
 			sprite.addEventListener(MouseEvent.MOUSE_UP, ItemMouseUp);
@@ -345,10 +349,34 @@ package twinlist
 			}
 		}
 		
-		private function ItemClick(event:MouseEvent):void
+		private function ButtonRollOver(event:MouseEvent):void
 		{
-			var sprite:DataSprite = event.currentTarget as DataSprite;
-			model.SelectedItem = sprite.data.item as ListItem;
+			event.currentTarget.color = 0xffff0000;
+		}
+		
+		private function ButtonRollOut(event:MouseEvent):void
+		{
+			event.currentTarget.color = 0xff330000;
+		}
+		
+		private function AcceptClick(event:MouseEvent):void
+		{
+			if (popup.alpha == 0)
+				return;
+			
+			var item:ListItem = selectedSprite.data.item as ListItem;
+			if (model.ActionListContains(item) == -1)
+				model.AddActionListItem(item);
+		}
+		
+		private function RejectClick(event:MouseEvent):void
+		{
+			if (popup.alpha == 0)
+				return;
+			
+			var item:ListItem = selectedSprite.data.item as ListItem;
+			if (model.ActionListContains(item) >= 0)
+				model.DelActionListItem(item);
 		}
 		
 		private function ItemDoubleClick(event:MouseEvent):void
@@ -365,10 +393,17 @@ package twinlist
 		
 		private function ItemMouseDown(event:MouseEvent):void
 		{
+			if (selectedSprite != null)
+				selectedSprite.removeChild(popup);
+			
 			var sprite:DataSprite = event.currentTarget as DataSprite;
+			model.SelectedItem = sprite.data.item as ListItem;
 			selectedSprite = sprite;
-			popup.x = sprite.x + event.localX - popup.width / 2;
-			popup.y = sprite.y + event.localY - popup.height / 2;
+			
+			popup.alpha = 0;
+			popup.x = sprite.getChildAt(0).width;
+			popup.y = event.localY - popup.height / 2;
+			sprite.addChild(popup);
 			timer.start();
 		}
 		
@@ -382,15 +417,13 @@ package twinlist
 		private function ItemMouseMove(event:MouseEvent):void
 		{
 			var sprite:DataSprite = event.currentTarget as DataSprite;
-			timer.reset();
-			popup.alpha = 0;
 		}
 		
 		private function ClickTimer(event:TimerEvent):void
 		{
 			if (popup.alpha == 0)
 			{
-				var tween:Tween = new Tween(popup, 0.5, {alpha: 1});
+				var tween:Tween = new Tween(popup, 0.15, {alpha: 1});
 				tween.play();
 			}
 		}
@@ -398,6 +431,7 @@ package twinlist
 		private function ItemRollOver(event:MouseEvent):void
 		{
 			var sprite:DataSprite = event.currentTarget as DataSprite;
+			
 			for (var i:int = 0; i < sprite.numChildren; i++) {
 				var text:TextSprite = sprite.getChildAt(i) as TextSprite;
 				text.color = 0xff0000ff;
@@ -407,6 +441,13 @@ package twinlist
 		private function ItemRollOut(event:MouseEvent):void
 		{
 			var sprite:DataSprite = event.currentTarget as DataSprite;
+			
+			if (sprite == selectedSprite)
+			{
+				timer.reset();
+				popup.alpha = 0;
+			}
+			
 			for (var i:int = 0; i < sprite.numChildren; i++) {
 				var text:TextSprite = sprite.getChildAt(i) as TextSprite;
 				text.color = 0xff000000;
