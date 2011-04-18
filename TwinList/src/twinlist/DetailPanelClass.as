@@ -21,8 +21,10 @@ package twinlist
 		protected function GetAttributes(item:ListItem):ArrayCollection
 		{
 			var array:ArrayCollection = new ArrayCollection();
-			for each (var attr:ItemAttribute in item.Attributes) {
-				array.addItem({Name:attr.toString(), Values:attr.Values});
+			if (item != null) {
+				for each (var attr:ItemAttribute in item.Attributes) {
+					array.addItem({Name:attr.toString(), Values:attr.Values});
+				}
 			}
 			return array;
 		}
