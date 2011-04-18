@@ -115,6 +115,7 @@ package twinlist
 			// Create the sprite
 			var acceptBtn:TextSprite = new TextSprite("Accept?");
 			acceptBtn.size = textHeight;
+			acceptBtn.font = fontString;
 			acceptBtn.color = 0xff330000;
 			acceptBtn.buttonMode = true;
 			acceptBtn.addEventListener(MouseEvent.MOUSE_OVER, ButtonRollOver);
@@ -123,6 +124,7 @@ package twinlist
 			
 			var rejectBtn:TextSprite = new TextSprite("Reject?");
 			rejectBtn.size = textHeight;
+			rejectBtn.font = fontString;
 			rejectBtn.color = 0xff330000;
 			rejectBtn.buttonMode = true;
 			rejectBtn.x = acceptBtn.width;
@@ -242,6 +244,7 @@ package twinlist
 			var rect:RectSprite = new RectSprite(index * columnWidth, 0, columnWidth, columnHeight);
 			rect.fillColor = rect.lineColor = color;
 			rect.addChild(header);
+			rect.addEventListener(MouseEvent.MOUSE_DOWN, ItemMouseDown);
 			columnList.addItem(rect);
 			
 			return rect;
@@ -392,21 +395,30 @@ package twinlist
 		
 		private function ItemMouseDown(event:MouseEvent):void
 		{
+			// remove selected sprite popup and highlight
 			if (selectedSprite != null) {
 				if (selectedSprite.contains(popup))
 					selectedSprite.removeChild(popup);
 				Highlight(selectedSprite, false);
 			}
-			
+			// get selected sprite (will be null if not item)
 			var sprite:DataSprite = event.currentTarget as DataSprite;
+			// if not item, update model and return
+			if (sprite == null) {
+				model.SelectedItem = null;
+				return;
+			}
+			// set selected item in model
 			model.SelectedItem = sprite.data.item as ListItem;
+			// set selected sprite and highlight
 			selectedSprite = sprite;
 			Highlight(sprite, true);
-			
+			// setup popup
 			popup.alpha = 0;
 			popup.x = sprite.getChildAt(0).width;
 			popup.y = event.localY - popup.height / 2;
 			sprite.addChild(popup);
+			// start timer
 			timer.start();
 		}
 		
