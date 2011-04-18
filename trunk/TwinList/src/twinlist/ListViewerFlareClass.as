@@ -285,7 +285,6 @@ package twinlist
 			sprite.addEventListener(MouseEvent.DOUBLE_CLICK, ItemDoubleClick);
 			sprite.addEventListener(MouseEvent.MOUSE_DOWN, ItemMouseDown);
 			sprite.addEventListener(MouseEvent.MOUSE_UP, ItemMouseUp);
-			sprite.addEventListener(MouseEvent.MOUSE_MOVE, ItemMouseMove);
 			sprite.addEventListener(MouseEvent.ROLL_OVER, ItemRollOver);
 			sprite.addEventListener(MouseEvent.ROLL_OUT, ItemRollOut);
 			
@@ -333,7 +332,7 @@ package twinlist
 			animReconcile.add(new Tween(columnList[4].getChildAt(0), 1, {text: ''}));
 		}
 		
-		protected function ButtonClick(event:MouseEvent):void
+		protected function ReconcileButtonClick(event:MouseEvent):void
 		{
 			if (reconciled)
 			{
@@ -393,12 +392,16 @@ package twinlist
 		
 		private function ItemMouseDown(event:MouseEvent):void
 		{
-			if (selectedSprite != null)
-				selectedSprite.removeChild(popup);
+			if (selectedSprite != null) {
+				if (selectedSprite.contains(popup))
+					selectedSprite.removeChild(popup);
+				Highlight(selectedSprite, false);
+			}
 			
 			var sprite:DataSprite = event.currentTarget as DataSprite;
 			model.SelectedItem = sprite.data.item as ListItem;
 			selectedSprite = sprite;
+			Highlight(sprite, true);
 			
 			popup.alpha = 0;
 			popup.x = sprite.getChildAt(0).width;
@@ -414,11 +417,6 @@ package twinlist
 			popup.alpha = 0;
 		}
 		
-		private function ItemMouseMove(event:MouseEvent):void
-		{
-			var sprite:DataSprite = event.currentTarget as DataSprite;
-		}
-		
 		private function ClickTimer(event:TimerEvent):void
 		{
 			if (popup.alpha == 0)
@@ -431,27 +429,22 @@ package twinlist
 		private function ItemRollOver(event:MouseEvent):void
 		{
 			var sprite:DataSprite = event.currentTarget as DataSprite;
-			
-			for (var i:int = 0; i < sprite.numChildren; i++) {
-				var text:TextSprite = sprite.getChildAt(i) as TextSprite;
-				text.color = 0xff0000ff;
-			}
+			if (sprite == selectedSprite)
+				return;
+			Highlight(sprite, true);
 		}
 		
 		private function ItemRollOut(event:MouseEvent):void
 		{
 			var sprite:DataSprite = event.currentTarget as DataSprite;
-			
-			if (sprite == selectedSprite)
-			{
+			if (sprite == selectedSprite) {
 				timer.reset();
 				popup.alpha = 0;
+				if (sprite.contains(popup))
+					sprite.removeChild(popup);
 			}
-			
-			for (var i:int = 0; i < sprite.numChildren; i++) {
-				var text:TextSprite = sprite.getChildAt(i) as TextSprite;
-				text.color = 0xff000000;
-			}
+			else
+				Highlight(sprite, false);
 		}
 		
 		private function get HeaderHeight():int
@@ -462,6 +455,16 @@ package twinlist
 		private function get RowHeight():int
 		{
 			return 2 * textHeight - 4 + textSpacing;
+		}
+		
+		private function Highlight(sprite:Sprite, enabled:Boolean):void
+		{
+			var color:int = enabled ? 0xff0000ff : 0xff000000;
+			for (var i:int = 0; i < sprite.numChildren; i++) {
+				var text:TextSprite = sprite.getChildAt(i) as TextSprite;
+				if (text != null)
+					text.color = color;
+			}
 		}
 	}
 }
