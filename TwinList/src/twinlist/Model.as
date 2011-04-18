@@ -420,21 +420,18 @@ package twinlist
 				var item1:ListItem = pair[0] as ListItem;
 				var item2:ListItem = pair[1] as ListItem;
 
-				var indexItem1:String;
-				var indexItem2:String;
+				var key:String;
 				
 				// Set up null indices
 				if (item1 == null)
-					indexItem1="";
-				else indexItem1=item1.Id;
-				
-				if (item2 == null)
-					indexItem2="";
-				else indexItem2=item2.Id;
+					key=item2.Id;
+				else if (item2 == null)
+					key=item1.Id;
+				else key=item1.Id+item2.Id;
 
 				// Look up the similarities of the two items in the hash table.
 				var simItem:SimilarityItem = 
-					hashSimilarities[indexItem1+indexItem2] as SimilarityItem;
+					hashSimilarities[key] as SimilarityItem;
 						
 				var listViewerItem:ListViewerItem;
 				if (simItem.Type == SimilarityItem.IDENTICAL) {
