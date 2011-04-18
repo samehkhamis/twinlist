@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<SimilarityList>
+    
+     <!-- Calcitrol -->
+     <SimilarityPair>
+        <L1Index>patientItem1</L1Index>
+        <L2Index>erItem1</L2Index>
+        <Type>0</Type> <!-- Identical -->
+        <Diffs>0</Diffs>
+	</SimilarityPair>
+    
+    <!-- Darbapoetin -->
+    <SimilarityPair>
+        <L1Index>patientItem2</L1Index>
+        <L2Index>erItem2</L2Index>
+        <Type>0</Type> <!-- Identical -->
+        <Diffs>0</Diffs>
+	</SimilarityPair>
+
+    <!-- Docusate Sodium -->
+	<SimilarityPair>
+        <L1Index>patientItem3</L1Index>
+        <L2Index>erItem3</L2Index>
+        <Type>0</Type> <!-- Identical -->
+        <Diffs>0</Diffs>
+    </SimilarityPair>
+
+      <!-- Ramipril -->
+	<SimilarityPair>
+        <L1Index>patientItem4</L1Index>
+        <L2Index>erItem4</L2Index>
+        <Type>0</Type> <!-- Identical -->
+        <Diffs>0</Diffs>
+	</SimilarityPair>
+  
+    <!-- Acetaminophen -->
+	<SimilarityPair>
+        <L1Index>patientItem5</L1Index>
+        <L2Index>erItem5</L2Index>
+        <Type>0</Type> <!-- Identical -->
+        <Diffs>0</Diffs>
+	</SimilarityPair>
+ 
+    <!-- Calcium Carbonate -->
+    <SimilarityPair>
+        <L1Index>patientItem6</L1Index>
+        <L2Index>erItem6</L2Index>
+        <Type>1</Type> <!-- Similar -->
+        <Diffs>1</Diffs>
+        <Difference>
+            <attrdiff>
+                <Name>Dosage</Name>
+                <L1Diff>500</L1Diff>
+                <L2Diff>1000</L2Diff>
+            </attrdiff>
+        </Difference>
+	</SimilarityPair>
+    
+    <!-- Atorvistatin -->
+ 	<SimilarityPair>
+        <L1Index>patientItem7</L1Index>
+        <L2Index>erItem7</L2Index>
+        <Type>1</Type> <!-- Similar -->
+        <Diffs>1</Diffs>
+        <Difference>
+            <attrdiff>
+                <Name>Dosage</Name>
+                <L1Diff>40</L1Diff>
+                <L2Diff>60</L2Diff>
+            </attrdiff>
+        </Difference>
+	</SimilarityPair>
+
+    <!-- Metoprolol -->   
+    <SimilarityPair>
+        <L1Index>patientItem8</L1Index>
+        <L2Index>erItem8</L2Index>
+        <Type>1</Type> <!-- Similar -->
+        <Diffs>2</Diffs>
+        <Difference>
+            <attrdiff>
+                <Name>Dosage</Name>
+                <L1Diff>50</L1Diff>
+                <L2Diff>100</L2Diff>
+            </attrdiff>
+            <attrdiff>
+                <Name>Frequency</Name>
+                <L1Diff>Daily</L1Diff>
+                <L2Diff>BID</L2Diff>
+            </attrdiff>
+        </Difference>
+	</SimilarityPair>
+
+    <!-- Aspirin -->   
+	<SimilarityPair>
+        <L1Index>patientItem9</L1Index>
+        <L2Index></L2Index>
+        <Type>2</Type> <!-- Unique -->
+        <Diffs>0</Diffs>
+	</SimilarityPair>
+
+    <!-- Meloxicam  -->   
+	<SimilarityPair>
+        <L1Index>patientItem10</L1Index>
+        <L2Index></L2Index>
+        <Type>2</Type> <!-- Unique -->
+        <Diffs>0</Diffs>
+	</SimilarityPair>
+ 
+    <!-- Ferrous Gloconate -->
+	<SimilarityPair>
+        <L1Index></L1Index>
+        <L2Index>erItem9</L2Index>
+        <Type>2</Type>
+        <Diffs>0</Diffs>
+	</SimilarityPair>
+
+   <!-- Omeprazole -->
+	<SimilarityPair>
+        <L1Index></L1Index>
+        <L2Index>erItem10</L2Index>
+        <Type>2</Type> <!-- Unique -->
+        <Diffs>0</Diffs>
+	</SimilarityPair>
+ 
+   <!-- Ciproflaxocin -->
+	<SimilarityPair>
+        <L1Index></L1Index>
+        <L2Index>erItem11</L2Index>
+        <Type>2</Type> <!-- Unique -->
+        <Diffs>0</Diffs>
+	</SimilarityPair>
+ 
+</SimilarityList>
