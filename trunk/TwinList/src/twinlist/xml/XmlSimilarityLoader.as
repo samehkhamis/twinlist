@@ -61,7 +61,14 @@ package twinlist.xml
 				}
 					
 				var item:SimilarityItem=new SimilarityItem(l1Index,l2Index,type,diffs,diffList);
-				simHash[l1Index+l2Index]=item;
+				var key: String;
+				if (l1Index == "")
+					key=l2Index;
+				else if (l2Index == "")
+					key=l1Index;
+				else key=l1Index+l2Index;
+				
+				simHash[key]=item;
 	
 			}
 			callback.call(null, simHash);
