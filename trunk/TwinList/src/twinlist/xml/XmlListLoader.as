@@ -1,5 +1,7 @@
 package twinlist.xml
 {
+	import com.carlcalderon.arthropod.Debug;
+	
 	import flash.events.Event;
 	import flash.net.URLLoader;
 	import flash.net.URLLoaderDataFormat;
@@ -8,7 +10,7 @@ package twinlist.xml
 	import twinlist.list.ItemAttribute;
 	import twinlist.list.List;
 	import twinlist.list.ListItem;
-
+	
 	public class XmlListLoader
 	{
 		public function XmlListLoader(fileName:String, callback:Function)
@@ -23,6 +25,7 @@ package twinlist.xml
 		
 		private function ReadXml(loader:URLLoader, callback:Function):void
 		{
+			
 			var xml:XML = XML(loader.data);
 			var listId:String = xml.attribute("id");
 			var listName:String = xml.attribute("name");

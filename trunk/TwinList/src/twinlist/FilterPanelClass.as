@@ -28,7 +28,7 @@ package twinlist {
 		private function OnInitComplete(event:FlexEvent):void
 		{
 			removeEventListener(FlexEvent.CREATION_COMPLETE, OnInitComplete);
-			
+
 			// add listeners to buttons
 			enableAllBtn.addEventListener(MouseEvent.CLICK, function(e:Event):void {
 				setAllFilters(true);
@@ -42,13 +42,13 @@ package twinlist {
 			// add a listener for each attribute
 			filterComponents = new Object();
 			var fc:FilterComponentClass;
-			for each (var attr:AttributeDescriptor in model.ItemAttributes) {
-				if (attr.Type == ItemAttribute.TYPE_NUMERICAL)
-					fc = new NumericalFilterComponent(attr);
+			for each (var attri:AttributeDescriptor in model.ItemAttributes) {
+				if (attri.Type == ItemAttribute.TYPE_NUMERICAL)
+					fc = new NumericalFilterComponent(attri);
 				else
-					fc = new CategoricalFilterComponent(attr);
+					fc = new CategoricalFilterComponent(attri);
 				filterGroup.addElement(fc);
-				filterComponents[attr.Name] = fc;
+				filterComponents[attri.Name] = fc;
 			}
 		}
 		
