@@ -1,5 +1,7 @@
 package twinlist
 {	
+	import com.carlcalderon.arthropod.Debug;
+	
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	
@@ -12,7 +14,8 @@ package twinlist
 	import twinlist.list.List;
 	import twinlist.list.ListItem;
 	import twinlist.xml.XmlListLoader;
-
+	import twinlist.xml.XmlSimilarityLoader;
+	
 	[Bindable]
 	public final class Model extends EventDispatcher
 	{
@@ -30,6 +33,7 @@ package twinlist
 		private var visibleItemIds:Object;
 		private var listViewerData:ArrayCollection;
 		private var actionListItems:ArrayCollection;
+		private var hashSimilarities:Object;
 		// attributes
 		private var itemAttributes:ArrayCollection;
 		private var categoricalAttributes:ArrayCollection;
@@ -64,10 +68,15 @@ package twinlist
 			groupByAttribute = null;
 			sortByAttribute = null;
 			filterList = new ArrayCollection();
+			hashSimilarities = new ArrayCollection();
 			// load data
 			//LoadCannedData();
 			new XmlListLoader("../data/list1.xml", OnReadXmlComplete);
 			new XmlListLoader("../data/list2.xml", OnReadXmlComplete);
+			
+			// Loading similarities from xml file.
+			new XmlSimilarityLoader("../data/list1_list2_similarities.xml",OnReadXmlSimilarityComplete);
+
 		}
 		
 		public static function get Instance():Model
@@ -320,6 +329,12 @@ package twinlist
 			}
 		}
 		
+		// Setting similarities to hash of similarities in the model.
+		private function OnReadXmlSimilarityComplete(hash:Object):void {
+			hashSimilarities=hash;
+			FinishInit();
+		}
+		
 		private function FinishInit():void
 		{
 			SetVisibleLists(lists[0].Id, lists[1].Id);
@@ -404,16 +419,32 @@ package twinlist
 			for each (var pair:Array in map) {
 				var item1:ListItem = pair[0] as ListItem;
 				var item2:ListItem = pair[1] as ListItem;
-				var sim:Number = GetSimilarity(item1, item2);
+
+				var indexItem1:String;
+				var indexItem2:String;
+				
+				// Set up null indices
+				if (item1 == null)
+					indexItem1="";
+				else indexItem1=item1.Id;
+				
+				if (item2 == null)
+					indexItem2="";
+				else indexItem2=item2.Id;
+
+				// Look up the similarities of the two items in the hash table.
+				var simItem:SimilarityItem = 
+					hashSimilarities[indexItem1+indexItem2] as SimilarityItem;
+						
 				var listViewerItem:ListViewerItem;
-				if (sim == 1) {
+				if (simItem.Type == SimilarityItem.IDENTICAL) {
 					// identical
 					listViewerItem = new ListViewerItem();
 					listViewerItem.Identical = item1;
 					listViewerData.addItem(listViewerItem);
 					visibleItemIds[item1.Id] = item1;
 				}
-				else if (sim >= 0) {
+				else if (simItem.Type == SimilarityItem.SIMILAR) {
 					// similar
 					listViewerItem = new ListViewerItem();
 					listViewerItem.L1Similar = item1;
@@ -435,7 +466,9 @@ package twinlist
 					}
 					listViewerData.addItem(listViewerItem);						
 				}
+		
 			}
+					
 		}
 		
 		private function GetSimilarity(item1:ListItem, item2:ListItem):Number
