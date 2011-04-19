@@ -1,6 +1,7 @@
 package twinlist
 {
 	import flare.animate.Parallel;
+	import flare.animate.Sequence;
 	import flare.animate.TransitionEvent;
 	import flare.animate.Tween;
 	import flare.display.LineSprite;
@@ -52,6 +53,14 @@ package twinlist
 		private var animReconcile:Parallel;
 		private var animSeparate:Parallel;
 		
+		private var colorList1:int = 0xffffffdd;
+		private var colorList2:int = 0xffddddff;
+		private var colorIdentical:int = 0xffddffdd;
+		private var colorOriginal:int = 0xffdddddd;
+		private var colorText:int = 0xff000000;
+		private var colorTextHighlighted:int = 0xff0000ff;
+		private var colorBackground:int = 0xffffffff;
+		
 		public function ListViewerFlareClass()
 		{
 			super();
@@ -80,11 +89,11 @@ package twinlist
 			// Set up the visualization
 			vis.bounds = new Rectangle(0, 0, 5 * columnWidth, columnHeight);
 			columnList = new ArrayCollection();
-			vis.addChild(CreateColumn(0, 0xffffffff, ''));
-			vis.addChild(CreateColumn(1, 0xffdddddd, model.VisibleLists[0].Name));
-			vis.addChild(CreateColumn(2, 0xffffffff, ''));
-			vis.addChild(CreateColumn(3, 0xffdddddd, model.VisibleLists[1].Name));
-			vis.addChild(CreateColumn(4, 0xffffffff, ''));
+			vis.addChild(CreateColumn(0, colorBackground, ''));
+			vis.addChild(CreateColumn(1, colorOriginal, model.VisibleLists[0].Name));
+			vis.addChild(CreateColumn(2, colorBackground, ''));
+			vis.addChild(CreateColumn(3, colorOriginal, model.VisibleLists[1].Name));
+			vis.addChild(CreateColumn(4, colorBackground, ''));
 			vis.addChild(CreateHorizontalLine(1));
 			vis.addChild(CreateHorizontalLine(textHeight + textSpacing));
 			
@@ -133,7 +142,7 @@ package twinlist
 			rejectBtn.addEventListener(MouseEvent.MOUSE_UP, RejectClick);
 			
 			popup = new RectSprite(0, 0, rejectBtn.x + rejectBtn.width, rejectBtn.height);
-			popup.fillColor = popup.lineColor = 0x55ffffff;
+			popup.fillColor = popup.lineColor = 0x55aaaaaa;
 			popup.alpha = 0;
 			popup.addChild(acceptBtn);
 			popup.addChild(rejectBtn);
@@ -199,29 +208,29 @@ package twinlist
 			{
 				if (item.Identical)
 				{
-					visList.addItem(CreateItemSprite(item.Identical, {x1: 1, y1: l1y, x2: 2, y2: ry}));
-					visList.addItem(CreateItemSprite(item.Identical, {x1: 3, y1: l2y, x2: 2, y2: ry}));
+					visList.addItem(CreateItemSprite(item.Identical, {x1: 1, y1: l1y, x2: 2, y2: ry, type: 0}));
+					visList.addItem(CreateItemSprite(item.Identical, {x1: 3, y1: l2y, x2: 2, y2: ry, type: 0}));
 					l1y += RowHeight;
 					l2y += RowHeight;
 					ry += RowHeight;
 				}
 				else if (item.L1Similar)
 				{
-					visList.addItem(CreateItemSprite(item.L1Similar, {x1: 1, y1: l1y, x2: 1, y2: ry}));
-					visList.addItem(CreateItemSprite(item.L2Similar, {x1: 3, y1: l2y, x2: 3, y2: ry}));
+					visList.addItem(CreateItemSprite(item.L1Similar, {x1: 1, y1: l1y, x2: 1, y2: ry, type: 1}));
+					visList.addItem(CreateItemSprite(item.L2Similar, {x1: 3, y1: l2y, x2: 3, y2: ry, type: 1}));
 					l1y += RowHeight;
 					l2y += RowHeight;
 					ry += RowHeight;
 				}
 				else if (item.L1Unique)
 				{
-					visList.addItem(CreateItemSprite(item.L1Unique, {x1: 1, y1: l1y, x2: 0, y2: ry}));
+					visList.addItem(CreateItemSprite(item.L1Unique, {x1: 1, y1: l1y, x2: 0, y2: ry, type: 2}));
 					l1y += RowHeight;
 					ry += RowHeight;
 				}
 				else if (item.L2Unique)
 				{
-					visList.addItem(CreateItemSprite(item.L2Unique, {x1: 3, y1: l2y, x2: 4, y2: ry}));
+					visList.addItem(CreateItemSprite(item.L2Unique, {x1: 3, y1: l2y, x2: 4, y2: ry, type: 2}));
 					l2y += RowHeight;
 					ry += RowHeight;
 				}
@@ -232,7 +241,7 @@ package twinlist
 		private function CreateColumn(index:int, color:int, title:String):RectSprite
 		{
 			var header:TextSprite = new TextSprite(title);
-			header.color = 0xff000000;
+			header.color = colorText;
 			header.size = textHeight;
 			header.font = fontString;
 			header.bold = true;
@@ -253,7 +262,7 @@ package twinlist
 		private function CreateHorizontalLine(y:int):LineSprite
 		{
 			var line:LineSprite = new LineSprite();
-			line.lineColor = 0xff000000;
+			line.lineColor = colorText;
 			line.x1 = 0;
 			line.y1 = y;
 			line.x2 = columnWidth * 5;
@@ -266,13 +275,13 @@ package twinlist
 		private function CreateItemSprite(item:ListItem, properties:Object):DataSprite
 		{
 			var nameText:TextSprite = new TextSprite(item.Name);
-			nameText.color = 0xff000000;
+			nameText.color = colorText;
 			nameText.size = textHeight;
 			nameText.font = fontString;
 			nameText.doubleClickEnabled = true;
 			
 			var attrText:TextSprite = new TextSprite(item.AttributesString());
-			attrText.color = 0xff000000;
+			attrText.color = colorText;
 			attrText.size = textHeight - 4;
 			attrText.font = fontString;
 			attrText.doubleClickEnabled = true;
@@ -299,27 +308,40 @@ package twinlist
 			animReconcile = new Parallel();
 			animSeparate = new Parallel();
 			
+			var animSeparateItems:Sequence = new Sequence();
+			var animSeparateIdentical:Parallel = new Parallel();
+			var animSeparateSimilar:Parallel = new Parallel();
+			var animSeparateUnique:Parallel = new Parallel();
+			animSeparateItems.add(animSeparateIdentical);
+			animSeparateItems.add(animSeparateUnique);
+			animSeparateItems.add(animSeparateSimilar);
+			animSeparate.add(animSeparateItems);
+			
 			// Animate the items
 			for each (var sprite:DataSprite in visList)
 			{
-				animReconcile.add(new Tween(sprite, 1, {x: sprite.data.properties.x1}));
-				animReconcile.add(new Tween(sprite, 1, {y: sprite.data.properties.y1}));
-				animSeparate.add(new Tween(sprite, 1, {x: sprite.data.properties.x2}));
-				animSeparate.add(new Tween(sprite, 1, {y: sprite.data.properties.y2}));
+				animReconcile.add(new Tween(sprite, 1, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
+				
+				if (sprite.data.properties.type == 0)
+					animSeparateIdentical.add(new Tween(sprite, 0.5, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
+				else if (sprite.data.properties.type == 1)
+					animSeparateSimilar.add(new Tween(sprite, 0.5, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
+				else if (sprite.data.properties.type == 2)
+					animSeparateUnique.add(new Tween(sprite, 0.5, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
 			}
 			
 			// Animate the column colors
-			animSeparate.add(new Tween(columnList[0], 1, {fillColor: 0xffffcfcf, lineColor: 0xffffcfcf}));
-			animSeparate.add(new Tween(columnList[1], 1, {fillColor: 0xffffecd5, lineColor: 0xffffecd5}));
-			animSeparate.add(new Tween(columnList[2], 1, {fillColor: 0xffb3fec5, lineColor: 0xffb3fec5}));
-			animSeparate.add(new Tween(columnList[3], 1, {fillColor: 0xffffecd5, lineColor: 0xffffecd5}));
-			animSeparate.add(new Tween(columnList[4], 1, {fillColor: 0xffffcfcf, lineColor: 0xffffcfcf}));
+			animSeparate.add(new Tween(columnList[0], 1, {fillColor: colorList1, lineColor: colorList1}));
+			animSeparate.add(new Tween(columnList[1], 1, {fillColor: (colorList1 + colorIdentical) / 2, lineColor: (colorList1 + colorIdentical) / 2}));
+			animSeparate.add(new Tween(columnList[2], 1, {fillColor: colorIdentical, lineColor: colorIdentical}));
+			animSeparate.add(new Tween(columnList[3], 1, {fillColor: (colorList2 + colorIdentical) / 2, lineColor: (colorList2 + colorIdentical) / 2}));
+			animSeparate.add(new Tween(columnList[4], 1, {fillColor: colorList2, lineColor: colorList2}));
 			
-			animReconcile.add(new Tween(columnList[0], 1, {fillColor: 0xffffffff, lineColor: 0xffffffff}));
-			animReconcile.add(new Tween(columnList[1], 1, {fillColor: 0xffdddddd, lineColor: 0xffdddddd}));
-			animReconcile.add(new Tween(columnList[2], 1, {fillColor: 0xffffffff, lineColor: 0xffffffff}));
-			animReconcile.add(new Tween(columnList[3], 1, {fillColor: 0xffdddddd, lineColor: 0xffdddddd}));
-			animReconcile.add(new Tween(columnList[4], 1, {fillColor: 0xffffffff, lineColor: 0xffffffff}));
+			animReconcile.add(new Tween(columnList[0], 1, {fillColor: colorBackground, lineColor: colorBackground}));
+			animReconcile.add(new Tween(columnList[1], 1, {fillColor: colorOriginal, lineColor: colorOriginal}));
+			animReconcile.add(new Tween(columnList[2], 1, {fillColor: colorBackground, lineColor: colorBackground}));
+			animReconcile.add(new Tween(columnList[3], 1, {fillColor: colorOriginal, lineColor: colorOriginal}));
+			animReconcile.add(new Tween(columnList[4], 1, {fillColor: colorBackground, lineColor: colorBackground}));
 			
 			// Animate the column headers
 			animSeparate.add(new Tween(columnList[0].getChildAt(0), 1, {text: model.VisibleLists[0].Name + ' - Unique'}));
@@ -405,6 +427,7 @@ package twinlist
 			var sprite:DataSprite = event.currentTarget as DataSprite;
 			// if not item, update model and return
 			if (sprite == null) {
+				selectedSprite = null;
 				model.SelectedItem = null;
 				return;
 			}
@@ -471,7 +494,7 @@ package twinlist
 		
 		private function Highlight(sprite:Sprite, enabled:Boolean):void
 		{
-			var color:int = enabled ? 0xff0000ff : 0xff000000;
+			var color:int = enabled ? colorTextHighlighted : colorText;
 			for (var i:int = 0; i < sprite.numChildren; i++) {
 				var text:TextSprite = sprite.getChildAt(i) as TextSprite;
 				if (text != null)
