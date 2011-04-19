@@ -8,12 +8,14 @@ package twinlist.list
 		private var id:String;
 		private var name:String;
 		private var attributes:Object;
+		private var nameUnique:Boolean;
 		
 		public function ListItem(id:String, name:String = "")
 		{
-			this.id = id;
-			this.name = name;
-			this.attributes = new Object();
+			Id = id;
+			Name = name;
+			attributes = new Object();
+			NameUnique = true;
 		}
 		
 		public function get Id():String
@@ -34,6 +36,15 @@ package twinlist.list
 			this.name = name;
 		}
 		
+		public function get NameUnique():Boolean
+		{
+			return nameUnique;
+		}
+		public function set NameUnique(nameUnique:Boolean):void
+		{
+			this.nameUnique = nameUnique;
+		}
+		
 		public function get Attributes():Object
 		{
 			return attributes;
@@ -42,7 +53,7 @@ package twinlist.list
 		public function toString():String
 		{
 			var string:String = Name;
-			for each (var attr:ItemAttribute in attributes) {
+			for each (var attr:ItemAttribute in Attributes) {
 				string += " " + attr.ValuesString();
 			}
 			return string;
@@ -51,7 +62,7 @@ package twinlist.list
 		public function AttributesString():String
 		{
 			var string:String = "";
-			for each (var attr:ItemAttribute in attributes) {
+			for each (var attr:ItemAttribute in Attributes) {
 				string += " " + attr.ValuesString();
 			}
 			return string;
@@ -63,13 +74,13 @@ package twinlist.list
 				return false;
 			var attr1:ItemAttribute = null;
 			var attr2:ItemAttribute = null;
-			for each (attr1 in this.attributes) {
-				attr2 = rhs.attributes[attr1.Name];
+			for each (attr1 in Attributes) {
+				attr2 = rhs.Attributes[attr1.Name];
 				if (attr2 == null || !attr1.Equals(attr2))
 					return false;
 			}
-			for each (attr1 in rhs.attributes) {
-				attr2 = this.attributes[attr1.Name];
+			for each (attr1 in rhs.Attributes) {
+				attr2 = Attributes[attr1.Name];
 				if (attr2 == null || !attr1.Equals(attr2))
 					return false;
 			}

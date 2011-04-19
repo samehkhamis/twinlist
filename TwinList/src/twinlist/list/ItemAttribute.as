@@ -14,6 +14,7 @@ package twinlist.list
 		private var values:Array;
 		private var type:uint;
 		private var unit:String;
+		private var unique:Boolean;
 		
 		public function ItemAttribute(name:String = "", values:Array = null, type:uint = TYPE_GENERAL)
 		{
@@ -23,6 +24,7 @@ package twinlist.list
 				Values.push(values);
 			Type = type;
 			Unit = null;
+			Unique = true;
 		}
 		
 		public function get Name():String
@@ -61,6 +63,15 @@ package twinlist.list
 		public function set Unit(unit:String):void
 		{
 			this.unit = unit;
+		}
+		
+		public function get Unique():Boolean
+		{
+			return unique;
+		}
+		public function set Unique(unique:Boolean):void
+		{
+			this.unique = unique;
 		}
 		
 		public function Equals(rhs:ItemAttribute):Boolean

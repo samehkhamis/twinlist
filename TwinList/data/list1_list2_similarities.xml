@@ -3,48 +3,48 @@
     
      <!-- Calcitrol -->
      <SimilarityPair>
-        <L1Index>patientItem1</L1Index>
-        <L2Index>erItem1</L2Index>
+        <L1ID>patientItem1</L1ID>
+        <L2ID>erItem1</L2ID>
         <Type>0</Type> <!-- Identical -->
         <Diffs>0</Diffs>
 	</SimilarityPair>
     
     <!-- Darbapoetin -->
     <SimilarityPair>
-        <L1Index>patientItem2</L1Index>
-        <L2Index>erItem2</L2Index>
+        <L1ID>patientItem2</L1ID>
+        <L2ID>erItem2</L2ID>
         <Type>0</Type> <!-- Identical -->
         <Diffs>0</Diffs>
 	</SimilarityPair>
 
     <!-- Docusate Sodium -->
 	<SimilarityPair>
-        <L1Index>patientItem3</L1Index>
-        <L2Index>erItem3</L2Index>
+        <L1ID>patientItem3</L1ID>
+        <L2ID>erItem3</L2ID>
         <Type>0</Type> <!-- Identical -->
         <Diffs>0</Diffs>
     </SimilarityPair>
 
       <!-- Ramipril -->
 	<SimilarityPair>
-        <L1Index>patientItem4</L1Index>
-        <L2Index>erItem4</L2Index>
+        <L1ID>patientItem4</L1ID>
+        <L2ID>erItem4</L2ID>
         <Type>0</Type> <!-- Identical -->
         <Diffs>0</Diffs>
 	</SimilarityPair>
   
     <!-- Acetaminophen -->
 	<SimilarityPair>
-        <L1Index>patientItem5</L1Index>
-        <L2Index>erItem5</L2Index>
+        <L1ID>patientItem5</L1ID>
+        <L2ID>erItem5</L2ID>
         <Type>0</Type> <!-- Identical -->
         <Diffs>0</Diffs>
 	</SimilarityPair>
  
     <!-- Calcium Carbonate -->
     <SimilarityPair>
-        <L1Index>patientItem6</L1Index>
-        <L2Index>erItem6</L2Index>
+        <L1ID>patientItem6</L1ID>
+        <L2ID>erItem6</L2ID>
         <Type>1</Type> <!-- Similar -->
         <Diffs>1</Diffs>
         <Difference>
@@ -58,8 +58,8 @@
     
     <!-- Atorvistatin -->
  	<SimilarityPair>
-        <L1Index>patientItem7</L1Index>
-        <L2Index>erItem7</L2Index>
+        <L1ID>patientItem7</L1ID>
+        <L2ID>erItem7</L2ID>
         <Type>1</Type> <!-- Similar -->
         <Diffs>1</Diffs>
         <Difference>
@@ -73,8 +73,8 @@
 
     <!-- Metoprolol -->   
     <SimilarityPair>
-        <L1Index>patientItem8</L1Index>
-        <L2Index>erItem8</L2Index>
+        <L1ID>patientItem8</L1ID>
+        <L2ID>erItem8</L2ID>
         <Type>1</Type> <!-- Similar -->
         <Diffs>2</Diffs>
         <Difference>
@@ -93,40 +93,40 @@
 
     <!-- Aspirin -->   
 	<SimilarityPair>
-        <L1Index>patientItem9</L1Index>
-        <L2Index></L2Index>
+        <L1ID>patientItem9</L1ID>
+        <L2ID></L2ID>
         <Type>2</Type> <!-- Unique -->
         <Diffs>0</Diffs>
 	</SimilarityPair>
 
     <!-- Meloxicam  -->   
 	<SimilarityPair>
-        <L1Index>patientItem10</L1Index>
-        <L2Index></L2Index>
+        <L1ID>patientItem10</L1ID>
+        <L2ID></L2ID>
         <Type>2</Type> <!-- Unique -->
         <Diffs>0</Diffs>
 	</SimilarityPair>
  
     <!-- Ferrous Gloconate -->
 	<SimilarityPair>
-        <L1Index></L1Index>
-        <L2Index>erItem9</L2Index>
+        <L1ID></L1ID>
+        <L2ID>erItem9</L2ID>
         <Type>2</Type>
         <Diffs>0</Diffs>
 	</SimilarityPair>
 
    <!-- Omeprazole -->
 	<SimilarityPair>
-        <L1Index></L1Index>
-        <L2Index>erItem10</L2Index>
+        <L1ID></L1ID>
+        <L2ID>erItem10</L2ID>
         <Type>2</Type> <!-- Unique -->
         <Diffs>0</Diffs>
 	</SimilarityPair>
  
    <!-- Ciproflaxocin -->
 	<SimilarityPair>
-        <L1Index></L1Index>
-        <L2Index>erItem11</L2Index>
+        <L1ID></L1ID>
+        <L2ID>erItem11</L2ID>
         <Type>2</Type> <!-- Unique -->
         <Diffs>0</Diffs>
 	</SimilarityPair>

@@ -15,6 +15,7 @@ package twinlist
 	import twinlist.list.ListItem;
 	import twinlist.xml.XmlListLoader;
 	import twinlist.xml.XmlSimilarityLoader;
+	import twinlist.list.SimilarityItem;
 	
 	[Bindable]
 	public final class Model extends EventDispatcher
@@ -71,11 +72,11 @@ package twinlist
 			hashSimilarities = new ArrayCollection();
 			// load data
 			//LoadCannedData();
-			new XmlListLoader("../data/list1.xml", OnReadXmlComplete);
-			new XmlListLoader("../data/list2.xml", OnReadXmlComplete);
+			new XmlListLoader("../data/list1.xml", OnReadListXmlComplete);
+			new XmlListLoader("../data/list2.xml", OnReadListXmlComplete);
 			
 			// Loading similarities from xml file.
-			new XmlSimilarityLoader("../data/list1_list2_similarities.xml",OnReadXmlSimilarityComplete);
+			new XmlSimilarityLoader("../data/list1_list2_similarities.xml",OnReadSimilarityXmlComplete);
 
 		}
 		
@@ -320,7 +321,7 @@ package twinlist
 				return listViewerItem.L2Unique;
 		}
 		
-		private function OnReadXmlComplete(list:List):void
+		private function OnReadListXmlComplete(list:List):void
 		{
 			listIdx[list.Id] = lists.length;
 			lists.addItem(list);
@@ -329,8 +330,9 @@ package twinlist
 			}
 		}
 		
-		// Setting similarities to hash of similarities in the model.
-		private function OnReadXmlSimilarityComplete(hash:Object):void {
+		private function OnReadSimilarityXmlComplete(hash:Object):void
+		{
+			// Setting similarities to hash of similarities in the model.
 			hashSimilarities=hash;
 			FinishInit();
 		}
@@ -403,39 +405,24 @@ package twinlist
 		{
 			visibleItemIds = new Object();
 			listViewerData.removeAll();
-			// use name hashing to find "similar" items (HACK)
-			var map:Object = new Object();
+			// hash item IDs in either list
+			var map1:Object = new Object();
+			var map2:Object = new Object();
 			var item:ListItem;
 			for each (item in list1) {
-				map[item.Name] = new Array(2);
-				map[item.Name][0] = item;
+				map1[item.Id] = item;
 			}
 			for each (item in list2) {
-				if (!(item.Name in map))
-					map[item.Name] = new Array(2);
-				map[item.Name][1] = item;
+				map2[item.Id] = item;
 			}
-			// reconcile lists
-			for each (var pair:Array in map) {
-				var item1:ListItem = pair[0] as ListItem;
-				var item2:ListItem = pair[1] as ListItem;
-
-				var key:String;
-				
-				// Set up null indices
-				if (item1 == null)
-					key=item2.Id;
-				else if (item2 == null)
-					key=item1.Id;
-				else key=item1.Id+item2.Id;
-
-				// Look up the similarities of the two items in the hash table.
-				var simItem:SimilarityItem = 
-					hashSimilarities[key] as SimilarityItem;
-						
-				var listViewerItem:ListViewerItem;
+			// iterate over similarity hash and find corresponding items
+			var item1:ListItem;
+			var item2:ListItem;
+			var listViewerItem:ListViewerItem;
+			for each (var simItem:SimilarityItem in hashSimilarities) {
 				if (simItem.Type == SimilarityItem.IDENTICAL) {
 					// identical
+					item1 = map1[simItem.L1Id];
 					listViewerItem = new ListViewerItem();
 					listViewerItem.Identical = item1;
 					listViewerData.addItem(listViewerItem);
@@ -443,6 +430,8 @@ package twinlist
 				}
 				else if (simItem.Type == SimilarityItem.SIMILAR) {
 					// similar
+					item1 = map1[simItem.L1Id] as ListItem;
+					item2 = map2[simItem.L2Id] as ListItem;
 					listViewerItem = new ListViewerItem();
 					listViewerItem.L1Similar = item1;
 					listViewerItem.L2Similar = item2;
@@ -453,19 +442,19 @@ package twinlist
 				else {
 					// unique
 					listViewerItem = new ListViewerItem();
-					if (item1 != null) {
+					if (simItem.L1Id != "") {
+						item1 = map1[simItem.L1Id];
 						listViewerItem.L1Unique = item1;
 						visibleItemIds[item1.Id] = item1;
 					}
 					else {
+						item2 = map2[simItem.L2Id];
 						listViewerItem.L2Unique = item2;
 						visibleItemIds[item2.Id] = item2;
 					}
 					listViewerData.addItem(listViewerItem);						
 				}
-		
 			}
-					
 		}
 		
 		private function GetSimilarity(item1:ListItem, item2:ListItem):Number
