@@ -51,8 +51,8 @@ package twinlist
 		private var fontString:String = "Sans Serif";
 		
 		private var reconciled:Boolean;
-		private var animReconcile:Parallel;
-		private var animSeparate:Parallel;
+		private var animReconcile:Sequence;
+		private var animSeparate:Sequence;
 		
 		private var colorList1:int = 0xffffffdd;
 		private var colorList2:int = 0xffddddff;
@@ -327,34 +327,45 @@ package twinlist
 		
 		private function UpdateButtonAnimations():void
 		{
-			animReconcile = new Parallel();
-			animSeparate = new Parallel();
+			animReconcile = new Sequence();
+			animSeparate = new Sequence();
 			
-			var animSeparateItems:Sequence = new Sequence();
+			var animSeparateColIdentical:Parallel = new Parallel();
+			var animSeparateColUnique:Parallel = new Parallel();
+			var animSeparateColSimilar:Parallel = new Parallel();
 			var animSeparateIdentical:Parallel = new Parallel();
 			var animSeparateSimilar:Parallel = new Parallel();
 			var animSeparateUnique:Parallel = new Parallel();
-			animSeparateItems.add(animSeparateIdentical);
-			animSeparateItems.add(animSeparateUnique);
-			animSeparateItems.add(animSeparateSimilar);
-			animSeparate.add(animSeparateItems);
+			
+			animSeparate.add(animSeparateColIdentical);
+			animSeparate.add(animSeparateIdentical);
+			animSeparate.add(animSeparateColUnique);
+			animSeparate.add(animSeparateUnique);
+			animSeparate.add(animSeparateColSimilar);
+			animSeparate.add(animSeparateSimilar);
+			
+			var animReconcileCol:Parallel = new Parallel();
+			var animReconcileItems:Parallel = new Parallel();
+			
+			animReconcile.add(animReconcileCol);
+			animReconcile.add(animReconcileItems);
 			
 			// Animate the items
 			for each (var sprite:DataSprite in visList)
 			{
-				animReconcile.add(new Tween(sprite, 1, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
+				animReconcileItems.add(new Tween(sprite, 1, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
 				
 				if (sprite.data.properties.type == 0)
-					animSeparateIdentical.add(new Tween(sprite, 0.5, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
+					animSeparateIdentical.add(new Tween(sprite, 1, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
 				else if (sprite.data.properties.type == 1)
-					animSeparateSimilar.add(new Tween(sprite, 0.5, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
+					animSeparateSimilar.add(new Tween(sprite, 1, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
 				else if (sprite.data.properties.type == 2)
-					animSeparateUnique.add(new Tween(sprite, 0.5, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
+					animSeparateUnique.add(new Tween(sprite, 1, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
 				
 				for (var i:int = 0; i < sprite.numChildren; i++) {
 					var child:Sprite = sprite.getChildAt(i) as Sprite;
 					if (child is RectSprite) {
-						animReconcile.add(new Tween(child, 1, {alpha: 0}));
+						animReconcileCol.add(new Tween(child, 0.25, {alpha: 0}));
 						if (sprite.data.properties.type == 0)
 							animSeparateIdentical.add(new Tween(child, 1, {alpha: 1}));
 						else if (sprite.data.properties.type == 1)
@@ -365,45 +376,51 @@ package twinlist
 				}
 			}
 			
-			// Animate the column colors
-			animSeparate.add(new Tween(columnList[0], 1, {fillColor: colorList1, lineColor: colorList1}));
-			animSeparate.add(new Tween(columnList[1], 1, {fillColor: (colorList1 + colorIdentical) / 2, lineColor: (colorList1 + colorIdentical) / 2}));
-			animSeparate.add(new Tween(columnList[2], 1, {fillColor: colorIdentical, lineColor: colorIdentical}));
-			animSeparate.add(new Tween(columnList[3], 1, {fillColor: (colorList2 + colorIdentical) / 2, lineColor: (colorList2 + colorIdentical) / 2}));
-			animSeparate.add(new Tween(columnList[4], 1, {fillColor: colorList2, lineColor: colorList2}));
+			// Animate the column colors and headers after
+			animSeparateColIdentical.add(new Tween(columnList[2], 0.25, {fillColor: colorIdentical, lineColor: colorIdentical}));
+			animSeparateColIdentical.add(new Tween(columnList[2].getChildAt(0), 0.25, {text: 'Identical'}));
 			
-			animReconcile.add(new Tween(columnList[0], 1, {fillColor: colorBackground, lineColor: colorBackground}));
-			animReconcile.add(new Tween(columnList[1], 1, {fillColor: colorOriginal, lineColor: colorOriginal}));
-			animReconcile.add(new Tween(columnList[2], 1, {fillColor: colorBackground, lineColor: colorBackground}));
-			animReconcile.add(new Tween(columnList[3], 1, {fillColor: colorOriginal, lineColor: colorOriginal}));
-			animReconcile.add(new Tween(columnList[4], 1, {fillColor: colorBackground, lineColor: colorBackground}));
+			animSeparateColUnique.add(new Tween(columnList[0], 0.25, {fillColor: colorList1, lineColor: colorList1}));
+			animSeparateColUnique.add(new Tween(columnList[0].getChildAt(0), 0.25, {text: model.VisibleLists[0].Name + ' - Unique'}));
+			animSeparateColUnique.add(new Tween(columnList[4], 0.25, {fillColor: colorList2, lineColor: colorList2}));
+			animSeparateColUnique.add(new Tween(columnList[4].getChildAt(0), 0.25, {text: model.VisibleLists[1].Name + ' - Unique'}));
 			
-			// Animate the column headers
-			animSeparate.add(new Tween(columnList[0].getChildAt(0), 1, {text: model.VisibleLists[0].Name + ' - Unique'}));
-			animSeparate.add(new Tween(columnList[1].getChildAt(0), 1, {text: model.VisibleLists[0].Name + ' - Similar'}));
-			animSeparate.add(new Tween(columnList[2].getChildAt(0), 1, {text: 'Identical'}));
-			animSeparate.add(new Tween(columnList[3].getChildAt(0), 1, {text: model.VisibleLists[1].Name + ' - Similar'}));
-			animSeparate.add(new Tween(columnList[4].getChildAt(0), 1, {text: model.VisibleLists[1].Name + ' - Unique'}));
+			animSeparateColSimilar.add(new Tween(columnList[1], 0.25, {fillColor: (colorList1 + colorIdentical) / 2, lineColor: (colorList1 + colorIdentical) / 2}));
+			animSeparateColSimilar.add(new Tween(columnList[1].getChildAt(0), 0.25, {text: model.VisibleLists[0].Name + ' - Similar'}));
+			animSeparateColSimilar.add(new Tween(columnList[3], 0.25, {fillColor: (colorList2 + colorIdentical) / 2, lineColor: (colorList2 + colorIdentical) / 2}));
+			animSeparateColSimilar.add(new Tween(columnList[3].getChildAt(0), 0.25, {text: model.VisibleLists[1].Name + ' - Similar'}));
 			
-			animReconcile.add(new Tween(columnList[0].getChildAt(0), 1, {text: ''}));
-			animReconcile.add(new Tween(columnList[1].getChildAt(0), 1, {text: model.VisibleLists[0].Name}));
-			animReconcile.add(new Tween(columnList[2].getChildAt(0), 1, {text: ''}));
-			animReconcile.add(new Tween(columnList[3].getChildAt(0), 1, {text: model.VisibleLists[1].Name}));
-			animReconcile.add(new Tween(columnList[4].getChildAt(0), 1, {text: ''}));
+			// Animate the column colors and headers before
+			animReconcileCol.add(new Tween(columnList[0], 0.25, {fillColor: colorBackground, lineColor: colorBackground}));
+			animReconcileCol.add(new Tween(columnList[0].getChildAt(0), 0.25, {text: ''}));
+			animReconcileCol.add(new Tween(columnList[2], 0.25, {fillColor: colorBackground, lineColor: colorBackground}));
+			animReconcileCol.add(new Tween(columnList[2].getChildAt(0), 0.25, {text: ''}));
+			animReconcileCol.add(new Tween(columnList[4], 0.25, {fillColor: colorBackground, lineColor: colorBackground}));
+			animReconcileCol.add(new Tween(columnList[4].getChildAt(0), 0.25, {text: ''}));
+			
+			animReconcileCol.add(new Tween(columnList[1], 0.25, {fillColor: colorOriginal, lineColor: colorOriginal}));
+			animReconcileCol.add(new Tween(columnList[1].getChildAt(0), 0.25, {text: model.VisibleLists[0].Name}));
+			animReconcileCol.add(new Tween(columnList[3], 0.25, {fillColor: colorOriginal, lineColor: colorOriginal}));
+			animReconcileCol.add(new Tween(columnList[3].getChildAt(0), 0.25, {text: model.VisibleLists[1].Name}));
+			
+			// Enable the reconcile button after
+			animReconcile.addEventListener(TransitionEvent.END, function(e:Event):void { btn.enabled = true; btn.label = "Reconcile"; });
+			animSeparate.addEventListener(TransitionEvent.END, function(e:Event):void { btn.enabled = true; btn.label = "Separate"; });
 		}
 		
 		protected function ReconcileButtonClick(event:MouseEvent):void
 		{
+			// Disable the button for the animation duration
+			btn.enabled = false;
+			
 			if (reconciled)
 			{
 				animReconcile.play();
-				btn.label = "Reconcile";
 				reconciled = false;
 			}
 			else
 			{
 				animSeparate.play();
-				btn.label = "Separate";
 				reconciled = true;
 			}
 		}
