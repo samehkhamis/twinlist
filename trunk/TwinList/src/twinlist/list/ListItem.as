@@ -15,7 +15,7 @@ package twinlist.list
 			Id = id;
 			Name = name;
 			attributes = new Object();
-			NameUnique = true;
+			NameUnique = false;
 		}
 		
 		public function get Id():String

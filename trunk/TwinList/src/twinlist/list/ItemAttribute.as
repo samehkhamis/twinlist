@@ -24,7 +24,7 @@ package twinlist.list
 				Values.push(values);
 			Type = type;
 			Unit = null;
-			Unique = true;
+			Unique = false;
 		}
 		
 		public function get Name():String

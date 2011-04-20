@@ -13,9 +13,10 @@ package twinlist
 	import twinlist.list.ItemAttribute;
 	import twinlist.list.List;
 	import twinlist.list.ListItem;
+	import twinlist.list.SimilarityItem;
+	import twinlist.xml.DifferenceItem;
 	import twinlist.xml.XmlListLoader;
 	import twinlist.xml.XmlSimilarityLoader;
-	import twinlist.list.SimilarityItem;
 	
 	[Bindable]
 	public final class Model extends EventDispatcher
@@ -423,36 +424,62 @@ package twinlist
 				if (simItem.Type == SimilarityItem.IDENTICAL) {
 					// identical
 					item1 = map1[simItem.L1Id];
-					listViewerItem = new ListViewerItem();
-					listViewerItem.Identical = item1;
-					listViewerData.addItem(listViewerItem);
-					visibleItemIds[item1.Id] = item1;
+					if (item1 != null) {
+						listViewerItem = new ListViewerItem();
+						listViewerItem.Identical = item1;
+						listViewerData.addItem(listViewerItem);
+						visibleItemIds[item1.Id] = item1;
+					}
 				}
 				else if (simItem.Type == SimilarityItem.SIMILAR) {
 					// similar
-					item1 = map1[simItem.L1Id] as ListItem;
-					item2 = map2[simItem.L2Id] as ListItem;
 					listViewerItem = new ListViewerItem();
-					listViewerItem.L1Similar = item1;
-					listViewerItem.L2Similar = item2;
-					listViewerData.addItem(listViewerItem);
-					visibleItemIds[item1.Id] = item1;
-					visibleItemIds[item2.Id] = item2;
+					item1 = map1[simItem.L1Id] as ListItem;
+					var diff:DifferenceItem;
+					if (item1 != null) {
+						for each (diff in simItem.AttributeDifferences) {
+							if (diff.Name == "Name")
+								item1.NameUnique = true;
+							else
+								item1.Attributes[diff.Name].Unique = true;
+						}
+						listViewerItem.L1Similar = item1;
+						visibleItemIds[item1.Id] = item1;
+					}
+					item2 = map2[simItem.L2Id] as ListItem;
+					if (item2 != null) {
+						for each (diff in simItem.AttributeDifferences) {
+							if (diff.Name == "Name")
+								item2.NameUnique = true;
+							else
+								item2.Attributes[diff.Name].Unique = true;
+						}
+						listViewerItem.L2Similar = item2;
+						visibleItemIds[item2.Id] = item2;						
+					}
+					if (listViewerItem.L1Similar != null || listViewerItem.L2Similar != null)
+						listViewerData.addItem(listViewerItem);
 				}
 				else {
 					// unique
-					listViewerItem = new ListViewerItem();
 					if (simItem.L1Id != "") {
 						item1 = map1[simItem.L1Id];
-						listViewerItem.L1Unique = item1;
-						visibleItemIds[item1.Id] = item1;
+						if (item1 != null) {
+							listViewerItem = new ListViewerItem();
+							listViewerItem.L1Unique = item1;
+							visibleItemIds[item1.Id] = item1;
+							listViewerData.addItem(listViewerItem);
+						}
 					}
 					else {
 						item2 = map2[simItem.L2Id];
-						listViewerItem.L2Unique = item2;
-						visibleItemIds[item2.Id] = item2;
+						if (item2 != null) {
+							listViewerItem = new ListViewerItem();
+							listViewerItem.L2Unique = item2;
+							visibleItemIds[item2.Id] = item2;
+							listViewerData.addItem(listViewerItem);	
+						}
 					}
-					listViewerData.addItem(listViewerItem);						
 				}
 			}
 		}
