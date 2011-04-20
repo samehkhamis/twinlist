@@ -23,6 +23,7 @@ package twinlist
 	import spark.components.Group;
 	import spark.components.Scroller;
 	
+	import twinlist.list.ItemAttribute;
 	import twinlist.list.ListItem;
 	
 	public class ListViewerFlareClass extends Group
@@ -46,7 +47,7 @@ package twinlist
 		private var columnWidth:int = 0;
 		private var columnHeight:int = 0;
 		private var textHeight:int = 16;
-		private var textSpacing:int = 12;
+		private var textSpacing:int = 14;
 		private var fontString:String = "Sans Serif";
 		
 		private var reconciled:Boolean;
@@ -60,6 +61,8 @@ package twinlist
 		private var colorText:int = 0xff000000;
 		private var colorTextHighlighted:int = 0xff0000ff;
 		private var colorBackground:int = 0xffffffff;
+		private var colorDiffHighlight1:int = 0xffffff40;
+		private var colorDiffHighlight2:int = 0xffB0B0ff;
 		
 		public function ListViewerFlareClass()
 		{
@@ -206,31 +209,33 @@ package twinlist
 			var visList:ArrayCollection = new ArrayCollection();
 			for each (var item:ListViewerItem in data)
 			{
-				if (item.Identical)
+				if (item.Identical != null)
 				{
-					visList.addItem(CreateItemSprite(item.Identical, {x1: 1, y1: l1y, x2: 2, y2: ry, type: 0}));
-					visList.addItem(CreateItemSprite(item.Identical, {x1: 3, y1: l2y, x2: 2, y2: ry, type: 0}));
+					visList.addItem(CreateItemSprite(item.Identical, 0, {x1: 1, y1: l1y, x2: 2, y2: ry, type: 0}));
+					visList.addItem(CreateItemSprite(item.Identical, 1, {x1: 3, y1: l2y, x2: 2, y2: ry, type: 0}));
 					l1y += RowHeight;
 					l2y += RowHeight;
 					ry += RowHeight;
 				}
-				else if (item.L1Similar)
+				else if (item.L1Unique != null)
 				{
-					visList.addItem(CreateItemSprite(item.L1Similar, {x1: 1, y1: l1y, x2: 1, y2: ry, type: 1}));
-					visList.addItem(CreateItemSprite(item.L2Similar, {x1: 3, y1: l2y, x2: 3, y2: ry, type: 1}));
+					visList.addItem(CreateItemSprite(item.L1Unique, 0, {x1: 1, y1: l1y, x2: 0, y2: ry, type: 2}));
 					l1y += RowHeight;
+					ry += RowHeight;
+				}
+				else if (item.L2Unique != null)
+				{
+					visList.addItem(CreateItemSprite(item.L2Unique, 1, {x1: 3, y1: l2y, x2: 4, y2: ry, type: 2}));
 					l2y += RowHeight;
 					ry += RowHeight;
 				}
-				else if (item.L1Unique)
+				else
 				{
-					visList.addItem(CreateItemSprite(item.L1Unique, {x1: 1, y1: l1y, x2: 0, y2: ry, type: 2}));
+					if (item.L1Similar != null)
+						visList.addItem(CreateItemSprite(item.L1Similar, 0, {x1: 1, y1: l1y, x2: 1, y2: ry, type: 1}));
+					if (item.L2Similar != null)
+						visList.addItem(CreateItemSprite(item.L2Similar, 1, {x1: 3, y1: l2y, x2: 3, y2: ry, type: 1}));
 					l1y += RowHeight;
-					ry += RowHeight;
-				}
-				else if (item.L2Unique)
-				{
-					visList.addItem(CreateItemSprite(item.L2Unique, {x1: 3, y1: l2y, x2: 4, y2: ry, type: 2}));
 					l2y += RowHeight;
 					ry += RowHeight;
 				}
@@ -272,24 +277,9 @@ package twinlist
 			return line;
 		}
 		
-		private function CreateItemSprite(item:ListItem, properties:Object):DataSprite
+		private function CreateItemSprite(item:ListItem, listIdx:int, properties:Object):DataSprite
 		{
-			var nameText:TextSprite = new TextSprite(item.Name);
-			nameText.color = colorText;
-			nameText.size = textHeight;
-			nameText.font = fontString;
-			nameText.doubleClickEnabled = true;
-			
-			var attrText:TextSprite = new TextSprite(item.AttributesString());
-			attrText.color = colorText;
-			attrText.size = textHeight - 4;
-			attrText.font = fontString;
-			attrText.doubleClickEnabled = true;
-			attrText.y = textHeight;
-			
 			var sprite:DataSprite = new DataSprite();
-			sprite.addChild(nameText);
-			sprite.addChild(attrText);
 			sprite.renderer = null;
 			sprite.data = {properties: properties, item: item};
 			sprite.buttonMode = true;
@@ -299,6 +289,38 @@ package twinlist
 			sprite.addEventListener(MouseEvent.MOUSE_UP, ItemMouseUp);
 			sprite.addEventListener(MouseEvent.ROLL_OVER, ItemRollOver);
 			sprite.addEventListener(MouseEvent.ROLL_OUT, ItemRollOut);
+			
+			var nameText:TextSprite = new TextSprite(item.Name);
+			var highlight:RectSprite;
+			nameText.color = colorText;
+			nameText.size = textHeight;
+			nameText.font = fontString;
+			nameText.doubleClickEnabled = true;
+			if (item.NameUnique) {
+				highlight = CreateHighlight(nameText, listIdx);
+				highlight.alpha = reconciled ? 1 : 0;
+				sprite.addChild(highlight);
+			}
+			sprite.addChild(nameText);
+		
+			var x:int = 0;
+			var attrText:TextSprite;
+			for each (var attr:ItemAttribute in item.Attributes) {
+				attrText = new TextSprite(attr.ValuesString());
+				attrText.color = colorText;
+				attrText.size = textHeight - 4;
+				attrText.font = fontString;
+				attrText.doubleClickEnabled = true;
+				attrText.x = x;
+				attrText.y = textHeight + 4;
+				if (attr.Unique) {
+					highlight = CreateHighlight(attrText, listIdx);
+					highlight.alpha = reconciled ? 1 : 0;
+					sprite.addChild(highlight);
+				}
+				sprite.addChild(attrText);
+				x += attrText.width;
+			}
 			
 			return sprite;
 		}
@@ -328,6 +350,19 @@ package twinlist
 					animSeparateSimilar.add(new Tween(sprite, 0.5, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
 				else if (sprite.data.properties.type == 2)
 					animSeparateUnique.add(new Tween(sprite, 0.5, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
+				
+				for (var i:int = 0; i < sprite.numChildren; i++) {
+					var child:Sprite = sprite.getChildAt(i) as Sprite;
+					if (child is RectSprite) {
+						animReconcile.add(new Tween(child, 1, {alpha: 0}));
+						if (sprite.data.properties.type == 0)
+							animSeparateIdentical.add(new Tween(child, 0.5, {alpha: 1}));
+						else if (sprite.data.properties.type == 1)
+							animSeparateSimilar.add(new Tween(child, 0.5, {alpha: 1}));
+						else if (sprite.data.properties.type == 2)
+							animSeparateUnique.add(new Tween(child, 0.5, {alpha: 1}));
+					}
+				}
 			}
 			
 			// Animate the column colors
@@ -500,6 +535,13 @@ package twinlist
 				if (text != null)
 					text.color = color;
 			}
+		}
+		
+		private function CreateHighlight(sprite:TextSprite, listIdx:int):RectSprite
+		{
+			var highlight:RectSprite = new RectSprite(sprite.x, sprite.y, sprite.width, sprite.height);
+			highlight.fillColor = highlight.lineColor = listIdx == 0 ? colorDiffHighlight1 : colorDiffHighlight2;
+			return highlight
 		}
 	}
 }
