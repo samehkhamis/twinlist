@@ -356,11 +356,11 @@ package twinlist
 					if (child is RectSprite) {
 						animReconcile.add(new Tween(child, 1, {alpha: 0}));
 						if (sprite.data.properties.type == 0)
-							animSeparateIdentical.add(new Tween(child, 0.5, {alpha: 1}));
+							animSeparateIdentical.add(new Tween(child, 1, {alpha: 1}));
 						else if (sprite.data.properties.type == 1)
-							animSeparateSimilar.add(new Tween(child, 0.5, {alpha: 1}));
+							animSeparateSimilar.add(new Tween(child, 1, {alpha: 1}));
 						else if (sprite.data.properties.type == 2)
-							animSeparateUnique.add(new Tween(child, 0.5, {alpha: 1}));
+							animSeparateUnique.add(new Tween(child, 1, {alpha: 1}));
 					}
 				}
 			}
