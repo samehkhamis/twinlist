@@ -14,7 +14,7 @@
 	</twinlist:layout>
 	<s:HGroup>
 		<s:Label text="List Viewer" fontSize="24" />
-		<s:Button id="btn" label="Reconcile" width="80" click="ReconcileButtonClick(event)"/>
+		<s:Button id="mergeBtn" label="Merge" width="80" click="ReconcileButtonClick(event)"/>
 	</s:HGroup>
 	<s:Scroller id="scroller" width="100%" height="100%" horizontalScrollPolicy="off">
 		<s:Group width="100%" height="100%" clipAndEnableScrolling="true">
