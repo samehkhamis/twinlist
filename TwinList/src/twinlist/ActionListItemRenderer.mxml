@@ -4,10 +4,9 @@
 	xmlns:s="library://ns.adobe.com/flex/spark" 
 	xmlns:mx="library://ns.adobe.com/flex/mx"
 	xmlns:twinlist="twinlist.*"
-	width="100%" height="100%"
+	width="100%" height="100%" 
 	>
 	<fx:Declarations>
-		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
 	<s:Button x="0" y="0" id="btn" label="Remove" visible="{ColumnName==ActionListClass.BUTTON_COL}" click="PutBack(event)"/>
 	<s:Label x="0" y="0" id="lbl" backgroundAlpha="0" fontSize="16"

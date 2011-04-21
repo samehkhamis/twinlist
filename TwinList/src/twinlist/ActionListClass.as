@@ -6,10 +6,8 @@ package twinlist
 	import mx.collections.Sort;
 	import mx.controls.AdvancedDataGrid;
 	import mx.controls.advancedDataGridClasses.AdvancedDataGridColumn;
-	import mx.controls.advancedDataGridClasses.MXAdvancedDataGridItemRenderer;
 	import mx.core.ClassFactory;
 	import mx.events.FlexEvent;
-	import mx.events.ListEvent;
 	
 	import spark.components.Group;
 	

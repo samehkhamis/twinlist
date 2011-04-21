@@ -1,15 +1,9 @@
 package twinlist
 {
 	import flash.events.Event;
-	import flash.events.MouseEvent;
 	
-	import mx.controls.Text;
 	import mx.controls.advancedDataGridClasses.MXAdvancedDataGridItemRenderer;
 	import mx.core.IFactory;
-	import mx.styles.CSSStyleDeclaration;
-	
-	import spark.components.Button;
-	import spark.components.Label;
 	
 	import twinlist.list.ItemAttribute;
 	import twinlist.list.ListItem;
