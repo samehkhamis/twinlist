@@ -33,7 +33,7 @@ package twinlist
 		[Bindable]
 		protected var vis:Visualization;
 		[Bindable]
-		public var btn:Button;
+		public var mergeBtn:Button;
 		[Bindable]
 		public var scroller:Scroller;
 		
@@ -50,8 +50,8 @@ package twinlist
 		private var textSpacing:int = 14;
 		private var fontString:String = "Sans Serif";
 		
-		private var reconciled:Boolean;
-		private var animReconcile:Sequence;
+		private var merged:Boolean;
+		private var animMerge:Sequence;
 		private var animSeparate:Sequence;
 		
 		private var colorList1:uint = 0xffffffdd;
@@ -71,7 +71,7 @@ package twinlist
 		{
 			super();
 			vis = new Visualization();
-			reconciled = false;
+			merged = false;
 			model.addEventListener(Model.DATA_LOADED, OnDataLoaded);
 			model.addEventListener(Model.VIEW_UPDATED, OnViewUpdate);
 		}
@@ -188,8 +188,8 @@ package twinlist
 			for each (sprite in newVisList) {
 				sprite.data.properties.x1 *= columnWidth;
 				sprite.data.properties.x2 *= columnWidth;
-				sprite.x = reconciled ? sprite.data.properties.x2 : sprite.data.properties.x1;
-				sprite.y = reconciled ? sprite.data.properties.y2 : sprite.data.properties.y1;
+				sprite.x = merged ? sprite.data.properties.x2 : sprite.data.properties.x1;
+				sprite.y = merged ? sprite.data.properties.y2 : sprite.data.properties.y1;
 				sprite.alpha = 0;
 				vis.addChild(sprite);
 				animUpdate.add(new Tween(sprite, 0.5, {alpha: 1}));
@@ -331,7 +331,7 @@ package twinlist
 			nameText.font = fontString;
 			if (item.NameUnique) {
 				highlight = CreateHighlight(nameText, listIdx);
-				highlight.alpha = reconciled ? 1 : 0;
+				highlight.alpha = merged ? 1 : 0;
 				sprite.addChild(highlight);
 			}
 			sprite.addChild(nameText);
@@ -347,7 +347,7 @@ package twinlist
 				attrText.y = textHeight + 4;
 				if (attr.Unique) {
 					highlight = CreateHighlight(attrText, listIdx);
-					highlight.alpha = reconciled ? 1 : 0;
+					highlight.alpha = merged ? 1 : 0;
 					sprite.addChild(highlight);
 				}
 				sprite.addChild(attrText);
@@ -359,7 +359,7 @@ package twinlist
 		
 		private function UpdateButtonAnimations():void
 		{
-			animReconcile = new Sequence();
+			animMerge = new Sequence();
 			animSeparate = new Sequence();
 			
 			var animSeparateColIdentical:Parallel = new Parallel();
@@ -379,8 +379,8 @@ package twinlist
 			var animReconcileCol:Parallel = new Parallel();
 			var animReconcileItems:Parallel = new Parallel();
 			
-			animReconcile.add(animReconcileCol);
-			animReconcile.add(animReconcileItems);
+			animMerge.add(animReconcileCol);
+			animMerge.add(animReconcileItems);
 			
 			// Animate the items
 			for each (var sprite:DataSprite in visList)
@@ -436,24 +436,30 @@ package twinlist
 			animReconcileCol.add(new Tween(columnList[3].getChildAt(0), 0.25, {text: model.VisibleLists[1].Name}));
 			
 			// Enable the reconcile button after
-			animReconcile.addEventListener(TransitionEvent.END, function(e:Event):void { btn.enabled = true; btn.label = "Reconcile"; });
-			animSeparate.addEventListener(TransitionEvent.END, function(e:Event):void { btn.enabled = true; btn.label = "Separate"; });
+			animMerge.addEventListener(TransitionEvent.END, function(e:Event):void {
+				mergeBtn.enabled = true;
+				mergeBtn.label = "Merge";
+			});
+			animSeparate.addEventListener(TransitionEvent.END, function(e:Event):void {
+				mergeBtn.enabled = true;
+				mergeBtn.label = "Separate";
+			});
 		}
 		
 		protected function ReconcileButtonClick(event:MouseEvent):void
 		{
 			// Disable the button for the animation duration
-			btn.enabled = false;
+			mergeBtn.enabled = false;
 			
-			if (reconciled)
+			if (merged)
 			{
-				animReconcile.play();
-				reconciled = false;
+				animMerge.play();
+				merged = false;
 			}
 			else
 			{
 				animSeparate.play();
-				reconciled = true;
+				merged = true;
 			}
 		}
 		
