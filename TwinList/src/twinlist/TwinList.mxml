@@ -19,17 +19,7 @@
 					<twinlist:ListViewerFlare/>
 				</s:Group>
 				<s:Group width="100%" height="40%">
-					<s:layout>
-						<s:HorizontalLayout paddingLeft="10" paddingRight="10" paddingTop="10" paddingBottom="10"/>
-					</s:layout>
-					<mx:TabNavigator id="actionListNav" width="100%" height="100%" borderVisible="false" creationPolicy="all">
-						<s:NavigatorContent label="Accepted List" width="100%" height="100%">
-							<twinlist:ActionList id="acceptList" ListName="{ActionListClass.ACCEPT_LIST}" DataSource="{this.model.AcceptedListItems}"/>
-						</s:NavigatorContent>
-						<s:NavigatorContent label="Rejected List" width="100%" height="100%">
-							<twinlist:ActionList id="rejectList" ListName="{ActionListClass.REJECT_LIST}" DataSource="{this.model.RejectedListItems}"/>
-						</s:NavigatorContent>
-					</mx:TabNavigator>
+					<twinlist:ActionListDock/>
 				</s:Group>
 			</mx:VDividedBox>
 		</s:Group>
