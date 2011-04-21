@@ -22,8 +22,9 @@ package twinlist
 	public final class Model extends EventDispatcher
 	{
 		// event strings
-		public static const DATA_LOADED:String = "DataLoaded";
-		public static const VIEW_UPDATED:String = "ViewUpdated";
+		public static const DATA_LOADED:String = "__DATA_LOADED__";
+		public static const VIEW_UPDATED:String = "__VIEW_UPDATED__";
+		public static const ACTION_TAKEN:String = "__ACTION_TAKEN__";
 		// model
 		private static var instance:Model = new Model();
 		// sorting
@@ -34,9 +35,11 @@ package twinlist
 		private var visibleListIds:Array;
 		private var visibleItemIds:Object;
 		private var listViewerData:ArrayCollection;
+		private var hashSimilarities:Object;
+		// action lists
 		private var acceptedItems:ArrayCollection;
 		private var rejectedItems:ArrayCollection;
-		private var hashSimilarities:Object;
+		private var visibleActionListIdx:int;
 		// attributes
 		private var itemAttributes:ArrayCollection;
 		private var categoricalAttributes:ArrayCollection;
@@ -62,6 +65,7 @@ package twinlist
 			listViewerData = new ArrayCollection();
 			acceptedItems = new ArrayCollection();
 			rejectedItems = new ArrayCollection();
+			visibleActionListIdx = 0;
 			itemAttributes = new ArrayCollection();
 			categoricalAttributes = new ArrayCollection();
 			numericalAttributes = new ArrayCollection();
@@ -137,13 +141,16 @@ package twinlist
 				if (AcceptedListContains(item) >= 0)
 					return;
 				acceptedItems.addItem(item);
+				visibleActionListIdx = 0;
 			}
 			else {
 				if (RejectedListContains(item) >= 0)
 					return;
 				rejectedItems.addItem(item);
+				visibleActionListIdx = 1;
 			}
 			item.ActedOn = true;
+			dispatchEvent(new Event(ACTION_TAKEN));
 			dispatchEvent(new Event(VIEW_UPDATED));
 		}
 		
@@ -155,15 +162,23 @@ package twinlist
 				if (idx < 0)
 					return;
 				acceptedItems.removeItemAt(idx);
+				visibleActionListIdx = 0;
 			}
 			else {
 				idx = RejectedListContains(item);
 				if (idx < 0)
 					return;
 				rejectedItems.removeItemAt(idx);
+				visibleActionListIdx = 1;
 			}
 			item.ActedOn = false;
+			dispatchEvent(new Event(ACTION_TAKEN));
 			dispatchEvent(new Event(VIEW_UPDATED));
+		}
+		
+		public function get VisibleActionListIndex():int
+		{
+			return visibleActionListIdx;
 		}
 		
 		public function get SelectedItem():ListItem
