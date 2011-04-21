@@ -6,12 +6,18 @@
 	xmlns:twinlist="twinlist.*"
 	width="100%" height="100%">
 	<fx:Declarations>
-		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<mx:Glow id="glow"
+				 duration="1000" repeatCount="1"
+				 color="0xffff00" strength="2"
+				 alphaFrom="1" alphaTo="0"
+				 blurXFrom="20" blurXTo="0"
+				 blurYFrom="20" blurYTo="0"
+				 />
 	</fx:Declarations>
 	<twinlist:layout>
 		<s:VerticalLayout />		
 	</twinlist:layout>
 	<!--<s:Label text="{this.title}" fontSize="24" />-->
 	<mx:AdvancedDataGrid id="dataGrid" height="100%" width="100%" borderVisible="false" rowHeight="30" verticalAlign="middle"
-				 dataProvider="{this.dataSource}" mouseEnabled="true"/>
+				 dataProvider="{this.dataSource}"/>
 </twinlist:ActionListClass>
