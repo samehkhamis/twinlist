@@ -9,6 +9,7 @@ package twinlist.list
 		private var name:String;
 		private var attributes:Object;
 		private var nameUnique:Boolean;
+		private var actedOn:Boolean;
 		
 		public function ListItem(id:String, name:String = "")
 		{
@@ -16,6 +17,7 @@ package twinlist.list
 			Name = name;
 			attributes = new Object();
 			NameUnique = false;
+			ActedOn = false;
 		}
 		
 		public function get Id():String
@@ -48,6 +50,15 @@ package twinlist.list
 		public function get Attributes():Object
 		{
 			return attributes;
+		}
+		
+		public function get ActedOn():Boolean
+		{
+			return actedOn;
+		}
+		public function set ActedOn(value:Boolean):void
+		{
+			actedOn = value;
 		}
 				
 		public function toString():String

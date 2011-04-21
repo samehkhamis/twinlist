@@ -32,10 +32,10 @@ package twinlist
 			var item:ListItem = GetClickedItem(event);
 			if (item == null)
 				return;
-			if (model.ActionListContains(item) >= 0)
-				model.DelActionListItem(item);
+			if (model.AcceptedListContains(item) >= 0)
+				model.DelActionListItem(item, true);
 			else
-				model.AddActionListItem(item);
+				model.AddActionListItem(item, true);
 		}
 		
 		private function GetClickedItem(event:ListEvent):ListItem

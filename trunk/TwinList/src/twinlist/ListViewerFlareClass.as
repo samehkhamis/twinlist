@@ -54,15 +54,18 @@ package twinlist
 		private var animReconcile:Sequence;
 		private var animSeparate:Sequence;
 		
-		private var colorList1:int = 0xffffffdd;
-		private var colorList2:int = 0xffddddff;
-		private var colorIdentical:int = 0xffddffdd;
-		private var colorOriginal:int = 0xffdddddd;
-		private var colorText:int = 0xff000000;
-		private var colorTextHighlighted:int = 0xff0000ff;
-		private var colorBackground:int = 0xffffffff;
-		private var colorDiffHighlight1:int = 0xffffff40;
-		private var colorDiffHighlight2:int = 0xffB0B0ff;
+		private var colorList1:uint = 0xffffffdd;
+		private var colorList2:uint = 0xffddddff;
+		private var colorIdentical:uint = 0xffddffdd;
+		private var colorOriginal:uint = 0xffdddddd;
+		private var colorText:uint = 0xff000000;
+		private var colorTextGray:uint = 0xff707070;
+		private var colorTextHighlighted:uint = 0xff0000ff;
+		private var colorBackground:uint = 0xffffffff;
+		private var colorDiffHighlight1:uint = 0xffffff40;
+		private var colorDiffHighlight2:uint = 0xffB0B0ff;
+		
+		private var removeAfterAction:Boolean = true;
 		
 		public function ListViewerFlareClass()
 		{
@@ -71,6 +74,15 @@ package twinlist
 			reconciled = false;
 			model.addEventListener(Model.DATA_LOADED, OnDataLoaded);
 			model.addEventListener(Model.VIEW_UPDATED, OnViewUpdate);
+		}
+		
+		public function get RemoveAfterAction():Boolean
+		{
+			return removeAfterAction;
+		}
+		public function set RemoveAfterAction(enabled:Boolean):void
+		{
+			removeAfterAction = enabled;
 		}
 		
 		private function OnDataLoaded(event:Event):void
@@ -130,8 +142,8 @@ package twinlist
 			acceptBtn.font = fontString;
 			acceptBtn.color = 0xff330000;
 			acceptBtn.buttonMode = true;
-			acceptBtn.addEventListener(MouseEvent.MOUSE_OVER, ButtonRollOver);
-			acceptBtn.addEventListener(MouseEvent.MOUSE_OUT, ButtonRollOut);
+			acceptBtn.addEventListener(MouseEvent.MOUSE_OVER, PopupButtonRollOver);
+			acceptBtn.addEventListener(MouseEvent.MOUSE_OUT, PopupButtonRollOut);
 			acceptBtn.addEventListener(MouseEvent.MOUSE_UP, AcceptClick);
 			
 			var rejectBtn:TextSprite = new TextSprite("Reject?");
@@ -140,8 +152,8 @@ package twinlist
 			rejectBtn.color = 0xff330000;
 			rejectBtn.buttonMode = true;
 			rejectBtn.x = acceptBtn.width;
-			rejectBtn.addEventListener(MouseEvent.MOUSE_OVER, ButtonRollOver);
-			rejectBtn.addEventListener(MouseEvent.MOUSE_OUT, ButtonRollOut);
+			rejectBtn.addEventListener(MouseEvent.MOUSE_OVER, PopupButtonRollOver);
+			rejectBtn.addEventListener(MouseEvent.MOUSE_OUT, PopupButtonRollOut);
 			rejectBtn.addEventListener(MouseEvent.MOUSE_UP, RejectClick);
 			
 			popup = new RectSprite(0, 0, rejectBtn.x + rejectBtn.width, rejectBtn.height);
@@ -157,6 +169,9 @@ package twinlist
 		
 		private function OnViewUpdate(event:Event):void
 		{
+			// reset selected sprite
+			selectedSprite = null;
+			
 			// Get new visList
 			var newVisList:ArrayCollection = CreateVisList(model.ListViewerData);
 			
@@ -209,34 +224,53 @@ package twinlist
 			var visList:ArrayCollection = new ArrayCollection();
 			for each (var item:ListViewerItem in data)
 			{
+				var sprite:DataSprite;
 				if (item.Identical != null)
 				{
-					visList.addItem(CreateItemSprite(item.Identical, 0, {x1: 1, y1: l1y, x2: 2, y2: ry, type: 0}));
-					visList.addItem(CreateItemSprite(item.Identical, 1, {x1: 3, y1: l2y, x2: 2, y2: ry, type: 0}));
-					l1y += RowHeight;
-					l2y += RowHeight;
-					ry += RowHeight;
+					if (!item.Identical.ActedOn || !RemoveAfterAction) {
+						sprite = CreateItemSprite(item.Identical, 0, {x1: 1, y1: l1y, x2: 2, y2: ry, type: 0});
+						visList.addItem(sprite);
+						sprite = CreateItemSprite(item.Identical, 1, {x1: 3, y1: l2y, x2: 2, y2: ry, type: 0});
+						visList.addItem(sprite);
+						l1y += RowHeight;
+						l2y += RowHeight;
+						ry += RowHeight;
+					}
 				}
 				else if (item.L1Unique != null)
 				{
-					visList.addItem(CreateItemSprite(item.L1Unique, 0, {x1: 1, y1: l1y, x2: 0, y2: ry, type: 2}));
-					l1y += RowHeight;
-					ry += RowHeight;
+					if (!item.L1Unique.ActedOn || !RemoveAfterAction) {
+						sprite = CreateItemSprite(item.L1Unique, 0, {x1: 1, y1: l1y, x2: 0, y2: ry, type: 2});
+						visList.addItem(sprite);
+						l1y += RowHeight;
+						ry += RowHeight;
+					}
 				}
 				else if (item.L2Unique != null)
 				{
-					visList.addItem(CreateItemSprite(item.L2Unique, 1, {x1: 3, y1: l2y, x2: 4, y2: ry, type: 2}));
-					l2y += RowHeight;
-					ry += RowHeight;
+					if (!item.L2Unique.ActedOn || !RemoveAfterAction) {
+						sprite = CreateItemSprite(item.L2Unique, 1, {x1: 3, y1: l2y, x2: 4, y2: ry, type: 2});
+						visList.addItem(sprite);
+						l2y += RowHeight;
+						ry += RowHeight;
+					}
 				}
 				else
 				{
-					if (item.L1Similar != null)
-						visList.addItem(CreateItemSprite(item.L1Similar, 0, {x1: 1, y1: l1y, x2: 1, y2: ry, type: 1}));
-					if (item.L2Similar != null)
-						visList.addItem(CreateItemSprite(item.L2Similar, 1, {x1: 3, y1: l2y, x2: 3, y2: ry, type: 1}));
-					l1y += RowHeight;
-					l2y += RowHeight;
+					if (item.L1Similar != null) {
+						if (!item.L1Similar.ActedOn || !RemoveAfterAction) {
+							sprite = CreateItemSprite(item.L1Similar, 0, {x1: 1, y1: l1y, x2: 1, y2: ry, type: 1});
+							visList.addItem(sprite);
+							l1y += RowHeight;
+						}
+					}
+					if (item.L2Similar != null) {
+						if (!item.L2Similar.ActedOn || !RemoveAfterAction) {
+							sprite = CreateItemSprite(item.L2Similar, 1, {x1: 3, y1: l2y, x2: 3, y2: ry, type: 1});
+							visList.addItem(sprite);
+							l2y += RowHeight;
+						}
+					}
 					ry += RowHeight;
 				}
 			}
@@ -282,20 +316,19 @@ package twinlist
 			var sprite:DataSprite = new DataSprite();
 			sprite.renderer = null;
 			sprite.data = {properties: properties, item: item};
-			sprite.buttonMode = true;
-			sprite.doubleClickEnabled = true;
-			sprite.addEventListener(MouseEvent.DOUBLE_CLICK, ItemDoubleClick);
-			sprite.addEventListener(MouseEvent.MOUSE_DOWN, ItemMouseDown);
-			sprite.addEventListener(MouseEvent.MOUSE_UP, ItemMouseUp);
-			sprite.addEventListener(MouseEvent.ROLL_OVER, ItemRollOver);
-			sprite.addEventListener(MouseEvent.ROLL_OUT, ItemRollOut);
+			if (!item.ActedOn) {
+				sprite.buttonMode = true;
+				sprite.addEventListener(MouseEvent.MOUSE_DOWN, ItemMouseDown);
+				sprite.addEventListener(MouseEvent.MOUSE_UP, ItemMouseUp);
+				sprite.addEventListener(MouseEvent.ROLL_OVER, ItemRollOver);
+				sprite.addEventListener(MouseEvent.ROLL_OUT, ItemRollOut);
+			}
 			
 			var nameText:TextSprite = new TextSprite(item.Name);
 			var highlight:RectSprite;
-			nameText.color = colorText;
+			nameText.color = item.ActedOn ? colorTextGray : colorText;
 			nameText.size = textHeight;
 			nameText.font = fontString;
-			nameText.doubleClickEnabled = true;
 			if (item.NameUnique) {
 				highlight = CreateHighlight(nameText, listIdx);
 				highlight.alpha = reconciled ? 1 : 0;
@@ -307,10 +340,9 @@ package twinlist
 			var attrText:TextSprite;
 			for each (var attr:ItemAttribute in item.Attributes) {
 				attrText = new TextSprite(attr.ValuesString());
-				attrText.color = colorText;
+				attrText.color = item.ActedOn ? colorTextGray : colorText;
 				attrText.size = textHeight - 4;
 				attrText.font = fontString;
-				attrText.doubleClickEnabled = true;
 				attrText.x = x;
 				attrText.y = textHeight + 4;
 				if (attr.Unique) {
@@ -425,12 +457,12 @@ package twinlist
 			}
 		}
 		
-		private function ButtonRollOver(event:MouseEvent):void
+		private function PopupButtonRollOver(event:MouseEvent):void
 		{
 			event.currentTarget.color = 0xffff0000;
 		}
 		
-		private function ButtonRollOut(event:MouseEvent):void
+		private function PopupButtonRollOut(event:MouseEvent):void
 		{
 			event.currentTarget.color = 0xff330000;
 		}
@@ -441,8 +473,7 @@ package twinlist
 				return;
 			
 			var item:ListItem = selectedSprite.data.item as ListItem;
-			if (model.ActionListContains(item) == -1)
-				model.AddActionListItem(item);
+			model.AddActionListItem(item, true);
 		}
 		
 		private function RejectClick(event:MouseEvent):void
@@ -451,20 +482,7 @@ package twinlist
 				return;
 			
 			var item:ListItem = selectedSprite.data.item as ListItem;
-			if (model.ActionListContains(item) >= 0)
-				model.DelActionListItem(item);
-		}
-		
-		private function ItemDoubleClick(event:MouseEvent):void
-		{
-			var sprite:DataSprite = event.currentTarget as DataSprite;
-			var item:ListItem = sprite.data.item as ListItem;
-			if (item == null)
-				return;
-			if (model.ActionListContains(item) >= 0)
-				model.DelActionListItem(item);
-			else
-				model.AddActionListItem(item);
+			model.AddActionListItem(item, false);
 		}
 		
 		private function ItemMouseDown(event:MouseEvent):void

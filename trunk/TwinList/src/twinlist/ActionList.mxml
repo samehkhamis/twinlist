@@ -9,9 +9,9 @@
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
 	<twinlist:layout>
-		<s:VerticalLayout paddingLeft="10" paddingRight="10" paddingTop="10" paddingBottom="10"/>		
+		<s:VerticalLayout />		
 	</twinlist:layout>
-	<s:Label text="Action List" fontSize="24" />
-	<mx:AdvancedDataGrid id="dataGrid" height="100%" width="100%" borderVisible="false"
-				 dataProvider="{this.model.ActionListItems}"/>
+	<!--<s:Label text="{this.title}" fontSize="24" />-->
+	<mx:AdvancedDataGrid id="dataGrid" height="100%" width="100%" borderVisible="false" rowHeight="30" verticalAlign="middle"
+				 dataProvider="{this.dataSource}" mouseEnabled="true"/>
 </twinlist:ActionListClass>

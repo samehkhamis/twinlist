@@ -34,7 +34,8 @@ package twinlist
 		private var visibleListIds:Array;
 		private var visibleItemIds:Object;
 		private var listViewerData:ArrayCollection;
-		private var actionListItems:ArrayCollection;
+		private var acceptedItems:ArrayCollection;
+		private var rejectedItems:ArrayCollection;
 		private var hashSimilarities:Object;
 		// attributes
 		private var itemAttributes:ArrayCollection;
@@ -59,7 +60,8 @@ package twinlist
 			visibleListIds = new Array(2);
 			visibleItemIds = new Object();
 			listViewerData = new ArrayCollection();
-			actionListItems = new ArrayCollection();
+			acceptedItems = new ArrayCollection();
+			rejectedItems = new ArrayCollection();
 			itemAttributes = new ArrayCollection();
 			categoricalAttributes = new ArrayCollection();
 			numericalAttributes = new ArrayCollection();
@@ -101,33 +103,67 @@ package twinlist
 			return listViewerData;
 		}
 		
-		public function get ActionListItems():ArrayCollection
+		public function get AcceptedListItems():ArrayCollection
 		{
-			return actionListItems;
+			return acceptedItems;
 		}
 		
-		public function ActionListContains(item:ListItem):int
+		public function AcceptedListContains(item:ListItem):int
 		{
-			for (var idx:int = 0; idx < actionListItems.length; idx++) {
-				if (actionListItems[idx].Id == item.Id)
+			for (var idx:int = 0; idx < acceptedItems.length; idx++) {
+				if (acceptedItems[idx].Id == item.Id)
 					return idx;
 			}
 			return -1;
 		}
 		
-		public function AddActionListItem(item:ListItem):void
+		public function get RejectedListItems():ArrayCollection
 		{
-			if (ActionListContains(item) >= 0)
-				return;
-			actionListItems.addItem(item);
+			return rejectedItems;
 		}
 		
-		public function DelActionListItem(item:ListItem):void
+		public function RejectedListContains(item:ListItem):int
 		{
-			var idx:int = ActionListContains(item);
-			if (idx >= 0) {
-				actionListItems.removeItemAt(idx);
+			for (var idx:int = 0; idx < rejectedItems.length; idx++) {
+				if (rejectedItems[idx].Id == item.Id)
+					return idx;
 			}
+			return -1;
+		}
+		
+		public function AddActionListItem(item:ListItem, accepted:Boolean):void
+		{
+			if (accepted) {
+				if (AcceptedListContains(item) >= 0)
+					return;
+				acceptedItems.addItem(item);
+			}
+			else {
+				if (RejectedListContains(item) >= 0)
+					return;
+				rejectedItems.addItem(item);
+			}
+			item.ActedOn = true;
+			dispatchEvent(new Event(VIEW_UPDATED));
+		}
+		
+		public function DelActionListItem(item:ListItem, accepted:Boolean):void
+		{
+			var idx:int;
+			if (accepted) {
+				idx = AcceptedListContains(item);
+				if (idx < 0)
+					return;
+				acceptedItems.removeItemAt(idx);
+			}
+			else {
+				idx = RejectedListContains(item);
+				if (idx < 0)
+					return;
+				rejectedItems.removeItemAt(idx);
+			}
+			item.ActedOn = false;
+			dispatchEvent(new Event(VIEW_UPDATED));
 		}
 		
 		public function get SelectedItem():ListItem
@@ -326,7 +362,7 @@ package twinlist
 		{
 			listIdx[list.Id] = lists.length;
 			lists.addItem(list);
-			if (lists.length >= 2) {
+			if (lists.length >= 2 && hashSimilarities != null) {
 				FinishInit();
 			}
 		}
@@ -334,8 +370,10 @@ package twinlist
 		private function OnReadSimilarityXmlComplete(hash:Object):void
 		{
 			// Setting similarities to hash of similarities in the model.
-			hashSimilarities=hash;
-			FinishInit();
+			hashSimilarities = hash;
+			if (lists.length >= 2 && hashSimilarities != null) {
+				FinishInit();
+			}
 		}
 		
 		private function FinishInit():void
@@ -482,15 +520,6 @@ package twinlist
 					}
 				}
 			}
-		}
-		
-		private function GetSimilarity(item1:ListItem, item2:ListItem):Number
-		{
-			if (item1 == null || item2 == null)
-				return -1;
-			if (item1.Equals(item2))
-				return 1;
-			return 0;
 		}
 		
 		private function LoadCannedData():void
