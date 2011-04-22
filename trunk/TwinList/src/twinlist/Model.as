@@ -339,8 +339,6 @@ package twinlist
 		
 		private function SortListViewerData():void
 		{
-			if (SortBy == null && GroupBy == null)
-				return;
 			var sort:Sort = new Sort();
 			sort.compareFunction = SortFunction;
 			sort.sort(listViewerData.source);
@@ -350,6 +348,8 @@ package twinlist
 		
 		private function SortFunction(a:Object, b:Object, fields:Array):int
 		{
+			if (groupByAttribute == null && sortByAttribute == null)
+				return defaultSort.compareFunction.call(null, a.RowIndex, b.RowIndex, fields);
 			var item1:ListItem = GetListItemToSortOn(a as ListViewerItem);
 			var item2:ListItem = GetListItemToSortOn(b as ListViewerItem);
 			var val1:Object;
@@ -394,11 +394,9 @@ package twinlist
 				return listViewerItem.L2Unique;
 		}
 		
-
-	        private function OnReadSchemaXmlComplete(schema:ListSchema):void
+		private function OnReadSchemaXmlComplete(schema:ListSchema):void
 		{
-       		        this.schema = schema;
-
+			this.schema = schema;
 		}
 
 		private function OnReadListXmlComplete(list:List):void
@@ -501,8 +499,10 @@ package twinlist
 			var item1:ListItem;
 			var item2:ListItem;
 			var listViewerItem:ListViewerItem;
+			var idx:int = 0;
 			for each (var simItem:SimilarityItem in hashSimilarities) {
 				listViewerItem = new ListViewerItem();
+				listViewerItem.RowIndex = idx;
 				if (simItem.Type == SimilarityItem.IDENTICAL) {
 					// identical
 					item1 = map1[simItem.L1Id] as ListItem;
@@ -515,8 +515,10 @@ package twinlist
 						listViewerItem.Identical2 = item2;
 						visibleItemIds[item2.Id] = item2;
 					}
-					if (item1 != null || item2 != null)
+					if (item1 != null || item2 != null) {
 						listViewerData.addItem(listViewerItem);
+						++idx;
+					}
 				}
 				else if (simItem.Type == SimilarityItem.SIMILAR) {
 					// similar
@@ -543,8 +545,10 @@ package twinlist
 						listViewerItem.L2Similar = item2;
 						visibleItemIds[item2.Id] = item2;						
 					}
-					if (item1 != null || item2 != null)
+					if (item1 != null || item2 != null) {
 						listViewerData.addItem(listViewerItem);
+						++idx;
+					}
 				}
 				else {
 					// unique
@@ -554,6 +558,7 @@ package twinlist
 							listViewerItem.L1Unique = item1;
 							visibleItemIds[item1.Id] = item1;
 							listViewerData.addItem(listViewerItem);
+							++idx;
 						}
 					}
 					else {
@@ -561,7 +566,8 @@ package twinlist
 						if (item2 != null) {
 							listViewerItem.L2Unique = item2;
 							visibleItemIds[item2.Id] = item2;
-							listViewerData.addItem(listViewerItem);	
+							listViewerData.addItem(listViewerItem);
+							++idx;
 						}
 					}
 				}

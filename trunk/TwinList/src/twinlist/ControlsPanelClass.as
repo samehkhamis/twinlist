@@ -1,7 +1,5 @@
 package twinlist
 {
-	import com.carlcalderon.arthropod.Debug;
-	
 	import flash.events.Event;
 	
 	import mx.collections.ArrayCollection;
@@ -15,10 +13,28 @@ package twinlist
 	{
 		[Bindable]
 		protected var model:Model = Model.Instance;
+		[Bindable]
+		protected var categoricalOptions:ArrayCollection;
+		[Bindable]
+		protected var numericalOptions:ArrayCollection;
+		[Bindable]
+		protected var generalOptions:ArrayCollection;
 		
 		public function ControlsPanelClass()
 		{
 			super();
+			categoricalOptions = CreateOptionsList(model.CategoricalAttributes);
+			numericalOptions = CreateOptionsList(model.NumericalAttributes);
+			generalOptions = CreateOptionsList(model.ItemAttributes);
+			model.CategoricalAttributes.addEventListener(CollectionEvent.COLLECTION_CHANGE, function(e:Event):void {
+				categoricalOptions = CreateOptionsList(model.CategoricalAttributes);
+			});
+			model.NumericalAttributes.addEventListener(CollectionEvent.COLLECTION_CHANGE, function(e:Event):void {
+				numericalOptions = CreateOptionsList(model.NumericalAttributes);
+			});
+			model.ItemAttributes.addEventListener(CollectionEvent.COLLECTION_CHANGE, function(e:Event):void {
+				generalOptions = CreateOptionsList(model.ItemAttributes);
+			});
 		}
 		
 		protected function OnChange(event:IndexChangeEvent):void {
@@ -28,21 +44,30 @@ package twinlist
 			switch (dd.id) {
 				case "SizeByList":
 					//Debug.log("ColorByList");
-					model.SizeBy = model.NumericalAttributes[event.newIndex];
+					model.SizeBy = numericalOptions[event.newIndex];
 					break;
 				case "ColorByList":
 					//Debug.log("ColorByList");
-					model.ColorBy = model.CategoricalAttributes[event.newIndex];
+					model.ColorBy = categoricalOptions[event.newIndex];
 					break;
 				case "groupByList":
 					//Debug.log("GroupByList");
-					model.GroupBy = model.CategoricalAttributes[event.newIndex];
+					model.GroupBy = categoricalOptions[event.newIndex];
 					break;
 				case "sortByList":
 					//Debug.log("SortByList");
-					model.SortBy = model.ItemAttributes[event.newIndex];
+					model.SortBy = generalOptions[event.newIndex];
 					break;
 			}
+		}
+		
+		private function CreateOptionsList(data:ArrayCollection):ArrayCollection
+		{
+			var source:Array = new Array(1);
+			source[0] = null;
+			source = source.concat(data.source);
+			var options:ArrayCollection = new ArrayCollection(source);
+			return options;
 		}
 	}
 }

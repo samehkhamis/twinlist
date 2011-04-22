@@ -15,6 +15,7 @@
 		<s:Label text="Font size" width="75" height="25" fontSize="14"/>
 		<s:NumericStepper width="50" height="25" minimum="8" maximum="32" value="16" change="OnFontSizeChange(event)"/>
 	</s:HGroup>
+	<mx:Spacer height="10"/>
 	<!--
 	<s:HGroup width="100%">
 		<s:Label text="Font Color" fontSize="14"/>
@@ -24,12 +25,15 @@
 	<s:CheckBox label="Identical items"/>
 	<s:CheckBox label="All List1 items"/>
 	<s:CheckBox label="All List2 items"/>
+	<mx:Spacer height="10"/>
 	-->
 	<s:HGroup>
 		<s:Label text="Link identical items:" fontSize="14"/>
 		<s:CheckBox id="cbLinkIdentical" change="OnLinkIdenticalChange(event)" selected="true"/>		
 	</s:HGroup>
+	<mx:Spacer height="10"/>
 	<s:Label text="After item accept/reject:" fontSize="14"/>
 	<s:RadioButton id="rbGray" group="{rbgAfterAction}" label="Gray out" value="{OptionsPanelClass.OPTVAL_GRAYOUT}"/>
 	<s:RadioButton id="rbRemove" group="{rbgAfterAction}" label="Remove" value="{OptionsPanelClass.OPTVAL_REMOVE}" selected="true"/>
+	<mx:Spacer height="10"/>
 </twinlist:OptionsPanelClass>
