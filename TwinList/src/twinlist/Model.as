@@ -82,7 +82,7 @@ package twinlist
 			hashSimilarities = new ArrayCollection();
 			// load data
 			//LoadCannedData();
-			new XmlSchemaLoader("../data/medication/schema.xml", OnReadSchemaXmlComplete);
+			//new XmlSchemaLoader("../data/medication/schema.xml", OnReadSchemaXmlComplete);
 			new XmlListLoader("../data/medication/list1.xml", OnReadListXmlComplete);
 			new XmlListLoader("../data/medication/list2.xml", OnReadListXmlComplete);
 			
