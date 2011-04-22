@@ -3,7 +3,7 @@
 <project name="TwinList" basedir="." default="help">
 	<property name="APP_NAME" value="TwinList"/>
 	<property name="LOCALE" value="en_US"/>
-	<property name="FLEX_HOME" value="C:/Programs/flex"/>
+	<property name="FLEX_HOME" value="/home/puuj/Downloads/flex_sdk_4/"/>
 	
 	<taskdef resource="flexTasks.tasks"
 		classpath="libs/flexTasks.jar"/>

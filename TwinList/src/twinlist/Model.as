@@ -102,8 +102,8 @@ package twinlist
 			  simFile= "../data/sotu/bush_08_obama_09_similarities.xml";
 			  break;
 			case "sotu0809test":
-			  list1File = "../data/sotu/bush08.0809.test.xml";
-			  list2File = "../data/sotu/obama09.0809.test.xml";
+//			  list1File = "../data/sotu/bush08.0809.test.xml";
+//			  list2File = "../data/sotu/obama09.0809.test.xml";
 			  simFile= "../data/sotu/bush_08_obama_09_similarities.test.xml";
 			  break;
 
