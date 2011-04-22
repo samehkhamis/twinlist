@@ -73,7 +73,8 @@ package twinlist
 			vis = new Visualization();
 			merged = false;
 			model.addEventListener(Model.DATA_LOADED, OnDataLoaded);
-			model.addEventListener(Model.VIEW_UPDATED, OnViewUpdate);
+			model.addEventListener(Model.VIEW_UPDATED, OnViewUpdated);
+			model.addEventListener(Model.OPTIONS_UPDATED, OnOptionsUpdated);
 		}
 		
 		public function get RemoveAfterAction():Boolean
@@ -167,7 +168,7 @@ package twinlist
 			timer.addEventListener(TimerEvent.TIMER, ClickTimer);
 		}
 		
-		private function OnViewUpdate(event:Event):void
+		private function OnViewUpdated(event:Event):void
 		{
 			// reset selected sprite
 			selectedSprite = null;
@@ -583,6 +584,20 @@ package twinlist
 			var highlight:RectSprite = new RectSprite(sprite.x, sprite.y, sprite.width, sprite.height);
 			highlight.fillColor = highlight.lineColor = listIdx == 0 ? colorDiffHighlight1 : colorDiffHighlight2;
 			return highlight
+		}
+		
+		private function OnOptionsUpdated(event:TwinListEvent):void
+		{
+			var opt:Array = event.Data as Array;
+			switch (opt[0]) {
+				case OptionsPanelClass.OPT_FONTSIZE:
+					textHeight = opt[1] as int;
+					break;
+				case OptionsPanelClass.OPT_AFTERACTION:
+					removeAfterAction = opt[1] == OptionsPanelClass.OPTVAL_REMOVE;
+					break;
+			}
+			OnViewUpdated(event);
 		}
 	}
 }
