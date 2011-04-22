@@ -25,6 +25,10 @@
 	<s:CheckBox label="All List1 items"/>
 	<s:CheckBox label="All List2 items"/>
 	-->
+	<s:HGroup>
+		<s:Label text="Link identical items:" fontSize="14"/>
+		<s:CheckBox id="cbLinkIdentical" change="OnLinkIdenticalChange(event)" selected="true"/>		
+	</s:HGroup>
 	<s:Label text="After item accept/reject:" fontSize="14"/>
 	<s:RadioButton id="rbGray" group="{rbgAfterAction}" label="Gray out" value="{OptionsPanelClass.OPTVAL_GRAYOUT}"/>
 	<s:RadioButton id="rbRemove" group="{rbgAfterAction}" label="Remove" value="{OptionsPanelClass.OPTVAL_REMOVE}" selected="true"/>

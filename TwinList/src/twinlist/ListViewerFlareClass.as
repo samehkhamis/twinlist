@@ -36,24 +36,25 @@ package twinlist
 		public var mergeBtn:Button;
 		[Bindable]
 		public var scroller:Scroller;
-		
+		// data
 		private var visList:ArrayCollection;
 		private var columnList:ArrayCollection;
-		
+		// selected sprite
 		private var selectedSprite:DataSprite = null;
 		private var popup:RectSprite;
 		private var timer:Timer;
-		
+		// column details
 		private var columnWidth:int = 0;
 		private var columnHeight:int = 0;
+		// font details
 		private var textHeight:int = 16;
 		private var textSpacing:int = 14;
 		private var fontString:String = "Sans Serif";
-		
+		// merging
 		private var merged:Boolean;
 		private var animMerge:Sequence;
 		private var animSeparate:Sequence;
-		
+		// colors
 		private var colorList1:uint = 0xffffffdd;
 		private var colorList2:uint = 0xffddddff;
 		private var colorIdentical:uint = 0xffddffdd;
@@ -61,10 +62,12 @@ package twinlist
 		private var colorText:uint = 0xff000000;
 		private var colorTextGray:uint = 0xff707070;
 		private var colorTextHighlighted:uint = 0xff0000ff;
+		private var colorTextSelected:uint = 0xffff0000;
 		private var colorBackground:uint = 0xffffffff;
 		private var colorDiffHighlight1:uint = 0xffffff40;
 		private var colorDiffHighlight2:uint = 0xffB0B0ff;
-		
+		// options
+		private var linkIdentical:Boolean = true;
 		private var removeAfterAction:Boolean = true;
 		
 		public function ListViewerFlareClass()
@@ -223,56 +226,64 @@ package twinlist
 			var ry:int = HeaderHeight;
 			
 			var visList:ArrayCollection = new ArrayCollection();
+			
+			var idx:int = 0;
 			for each (var item:ListViewerItem in data)
 			{
 				var sprite:DataSprite;
-				if (item.Identical != null)
+				var spriteAdded:Boolean = false;
+				if (item.Identical1 != null || item.Identical2 != null)
 				{
-					if (!item.Identical.ActedOn || !RemoveAfterAction) {
-						sprite = CreateItemSprite(item.Identical, 0, {x1: 1, y1: l1y, x2: 2, y2: ry, type: 0});
+					if (item.Identical1 != null && (!item.Identical1.ActedOn || !RemoveAfterAction)) {
+						sprite = CreateItemSprite(item.Identical1, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 2, y2: ry, type: 0});
 						visList.addItem(sprite);
-						sprite = CreateItemSprite(item.Identical, 1, {x1: 3, y1: l2y, x2: 2, y2: ry, type: 0});
-						visList.addItem(sprite);
+						spriteAdded = true;
 						l1y += RowHeight;
+					}
+					if (item.Identical2 != null && (!item.Identical2.ActedOn || !RemoveAfterAction)) {
+						sprite = CreateItemSprite(item.Identical2, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 2, y2: ry, type: 0});
+						visList.addItem(sprite);
+						spriteAdded = true;
 						l2y += RowHeight;
-						ry += RowHeight;
+					}
+				}
+				else if (item.L1Similar != null || item.L2Similar != null)
+				{
+					if (item.L1Similar != null && (!item.L1Similar.ActedOn || !RemoveAfterAction)) {
+						sprite = CreateItemSprite(item.L1Similar, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 1, y2: ry, type: 1});
+						visList.addItem(sprite);
+						spriteAdded = true;
+						l1y += RowHeight;
+					}
+					if (item.L2Similar != null && (!item.L2Similar.ActedOn || !RemoveAfterAction)) {
+						sprite = CreateItemSprite(item.L2Similar, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 3, y2: ry, type: 1});
+						visList.addItem(sprite);
+						spriteAdded = true;
+						l2y += RowHeight;
 					}
 				}
 				else if (item.L1Unique != null)
 				{
 					if (!item.L1Unique.ActedOn || !RemoveAfterAction) {
-						sprite = CreateItemSprite(item.L1Unique, 0, {x1: 1, y1: l1y, x2: 0, y2: ry, type: 2});
+						sprite = CreateItemSprite(item.L1Unique, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 0, y2: ry, type: 2});
 						visList.addItem(sprite);
+						spriteAdded = true;
 						l1y += RowHeight;
-						ry += RowHeight;
 					}
 				}
 				else if (item.L2Unique != null)
 				{
 					if (!item.L2Unique.ActedOn || !RemoveAfterAction) {
-						sprite = CreateItemSprite(item.L2Unique, 1, {x1: 3, y1: l2y, x2: 4, y2: ry, type: 2});
+						sprite = CreateItemSprite(item.L2Unique, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 4, y2: ry, type: 2});
 						visList.addItem(sprite);
+						spriteAdded = true;
 						l2y += RowHeight;
-						ry += RowHeight;
 					}
 				}
-				else
-				{
-					if (item.L1Similar != null) {
-						if (!item.L1Similar.ActedOn || !RemoveAfterAction) {
-							sprite = CreateItemSprite(item.L1Similar, 0, {x1: 1, y1: l1y, x2: 1, y2: ry, type: 1});
-							visList.addItem(sprite);
-							l1y += RowHeight;
-						}
-					}
-					if (item.L2Similar != null) {
-						if (!item.L2Similar.ActedOn || !RemoveAfterAction) {
-							sprite = CreateItemSprite(item.L2Similar, 1, {x1: 3, y1: l2y, x2: 3, y2: ry, type: 1});
-							visList.addItem(sprite);
-							l2y += RowHeight;
-						}
-					}
+				// update row y-offset
+				if (spriteAdded) {
 					ry += RowHeight;
+					++idx;
 				}
 			}
 			return visList;
@@ -331,7 +342,7 @@ package twinlist
 			nameText.size = textHeight;
 			nameText.font = fontString;
 			if (item.NameUnique) {
-				highlight = CreateHighlight(nameText, listIdx);
+				highlight = CreateDiffHighlight(nameText, listIdx);
 				highlight.alpha = merged ? 1 : 0;
 				sprite.addChild(highlight);
 			}
@@ -347,7 +358,7 @@ package twinlist
 				attrText.x = x;
 				attrText.y = textHeight + 4;
 				if (attr.Unique) {
-					highlight = CreateHighlight(attrText, listIdx);
+					highlight = CreateDiffHighlight(attrText, listIdx);
 					highlight.alpha = merged ? 1 : 0;
 					sprite.addChild(highlight);
 				}
@@ -479,6 +490,11 @@ package twinlist
 			if (popup.alpha == 0)
 				return;
 			
+			if (linkIdentical) {
+				var other:DataSprite = FindDuplicateRowIndex(selectedSprite);
+				if (other != null)
+					(other.data.item as ListItem).ActedOn = true;
+			}
 			var item:ListItem = selectedSprite.data.item as ListItem;
 			model.AddActionListItem(item, true);
 		}
@@ -488,6 +504,11 @@ package twinlist
 			if (popup.alpha == 0)
 				return;
 			
+			if (linkIdentical) {
+				var other:DataSprite = FindDuplicateRowIndex(selectedSprite);
+				if (other != null)
+					(other.data.item as ListItem).ActedOn = true;
+			}
 			var item:ListItem = selectedSprite.data.item as ListItem;
 			model.AddActionListItem(item, false);
 		}
@@ -569,17 +590,57 @@ package twinlist
 			return 2 * textHeight - 4 + textSpacing;
 		}
 		
-		private function Highlight(sprite:Sprite, enabled:Boolean):void
+		private function Highlight(sprite:DataSprite, enabled:Boolean):void
 		{
-			var color:int = enabled ? colorTextHighlighted : colorText;
-			for (var i:int = 0; i < sprite.numChildren; i++) {
-				var text:TextSprite = sprite.getChildAt(i) as TextSprite;
+			var color:uint;
+			if (!enabled)
+				color = colorText;
+			else if (sprite == selectedSprite)
+				color = colorTextSelected;
+			else
+				color = colorTextHighlighted;
+			var text:TextSprite;
+			var i:int;
+			for (i = 0; i < sprite.numChildren; i++) {
+				text = sprite.getChildAt(i) as TextSprite;
 				if (text != null)
 					text.color = color;
 			}
+			if (linkIdentical) {
+				var other:DataSprite = FindDuplicateRowIndex(sprite);
+				if (other != null) {
+					for (i = 0; i < other.numChildren; i++) {
+						text = other.getChildAt(i) as TextSprite;
+						if (text != null)
+							text.color = color;
+					}
+				}
+			}
 		}
 		
-		private function CreateHighlight(sprite:TextSprite, listIdx:int):RectSprite
+		private function HighlightSelected(sprite:DataSprite, enabled:Boolean):void
+		{
+			var color:uint = enabled ? colorTextSelected : colorText;
+			var text:TextSprite;
+			var i:int;
+			for (i = 0; i < sprite.numChildren; i++) {
+				text = sprite.getChildAt(i) as TextSprite;
+				if (text != null)
+					text.color = color;
+			}
+			if (linkIdentical) {
+				var other:DataSprite = FindDuplicateRowIndex(sprite);
+				if (other != null) {
+					for (i = 0; i < other.numChildren; i++) {
+						text = other.getChildAt(i) as TextSprite;
+						if (text != null)
+							text.color = color;
+					}
+				}
+			}
+		}
+		
+		private function CreateDiffHighlight(sprite:TextSprite, listIdx:int):RectSprite
 		{
 			var highlight:RectSprite = new RectSprite(sprite.x, sprite.y, sprite.width, sprite.height);
 			highlight.fillColor = highlight.lineColor = listIdx == 0 ? colorDiffHighlight1 : colorDiffHighlight2;
@@ -588,16 +649,32 @@ package twinlist
 		
 		private function OnOptionsUpdated(event:TwinListEvent):void
 		{
-			var opt:Array = event.Data as Array;
-			switch (opt[0]) {
+			var opt:Option = event.Data as Option;
+			switch (opt.Name) {
 				case OptionsPanelClass.OPT_FONTSIZE:
-					textHeight = opt[1] as int;
+					textHeight = opt.Value as int;
+					break;
+				case OptionsPanelClass.OPT_LINKIDENTICAL:
+					linkIdentical = opt.Value as Boolean;
 					break;
 				case OptionsPanelClass.OPT_AFTERACTION:
-					removeAfterAction = opt[1] == OptionsPanelClass.OPTVAL_REMOVE;
+					removeAfterAction = opt.Value == OptionsPanelClass.OPTVAL_REMOVE;
 					break;
 			}
 			OnViewUpdated(event);
+		}
+		
+		private function FindDuplicateRowIndex(sprite:DataSprite):DataSprite
+		{
+			if (sprite == null || sprite.data.properties.type != 0)
+				return null;
+			var item1:ListItem = sprite.data.item as ListItem;
+			for each (var other:DataSprite in visList) {
+				var item2:ListItem = other.data.item as ListItem;
+				if (sprite.data.properties.rowIdx == other.data.properties.rowIdx && item1.Id != item2.Id)
+					return other;
+			}
+			return null;
 		}
 	}
 }
