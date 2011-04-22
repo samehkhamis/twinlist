@@ -27,6 +27,7 @@ package twinlist
 		public static const DATA_LOADED:String = "__DATA_LOADED__";
 		public static const VIEW_UPDATED:String = "__VIEW_UPDATED__";
 		public static const ACTION_TAKEN:String = "__ACTION_TAKEN__";
+		public static const OPTIONS_UPDATED:String = "__OPTIONS_UPDATED__";
 		// model
 		private static var instance:Model = new Model();
 		// sorting
@@ -54,6 +55,8 @@ package twinlist
 		private var groupByAttribute:AttributeDescriptor;
 		private var sortByAttribute:AttributeDescriptor;
 		private var filterList:ArrayCollection;
+		// options hashmap
+		private var options:Object;
 		
 		public function Model()
 		{
@@ -66,6 +69,7 @@ package twinlist
 			visibleListIds = new Array(2);
 			visibleItemIds = new Object();
 			listViewerData = new ArrayCollection();
+			hashSimilarities = new ArrayCollection();
 			acceptedItems = new ArrayCollection();
 			rejectedItems = new ArrayCollection();
 			visibleActionListIdx = 0;
@@ -79,7 +83,7 @@ package twinlist
 			groupByAttribute = null;
 			sortByAttribute = null;
 			filterList = new ArrayCollection();
-			hashSimilarities = new ArrayCollection();
+			options = new Object();
 			// load data
 			//LoadCannedData();
 			//new XmlSchemaLoader("../data/medication/schema.xml", OnReadSchemaXmlComplete);
@@ -94,6 +98,19 @@ package twinlist
 		public static function get Instance():Model
 		{
 			return instance;
+		}
+		
+		public function GetOption(option:String):Object
+		{
+			if (option in options)
+				return options[option];
+			return null;
+		}
+		
+		public function SetOption(option:String, value:Object):void
+		{
+			options[option] = value;
+			dispatchEvent(new TwinListEvent(OPTIONS_UPDATED, [option, value]));
 		}
 		
 		public function get Lists():ArrayCollection
@@ -154,8 +171,8 @@ package twinlist
 				visibleActionListIdx = 1;
 			}
 			item.ActedOn = true;
-			dispatchEvent(new Event(ACTION_TAKEN));
-			dispatchEvent(new Event(VIEW_UPDATED));
+			dispatchEvent(new TwinListEvent(ACTION_TAKEN));
+			dispatchEvent(new TwinListEvent(VIEW_UPDATED));
 		}
 		
 		public function DelActionListItem(item:ListItem, accepted:Boolean):void
@@ -176,8 +193,8 @@ package twinlist
 				visibleActionListIdx = 1;
 			}
 			item.ActedOn = false;
-			dispatchEvent(new Event(ACTION_TAKEN));
-			dispatchEvent(new Event(VIEW_UPDATED));
+			dispatchEvent(new TwinListEvent(ACTION_TAKEN));
+			dispatchEvent(new TwinListEvent(VIEW_UPDATED));
 		}
 		
 		public function get VisibleActionListIndex():int
@@ -316,7 +333,7 @@ package twinlist
 				SortListViewerData();
 			else {
 				listViewerData.refresh();
-				dispatchEvent(new Event(VIEW_UPDATED));
+				dispatchEvent(new TwinListEvent(VIEW_UPDATED));
 			}
 		}
 		
@@ -328,7 +345,7 @@ package twinlist
 			sort.compareFunction = SortFunction;
 			sort.sort(listViewerData.source);
 			listViewerData.refresh();
-			dispatchEvent(new Event(VIEW_UPDATED));
+			dispatchEvent(new TwinListEvent(VIEW_UPDATED));
 		}
 		
 		private function SortFunction(a:Object, b:Object, fields:Array):int
@@ -406,7 +423,7 @@ package twinlist
 		{
 			SetVisibleLists(lists[0].Id, lists[1].Id);
 			//SortListViewerData();
-			dispatchEvent(new Event(DATA_LOADED));
+			dispatchEvent(new TwinListEvent(DATA_LOADED));
 		}
 		
 		private function DetectAttributes():void

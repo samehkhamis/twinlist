@@ -4,27 +4,28 @@
 	xmlns:s="library://ns.adobe.com/flex/spark" 
 	xmlns:mx="library://ns.adobe.com/flex/mx"
 	xmlns:twinlist="twinlist.*"
-	width="100%" height="100%" xmlns:mxml="/Users/thomasburleson/Documents/dev/frameworks/Flare/upstream/flare/http:/ns.flare.com/2010/mxml">
+	width="100%" height="100%">
 	<fx:Declarations>
-		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<s:RadioButtonGroup id="rbgAfterAction" change="OnAfterActionChange(event)"/>
 	</fx:Declarations>
 	<twinlist:layout>
-		<s:HorizontalLayout paddingLeft="20" paddingRight="20" paddingTop="20" paddingBottom="20"/>
+		<s:VerticalLayout paddingLeft="10" paddingRight="10" paddingTop="10" paddingBottom="10"/>
 	</twinlist:layout>
-	<s:VGroup width="200" height="200">
-		<s:HGroup width="141" height="33">
-			<s:Label text="Font size" width="75" height="25" fontSize="14"/>
-			<s:NumericStepper width="56" height="25"/>
-		</s:HGroup>
-		<s:HGroup width="107" height="25">
-			<s:Label text="Font Color" fontSize="14"/>
-			<mx:ColorPicker/>
-		</s:HGroup>
-		<s:Label text="Auto include:" fontSize="14" verticalAlign="top"/>
-		<s:CheckBox label="identical items"/>
-		<s:CheckBox label="all Items in E.R. List"/>
-		<s:Label text="After action:" fontSize="14"/>
-		<s:RadioButton label="grey out" width="86"/>
-		<s:RadioButton label="remove from list view"/>
-	</s:VGroup>
+	<s:HGroup width="100%" verticalAlign="middle">
+		<s:Label text="Font size" width="75" height="25" fontSize="14"/>
+		<s:NumericStepper width="50" height="25" minimum="8" maximum="32" value="16" change="OnFontSizeChange(event)"/>
+	</s:HGroup>
+	<!--
+	<s:HGroup width="100%">
+		<s:Label text="Font Color" fontSize="14"/>
+		<mx:ColorPicker/>
+	</s:HGroup>
+	<s:Label text="Auto include:" fontSize="14" verticalAlign="top"/>
+	<s:CheckBox label="Identical items"/>
+	<s:CheckBox label="All List1 items"/>
+	<s:CheckBox label="All List2 items"/>
+	-->
+	<s:Label text="After item accept/reject:" fontSize="14"/>
+	<s:RadioButton id="rbGray" group="{rbgAfterAction}" label="Gray out" value="{OptionsPanelClass.OPTVAL_GRAYOUT}"/>
+	<s:RadioButton id="rbRemove" group="{rbgAfterAction}" label="Remove" value="{OptionsPanelClass.OPTVAL_REMOVE}" selected="true"/>
 </twinlist:OptionsPanelClass>
