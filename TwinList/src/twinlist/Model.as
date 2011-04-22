@@ -172,7 +172,7 @@ package twinlist
 			}
 			item.ActedOn = true;
 			dispatchEvent(new TwinListEvent(ACTION_TAKEN));
-			dispatchEvent(new TwinListEvent(VIEW_UPDATED));
+			RefreshView();
 		}
 		
 		public function DelActionListItem(item:ListItem, accepted:Boolean):void
@@ -194,7 +194,7 @@ package twinlist
 			}
 			item.ActedOn = false;
 			dispatchEvent(new TwinListEvent(ACTION_TAKEN));
-			dispatchEvent(new TwinListEvent(VIEW_UPDATED));
+			RefreshView();
 		}
 		
 		public function get VisibleActionListIndex():int
@@ -332,8 +332,7 @@ package twinlist
 			if (SortBy != null || GroupBy != null)
 				SortListViewerData();
 			else {
-				listViewerData.refresh();
-				dispatchEvent(new TwinListEvent(VIEW_UPDATED));
+				RefreshView();
 			}
 		}
 		
@@ -342,8 +341,7 @@ package twinlist
 			var sort:Sort = new Sort();
 			sort.compareFunction = SortFunction;
 			sort.sort(listViewerData.source);
-			listViewerData.refresh();
-			dispatchEvent(new TwinListEvent(VIEW_UPDATED));
+			RefreshView();
 		}
 		
 		private function SortFunction(a:Object, b:Object, fields:Array):int
@@ -392,6 +390,14 @@ package twinlist
 				return listViewerItem.L1Unique;
 			else
 				return listViewerItem.L2Unique;
+		}
+		
+		private function RefreshView():void
+		{
+			if (SelectedItem != null && !(SelectedItem.Id in visibleItemIds))
+				SelectedItem = null;
+			listViewerData.refresh();
+			dispatchEvent(new TwinListEvent(VIEW_UPDATED));			
 		}
 		
 		private function OnReadSchemaXmlComplete(schema:ListSchema):void
