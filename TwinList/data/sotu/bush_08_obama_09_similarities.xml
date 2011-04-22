@@ -24,11 +24,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00116</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:aid</L1ID>
@@ -42,11 +43,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00132</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:distinguished</L1ID>
@@ -102,11 +104,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00166</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -156,11 +159,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00300</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -174,11 +178,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -204,11 +209,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00116</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -222,11 +228,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:panama</L1ID>
@@ -240,11 +247,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00353</L1Diff>
 			<L2Diff>0.00497</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:land</L1ID>
@@ -258,11 +266,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -318,11 +327,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:staying</L1ID>
@@ -348,11 +358,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -372,11 +383,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00149</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:reminder</L1ID>
@@ -390,11 +402,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00617</L1Diff>
 			<L2Diff>0.00331</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -408,11 +421,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00099</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:foreclosure</L1ID>
@@ -546,11 +560,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00123</L1Diff>
 			<L2Diff>0.00215</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -570,11 +585,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:keeping</L1ID>
@@ -588,11 +604,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -666,11 +683,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:madrid</L1ID>
@@ -708,11 +726,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00511</L1Diff>
 			<L2Diff>0.00348</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:top</L1ID>
@@ -732,11 +751,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:protection</L1ID>
@@ -762,11 +782,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:local</L1ID>
@@ -774,11 +795,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -798,11 +820,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -822,11 +845,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00232</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:destiny</L1ID>
@@ -906,11 +930,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:few</L1ID>
@@ -918,11 +943,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:government</L1ID>
@@ -930,11 +956,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00194</L1Diff>
 			<L2Diff>0.00116</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -954,11 +981,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -1020,11 +1048,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00166</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -1062,11 +1091,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00106</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -1092,11 +1122,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00099</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:he</L1ID>
@@ -1104,11 +1135,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -1122,11 +1154,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -1194,11 +1227,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00141</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:better</L1ID>
@@ -1230,11 +1264,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00141</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:pace</L1ID>
@@ -1254,11 +1289,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -1344,11 +1380,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00106</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -1374,11 +1411,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00099</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:doors</L1ID>
@@ -1386,11 +1424,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:treatments</L1ID>
@@ -1404,11 +1443,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -1446,11 +1486,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00159</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -1470,11 +1511,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -1512,11 +1554,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -1638,11 +1681,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.01287</L1Diff>
 			<L2Diff>0.02483</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:liberate</L1ID>
@@ -1686,11 +1730,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:partner</L1ID>
@@ -1776,11 +1821,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -1800,11 +1846,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00370</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:strengthening</L1ID>
@@ -1824,11 +1871,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00106</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:fuels</L1ID>
@@ -1842,11 +1890,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00106</L1Diff>
 			<L2Diff>0.00149</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:white</L1ID>
@@ -1860,11 +1909,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:or</L1ID>
@@ -1872,11 +1922,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00194</L1Diff>
 			<L2Diff>0.00513</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:assassins</L1ID>
@@ -1890,11 +1941,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:does</L1ID>
@@ -1902,11 +1954,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:lifelines</L1ID>
@@ -1956,11 +2009,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:qaidairaq</L1ID>
@@ -2004,11 +2058,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:young</L1ID>
@@ -2016,11 +2071,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -2040,11 +2096,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00099</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -2088,11 +2145,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:vote</L1ID>
@@ -2160,11 +2218,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:program</L1ID>
@@ -2172,11 +2231,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:nominees</L1ID>
@@ -2190,11 +2250,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00106</L1Diff>
 			<L2Diff>0.00182</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:donna</L1ID>
@@ -2250,11 +2311,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:period</L1ID>
@@ -2268,11 +2330,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -2358,11 +2421,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00159</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:traditions</L1ID>
@@ -2388,11 +2452,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:undergoing</L1ID>
@@ -2436,11 +2501,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00215</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -2478,11 +2544,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00141</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -2514,11 +2581,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -2544,11 +2612,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00116</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:trucks</L1ID>
@@ -2562,11 +2631,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:including</L1ID>
@@ -2574,11 +2644,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -2598,11 +2669,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -2736,11 +2808,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -2772,11 +2845,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:tens</L1ID>
@@ -2796,11 +2870,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00215</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -2844,11 +2919,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:streets</L1ID>
@@ -2874,11 +2950,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00132</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:expand</L1ID>
@@ -2886,11 +2963,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:schools</L1ID>
@@ -2922,11 +3000,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:legislations</L1ID>
@@ -2976,11 +3055,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -3036,11 +3116,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:call</L1ID>
@@ -3066,11 +3147,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:higher</L1ID>
@@ -3078,11 +3160,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:draft</L1ID>
@@ -3132,11 +3215,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:want</L1ID>
@@ -3144,11 +3228,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:jordan</L1ID>
@@ -3180,11 +3265,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00099</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:shia</L1ID>
@@ -3204,11 +3290,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00348</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:dynamic</L1ID>
@@ -3228,11 +3315,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:replaced</L1ID>
@@ -3294,11 +3382,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00194</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -3378,11 +3467,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00132</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -3402,11 +3492,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00123</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:qaida</L1ID>
@@ -3414,11 +3505,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00141</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -3462,11 +3554,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00141</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:immigration</L1ID>
@@ -3486,11 +3579,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:legislation</L1ID>
@@ -3498,11 +3592,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:iraqis</L1ID>
@@ -3558,11 +3653,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00106</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:they</L1ID>
@@ -3654,11 +3750,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00159</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -3684,11 +3781,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00282</L1Diff>
 			<L2Diff>0.00414</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:successes</L1ID>
@@ -3804,11 +3902,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00099</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -3858,11 +3957,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00232</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -3906,11 +4006,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00917</L1Diff>
 			<L2Diff>0.01341</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:submitted</L1ID>
@@ -3924,11 +4025,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00099</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:leading</L1ID>
@@ -3966,11 +4068,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -4050,11 +4153,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00176</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -4080,11 +4184,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00123</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:extend</L1ID>
@@ -4116,11 +4221,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:subject</L1ID>
@@ -4146,11 +4252,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:permanent</L1ID>
@@ -4164,11 +4271,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00232</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:delegates</L1ID>
@@ -4182,11 +4290,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00116</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -4260,11 +4369,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:college</L1ID>
@@ -4272,11 +4382,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00166</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:every</L1ID>
@@ -4284,11 +4395,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00331</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:shifting</L1ID>
@@ -4302,11 +4414,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -4350,11 +4463,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:in</L1ID>
@@ -4362,11 +4476,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.02380</L1Diff>
 			<L2Diff>0.01754</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -4380,11 +4495,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -4398,11 +4514,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:unfairly</L1ID>
@@ -4440,11 +4557,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:purchasing</L1ID>
@@ -4476,11 +4594,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00298</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -4530,11 +4649,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:pressing</L1ID>
@@ -4554,11 +4674,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:commitments</L1ID>
@@ -4614,11 +4735,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:on</L1ID>
@@ -4674,11 +4796,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -4836,11 +4959,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:pressures</L1ID>
@@ -4896,11 +5020,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00106</L1Diff>
 			<L2Diff>0.00215</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:down</L1ID>
@@ -4908,11 +5033,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00132</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:gulf</L1ID>
@@ -4938,11 +5064,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00106</L1Diff>
 			<L2Diff>0.00182</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:spouses</L1ID>
@@ -4968,11 +5095,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:creating</L1ID>
@@ -4980,11 +5108,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -5016,11 +5145,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -5052,11 +5182,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00159</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:unused</L1ID>
@@ -5082,11 +5213,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:bob</L1ID>
@@ -5172,11 +5304,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -5226,11 +5359,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00176</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:possible</L1ID>
@@ -5316,11 +5450,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:members</L1ID>
@@ -5328,11 +5463,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:dont</L1ID>
@@ -5340,11 +5476,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00182</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:truly</L1ID>
@@ -5364,11 +5501,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00247</L1Diff>
 			<L2Diff>0.00149</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:law</L1ID>
@@ -5376,11 +5514,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00106</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:containing</L1ID>
@@ -5406,11 +5545,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -5460,11 +5600,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00159</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:cost</L1ID>
@@ -5472,11 +5613,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00182</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:democratic</L1ID>
@@ -5484,11 +5626,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -5514,11 +5657,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -5574,11 +5718,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00247</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:engaged</L1ID>
@@ -5610,11 +5755,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:entitlement</L1ID>
@@ -5676,11 +5822,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:republicans</L1ID>
@@ -5688,11 +5835,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -5712,11 +5860,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:missiles</L1ID>
@@ -5748,11 +5897,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00123</L1Diff>
 			<L2Diff>0.00331</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -5862,11 +6012,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -5904,11 +6055,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:remains</L1ID>
@@ -6012,11 +6164,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00159</L1Diff>
 			<L2Diff>0.00348</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -6066,11 +6219,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:laughter</L1ID>
@@ -6084,11 +6238,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:violent</L1ID>
@@ -6120,11 +6275,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00132</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:roads</L1ID>
@@ -6198,11 +6354,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00317</L1Diff>
 			<L2Diff>0.00166</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:reach</L1ID>
@@ -6210,11 +6367,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:reforms</L1ID>
@@ -6234,11 +6392,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00828</L1Diff>
 			<L2Diff>0.00612</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:monitor</L1ID>
@@ -6252,11 +6411,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:reliable</L1ID>
@@ -6282,11 +6442,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:great</L1ID>
@@ -6306,11 +6467,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00099</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:than</L1ID>
@@ -6324,11 +6486,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:determine</L1ID>
@@ -6336,11 +6499,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:force</L1ID>
@@ -6348,11 +6512,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:just</L1ID>
@@ -6360,11 +6525,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00149</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:measure</L1ID>
@@ -6372,11 +6538,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -6408,11 +6575,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00476</L1Diff>
 			<L2Diff>0.00166</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:my</L1ID>
@@ -6426,11 +6594,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -6468,11 +6637,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -6504,11 +6674,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:seems</L1ID>
@@ -6552,11 +6723,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:peoples</L1ID>
@@ -6588,11 +6760,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:rest</L1ID>
@@ -6600,11 +6773,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:elected</L1ID>
@@ -6630,11 +6804,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:generations</L1ID>
@@ -6642,11 +6817,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:pleased</L1ID>
@@ -6654,11 +6830,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:dictatorship</L1ID>
@@ -6678,11 +6855,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:assistance</L1ID>
@@ -6690,11 +6868,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:upholds</L1ID>
@@ -6720,11 +6899,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:displaced</L1ID>
@@ -6756,11 +6936,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:might</L1ID>
@@ -6780,11 +6961,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:accepts</L1ID>
@@ -6870,11 +7052,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:democracy</L1ID>
@@ -6888,11 +7071,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:discussion</L1ID>
@@ -6912,11 +7096,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00132</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:border</L1ID>
@@ -6936,11 +7121,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00247</L1Diff>
 			<L2Diff>0.00414</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:assisted</L1ID>
@@ -6960,11 +7146,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -6990,11 +7177,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:america</L1ID>
@@ -7002,11 +7190,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00529</L1Diff>
 			<L2Diff>0.00298</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -7032,11 +7221,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:sensible</L1ID>
@@ -7134,11 +7324,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:eliminate</L1ID>
@@ -7146,11 +7337,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -7254,11 +7446,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -7344,11 +7537,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -7398,11 +7592,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -7446,11 +7641,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:army</L1ID>
@@ -7488,11 +7684,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:two</L1ID>
@@ -7506,11 +7703,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00141</L1Diff>
 			<L2Diff>0.00215</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -7536,11 +7734,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00116</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:illegal</L1ID>
@@ -7608,11 +7807,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:combat</L1ID>
@@ -7662,11 +7862,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00388</L1Diff>
 			<L2Diff>0.00910</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:progress</L1ID>
@@ -7674,11 +7875,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00106</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -7764,11 +7966,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -7812,11 +8015,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:tough</L1ID>
@@ -7860,11 +8064,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -7878,11 +8083,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:money</L1ID>
@@ -7890,11 +8096,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00166</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -8010,11 +8217,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -8100,11 +8308,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:mission</L1ID>
@@ -8118,11 +8327,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -8160,11 +8370,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:any</L1ID>
@@ -8172,11 +8383,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:prosperity</L1ID>
@@ -8184,11 +8396,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:renewable</L1ID>
@@ -8196,11 +8409,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:republican</L1ID>
@@ -8244,11 +8458,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00423</L1Diff>
 			<L2Diff>0.00166</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:usa</L1ID>
@@ -8274,11 +8489,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00159</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:groups</L1ID>
@@ -8298,11 +8514,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00846</L1Diff>
 			<L2Diff>0.01241</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:carbon</L1ID>
@@ -8328,11 +8545,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00335</L1Diff>
 			<L2Diff>0.00513</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -8370,11 +8588,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00141</L1Diff>
 			<L2Diff>0.00099</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:thousands</L1ID>
@@ -8382,11 +8601,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:afghanistan</L1ID>
@@ -8394,11 +8614,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -8412,11 +8633,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:passenger</L1ID>
@@ -8448,11 +8670,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:witness</L1ID>
@@ -8466,11 +8689,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:dole</L1ID>
@@ -8562,11 +8786,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -8592,11 +8817,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00141</L1Diff>
 			<L2Diff>0.00199</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -8646,11 +8872,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00099</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:objective</L1ID>
@@ -8688,11 +8915,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00934</L1Diff>
 			<L2Diff>0.01407</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:phase</L1ID>
@@ -8754,11 +8982,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00166</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:confident</L1ID>
@@ -8796,11 +9025,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:grim</L1ID>
@@ -8826,11 +9056,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:embodied</L1ID>
@@ -8844,11 +9075,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00123</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:captured</L1ID>
@@ -8856,11 +9088,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:future</L1ID>
@@ -8868,11 +9101,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00229</L1Diff>
 			<L2Diff>0.00166</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:cause</L1ID>
@@ -8880,11 +9114,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -8916,11 +9151,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00116</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -8952,11 +9188,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -8988,11 +9225,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:advances</L1ID>
@@ -9030,11 +9268,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:empower</L1ID>
@@ -9078,11 +9317,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:numbers</L1ID>
@@ -9150,11 +9390,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -9180,11 +9421,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00149</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -9198,11 +9440,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00141</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:seven</L1ID>
@@ -9216,11 +9459,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:good</L1ID>
@@ -9228,11 +9472,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00176</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -9246,11 +9491,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:students</L1ID>
@@ -9282,11 +9528,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:stopped</L1ID>
@@ -9294,11 +9541,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:suspend</L1ID>
@@ -9348,11 +9596,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -9474,11 +9723,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:behavior</L1ID>
@@ -9528,11 +9778,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00194</L1Diff>
 			<L2Diff>0.00099</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:fly</L1ID>
@@ -9576,11 +9827,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -9618,11 +9870,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00317</L1Diff>
 			<L2Diff>0.00199</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:increased</L1ID>
@@ -9678,11 +9931,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:election</L1ID>
@@ -9696,11 +9950,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:last</L1ID>
@@ -9708,11 +9963,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00229</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -9750,11 +10006,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -9780,11 +10037,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00166</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:boehner</L1ID>
@@ -9858,11 +10116,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:nations</L1ID>
@@ -9870,11 +10129,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00123</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:areas</L1ID>
@@ -9936,11 +10196,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00159</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:fighters</L1ID>
@@ -9954,11 +10215,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:finest</L1ID>
@@ -9996,11 +10258,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00232</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:extremists</L1ID>
@@ -10044,11 +10307,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:worry</L1ID>
@@ -10104,11 +10368,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:president</L1ID>
@@ -10116,11 +10381,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -10134,11 +10400,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:ideological</L1ID>
@@ -10176,11 +10443,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -10218,11 +10486,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00106</L1Diff>
 			<L2Diff>0.00149</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:with</L1ID>
@@ -10230,11 +10499,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00635</L1Diff>
 			<L2Diff>0.00397</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:here</L1ID>
@@ -10242,11 +10512,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00232</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:orders</L1ID>
@@ -10344,11 +10615,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:spread</L1ID>
@@ -10392,11 +10664,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00123</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:given</L1ID>
@@ -10404,11 +10677,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:ensure</L1ID>
@@ -10422,11 +10696,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00141</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:friends</L1ID>
@@ -10524,11 +10799,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -10554,11 +10830,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00099</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:ability</L1ID>
@@ -10566,11 +10843,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -10584,11 +10862,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:partnering</L1ID>
@@ -10614,11 +10893,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:breakthroughs</L1ID>
@@ -10704,11 +10984,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00149</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:responded</L1ID>
@@ -10968,11 +11249,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:coalition</L1ID>
@@ -11010,11 +11292,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:ordinary</L1ID>
@@ -11022,11 +11305,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:saving</L1ID>
@@ -11046,11 +11330,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:why</L1ID>
@@ -11058,11 +11343,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00215</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -11088,11 +11374,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00414</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:destruction</L1ID>
@@ -11112,11 +11399,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:children</L1ID>
@@ -11148,11 +11436,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00182</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:break</L1ID>
@@ -11160,11 +11449,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:determination</L1ID>
@@ -11184,11 +11474,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:commander</L1ID>
@@ -11238,11 +11529,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00511</L1Diff>
 			<L2Diff>0.00248</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:seemed</L1ID>
@@ -11274,11 +11566,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:homefront</L1ID>
@@ -11364,11 +11657,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:critical</L1ID>
@@ -11442,11 +11736,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:ever</L1ID>
@@ -11454,11 +11749,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:worthy</L1ID>
@@ -11466,11 +11762,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -11520,11 +11817,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:inspired</L1ID>
@@ -11568,11 +11866,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:another</L1ID>
@@ -11580,11 +11879,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00099</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -11616,11 +11916,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -11646,11 +11947,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -11670,11 +11972,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:watched</L1ID>
@@ -11688,11 +11991,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00159</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:discovered</L1ID>
@@ -11736,11 +12040,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:powerful</L1ID>
@@ -11832,11 +12137,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00106</L1Diff>
 			<L2Diff>0.00364</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -11898,11 +12204,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -11922,11 +12229,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:shalala</L1ID>
@@ -11994,11 +12302,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00564</L1Diff>
 			<L2Diff>0.01208</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -12024,11 +12333,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:dreams</L1ID>
@@ -12036,11 +12346,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -12078,11 +12389,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00132</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:office</L1ID>
@@ -12090,11 +12402,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -12120,11 +12433,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00381</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:depends</L1ID>
@@ -12132,11 +12446,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:haven</L1ID>
@@ -12180,11 +12495,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:travel</L1ID>
@@ -12234,11 +12550,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:sources</L1ID>
@@ -12252,11 +12569,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -12294,11 +12612,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:none</L1ID>
@@ -12306,11 +12625,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:do</L1ID>
@@ -12318,11 +12638,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00194</L1Diff>
 			<L2Diff>0.00281</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:followed</L1ID>
@@ -12330,11 +12651,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:terminates</L1ID>
@@ -12360,11 +12682,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:pioneer</L1ID>
@@ -12378,11 +12701,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -12450,11 +12774,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -12474,11 +12799,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:iran</L1ID>
@@ -12492,11 +12818,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -12516,11 +12843,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00494</L1Diff>
 			<L2Diff>0.00331</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:insurance</L1ID>
@@ -12528,11 +12856,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -12564,11 +12893,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00229</L1Diff>
 			<L2Diff>0.00166</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:complicated</L1ID>
@@ -12606,11 +12936,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00264</L1Diff>
 			<L2Diff>0.00166</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -12714,11 +13045,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:scores</L1ID>
@@ -12726,11 +13058,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -12762,11 +13095,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00458</L1Diff>
 			<L2Diff>0.00166</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:abandon</L1ID>
@@ -12810,11 +13144,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:steps</L1ID>
@@ -12822,11 +13157,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -12960,11 +13296,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:argue</L1ID>
@@ -12990,11 +13327,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -13032,11 +13370,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -13104,11 +13443,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -13224,11 +13564,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:directs</L1ID>
@@ -13266,11 +13607,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:secure</L1ID>
@@ -13278,11 +13620,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -13326,11 +13669,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -13368,11 +13712,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:developing</L1ID>
@@ -13410,11 +13755,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:realize</L1ID>
@@ -13428,11 +13774,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:influence</L1ID>
@@ -13476,11 +13823,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00194</L1Diff>
 			<L2Diff>0.00430</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -13506,11 +13854,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00182</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:fannie</L1ID>
@@ -13542,11 +13891,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00864</L1Diff>
 			<L2Diff>0.00463</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:derail</L1ID>
@@ -13596,11 +13946,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00212</L1Diff>
 			<L2Diff>0.00149</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:having</L1ID>
@@ -13704,11 +14055,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00106</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:far</L1ID>
@@ -13782,11 +14134,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00194</L1Diff>
 			<L2Diff>0.00662</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:too</L1ID>
@@ -13794,11 +14147,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00099</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:small</L1ID>
@@ -13806,11 +14160,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:over</L1ID>
@@ -13818,11 +14173,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00159</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:federal</L1ID>
@@ -13830,11 +14186,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00159</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:is</L1ID>
@@ -13848,11 +14205,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -13872,11 +14230,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -13926,11 +14285,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -13950,11 +14310,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:bigger</L1ID>
@@ -13974,11 +14335,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -13998,11 +14360,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:madam</L1ID>
@@ -14022,11 +14385,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00212</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -14052,11 +14416,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -14094,11 +14459,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:standing</L1ID>
@@ -14112,11 +14478,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:nearly</L1ID>
@@ -14124,11 +14491,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:his</L1ID>
@@ -14136,11 +14504,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -14166,11 +14535,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00123</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:through</L1ID>
@@ -14178,11 +14548,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00099</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -14202,11 +14573,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:coming</L1ID>
@@ -14214,11 +14586,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -14274,11 +14647,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:clear</L1ID>
@@ -14286,11 +14660,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:projects</L1ID>
@@ -14304,11 +14679,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00132</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:modernize</L1ID>
@@ -14322,11 +14698,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:temptation</L1ID>
@@ -14430,11 +14807,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00116</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -14580,11 +14958,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00116</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:killed</L1ID>
@@ -14610,11 +14989,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -14634,11 +15014,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:such</L1ID>
@@ -14652,11 +15033,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -14682,11 +15064,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:purpose</L1ID>
@@ -14694,11 +15077,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:upordown</L1ID>
@@ -14796,11 +15180,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00441</L1Diff>
 			<L2Diff>0.00265</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:forth</L1ID>
@@ -14826,11 +15211,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:see</L1ID>
@@ -14838,11 +15224,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00132</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:north</L1ID>
@@ -14856,11 +15243,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00141</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -14886,11 +15274,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00083</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:wherever</L1ID>
@@ -14934,11 +15323,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00132</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:mae</L1ID>
@@ -14952,11 +15342,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:stem</L1ID>
@@ -14970,11 +15361,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00141</L1Diff>
 			<L2Diff>0.00265</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:round</L1ID>
@@ -15024,11 +15416,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:health</L1ID>
@@ -15036,11 +15429,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00123</L1Diff>
 			<L2Diff>0.00331</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:verifiably</L1ID>
@@ -15060,11 +15454,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:human</L1ID>
@@ -15072,11 +15467,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:bin</L1ID>
@@ -15102,11 +15498,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:deficits</L1ID>
@@ -15126,11 +15523,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -15180,11 +15578,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00099</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:havens</L1ID>
@@ -15288,11 +15687,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:secretary</L1ID>
@@ -15336,11 +15736,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00106</L1Diff>
 			<L2Diff>0.00182</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -15360,11 +15761,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00194</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:compete</L1ID>
@@ -15396,11 +15798,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:massive</L1ID>
@@ -15408,11 +15811,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:accomplishments</L1ID>
@@ -15426,11 +15830,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:pakistan</L1ID>
@@ -15438,11 +15843,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:size</L1ID>
@@ -15486,11 +15892,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -15516,11 +15923,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:hotel</L1ID>
@@ -15558,11 +15966,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:cuba</L1ID>
@@ -15594,11 +16003,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -15642,11 +16052,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:social</L1ID>
@@ -15654,11 +16065,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:im</L1ID>
@@ -15666,11 +16078,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -15690,11 +16103,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:continue</L1ID>
@@ -15702,11 +16116,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00106</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -15732,11 +16147,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -15750,11 +16166,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00066</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:short</L1ID>
@@ -15774,11 +16191,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:been</L1ID>
@@ -15816,11 +16234,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -15894,11 +16313,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:millions</L1ID>
@@ -15906,11 +16326,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -15924,11 +16345,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:carry</L1ID>
@@ -15966,11 +16388,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -15984,11 +16407,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00116</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:korea</L1ID>
@@ -16008,11 +16432,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:orleans</L1ID>
@@ -16068,11 +16493,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00229</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:transparency</L1ID>
@@ -16116,11 +16542,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:require</L1ID>
@@ -16128,11 +16555,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:philosophy</L1ID>
@@ -16212,11 +16640,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00106</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -16272,11 +16701,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00088</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:us</L1ID>
@@ -16284,11 +16714,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00423</L1Diff>
 			<L2Diff>0.00314</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:genius</L1ID>
@@ -16326,11 +16757,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:message</L1ID>
@@ -16338,11 +16770,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:peaceful</L1ID>
@@ -16416,11 +16849,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00053</L1Diff>
 			<L2Diff>0.00166</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:along</L1ID>
@@ -16428,11 +16862,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -16446,11 +16881,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00353</L1Diff>
 			<L2Diff>0.00679</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:homeland</L1ID>
@@ -16626,11 +17062,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00071</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:declined</L1ID>
@@ -16644,11 +17081,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00132</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:scientists</L1ID>
@@ -16686,11 +17124,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:consumption</L1ID>
@@ -16716,11 +17155,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00033</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:success</L1ID>
@@ -16728,11 +17168,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00017</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -16788,11 +17229,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:issues</L1ID>
@@ -16806,11 +17248,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00018</L1Diff>
 			<L2Diff>0.00050</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:high</L1ID>
@@ -16818,11 +17261,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00116</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID>bush08.freqs:saw</L1ID>
@@ -16842,11 +17286,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00317</L1Diff>
 			<L2Diff>0.00132</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
@@ -16872,11 +17317,12 @@
 		<Type>1</Type>
 		<Diffs>1</Diffs>
 		<Difference>
-		<attrdiff>
+			<attrdiff>
 			<Name>Relative-Frequency</Name>
 			<L1Diff>0.00035</L1Diff>
 			<L2Diff>0.00132</L2Diff>
-		</attrdiff>
+			</attrdiff>
+		</Difference>
 	</SimilarityPair>
 	<SimilarityPair>
 		<L1ID></L1ID>
