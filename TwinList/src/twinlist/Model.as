@@ -85,14 +85,39 @@ package twinlist
 			filterList = new ArrayCollection();
 			options = new Object();
 			// load data
+
+			var mode:String = "sotu0809test";
+			var list1File:String = "../data/medication/list1.xml";
+			var list2File:String = "../data/medication/list2.xml";
+			var simFile:String = "../data/medication/list1_list2_similarities.xml";
+			switch (mode) {
+			case "medRec":
+			  list1File = "../data/medication/list1.xml";
+			  list2File = "../data/medication/list2.xml";
+			  simFile= "../data/medication/list1_list2_similarities.xml";
+			  break;
+			case "sotu0809":
+			  list1File = "../data/sotu/bush08.0809.xml";
+			  list2File = "../data/sotu/obama09.0809.xml";
+			  simFile= "../data/sotu/bush_08_obama_09_similarities.xml";
+			  break;
+			case "sotu0809test":
+			  list1File = "../data/sotu/bush08.0809.test.xml";
+			  list2File = "../data/sotu/obama09.0809.test.xml";
+			  simFile= "../data/sotu/bush_08_obama_09_similarities.test.xml";
+			  break;
+
+			} // switch mode
+
 			//LoadCannedData();
 			//new XmlSchemaLoader("../data/medication/schema.xml", OnReadSchemaXmlComplete);
-			new XmlListLoader("../data/medication/list1.xml", OnReadListXmlComplete);
-			new XmlListLoader("../data/medication/list2.xml", OnReadListXmlComplete);
+
+			new XmlListLoader(list1File, OnReadListXmlComplete);
+			new XmlListLoader(list2File, OnReadListXmlComplete);
 			
 			// Loading similarities from xml file.
-			new XmlSimilarityLoader("../data/medication/list1_list2_similarities.xml",OnReadSimilarityXmlComplete);
-
+			new XmlSimilarityLoader(simFile,OnReadSimilarityXmlComplete);
+			
 		}
 		
 		public static function get Instance():Model
