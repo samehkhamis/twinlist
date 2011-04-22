@@ -6,7 +6,8 @@ package twinlist
 	{
 		private var l1_unique:ListItem;
 		private var l1_similar:ListItem;
-		private var identical:ListItem;
+		private var identical1:ListItem;
+		private var identical2:ListItem;
 		private var l2_similar:ListItem;
 		private var l2_unique:ListItem;
 		
@@ -32,13 +33,22 @@ package twinlist
 			l1_similar = item;
 		}
 		
-		public function get Identical():ListItem
+		public function get Identical1():ListItem
 		{
-			return identical;
+			return identical1;
 		}
-		public function set Identical(item:ListItem):void
+		public function set Identical1(item:ListItem):void
 		{
-			identical = item;
+			identical1 = item;
+		}
+		
+		public function get Identical2():ListItem
+		{
+			return identical2;
+		}
+		public function set Identical2(item:ListItem):void
+		{
+			identical2 = item;
 		}
 		
 		public function get L2Similar():ListItem
