@@ -178,18 +178,21 @@ package twinlist
 			
 			// Get new visList
 			var newVisList:ArrayCollection = CreateVisList(model.ListViewerData);
-			
-			var sprite:DataSprite;
-			
+						
 			// create transition animation
 			var animUpdate:Parallel = new Parallel();
 			
 			// fade out old sprites
+			var sprite:DataSprite;
 			for each (sprite in visList) {
 				animUpdate.add(new Tween(sprite, 0.5, {alpha: 0}));
 			}
 			// fade in new sprites
 			for each (sprite in newVisList) {
+				if (model.SelectedItem != null && model.SelectedItem.Id == sprite.data.item.Id) {
+					selectedSprite = sprite;
+					Highlight(sprite, enabled);
+				}
 				sprite.data.properties.x1 *= columnWidth;
 				sprite.data.properties.x2 *= columnWidth;
 				sprite.x = merged ? sprite.data.properties.x2 : sprite.data.properties.x1;
