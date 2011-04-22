@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema>
+  <attribute name="Form">
+    <type>Categorical</type>
+  </attribute>
+  <attribute name="Class">
+    <type>Categorical</type>
+  </attribute>
+  <attribute name="Dosage">
+    <type>Numerical</type>
+    <unit>mg</unit>
+  </attribute>
+  <attribute name="Frequency">
+    <type>Numerical</type>
+  </attribute>
+  <attribute name="Route">
+    <type>Categorical</type>
+  </attribute>
+</schema>
