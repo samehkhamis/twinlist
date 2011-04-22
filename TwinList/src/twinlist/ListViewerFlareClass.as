@@ -499,6 +499,7 @@ package twinlist
 					(other.data.item as ListItem).ActedOn = true;
 			}
 			var item:ListItem = selectedSprite.data.item as ListItem;
+			model.SelectedItem = null;
 			model.AddActionListItem(item, true);
 		}
 		
@@ -513,6 +514,7 @@ package twinlist
 					(other.data.item as ListItem).ActedOn = true;
 			}
 			var item:ListItem = selectedSprite.data.item as ListItem;
+			model.SelectedItem = null;
 			model.AddActionListItem(item, false);
 		}
 		
@@ -597,7 +599,7 @@ package twinlist
 		{
 			var color:uint;
 			if (!enabled)
-				color = colorText;
+				color = sprite.data.item.ActedOn ? colorTextGray : colorText;
 			else if (sprite == selectedSprite)
 				color = colorTextSelected;
 			else
@@ -620,29 +622,7 @@ package twinlist
 				}
 			}
 		}
-		
-		private function HighlightSelected(sprite:DataSprite, enabled:Boolean):void
-		{
-			var color:uint = enabled ? colorTextSelected : colorText;
-			var text:TextSprite;
-			var i:int;
-			for (i = 0; i < sprite.numChildren; i++) {
-				text = sprite.getChildAt(i) as TextSprite;
-				if (text != null)
-					text.color = color;
-			}
-			if (linkIdentical) {
-				var other:DataSprite = FindDuplicateRowIndex(sprite);
-				if (other != null) {
-					for (i = 0; i < other.numChildren; i++) {
-						text = other.getChildAt(i) as TextSprite;
-						if (text != null)
-							text.color = color;
-					}
-				}
-			}
-		}
-		
+
 		private function CreateDiffHighlight(sprite:TextSprite, listIdx:int):RectSprite
 		{
 			var highlight:RectSprite = new RectSprite(sprite.x, sprite.y, sprite.width, sprite.height);

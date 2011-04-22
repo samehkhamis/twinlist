@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<actionScriptProperties analytics="false" mainApplicationPath="TwinList.mxml" projectUUID="1a75c1fb-09ee-4cb7-ad22-3279e3314511" version="7">
+<actionScriptProperties analytics="false" mainApplicationPath="twinlist/TwinList.mxml" projectUUID="1a75c1fb-09ee-4cb7-ad22-3279e3314511" version="6">
   <compiler additionalCompilerArguments="-locale en_US" autoRSLOrdering="true" copyDependentFiles="true" fteInMXComponents="false" generateAccessible="true" htmlExpressInstall="true" htmlGenerate="true" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin-debug" sourceFolderPath="src" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
     <compilerSourcePath/>
     <libraryPath defaultLinkType="0">
@@ -13,9 +13,8 @@
     <sourceAttachmentPath/>
   </compiler>
   <applications>
-    <application path="TwinList.mxml"/>
+    <application path="twinlist/TwinList.mxml"/>
   </applications>
   <modules/>
   <buildCSSFiles/>
-  <flashCatalyst validateFlashCatalystCompatibility="false"/>
 </actionScriptProperties>
