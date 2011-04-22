@@ -10,6 +10,7 @@ package twinlist
 		private var identical2:ListItem;
 		private var l2_similar:ListItem;
 		private var l2_unique:ListItem;
+		private var rowIdx;
 		
 		public function ListViewerItem()
 		{
@@ -67,6 +68,15 @@ package twinlist
 		public function set L2Unique(item:ListItem):void
 		{
 			l2_unique = item;
+		}
+		
+		public function get RowIndex():int
+		{
+			return rowIdx;
+		}
+		public function set RowIndex(value:int):void
+		{
+			this.rowIdx = value;
 		}
 	}
 }

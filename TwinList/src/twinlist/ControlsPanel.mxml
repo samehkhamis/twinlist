@@ -13,26 +13,29 @@
 	</fx:Declarations>
 	<s:HGroup>
 		<s:Label text="Size by:" paddingTop="5" width="80"/>
-		<s:DropDownList id="sizeByList" width="100%"
-						dataProvider="{model.NumericalAttributes}" change="OnChange(event)"
+		<s:DropDownList id="sizeByList" width="100%" selectedIndex="0"
+						dataProvider="{this.numericalOptions}" change="OnChange(event)"
 						/>
 	</s:HGroup>
+	<mx:Spacer height="10"/>
 	<s:HGroup>
 		<s:Label text="Color by:" paddingTop="5" width="80"/>
-		<s:DropDownList id="colorByList" width="100%"
-						dataProvider="{model.CategoricalAttributes}" change="OnChange(event)"
+		<s:DropDownList id="colorByList" width="100%" selectedIndex="0"
+						dataProvider="{this.categoricalOptions}" change="OnChange(event)"
 						/>
 	</s:HGroup>
+	<mx:Spacer height="10"/>
 	<s:HGroup>
 		<s:Label text="Group by:" paddingTop="5" width="80"/>
-		<s:DropDownList id="groupByList" width="100%"
-						dataProvider="{model.CategoricalAttributes}" change="OnChange(event)"
+		<s:DropDownList id="groupByList" width="100%" selectedIndex="0"
+						dataProvider="{this.categoricalOptions}" change="OnChange(event)"
 						/>
 	</s:HGroup>
+	<mx:Spacer height="10"/>
 	<s:HGroup>
 		<s:Label text="Sort by:" paddingTop="5" width="80"/>
-		<s:DropDownList id="sortByList" width="100%"
-						dataProvider="{model.ItemAttributes}" change="OnChange(event)"
+		<s:DropDownList id="sortByList" width="100%" selectedIndex="0"
+						dataProvider="{this.generalOptions}" change="OnChange(event)"
 						/>
 	</s:HGroup>
 </twinlist:ControlsPanelClass>
