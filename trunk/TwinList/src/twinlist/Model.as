@@ -12,9 +12,11 @@ package twinlist
 	import twinlist.list.AttributeDescriptor;
 	import twinlist.list.ItemAttribute;
 	import twinlist.list.List;
+	import twinlist.list.ListSchema;
 	import twinlist.list.ListItem;
 	import twinlist.list.SimilarityItem;
 	import twinlist.xml.DifferenceItem;
+	import twinlist.xml.XmlSchemaLoader;
 	import twinlist.xml.XmlListLoader;
 	import twinlist.xml.XmlSimilarityLoader;
 	
@@ -30,6 +32,7 @@ package twinlist
 		// sorting
 		private static var defaultSort:Sort;
 		// list info
+	        private var schema:Object;
 		private var lists:ArrayCollection;
 		private var listIdx:Object;
 		private var visibleListIds:Array;
@@ -79,11 +82,12 @@ package twinlist
 			hashSimilarities = new ArrayCollection();
 			// load data
 			//LoadCannedData();
-			new XmlListLoader("../data/list1.xml", OnReadListXmlComplete);
-			new XmlListLoader("../data/list2.xml", OnReadListXmlComplete);
+			new XmlSchemaLoader("../data/medication/schema.xml", OnReadSchemaXmlComplete);
+			new XmlListLoader("../data/medication/list1.xml", OnReadListXmlComplete);
+			new XmlListLoader("../data/medication/list2.xml", OnReadListXmlComplete);
 			
 			// Loading similarities from xml file.
-			new XmlSimilarityLoader("../data/list1_list2_similarities.xml",OnReadSimilarityXmlComplete);
+			new XmlSimilarityLoader("../data/medication/list1_list2_similarities.xml",OnReadSimilarityXmlComplete);
 
 		}
 		
@@ -373,6 +377,13 @@ package twinlist
 				return listViewerItem.L2Unique;
 		}
 		
+
+	        private function OnReadSchemaXmlComplete(schema:ListSchema):void
+		{
+       		        this.schema = schema;
+
+		}
+
 		private function OnReadListXmlComplete(list:List):void
 		{
 			listIdx[list.Id] = lists.length;

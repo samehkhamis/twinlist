@@ -1,6 +1,8 @@
 package twinlist.list
 {
 	import mx.collections.ArrayCollection;
+	import twinlist.list.ItemAttribute;
+
 
 	[Bindable]
 	public class AttributeDescriptor
@@ -53,6 +55,7 @@ package twinlist.list
 				throw new Error("Invalid ListItemAttribute type " + type);
 			this.type = type;
 		}
+
 		
 		public function get Properties():Object
 		{
@@ -71,7 +74,11 @@ package twinlist.list
 		{
 			this.values = values;
 		}
-		
+	        public function addValue(value:Object):void
+	        {
+		        this.Values.addItem(value)
+		}
+	  
 		public function toString():String
 		{
 			var str:String = name;
@@ -79,5 +86,23 @@ package twinlist.list
 				str += " (" + Properties[PROP_UNIT] + ")";
 			return str;
 		}
+	        public function getAttributeType(attrType:String):uint
+                {
+		  var type:int = -1;
+		  switch (attrType) {
+		  case "Categorical":
+		    type = ItemAttribute.TYPE_CATEGORICAL;
+		    break;
+		  case "Numerical":
+		    type = ItemAttribute.TYPE_NUMERICAL;
+		    break;
+		  default:
+		    type = ItemAttribute.TYPE_GENERAL;
+		    break;
+		  }
+		  return type;
+		}
+	  
 	}
+	
 }
