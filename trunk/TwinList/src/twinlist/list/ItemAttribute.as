@@ -6,17 +6,17 @@ package twinlist.list
 	public class ItemAttribute
 	{
 		// type constants
-		public static const TYPE_GENERAL:uint = 0;
-		public static const TYPE_CATEGORICAL:uint = 1;
-		public static const TYPE_NUMERICAL:uint = 2;
+		public static const TYPE_GENERAL:String = "General";
+		public static const TYPE_CATEGORICAL:String = "Categorical";
+		public static const TYPE_NUMERICAL:String = "Numerical";
 		
 		private var name:String;
 		private var values:Array;
-		private var type:uint;
+		private var type:String;
 		private var unit:String;
 		private var unique:Boolean;
 		
-		public function ItemAttribute(name:String = "", values:Array = null, type:uint = TYPE_GENERAL)
+		public function ItemAttribute(name:String = "", values:Array = null, type:String = TYPE_GENERAL)
 		{
 			Name = name;
 			Values = new Array();
@@ -45,14 +45,12 @@ package twinlist.list
 			this.values = values;
 		}
 		
-		public function get Type():uint
+		public function get Type():String
 		{
 			return type;
 		}
-		public function set Type(type:uint):void
+		public function set Type(type:String):void
 		{
-			if (type > 2)
-				throw new Error("Invalid ListItemAttribute type " + type);
 			this.type = type;
 		}
 		

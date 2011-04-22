@@ -37,8 +37,9 @@ package twinlist
 		[Bindable]
 		public var scroller:Scroller;
 		// data
-		private var visList:ArrayCollection;
+		private var visHash:Object;
 		private var columnList:ArrayCollection;
+		private var rowIdxHash:Object;
 		// selected sprite
 		private var selectedSprite:DataSprite = null;
 		private var popup:RectSprite;
@@ -92,13 +93,13 @@ package twinlist
 		private function OnDataLoaded(event:Event):void
 		{
 			// Get visList
-			visList = CreateVisList(model.ListViewerData);
+			visHash = CreateVisHash(model.ListViewerData);
 			
 			var sprite:DataSprite;
 			
 			// Calculate column dimensions
 			var calculatedColumnWidth:int = 0;
-			for each (sprite in visList) {
+			for each (sprite in visHash) {
 				if (sprite.getChildAt(0).width > calculatedColumnWidth)
 					calculatedColumnWidth = sprite.getChildAt(0).width;
 			}
@@ -117,7 +118,7 @@ package twinlist
 			vis.addChild(CreateHorizontalLine(textHeight + textSpacing));
 			
 			// Fix x values and draw sprites
-			for each (sprite in visList)
+			for each (sprite in visHash)
 			{
 				sprite.data.properties.x1 *= columnWidth;
 				sprite.data.properties.x2 *= columnWidth;
@@ -177,18 +178,18 @@ package twinlist
 			selectedSprite = null;
 			
 			// Get new visList
-			var newVisList:ArrayCollection = CreateVisList(model.ListViewerData);
+			var newVisHash:Object = CreateVisHash(model.ListViewerData);
 						
 			// create transition animation
 			var animUpdate:Parallel = new Parallel();
 			
 			// fade out old sprites
 			var sprite:DataSprite;
-			for each (sprite in visList) {
+			for each (sprite in visHash) {
 				animUpdate.add(new Tween(sprite, 0.5, {alpha: 0}));
 			}
 			// fade in new sprites
-			for each (sprite in newVisList) {
+			for each (sprite in newVisHash) {
 				if (model.SelectedItem != null && model.SelectedItem.Id == sprite.data.item.Id) {
 					selectedSprite = sprite;
 					Highlight(sprite, enabled);
@@ -204,24 +205,24 @@ package twinlist
 			
 			// Update display and animate
 			animUpdate.addEventListener(TransitionEvent.END, function(e:Event):void {
-				OnTransitionComplete(newVisList);
+				OnTransitionComplete(newVisHash);
 			});
 			animUpdate.play();
 		}
 		
-		private function OnTransitionComplete(newVisList:ArrayCollection):void
+		private function OnTransitionComplete(newVisHash:Object):void
 		{
-			// clear old sprites from vis
-			for each (var sprite:DataSprite in visList) {
-				if (vis.contains(sprite))
-					vis.removeChild(sprite);
+			// remove old sprites
+			for each (var sprite:DataSprite in visHash) {
+				vis.removeChild(sprite);
 			}
-			visList = newVisList;
+			visHash = newVisHash;
 			
 			// Update the two animation sequences
 			UpdateButtonAnimations();
 		}
 		
+		/*
 		private function CreateVisList(data:ArrayCollection):ArrayCollection
 		{
 			var l1y:int = HeaderHeight;
@@ -230,6 +231,7 @@ package twinlist
 			
 			var visList:ArrayCollection = new ArrayCollection();
 			
+			rowIdxHash = new Object();
 			var idx:int = 0;
 			for each (var item:ListViewerItem in data)
 			{
@@ -241,12 +243,18 @@ package twinlist
 						sprite = CreateItemSprite(item.Identical1, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 2, y2: ry, type: 0});
 						visList.addItem(sprite);
 						spriteAdded = true;
+						if (!(idx in rowIdxHash))
+							rowIdxHash[idx] = new Array();
+						rowIdxHash[idx].push(sprite);
 						l1y += RowHeight;
 					}
 					if (item.Identical2 != null && (!item.Identical2.ActedOn || !RemoveAfterAction)) {
 						sprite = CreateItemSprite(item.Identical2, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 2, y2: ry, type: 0});
 						visList.addItem(sprite);
 						spriteAdded = true;
+						if (!(idx in rowIdxHash))
+							rowIdxHash[idx] = new Array();
+						rowIdxHash[idx].push(sprite);
 						l2y += RowHeight;
 					}
 				}
@@ -256,12 +264,18 @@ package twinlist
 						sprite = CreateItemSprite(item.L1Similar, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 1, y2: ry, type: 1});
 						visList.addItem(sprite);
 						spriteAdded = true;
+						if (!(idx in rowIdxHash))
+							rowIdxHash[idx] = new Array();
+						rowIdxHash[idx].push(sprite);
 						l1y += RowHeight;
 					}
 					if (item.L2Similar != null && (!item.L2Similar.ActedOn || !RemoveAfterAction)) {
 						sprite = CreateItemSprite(item.L2Similar, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 3, y2: ry, type: 1});
 						visList.addItem(sprite);
 						spriteAdded = true;
+						if (!(idx in rowIdxHash))
+							rowIdxHash[idx] = new Array();
+						rowIdxHash[idx].push(sprite);
 						l2y += RowHeight;
 					}
 				}
@@ -271,6 +285,9 @@ package twinlist
 						sprite = CreateItemSprite(item.L1Unique, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 0, y2: ry, type: 2});
 						visList.addItem(sprite);
 						spriteAdded = true;
+						if (!(idx in rowIdxHash))
+							rowIdxHash[idx] = new Array();
+						rowIdxHash[idx].push(sprite);
 						l1y += RowHeight;
 					}
 				}
@@ -280,6 +297,9 @@ package twinlist
 						sprite = CreateItemSprite(item.L2Unique, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 4, y2: ry, type: 2});
 						visList.addItem(sprite);
 						spriteAdded = true;
+						if (!(idx in rowIdxHash))
+							rowIdxHash[idx] = new Array();
+						rowIdxHash[idx].push(sprite);
 						l2y += RowHeight;
 					}
 				}
@@ -290,6 +310,96 @@ package twinlist
 				}
 			}
 			return visList;
+		}
+		*/
+		
+		private function CreateVisHash(data:ArrayCollection):Object
+		{
+			var l1y:int = HeaderHeight;
+			var l2y:int = HeaderHeight;
+			var ry:int = HeaderHeight;
+			
+			var visHash:Object = new Object();
+			
+			rowIdxHash = new Object();
+			var idx:int = 0;
+			for each (var item:ListViewerItem in data)
+			{
+				var sprite:DataSprite;
+				var spriteAdded:Boolean = false;
+				if (item.Identical1 != null || item.Identical2 != null)
+				{
+					if (item.Identical1 != null && (!item.Identical1.ActedOn || !RemoveAfterAction)) {
+						sprite = CreateItemSprite(item.Identical1, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 2, y2: ry, type: 0});
+						visHash[item.Identical1.Id] = sprite;
+						spriteAdded = true;
+						if (!(idx in rowIdxHash))
+							rowIdxHash[idx] = new Array();
+						rowIdxHash[idx].push(sprite);
+						l1y += RowHeight;
+					}
+					if (item.Identical2 != null && (!item.Identical2.ActedOn || !RemoveAfterAction)) {
+						sprite = CreateItemSprite(item.Identical2, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 2, y2: ry, type: 0});
+						visHash[item.Identical2.Id] = sprite;
+						spriteAdded = true;
+						if (!(idx in rowIdxHash))
+							rowIdxHash[idx] = new Array();
+						rowIdxHash[idx].push(sprite);
+						l2y += RowHeight;
+					}
+				}
+				else if (item.L1Similar != null || item.L2Similar != null)
+				{
+					if (item.L1Similar != null && (!item.L1Similar.ActedOn || !RemoveAfterAction)) {
+						sprite = CreateItemSprite(item.L1Similar, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 1, y2: ry, type: 1});
+						visHash[item.L1Similar.Id] = sprite;
+						spriteAdded = true;
+						if (!(idx in rowIdxHash))
+							rowIdxHash[idx] = new Array();
+						rowIdxHash[idx].push(sprite);
+						l1y += RowHeight;
+					}
+					if (item.L2Similar != null && (!item.L2Similar.ActedOn || !RemoveAfterAction)) {
+						sprite = CreateItemSprite(item.L2Similar, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 3, y2: ry, type: 1});
+						visHash[item.L2Similar.Id] = sprite;
+						spriteAdded = true;
+						if (!(idx in rowIdxHash))
+							rowIdxHash[idx] = new Array();
+						rowIdxHash[idx].push(sprite);
+						l2y += RowHeight;
+					}
+				}
+				else if (item.L1Unique != null)
+				{
+					if (!item.L1Unique.ActedOn || !RemoveAfterAction) {
+						sprite = CreateItemSprite(item.L1Unique, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 0, y2: ry, type: 2});
+						visHash[item.L1Unique.Id] = sprite;
+						spriteAdded = true;
+						if (!(idx in rowIdxHash))
+							rowIdxHash[idx] = new Array();
+						rowIdxHash[idx].push(sprite);
+						l1y += RowHeight;
+					}
+				}
+				else if (item.L2Unique != null)
+				{
+					if (!item.L2Unique.ActedOn || !RemoveAfterAction) {
+						sprite = CreateItemSprite(item.L2Unique, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 4, y2: ry, type: 2});
+						visHash[item.L2Unique.Id] = sprite;
+						spriteAdded = true;
+						if (!(idx in rowIdxHash))
+							rowIdxHash[idx] = new Array();
+						rowIdxHash[idx].push(sprite);
+						l2y += RowHeight;
+					}
+				}
+				// update row y-offset
+				if (spriteAdded) {
+					ry += RowHeight;
+					++idx;
+				}
+			}
+			return visHash;
 		}
 		
 		private function CreateColumn(index:int, color:int, title:String):RectSprite
@@ -398,7 +508,7 @@ package twinlist
 			animMerge.add(animReconcileItems);
 			
 			// Animate the items
-			for each (var sprite:DataSprite in visList)
+			for each (var sprite:DataSprite in visHash)
 			{
 				animReconcileItems.add(new Tween(sprite, 1, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
 				
@@ -651,8 +761,9 @@ package twinlist
 		{
 			if (sprite == null || sprite.data.properties.type != 0)
 				return null;
+			var idx:int = sprite.data.properties.rowIdx;
 			var item1:ListItem = sprite.data.item as ListItem;
-			for each (var other:DataSprite in visList) {
+			for each (var other:DataSprite in rowIdxHash[idx]) {
 				var item2:ListItem = other.data.item as ListItem;
 				if (sprite.data.properties.rowIdx == other.data.properties.rowIdx && item1.Id != item2.Id)
 					return other;

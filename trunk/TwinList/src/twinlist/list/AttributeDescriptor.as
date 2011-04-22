@@ -13,14 +13,14 @@ package twinlist.list
 		public static const PROP_UNIT:String = "Unit";
 
 		private var name:String;
-		private var type:uint;
+		private var type:String;
 		private var properties:Object;
 		private var values:ArrayCollection;
 		
-		public function AttributeDescriptor(name:String = "", type:uint = -1, properties:Object = null)
+		public function AttributeDescriptor(name:String = "", type:String = "", properties:Object = null)
 		{
 			Name = name;
-			if (type != -1)
+			if (type != "")
 				Type = type;
 			else
 				Type = ItemAttribute.TYPE_GENERAL;
@@ -45,14 +45,12 @@ package twinlist.list
 			this.name = name;
 		}
 		
-		public function get Type():uint
+		public function get Type():String
 		{
 			return type;
 		}
-		public function set Type(type:uint):void
+		public function set Type(type:String):void
 		{
-			if (type > 2)
-				throw new Error("Invalid ListItemAttribute type " + type);
 			this.type = type;
 		}
 
@@ -86,23 +84,6 @@ package twinlist.list
 				str += " (" + Properties[PROP_UNIT] + ")";
 			return str;
 		}
-	        public function getAttributeType(attrType:String):uint
-                {
-		  var type:int = -1;
-		  switch (attrType) {
-		  case "Categorical":
-		    type = ItemAttribute.TYPE_CATEGORICAL;
-		    break;
-		  case "Numerical":
-		    type = ItemAttribute.TYPE_NUMERICAL;
-		    break;
-		  default:
-		    type = ItemAttribute.TYPE_GENERAL;
-		    break;
-		  }
-		  return type;
-		}
-	  
 	}
 	
 }

@@ -34,9 +34,9 @@ package twinlist.xml
 				var attrName:String = attrXml.attribute("name");
 				var attrDesc:AttributeDescriptor = new AttributeDescriptor(attrName);
 				var typeStr:String = attrXml.child("type")[0].toXMLString();
-				attrDesc.Type=attrDesc.getAttributeType(typeStr);
+				attrDesc.Type = typeStr;
 				if(attrXml.child("unit") != null){
-				  attrDesc.Properties[AttributeDescriptor.PROP_UNIT]= attrXml.child("unit")[0].toXMLString();
+					attrDesc.Properties[AttributeDescriptor.PROP_UNIT]= attrXml.child("unit")[0].toXMLString();
 				}
 				schema.addAttribute(attrName,attrDesc);
 			 }
