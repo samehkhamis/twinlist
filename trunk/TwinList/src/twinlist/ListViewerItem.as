@@ -10,7 +10,7 @@ package twinlist
 		private var identical2:ListItem;
 		private var l2_similar:ListItem;
 		private var l2_unique:ListItem;
-		private var rowIdx;
+		private var rowIdx:int;
 		
 		public function ListViewerItem()
 		{
