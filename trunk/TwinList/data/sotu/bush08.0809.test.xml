@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list id="bush08" name="bush08 List">
+
+	<item id="bush08:competitiveness" name="competitiveness">
+		<attribute name="Frequency" type="Numerical">
+			<value value="1">
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical">
+			<value value="0.00018">
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical">
+			<value value="0.693">
+		</attribute>
+	</item>
+	<item id="bush08:mourners" name="mourners">
+		<attribute name="Frequency" type="Numerical">
+			<value value="1">
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical">
+			<value value="0.00018">
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical">
+			<value value="0.693">
+		</attribute>
+	</item>
+	<item id="bush08:issue" name="issue">
+		<attribute name="Frequency" type="Numerical">
+			<value value="2">
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical">
+			<value value="0.00035">
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical">
+			<value value="0.000">
+		</attribute>
+	</item>
+	<item id="bush08:aid" name="aid">
+		<attribute name="Frequency" type="Numerical">
+			<value value="2">
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical">
+			<value value="0.00035">
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical">
+			<value value="1.386">
+		</attribute>
+	</item>
+	<item id="bush08:million" name="million">
+		<attribute name="Frequency" type="Numerical">
+			<value value="4">
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical">
+			<value value="0.00071">
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical">
+			<value value="0.000">
+		</attribute>
+	</item>
+	<item id="bush08:delivered" name="delivered">
+		<attribute name="Frequency" type="Numerical">
+			<value value="1">
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical">
+			<value value="0.00018">
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical">
+			<value value="0.000">
+		</attribute>
+	</item>
+	<item id="bush08:distinguished" name="distinguished">
+		<attribute name="Frequency" type="Numerical">
+			<value value="1">
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical">
+			<value value="0.00018">
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical">
+			<value value="0.000">
+		</attribute>
+	</item>
+	<item id="bush08:emissions" name="emissions">
+		<attribute name="Frequency" type="Numerical">
+			<value value="1">
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical">
+			<value value="0.00018">
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical">
+			<value value="0.693">
+		</attribute>
+	</item>
+	<item id="bush08:taken" name="taken">
+		<attribute name="Frequency" type="Numerical">
+			<value value="5">
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical">
+			<value value="0.00088">
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical">
+			<value value="3.465">
+		</attribute>
+	</item>
+	<item id="bush08:coal" name="coal">
+		<attribute name="Frequency" type="Numerical">
+			<value value="1">
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical">
+			<value value="0.00018">
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical">
+			<value value="0.000">
+		</attribute>
+	</item>
+	<item id="bush08:london" name="london">
+		<attribute name="Frequency" type="Numerical">
+			<value value="1">
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical">
+			<value value="0.00018">
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical">
+			<value value="0.693">
+		</attribute>
+	</item>
+</list>

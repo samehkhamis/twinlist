@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<SimilarityList>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09.freqs:reinvestment</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09.freqs:proven</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09.freqs:learned</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08.freqs:issue</L1ID>
+		<L2ID>obama09.freqs:issue</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09.freqs:stamp</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08.freqs:competitiveness</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08.freqs:aid</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08.freqs:million</L1ID>
+		<L2ID>obama09.freqs:million</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08.freqs:distinguished</L1ID>
+		<L2ID>obama09.freqs:distinguished</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09.freqs:facts</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08.freqs:emissions</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08.freqs:taken</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08.freqs:coal</L1ID>
+		<L2ID>obama09.freqs:coal</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08.freqs:london</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+</SimilarityList>
