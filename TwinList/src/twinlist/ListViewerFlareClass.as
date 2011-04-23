@@ -222,97 +222,6 @@ package twinlist
 			UpdateButtonAnimations();
 		}
 		
-		/*
-		private function CreateVisList(data:ArrayCollection):ArrayCollection
-		{
-			var l1y:int = HeaderHeight;
-			var l2y:int = HeaderHeight;
-			var ry:int = HeaderHeight;
-			
-			var visList:ArrayCollection = new ArrayCollection();
-			
-			rowIdxHash = new Object();
-			var idx:int = 0;
-			for each (var item:ListViewerItem in data)
-			{
-				var sprite:DataSprite;
-				var spriteAdded:Boolean = false;
-				if (item.Identical1 != null || item.Identical2 != null)
-				{
-					if (item.Identical1 != null && (!item.Identical1.ActedOn || !RemoveAfterAction)) {
-						sprite = CreateItemSprite(item.Identical1, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 2, y2: ry, type: 0});
-						visList.addItem(sprite);
-						spriteAdded = true;
-						if (!(idx in rowIdxHash))
-							rowIdxHash[idx] = new Array();
-						rowIdxHash[idx].push(sprite);
-						l1y += RowHeight;
-					}
-					if (item.Identical2 != null && (!item.Identical2.ActedOn || !RemoveAfterAction)) {
-						sprite = CreateItemSprite(item.Identical2, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 2, y2: ry, type: 0});
-						visList.addItem(sprite);
-						spriteAdded = true;
-						if (!(idx in rowIdxHash))
-							rowIdxHash[idx] = new Array();
-						rowIdxHash[idx].push(sprite);
-						l2y += RowHeight;
-					}
-				}
-				else if (item.L1Similar != null || item.L2Similar != null)
-				{
-					if (item.L1Similar != null && (!item.L1Similar.ActedOn || !RemoveAfterAction)) {
-						sprite = CreateItemSprite(item.L1Similar, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 1, y2: ry, type: 1});
-						visList.addItem(sprite);
-						spriteAdded = true;
-						if (!(idx in rowIdxHash))
-							rowIdxHash[idx] = new Array();
-						rowIdxHash[idx].push(sprite);
-						l1y += RowHeight;
-					}
-					if (item.L2Similar != null && (!item.L2Similar.ActedOn || !RemoveAfterAction)) {
-						sprite = CreateItemSprite(item.L2Similar, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 3, y2: ry, type: 1});
-						visList.addItem(sprite);
-						spriteAdded = true;
-						if (!(idx in rowIdxHash))
-							rowIdxHash[idx] = new Array();
-						rowIdxHash[idx].push(sprite);
-						l2y += RowHeight;
-					}
-				}
-				else if (item.L1Unique != null)
-				{
-					if (!item.L1Unique.ActedOn || !RemoveAfterAction) {
-						sprite = CreateItemSprite(item.L1Unique, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 0, y2: ry, type: 2});
-						visList.addItem(sprite);
-						spriteAdded = true;
-						if (!(idx in rowIdxHash))
-							rowIdxHash[idx] = new Array();
-						rowIdxHash[idx].push(sprite);
-						l1y += RowHeight;
-					}
-				}
-				else if (item.L2Unique != null)
-				{
-					if (!item.L2Unique.ActedOn || !RemoveAfterAction) {
-						sprite = CreateItemSprite(item.L2Unique, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 4, y2: ry, type: 2});
-						visList.addItem(sprite);
-						spriteAdded = true;
-						if (!(idx in rowIdxHash))
-							rowIdxHash[idx] = new Array();
-						rowIdxHash[idx].push(sprite);
-						l2y += RowHeight;
-					}
-				}
-				// update row y-offset
-				if (spriteAdded) {
-					ry += RowHeight;
-					++idx;
-				}
-			}
-			return visList;
-		}
-		*/
-		
 		private function CreateVisHash(data:ArrayCollection):Object
 		{
 			var l1y:int = HeaderHeight;
@@ -571,7 +480,7 @@ package twinlist
 			});
 		}
 		
-		protected function ReconcileButtonClick(event:MouseEvent):void
+		protected function MergeButtonClick(event:MouseEvent):void
 		{
 			// Disable the button for the animation duration
 			mergeBtn.enabled = false;
@@ -603,11 +512,6 @@ package twinlist
 			if (popup.alpha == 0)
 				return;
 			
-			if (linkIdentical) {
-				var other:DataSprite = FindDuplicateRowIndex(selectedSprite);
-				if (other != null)
-					(other.data.item as ListItem).ActedOn = true;
-			}
 			var item:ListItem = selectedSprite.data.item as ListItem;
 			model.SelectedItem = null;
 			model.AddActionListItem(item, true);
@@ -618,11 +522,6 @@ package twinlist
 			if (popup.alpha == 0)
 				return;
 			
-			if (linkIdentical) {
-				var other:DataSprite = FindDuplicateRowIndex(selectedSprite);
-				if (other != null)
-					(other.data.item as ListItem).ActedOn = true;
-			}
 			var item:ListItem = selectedSprite.data.item as ListItem;
 			model.SelectedItem = null;
 			model.AddActionListItem(item, false);
