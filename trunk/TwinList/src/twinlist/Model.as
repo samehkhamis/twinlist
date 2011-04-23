@@ -39,6 +39,7 @@ package twinlist
 		private var visibleListIds:Array;
 		private var visibleItemIds:Object;
 		private var listViewerData:ArrayCollection;
+		private var listViewerIdxHash:Object;
 		private var hashSimilarities:Object;
 		// action lists
 		private var acceptedItems:ArrayCollection;
@@ -69,6 +70,7 @@ package twinlist
 			visibleListIds = new Array(2);
 			visibleItemIds = new Object();
 			listViewerData = new ArrayCollection();
+			listViewerIdxHash = new Object();
 			hashSimilarities = new ArrayCollection();
 			acceptedItems = new ArrayCollection();
 			rejectedItems = new ArrayCollection();
@@ -194,6 +196,9 @@ package twinlist
 				visibleActionListIdx = 1;
 			}
 			item.ActedOn = true;
+			var twin:ListItem = FindListViewerTwin(item);
+			if (twin != null)
+				twin.ActedOn = true;
 			dispatchEvent(new TwinListEvent(ACTION_TAKEN));
 			RefreshView();
 		}
@@ -216,6 +221,9 @@ package twinlist
 				visibleActionListIdx = 1;
 			}
 			item.ActedOn = false;
+			var twin:ListItem = FindListViewerTwin(item);
+			if (twin != null)
+				twin.ActedOn = false;
 			dispatchEvent(new TwinListEvent(ACTION_TAKEN));
 			RefreshView();
 		}
@@ -357,6 +365,16 @@ package twinlist
 			else {
 				RefreshView();
 			}
+		}
+		
+		private function FindListViewerTwin(item:ListItem):ListItem
+		{
+			var lvi:ListViewerItem = listViewerData[listViewerIdxHash[item.Id]];
+			if (lvi.Identical1 != null && lvi.Identical1.Id != item.Id)
+				return lvi.Identical1;
+			else if (lvi.Identical2 != null && lvi.Identical2.Id != item.Id)
+				return lvi.Identical2;
+			return null;
 		}
 		
 		private function SortListViewerData():void
@@ -513,6 +531,7 @@ package twinlist
 		private function ReconcileLists(list1:List, list2:List):void
 		{
 			visibleItemIds = new Object();
+			listViewerIdxHash = new Object();
 			listViewerData.removeAll();
 			// hash item IDs in either list
 			var map1:Object = new Object();
@@ -538,11 +557,13 @@ package twinlist
 					if (item1 != null) {
 						listViewerItem.Identical1 = item1;
 						visibleItemIds[item1.Id] = item1;
+						listViewerIdxHash[item1.Id] = idx;
 					}
 					item2 = map2[simItem.L2Id] as ListItem;
 					if (item2 != null) {
 						listViewerItem.Identical2 = item2;
 						visibleItemIds[item2.Id] = item2;
+						listViewerIdxHash[item2.Id] = idx;
 					}
 					if (item1 != null || item2 != null) {
 						listViewerData.addItem(listViewerItem);
@@ -562,6 +583,7 @@ package twinlist
 						}
 						listViewerItem.L1Similar = item1;
 						visibleItemIds[item1.Id] = item1;
+						listViewerIdxHash[item1.Id] = idx;
 					}
 					item2 = map2[simItem.L2Id] as ListItem;
 					if (item2 != null) {
@@ -572,7 +594,8 @@ package twinlist
 								item2.Attributes[diff.Name].Unique = true;
 						}
 						listViewerItem.L2Similar = item2;
-						visibleItemIds[item2.Id] = item2;						
+						visibleItemIds[item2.Id] = item2;
+						listViewerIdxHash[item2.Id] = idx;
 					}
 					if (item1 != null || item2 != null) {
 						listViewerData.addItem(listViewerItem);
@@ -586,6 +609,7 @@ package twinlist
 						if (item1 != null) {
 							listViewerItem.L1Unique = item1;
 							visibleItemIds[item1.Id] = item1;
+							listViewerIdxHash[item1.Id] = idx;
 							listViewerData.addItem(listViewerItem);
 							++idx;
 						}
@@ -595,6 +619,7 @@ package twinlist
 						if (item2 != null) {
 							listViewerItem.L2Unique = item2;
 							visibleItemIds[item2.Id] = item2;
+							listViewerIdxHash[item2.Id] = idx;
 							listViewerData.addItem(listViewerItem);
 							++idx;
 						}
