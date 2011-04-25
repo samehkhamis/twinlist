@@ -33,7 +33,7 @@
 	</s:HGroup>
 	<mx:Spacer height="10"/>
 	<s:Label text="After item accept/reject:" fontSize="14"/>
-	<s:RadioButton id="rbGray" group="{rbgAfterAction}" label="Gray out" value="{OptionsPanelClass.OPTVAL_GRAYOUT}"/>
-	<s:RadioButton id="rbRemove" group="{rbgAfterAction}" label="Remove" value="{OptionsPanelClass.OPTVAL_REMOVE}" selected="true"/>
+	<s:RadioButton id="rbGray" group="{rbgAfterAction}" label="Gray out" value="{Option.OPTVAL_GRAYOUT}"/>
+	<s:RadioButton id="rbRemove" group="{rbgAfterAction}" label="Remove" value="{Option.OPTVAL_REMOVE}" selected="true"/>
 	<mx:Spacer height="10"/>
 </twinlist:OptionsPanelClass>

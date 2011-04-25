@@ -1,4 +1,4 @@
-package twinlist
+	package twinlist
 {	
 	import com.carlcalderon.arthropod.Debug;
 	
@@ -87,8 +87,13 @@ package twinlist
 			sortByAttribute = null;
 			filterList = new ArrayCollection();
 			options = new Object();
-			// load data
+			
+			// default options
+			SetOption(new Option(Option.OPT_FONTSIZE, 16));
+			SetOption(new Option(Option.OPT_LINKIDENTICAL, true));
+			SetOption(new Option(Option.OPT_AFTERACTION, Option.OPTVAL_REMOVE));
 
+			// load data
 			var mode:String = "medRec";
 			var list1File:String = "../data/medication/list1.xml";
 			var list2File:String = "../data/medication/list2.xml";
@@ -126,10 +131,10 @@ package twinlist
 			return instance;
 		}
 		
-		public function GetOption(option:Option):Option
+		public function GetOption(name:String):Option
 		{
-			if (option.Name in options)
-				return options[option.Name];
+			if (name in options)
+				return options[name];
 			return null;
 		}
 		
@@ -197,9 +202,11 @@ package twinlist
 				visibleActionListIdx = 1;
 			}
 			item.ActedOn = true;
-			var twin:ListItem = FindListViewerTwin(item);
-			if (twin != null)
-				twin.ActedOn = true;
+			if (GetOption(Option.OPT_LINKIDENTICAL).Value) {
+				var twin:ListItem = FindListViewerTwin(item);
+				if (twin != null)
+					twin.ActedOn = true;
+			}
 			dispatchEvent(new TwinListEvent(ACTION_TAKEN));
 			RefreshView();
 		}
@@ -214,9 +221,6 @@ package twinlist
 						continue;
 					acceptedItems.addItem(item);
 					item.ActedOn = true;
-					twin = FindListViewerTwin(item);
-					if (twin != null)
-						twin.ActedOn = true;
 				}
 				visibleActionListIdx = 0;
 			}
@@ -226,11 +230,15 @@ package twinlist
 						continue;
 					rejectedItems.addItem(item);
 					item.ActedOn = true;
+				}
+				visibleActionListIdx = 1;
+			}
+			if (GetOption(Option.OPT_LINKIDENTICAL).Value) {
+				for each (item in items) {
 					twin = FindListViewerTwin(item);
 					if (twin != null)
 						twin.ActedOn = true;
 				}
-				visibleActionListIdx = 1;
 			}
 			dispatchEvent(new TwinListEvent(ACTION_TAKEN));
 			RefreshView();
@@ -254,9 +262,11 @@ package twinlist
 				visibleActionListIdx = 1;
 			}
 			item.ActedOn = false;
-			var twin:ListItem = FindListViewerTwin(item);
-			if (twin != null)
-				twin.ActedOn = false;
+			if (GetOption(Option.OPT_LINKIDENTICAL).Value) {
+				var twin:ListItem = FindListViewerTwin(item);
+				if (twin != null)
+					twin.ActedOn = false;
+			}
 			dispatchEvent(new TwinListEvent(ACTION_TAKEN));
 			RefreshView();
 		}
