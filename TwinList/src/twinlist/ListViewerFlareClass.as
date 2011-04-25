@@ -220,7 +220,8 @@ package twinlist
 						if (!(idx in rowIdxHash))
 							rowIdxHash[idx] = new Array();
 						rowIdxHash[idx].push(sprite);
-						colItems[2].addItem(item.Identical1);
+						if (!linkIdentical)
+							colItems[2].addItem(item.Identical1);
 						l1y += RowHeight;
 					}
 					if (item.Identical2 != null && (!item.Identical2.ActedOn || !RemoveAfterAction)) {
@@ -612,8 +613,7 @@ package twinlist
 					model.AddActionListItems(model.VisibleLists[0], true);
 				else
 					model.AddActionListItems(model.VisibleLists[1], true);
-			}
-				
+			}		
 		}
 		
 		private function RejectClick(event:MouseEvent):void
@@ -742,14 +742,14 @@ package twinlist
 		{
 			var opt:Option = event.Data as Option;
 			switch (opt.Name) {
-				case OptionsPanelClass.OPT_FONTSIZE:
+				case Option.OPT_FONTSIZE:
 					textHeight = opt.Value as int;
 					break;
-				case OptionsPanelClass.OPT_LINKIDENTICAL:
+				case Option.OPT_LINKIDENTICAL:
 					linkIdentical = opt.Value as Boolean;
 					break;
-				case OptionsPanelClass.OPT_AFTERACTION:
-					removeAfterAction = opt.Value == OptionsPanelClass.OPTVAL_REMOVE;
+				case Option.OPT_AFTERACTION:
+					removeAfterAction = opt.Value == Option.OPTVAL_REMOVE;
 					break;
 			}
 			OnViewUpdated(event);
