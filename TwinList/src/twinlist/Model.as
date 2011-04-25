@@ -6,6 +6,7 @@ package twinlist
 	import flash.events.EventDispatcher;
 	
 	import mx.collections.ArrayCollection;
+	import mx.collections.IList;
 	import mx.collections.Sort;
 	
 	import twinlist.filter.IFilter;
@@ -199,6 +200,38 @@ package twinlist
 			var twin:ListItem = FindListViewerTwin(item);
 			if (twin != null)
 				twin.ActedOn = true;
+			dispatchEvent(new TwinListEvent(ACTION_TAKEN));
+			RefreshView();
+		}
+		
+		public function AddActionListItems(items:IList, accepted:Boolean):void
+		{
+			var item:ListItem;
+			var twin:ListItem;
+			if (accepted) {
+				for each (item in items) {
+					if (AcceptedListContains(item) >= 0)
+						continue;
+					acceptedItems.addItem(item);
+					item.ActedOn = true;
+					twin = FindListViewerTwin(item);
+					if (twin != null)
+						twin.ActedOn = true;
+				}
+				visibleActionListIdx = 0;
+			}
+			else {
+				for each (item in items) {
+					if (RejectedListContains(item) >= 0)
+						continue;
+					rejectedItems.addItem(item);
+					item.ActedOn = true;
+					twin = FindListViewerTwin(item);
+					if (twin != null)
+						twin.ActedOn = true;
+				}
+				visibleActionListIdx = 1;
+			}
 			dispatchEvent(new TwinListEvent(ACTION_TAKEN));
 			RefreshView();
 		}
