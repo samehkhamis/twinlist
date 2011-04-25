@@ -40,6 +40,7 @@ package twinlist
 		private var visHash:Object;
 		private var columnList:ArrayCollection;
 		private var rowIdxHash:Object;
+		private var colItems:Array;
 		// selected sprite
 		private var selectedSprite:DataSprite = null;
 		private var popup:RectSprite;
@@ -49,6 +50,7 @@ package twinlist
 		private var columnHeight:int = 0;
 		// font details
 		private var textHeight:int = 16;
+		private var headerTextHeight:int = 16;
 		private var textSpacing:int = 14;
 		private var fontString:String = "Sans Serif";
 		// merging
@@ -108,14 +110,16 @@ package twinlist
 			
 			// Set up the visualization
 			vis.bounds = new Rectangle(0, 0, 5 * columnWidth, columnHeight);
+			
+			// create columns
 			columnList = new ArrayCollection();
-			vis.addChild(CreateColumn(0, colorBackground, ''));
+			vis.addChild(CreateColumn(0, colorBackground, model.VisibleLists[0].Name + " - Unique"));
 			vis.addChild(CreateColumn(1, colorOriginal, model.VisibleLists[0].Name));
-			vis.addChild(CreateColumn(2, colorBackground, ''));
+			vis.addChild(CreateColumn(2, colorBackground, "Identical"));
 			vis.addChild(CreateColumn(3, colorOriginal, model.VisibleLists[1].Name));
-			vis.addChild(CreateColumn(4, colorBackground, ''));
+			vis.addChild(CreateColumn(4, colorBackground, model.VisibleLists[1].Name + " - Unique"));
 			vis.addChild(CreateHorizontalLine(1));
-			vis.addChild(CreateHorizontalLine(textHeight + textSpacing));
+			vis.addChild(CreateHorizontalLine(2*textHeight + textSpacing));
 			
 			// Fix x values and draw sprites
 			for each (sprite in visHash)
@@ -137,39 +141,6 @@ package twinlist
 			
 			// Create the two animation sequences
 			UpdateButtonAnimations();
-		}
-		
-		private function CreatePopup():void
-		{
-			// Create the sprite
-			var acceptBtn:TextSprite = new TextSprite("Accept?");
-			acceptBtn.size = textHeight;
-			acceptBtn.font = fontString;
-			acceptBtn.color = 0xff330000;
-			acceptBtn.buttonMode = true;
-			acceptBtn.addEventListener(MouseEvent.MOUSE_OVER, PopupButtonRollOver);
-			acceptBtn.addEventListener(MouseEvent.MOUSE_OUT, PopupButtonRollOut);
-			acceptBtn.addEventListener(MouseEvent.MOUSE_UP, AcceptClick);
-			
-			var rejectBtn:TextSprite = new TextSprite("Reject?");
-			rejectBtn.size = textHeight;
-			rejectBtn.font = fontString;
-			rejectBtn.color = 0xff330000;
-			rejectBtn.buttonMode = true;
-			rejectBtn.x = acceptBtn.width;
-			rejectBtn.addEventListener(MouseEvent.MOUSE_OVER, PopupButtonRollOver);
-			rejectBtn.addEventListener(MouseEvent.MOUSE_OUT, PopupButtonRollOut);
-			rejectBtn.addEventListener(MouseEvent.MOUSE_UP, RejectClick);
-			
-			popup = new RectSprite(0, 0, rejectBtn.x + rejectBtn.width, rejectBtn.height);
-			popup.fillColor = popup.lineColor = 0x55aaaaaa;
-			popup.alpha = 0;
-			popup.addChild(acceptBtn);
-			popup.addChild(rejectBtn);
-			
-			// Create the timer
-			timer = new Timer(250);
-			timer.addEventListener(TimerEvent.TIMER, ClickTimer);
 		}
 		
 		private function OnViewUpdated(event:Event):void
@@ -231,6 +202,10 @@ package twinlist
 			var visHash:Object = new Object();
 			
 			rowIdxHash = new Object();
+			colItems = new Array(5);
+			for (var i:int = 0; i < 5; i++) {
+				colItems[i] = new ArrayCollection();
+			}
 			var idx:int = 0;
 			for each (var item:ListViewerItem in data)
 			{
@@ -245,6 +220,7 @@ package twinlist
 						if (!(idx in rowIdxHash))
 							rowIdxHash[idx] = new Array();
 						rowIdxHash[idx].push(sprite);
+						colItems[2].addItem(item.Identical1);
 						l1y += RowHeight;
 					}
 					if (item.Identical2 != null && (!item.Identical2.ActedOn || !RemoveAfterAction)) {
@@ -254,6 +230,7 @@ package twinlist
 						if (!(idx in rowIdxHash))
 							rowIdxHash[idx] = new Array();
 						rowIdxHash[idx].push(sprite);
+						colItems[2].addItem(item.Identical2);
 						l2y += RowHeight;
 					}
 				}
@@ -266,6 +243,7 @@ package twinlist
 						if (!(idx in rowIdxHash))
 							rowIdxHash[idx] = new Array();
 						rowIdxHash[idx].push(sprite);
+						colItems[1].addItem(item.L1Similar);
 						l1y += RowHeight;
 					}
 					if (item.L2Similar != null && (!item.L2Similar.ActedOn || !RemoveAfterAction)) {
@@ -275,6 +253,7 @@ package twinlist
 						if (!(idx in rowIdxHash))
 							rowIdxHash[idx] = new Array();
 						rowIdxHash[idx].push(sprite);
+						colItems[3].addItem(item.L2Similar);
 						l2y += RowHeight;
 					}
 				}
@@ -287,6 +266,7 @@ package twinlist
 						if (!(idx in rowIdxHash))
 							rowIdxHash[idx] = new Array();
 						rowIdxHash[idx].push(sprite);
+						colItems[0].addItem(item.L1Unique);
 						l1y += RowHeight;
 					}
 				}
@@ -299,6 +279,7 @@ package twinlist
 						if (!(idx in rowIdxHash))
 							rowIdxHash[idx] = new Array();
 						rowIdxHash[idx].push(sprite);
+						colItems[4].addItem(item.L2Unique);
 						l2y += RowHeight;
 					}
 				}
@@ -314,8 +295,12 @@ package twinlist
 		private function CreateColumn(index:int, color:int, title:String):RectSprite
 		{
 			var header:TextSprite = new TextSprite(title);
+			if (index % 2 == 0) {
+				header.alpha = 0;
+				header.visible = false;
+			}
 			header.color = colorText;
-			header.size = textHeight;
+			header.size = headerTextHeight;
 			header.font = fontString;
 			header.bold = true;
 			header.letterSpacing = 3;
@@ -323,9 +308,34 @@ package twinlist
 			header.x = columnWidth / 2;
 			header.y = 0;
 			
+			var button:TextSprite = new TextSprite("(Accept All)");
+			if (index % 2 == 0) {
+				button.alpha = 0;
+				button.visible = false;
+			}
+			button.color = colorText;
+			button.size = headerTextHeight - 4;
+			button.font = fontString;
+			button.horizontalAnchor = TextSprite.CENTER;
+			button.x = columnWidth / 2;
+			button.y = headerTextHeight + 4;
+			button.backgroundBorder = true;
+			button.backgroundBorderColor = colorText;
+			button.buttonMode = true;
+			button.addEventListener(MouseEvent.ROLL_OVER, function(e:Event):void {
+				button.color = colorTextHighlighted;
+			});
+			button.addEventListener(MouseEvent.ROLL_OUT, function(e:Event):void {
+				button.color = colorText;
+			});
+			button.addEventListener(MouseEvent.MOUSE_DOWN, function(e:Event):void {
+				AcceptAll(index);
+			});
+			
 			var rect:RectSprite = new RectSprite(index * columnWidth, 0, columnWidth, columnHeight);
 			rect.fillColor = rect.lineColor = color;
 			rect.addChild(header);
+			rect.addChild(button);
 			rect.addEventListener(MouseEvent.MOUSE_DOWN, ItemMouseDown);
 			columnList.addItem(rect);
 			
@@ -391,6 +401,39 @@ package twinlist
 			return sprite;
 		}
 		
+		private function CreatePopup():void
+		{
+			// Create the sprite
+			var acceptBtn:TextSprite = new TextSprite("Accept?");
+			acceptBtn.size = textHeight;
+			acceptBtn.font = fontString;
+			acceptBtn.color = 0xff330000;
+			acceptBtn.buttonMode = true;
+			acceptBtn.addEventListener(MouseEvent.MOUSE_OVER, PopupButtonRollOver);
+			acceptBtn.addEventListener(MouseEvent.MOUSE_OUT, PopupButtonRollOut);
+			acceptBtn.addEventListener(MouseEvent.MOUSE_UP, AcceptClick);
+			
+			var rejectBtn:TextSprite = new TextSprite("Reject?");
+			rejectBtn.size = textHeight;
+			rejectBtn.font = fontString;
+			rejectBtn.color = 0xff330000;
+			rejectBtn.buttonMode = true;
+			rejectBtn.x = acceptBtn.width;
+			rejectBtn.addEventListener(MouseEvent.MOUSE_OVER, PopupButtonRollOver);
+			rejectBtn.addEventListener(MouseEvent.MOUSE_OUT, PopupButtonRollOut);
+			rejectBtn.addEventListener(MouseEvent.MOUSE_UP, RejectClick);
+			
+			popup = new RectSprite(0, 0, rejectBtn.x + rejectBtn.width, rejectBtn.height);
+			popup.fillColor = popup.lineColor = 0x55aaaaaa;
+			popup.alpha = 0;
+			popup.addChild(acceptBtn);
+			popup.addChild(rejectBtn);
+			
+			// Create the timer
+			timer = new Timer(250);
+			timer.addEventListener(TimerEvent.TIMER, ClickTimer);
+		}
+		
 		private function UpdateButtonAnimations():void
 		{
 			animMerge = new Sequence();
@@ -443,13 +486,35 @@ package twinlist
 			}
 			
 			// Animate the column colors and headers after
+			var seq:Sequence;
 			animSeparateColIdentical.add(new Tween(columnList[2], 0.25, {fillColor: colorIdentical, lineColor: colorIdentical}));
-			animSeparateColIdentical.add(new Tween(columnList[2].getChildAt(0), 0.25, {text: 'Identical'}));
+			seq = new Sequence();
+			seq.add(new Tween(columnList[2].getChildAt(0), 0, {visible: true}));
+			seq.add(new Tween(columnList[2].getChildAt(0), 0.25, {alpha: 1}));
+			animSeparateColIdentical.add(seq);
+			seq = new Sequence();
+			seq.add(new Tween(columnList[2].getChildAt(1), 0, {visible: true}));
+			seq.add(new Tween(columnList[2].getChildAt(1), 0.25, {alpha: 1}));
+			animSeparateColIdentical.add(seq);
 			
 			animSeparateColUnique.add(new Tween(columnList[0], 0.25, {fillColor: colorList1, lineColor: colorList1}));
-			animSeparateColUnique.add(new Tween(columnList[0].getChildAt(0), 0.25, {text: model.VisibleLists[0].Name + ' - Unique'}));
+			seq = new Sequence();
+			seq.add(new Tween(columnList[0].getChildAt(0), 0, {visible: true}));
+			seq.add(new Tween(columnList[0].getChildAt(0), 0.25, {alpha: 1}));
+			animSeparateColUnique.add(seq);
+			seq = new Sequence();
+			seq.add(new Tween(columnList[0].getChildAt(1), 0, {visible: true}));
+			seq.add(new Tween(columnList[0].getChildAt(1), 0.25, {alpha: 1}));
+			animSeparateColUnique.add(seq);
 			animSeparateColUnique.add(new Tween(columnList[4], 0.25, {fillColor: colorList2, lineColor: colorList2}));
-			animSeparateColUnique.add(new Tween(columnList[4].getChildAt(0), 0.25, {text: model.VisibleLists[1].Name + ' - Unique'}));
+			seq = new Sequence();
+			seq.add(new Tween(columnList[4].getChildAt(0), 0, {visible: true}));
+			seq.add(new Tween(columnList[4].getChildAt(0), 0.25, {alpha: 1}));
+			animSeparateColUnique.add(seq);
+			seq = new Sequence();
+			seq.add(new Tween(columnList[4].getChildAt(1), 0, {visible: true}));
+			seq.add(new Tween(columnList[4].getChildAt(1), 0.25, {alpha: 1}));
+			animSeparateColUnique.add(seq);
 			
 			animSeparateColSimilar.add(new Tween(columnList[1], 0.25, {fillColor: (colorList1 + colorIdentical) / 2, lineColor: (colorList1 + colorIdentical) / 2}));
 			animSeparateColSimilar.add(new Tween(columnList[1].getChildAt(0), 0.25, {text: model.VisibleLists[0].Name + ' - Similar'}));
@@ -457,17 +522,38 @@ package twinlist
 			animSeparateColSimilar.add(new Tween(columnList[3].getChildAt(0), 0.25, {text: model.VisibleLists[1].Name + ' - Similar'}));
 			
 			// Animate the column colors and headers before
-			animReconcileCol.add(new Tween(columnList[0], 0.25, {fillColor: colorBackground, lineColor: colorBackground}));
-			animReconcileCol.add(new Tween(columnList[0].getChildAt(0), 0.25, {text: ''}));
-			animReconcileCol.add(new Tween(columnList[2], 0.25, {fillColor: colorBackground, lineColor: colorBackground}));
-			animReconcileCol.add(new Tween(columnList[2].getChildAt(0), 0.25, {text: ''}));
-			animReconcileCol.add(new Tween(columnList[4], 0.25, {fillColor: colorBackground, lineColor: colorBackground}));
-			animReconcileCol.add(new Tween(columnList[4].getChildAt(0), 0.25, {text: ''}));
+			animReconcileCol.add(new Tween(columnList[0], 0.5, {fillColor: colorBackground, lineColor: colorBackground}));
+			seq = new Sequence();
+			seq.add(new Tween(columnList[0].getChildAt(0), 0.5, {alpha: 0}));
+			seq.add(new Tween(columnList[0].getChildAt(0), 0, {visible: false}));
+			animReconcileCol.add(seq);
+			seq = new Sequence();
+			seq.add(new Tween(columnList[0].getChildAt(1), 0.5, {alpha: 0}));
+			seq.add(new Tween(columnList[0].getChildAt(1), 0, {visible: false}));
+			animReconcileCol.add(seq);
+			animReconcileCol.add(new Tween(columnList[2], 0.5, {fillColor: colorBackground, lineColor: colorBackground}));
+			seq = new Sequence();
+			seq.add(new Tween(columnList[2].getChildAt(0), 0.5, {alpha: 0}));
+			seq.add(new Tween(columnList[2].getChildAt(0), 0, {visible: false}));
+			animReconcileCol.add(seq);
+			seq = new Sequence();
+			seq.add(new Tween(columnList[2].getChildAt(1), 0.5, {alpha: 0}));
+			seq.add(new Tween(columnList[2].getChildAt(1), 0, {visible: false}));
+			animReconcileCol.add(seq);
+			animReconcileCol.add(new Tween(columnList[4], 0.5, {fillColor: colorBackground, lineColor: colorBackground}));
+			seq = new Sequence();
+			seq.add(new Tween(columnList[4].getChildAt(0), 0.5, {alpha: 0}));
+			seq.add(new Tween(columnList[4].getChildAt(0), 0, {visible: false}));
+			animReconcileCol.add(seq);
+			seq = new Sequence();
+			seq.add(new Tween(columnList[4].getChildAt(1), 0.5, {alpha: 0}));
+			seq.add(new Tween(columnList[4].getChildAt(1), 0, {visible: false}));
+			animReconcileCol.add(seq);
 			
-			animReconcileCol.add(new Tween(columnList[1], 0.25, {fillColor: colorOriginal, lineColor: colorOriginal}));
-			animReconcileCol.add(new Tween(columnList[1].getChildAt(0), 0.25, {text: model.VisibleLists[0].Name}));
-			animReconcileCol.add(new Tween(columnList[3], 0.25, {fillColor: colorOriginal, lineColor: colorOriginal}));
-			animReconcileCol.add(new Tween(columnList[3].getChildAt(0), 0.25, {text: model.VisibleLists[1].Name}));
+			animReconcileCol.add(new Tween(columnList[1], 0.5, {fillColor: colorOriginal, lineColor: colorOriginal}));
+			animReconcileCol.add(new Tween(columnList[1].getChildAt(0), 0.5, {text: model.VisibleLists[0].Name}));
+			animReconcileCol.add(new Tween(columnList[3], 0.5, {fillColor: colorOriginal, lineColor: colorOriginal}));
+			animReconcileCol.add(new Tween(columnList[3].getChildAt(0), 0.5, {text: model.VisibleLists[1].Name}));
 			
 			// Enable the reconcile button after
 			animMerge.addEventListener(TransitionEvent.END, function(e:Event):void {
@@ -515,6 +601,19 @@ package twinlist
 			var item:ListItem = selectedSprite.data.item as ListItem;
 			model.SelectedItem = null;
 			model.AddActionListItem(item, true);
+		}
+		
+		private function AcceptAll(colIdx:int):void
+		{
+			if (merged)
+				model.AddActionListItems(colItems[colIdx], true);
+			else {
+				if (colIdx == 1)
+					model.AddActionListItems(model.VisibleLists[0], true);
+				else
+					model.AddActionListItems(model.VisibleLists[1], true);
+			}
+				
 		}
 		
 		private function RejectClick(event:MouseEvent):void
@@ -596,7 +695,7 @@ package twinlist
 		
 		private function get HeaderHeight():int
 		{
-			return textHeight + 2 * textSpacing;
+			return 2 * headerTextHeight + 2 * textSpacing;
 		}
 		
 		private function get RowHeight():int
