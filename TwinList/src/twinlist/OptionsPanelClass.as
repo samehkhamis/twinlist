@@ -2,6 +2,8 @@ package twinlist
 {
 	import flash.events.Event;
 	
+	import mx.controls.HSlider;
+	
 	import spark.components.CheckBox;
 	import spark.components.Group;
 	import spark.components.NumericStepper;
@@ -21,6 +23,13 @@ package twinlist
 		{
 			var tgt:NumericStepper = event.target as NumericStepper;
 			model.SetOption(new Option(Option.OPT_FONTSIZE, tgt.value));
+		}
+		
+		protected function OnAnimSpeedChange(event:Event):void
+		{
+			var tgt:HSlider = event.target as HSlider;
+			var val:Number = Math.pow(2.0, -tgt.value);
+			model.SetOption(new Option(Option.OPT_ANIMATIONSPEED, val));
 		}
 		
 		protected function OnLinkIdenticalChange(event:Event):void

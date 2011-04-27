@@ -192,13 +192,13 @@
 			if (accepted) {
 				if (AcceptedListContains(item) >= 0)
 					return;
-				acceptedItems.addItem(item);
+				acceptedItems.addItemAt(item, 0);
 				visibleActionListIdx = 0;
 			}
 			else {
 				if (RejectedListContains(item) >= 0)
 					return;
-				rejectedItems.addItem(item);
+				rejectedItems.addItemAt(item, 0);
 				visibleActionListIdx = 1;
 			}
 			item.ActedOn = true;
@@ -219,7 +219,7 @@
 				for each (item in items) {
 					if (AcceptedListContains(item) >= 0)
 						continue;
-					acceptedItems.addItem(item);
+					acceptedItems.addItemAt(item, 0);
 					item.ActedOn = true;
 				}
 				visibleActionListIdx = 0;
@@ -228,7 +228,7 @@
 				for each (item in items) {
 					if (RejectedListContains(item) >= 0)
 						continue;
-					rejectedItems.addItem(item);
+					rejectedItems.addItemAt(item, 0);
 					item.ActedOn = true;
 				}
 				visibleActionListIdx = 1;
