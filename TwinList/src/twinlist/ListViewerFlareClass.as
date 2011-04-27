@@ -265,16 +265,13 @@ package twinlist
 			var idx:int = 0;
 			
 			// Remove old group sprites if group changed
-			var addAgain:Boolean = false;
-			if (!model.GroupBy || model.GroupBy.Name != groupName)
+			var header:TextSprite;
+			for each (header in groupVisList)
 			{
-				addAgain = true;
-				for each (var header:Sprite in groupVisList)
-				{
-					vis.removeChild(header);
-				}
+				vis.removeChild(header);
 			}
 			groupVisList.removeAll();
+			
 			
 			for each (var item:ListViewerItem in data)
 			{
@@ -287,11 +284,9 @@ package twinlist
 							newValue = item.Identical1.Attributes[model.GroupBy.Name].Values[0].toString();
 							if (newValue != curValue)
 							{
-								if (addAgain)
-								{
-									header = CreateGroupHeader(newValue, ry);
-									groupVisList.addItem(header);
-								}
+								header = CreateGroupHeader(newValue, ry);
+								groupVisList.addItem(header);
+								
 								curValue = newValue;
 								ry += TextSpacing;
 								valueCount++;
@@ -312,11 +307,9 @@ package twinlist
 							newValue = item.Identical2.Attributes[model.GroupBy.Name].Values[0].toString();
 							if (newValue != curValue)
 							{
-								if (addAgain)
-								{
-									header = CreateGroupHeader(newValue, ry);
-									groupVisList.addItem(header);
-								}
+								header = CreateGroupHeader(newValue, ry);
+								groupVisList.addItem(header);
+								
 								curValue = newValue;
 								ry += TextSpacing;
 								valueCount++;
@@ -342,11 +335,9 @@ package twinlist
 							newValue = item.L1Similar.Attributes[model.GroupBy.Name].Values[0].toString();
 							if (newValue != curValue)
 							{
-								if (addAgain)
-								{
-									header = CreateGroupHeader(newValue, ry);
-									groupVisList.addItem(header);
-								}
+								header = CreateGroupHeader(newValue, ry);
+								groupVisList.addItem(header);
+								
 								curValue = newValue;
 								ry += TextSpacing;
 								valueCount++;
@@ -369,11 +360,10 @@ package twinlist
 							{
 								if (added)
 									ry += RowHeight;
-								if (addAgain)
-								{
-									header = CreateGroupHeader(newValue, ry);
-									groupVisList.addItem(header);
-								}
+								
+								header = CreateGroupHeader(newValue, ry);
+								groupVisList.addItem(header);
+								
 								curValue = newValue;
 								ry += TextSpacing;
 								valueCount++;
@@ -398,11 +388,9 @@ package twinlist
 							newValue = item.L1Unique.Attributes[model.GroupBy.Name].Values[0].toString();
 							if (newValue != curValue)
 							{
-								if (addAgain)
-								{
-									header = CreateGroupHeader(newValue, ry);
-									groupVisList.addItem(header);
-								}
+								header = CreateGroupHeader(newValue, ry);
+								groupVisList.addItem(header);
+								
 								curValue = newValue;
 								ry += TextSpacing;
 								valueCount++;
@@ -427,11 +415,9 @@ package twinlist
 							newValue = item.L2Unique.Attributes[model.GroupBy.Name].Values[0].toString();
 							if (newValue != curValue)
 							{
-								if (addAgain)
-								{
-									header = CreateGroupHeader(newValue, ry);
-									groupVisList.addItem(header);
-								}
+								header = CreateGroupHeader(newValue, ry);
+								groupVisList.addItem(header);
+								
 								curValue = newValue;
 								ry += TextSpacing;
 								valueCount++;
@@ -459,6 +445,13 @@ package twinlist
 			columnWidth = calculatedColumnWidth + 40;
 			columnHeight = HeaderHeight + model.ListViewerData.length * RowHeight + valueCount * (TextSpacing + 3) + TextSpacing;
 			
+			
+			// Change group line width
+			for each (header in groupVisList)
+			{
+				(header.getChildAt(1) as LineSprite).x2 = columnWidth * 5;
+			}
+			
 			return visHash;
 		}
 		
@@ -468,7 +461,7 @@ package twinlist
 			line.lineColor = colorText;
 			line.x1 = 0;
 			line.y1 = textHeight;
-			line.x2 = columnWidth * 5;
+			line.x2 = 0;
 			line.y2 = textHeight;
 			line.lineWidth = 2;
 			
