@@ -14,10 +14,7 @@ package twinlist
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.events.TimerEvent;
-	import flash.geom.Rectangle;
 	import flash.utils.Timer;
-	
-	import flashx.textLayout.elements.ParagraphElement;
 	
 	import mx.collections.ArrayCollection;
 	
