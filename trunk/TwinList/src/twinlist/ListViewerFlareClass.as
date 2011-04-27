@@ -39,6 +39,8 @@ package twinlist
 		public var rightAnimBtn:Button;
 		[Bindable]
 		public var scroller:Scroller;
+		[Bindable]
+		public var canvas:Group;
 		// data
 		private var visHash:Object;
 		private var columnList:ArrayCollection;
@@ -183,6 +185,8 @@ package twinlist
 			
 			// Fix the visualization
 			FixColumns();
+			
+			canvas.invalidateDisplayList();
 			
 			// create transition animation
 			var animUpdate:Parallel = new Parallel();
