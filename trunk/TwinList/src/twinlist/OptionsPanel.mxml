@@ -5,6 +5,11 @@
 	xmlns:mx="library://ns.adobe.com/flex/mx"
 	xmlns:twinlist="twinlist.*"
 	width="100%" height="100%">
+	<fx:Script>
+		<![CDATA[
+			import spark.skins.spark.HSliderSkin;
+		]]>
+	</fx:Script>
 	<fx:Declarations>
 		<s:RadioButtonGroup id="rbgAfterAction" change="OnAfterActionChange(event)"/>
 	</fx:Declarations>
@@ -12,8 +17,14 @@
 		<s:VerticalLayout paddingLeft="10" paddingRight="10" paddingTop="10" paddingBottom="10"/>
 	</twinlist:layout>
 	<s:HGroup width="100%" verticalAlign="middle">
-		<s:Label text="Font size" width="75" height="25" fontSize="14"/>
-		<s:NumericStepper width="50" height="25" minimum="8" maximum="32" value="16" change="OnFontSizeChange(event)"/>
+		<s:Label text="Font size" width="120" height="25" fontSize="14"/>
+		<s:NumericStepper id="nsFontSize" width="50" height="25" minimum="8" maximum="32" value="16" change="OnFontSizeChange(event)"/>
+	</s:HGroup>
+	<mx:Spacer height="10"/>
+	<s:HGroup width="100%" verticalAlign="middle">
+		<s:Label text="Animation speed" width="120" height="25" fontSize="14"/>
+		<mx:HSlider id="hsAnimSpeed" width="120" minimum="-2" maximum="2" value="0" tickInterval="1" labels="{['-2','-1','0','+1','+2']}"
+					liveDragging="false" change="OnAnimSpeedChange(event)" snapInterval="0"/>
 	</s:HGroup>
 	<mx:Spacer height="10"/>
 	<!--

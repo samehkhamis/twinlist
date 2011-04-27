@@ -24,6 +24,8 @@ package twinlist
 		protected var listName:String;
 		[Bindable]
 		protected var dataSource:ArrayCollection;
+		[Bindable]
+		protected var listTitle:String;
 		public var dataGrid:AdvancedDataGrid;
 		private static var defaultSort:Sort
 		
@@ -51,6 +53,10 @@ package twinlist
 		public function set ListName(value:String):void
 		{
 			listName = value;
+			if (value == ACCEPT_LIST)
+				listTitle = "Accept List";
+			else if (value == REJECT_LIST)
+				listTitle = "Reject List";
 		}
 		
 		private function OnInitComplete(event:Event):void
