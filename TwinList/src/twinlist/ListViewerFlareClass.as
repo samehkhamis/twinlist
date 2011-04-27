@@ -827,6 +827,7 @@ package twinlist
 			for (i = 0; i < 3; i++) {
 				animMerge[i].addEventListener(TransitionEvent.END, function(e:Event):void {
 					++animState;
+					reset = false;
 					resetBtn.enabled = true;
 					leftAnimBtn.enabled = true;
 					rightAnimBtn.enabled = true;
