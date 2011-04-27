@@ -19,8 +19,8 @@
 		<s:Button id="rightAnimBtn" label="&gt;" width="50" click="RightAnimClick(event)" />
 	</s:HGroup>
 	<s:Scroller id="scroller" width="100%" height="100%" horizontalScrollPolicy="auto">
-		<s:Group width="100%" height="100%" clipAndEnableScrolling="true">
-			<flare:FlareCanvas id="canvas" visualization="{this.vis}"/>
+		<s:Group id="canvas" width="100%" height="100%" clipAndEnableScrolling="true">
+			<flare:FlareCanvas visualization="{this.vis}"/>
 		</s:Group>
 	</s:Scroller>
 </twinlist:ListViewerFlareClass>
