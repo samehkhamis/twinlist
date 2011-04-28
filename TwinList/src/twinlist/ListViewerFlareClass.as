@@ -28,19 +28,16 @@ package twinlist
 	import twinlist.list.ItemAttribute;
 	import twinlist.list.ListItem;
 	
+	[Bindable]
 	public class ListViewerFlareClass extends Group
 	{
-		[Bindable]
 		protected var model:Model = Model.Instance;
-		[Bindable]
+		// flare vis
 		protected var vis:Visualization;
-		[Bindable]
 		protected var stateVis:Visualization;
-		[Bindable]
+		// components
 		public var animBtn:Button;
-		[Bindable]
 		public var scroller:Scroller;
-		[Bindable]
 		public var canvas:Group;
 		// data
 		private var visHash:Object;
@@ -57,7 +54,10 @@ package twinlist
 		private var columnWidth:int = 0;
 		private var columnHeight:int = 0;
 		// font details
-		private var textHeight:int = 16;
+		private var fontSizeItem:int = 16;
+		private var fontSizeHeader:int = 16;
+		private var fontSizePopup:int = 16;
+		private var fontSizeGroupHeader:int = 12;
 		private var fontString:String = "Sans Serif";
 		// animation
 		private var reset:Boolean;
@@ -99,15 +99,6 @@ package twinlist
 			model.addEventListener(Model.OPTIONS_UPDATED, OnOptionsUpdated);
 		}
 		
-		public function get RemoveAfterAction():Boolean
-		{
-			return removeAfterAction;
-		}
-		public function set RemoveAfterAction(enabled:Boolean):void
-		{
-			removeAfterAction = enabled;
-		}
-		
 		private function OnDataLoaded(event:Event):void
 		{
 			// create state visualization
@@ -123,7 +114,7 @@ package twinlist
 			}
 			// add header horizontal lines
 			line1 = CreateHorizontalLine(1);
-			line2 = CreateHorizontalLine(2 * HeaderTextHeight + TextSpacing);
+			line2 = CreateHorizontalLine(2 * HeaderFontSize + TextSpacing);
 			vis.addChild(line1);
 			vis.addChild(line2);
 			
@@ -439,15 +430,15 @@ package twinlist
 			var line:LineSprite = new LineSprite();
 			line.lineColor = colorText;
 			line.x1 = 0;
-			line.y1 = textHeight;
+			line.y1 = HeaderFontSize;
 			line.x2 = 0;
-			line.y2 = textHeight;
+			line.y2 = HeaderFontSize;
 			line.lineWidth = 2;
 			
 			var header:TextSprite = new TextSprite(value);
 			header.font = fontString;
 			header.color = colorText;
-			header.size = textHeight - 4;
+			header.size = GroupHeaderFontSize;
 			header.letterSpacing = 2;
 			header.x = 0;
 			header.y = y;
@@ -465,7 +456,7 @@ package twinlist
 				header.visible = false;
 			}
 			header.color = colorText;
-			header.size = HeaderTextHeight;
+			header.size = HeaderFontSize;
 			header.font = fontString;
 			header.bold = true;
 			header.letterSpacing = 2;
@@ -479,11 +470,11 @@ package twinlist
 				button.visible = false;
 			}
 			button.color = colorText;
-			button.size = HeaderTextHeight - 4;
+			button.size = HeaderFontSize - 4;
 			button.font = fontString;
 			//button.horizontalAnchor = TextSprite.CENTER;
 			button.x = 10;//columnWidth / 2;
-			button.y = HeaderTextHeight + 4;
+			button.y = HeaderFontSize + 4;
 			button.buttonMode = true;
 			button.addEventListener(MouseEvent.ROLL_OVER, function(e:Event):void {
 				button.color = colorTextHighlighted;
@@ -527,18 +518,18 @@ package twinlist
 				x += columnWidth;
 				
 				sprite = rect.getChildAt(0) as TextSprite;
-				sprite.size = HeaderTextHeight;
-				sprite.x = columnWidth / 2;
+				sprite.size = HeaderFontSize;
+				sprite.x = 10;
 				
 				sprite = rect.getChildAt(1) as TextSprite;
-				sprite.size = HeaderTextHeight - 4;
-				sprite.x = columnWidth / 2;
-				sprite.y = HeaderTextHeight + 4;
+				sprite.size = HeaderFontSize - 4;
+				sprite.x = 10;
+				sprite.y = HeaderFontSize + 4;
 			}
 			
 			line1.x2 = 5 * columnWidth;
 			line2.x2 = 5 * columnWidth;
-			line2.y1 = line2.y2 = 2 * HeaderTextHeight + TextSpacing;
+			line2.y1 = line2.y2 = 2 * HeaderFontSize + TextSpacing;
 		}
 		
 		private function CreateHorizontalLine(y:int):LineSprite
@@ -570,7 +561,7 @@ package twinlist
 			var nameText:TextSprite = new TextSprite(item.Name);
 			var highlight:RectSprite;
 			nameText.color = item.ActedOn ? colorTextGray : colorText;
-			nameText.size = textHeight;
+			nameText.size = ItemFontSize;
 			nameText.font = fontString;
 			if (item.NameUnique) {
 				highlight = CreateDiffHighlight(nameText, listIdx);
@@ -584,10 +575,10 @@ package twinlist
 			for each (var attr:ItemAttribute in item.Attributes) {
 				attrText = new TextSprite(attr.ValuesString());
 				attrText.color = item.ActedOn ? colorTextGray : colorText;
-				attrText.size = textHeight - 4;
+				attrText.size = ItemFontSize - 4;
 				attrText.font = fontString;
 				attrText.x = x;
-				attrText.y = textHeight + 4;
+				attrText.y = ItemFontSize + 4;
 				if (attr.Unique) {
 					highlight = CreateDiffHighlight(attrText, listIdx);
 					highlight.alpha = animState == 3 ? 1 : 0;
@@ -604,7 +595,7 @@ package twinlist
 		{
 			// Create the sprite
 			var acceptBtn:TextSprite = new TextSprite("Accept?");
-			acceptBtn.size = textHeight;
+			acceptBtn.size = PopupFontSize;
 			acceptBtn.font = fontString;
 			acceptBtn.color = 0xff330000;
 			acceptBtn.buttonMode = true;
@@ -613,7 +604,7 @@ package twinlist
 			acceptBtn.addEventListener(MouseEvent.MOUSE_UP, AcceptClick);
 			
 			var rejectBtn:TextSprite = new TextSprite("Reject?");
-			rejectBtn.size = textHeight;
+			rejectBtn.size = PopupFontSize;
 			rejectBtn.font = fontString;
 			rejectBtn.color = 0xff330000;
 			rejectBtn.buttonMode = true;
@@ -715,32 +706,32 @@ package twinlist
 			for each (var sprite:DataSprite in visHash)
 			{
 				if (sprite.data.properties.type == 0) {
-					animMatchIdentical.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
-					animResetIdentical.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
+					animMatchIdentical.add(new Tween(sprite, 1*AnimationSpeed, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
+					animResetIdentical.add(new Tween(sprite, 1*AnimationSpeed, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
 				}
 				else if (sprite.data.properties.type == 1) {
-					animMatchSimilar.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
-					animResetSimilar.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
+					animMatchSimilar.add(new Tween(sprite, 1*AnimationSpeed, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
+					animResetSimilar.add(new Tween(sprite, 1*AnimationSpeed, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
 				}
 				else if (sprite.data.properties.type == 2) {
-					animMatchUnique.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
-					animResetUnique.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
+					animMatchUnique.add(new Tween(sprite, 1*AnimationSpeed, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
+					animResetUnique.add(new Tween(sprite, 1*AnimationSpeed, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
 				}
 				
 				for (i = 0; i < sprite.numChildren; i++) {
 					var child:Sprite = sprite.getChildAt(i) as Sprite;
 					if (child is RectSprite) {
 						if (sprite.data.properties.type == 0) {
-							animMatchIdentical.add(new Tween(child, 1*speedCoef, {alpha: 1}));
-							animResetIdentical.add(new Tween(child, 1*speedCoef, {alpha: 0}));
+							animMatchIdentical.add(new Tween(child, 1*AnimationSpeed, {alpha: 1}));
+							animResetIdentical.add(new Tween(child, 1*AnimationSpeed, {alpha: 0}));
 						}
 						else if (sprite.data.properties.type == 1) {
-							animMatchSimilar.add(new Tween(child, 1*speedCoef, {alpha: 1}));
-							animResetSimilar.add(new Tween(child, 1*speedCoef, {alpha: 0}));
+							animMatchSimilar.add(new Tween(child, 1*AnimationSpeed, {alpha: 1}));
+							animResetSimilar.add(new Tween(child, 1*AnimationSpeed, {alpha: 0}));
 						}
 						else if (sprite.data.properties.type == 2) {
-							animMatchUnique.add(new Tween(child, 1*speedCoef, {alpha: 1}));
-							animResetUnique.add(new Tween(child, 1*speedCoef, {alpha: 0}));
+							animMatchUnique.add(new Tween(child, 1*AnimationSpeed, {alpha: 1}));
+							animResetUnique.add(new Tween(child, 1*AnimationSpeed, {alpha: 0}));
 						}
 					}
 				}
@@ -749,76 +740,76 @@ package twinlist
 			// Animate group headers
 			for each (var header:Sprite in groupVisList)
 			{
-				animMatchSimilar.add(new Tween(header, 0.5*speedCoef, {alpha: 1}));
-				animResetSimilar.add(new Tween(header, 0.5*speedCoef, {alpha: 0}));
+				animMatchSimilar.add(new Tween(header, 0.5*AnimationSpeed, {alpha: 1}));
+				animResetSimilar.add(new Tween(header, 0.5*AnimationSpeed, {alpha: 0}));
 			}
 
 			// step-by-step "match" column animation
 			var seq:Sequence;
-			animMatchColIdentical.add(new Tween(columnList[2], 0.25*speedCoef, {fillColor: colorIdentical, lineColor: colorIdentical}));
+			animMatchColIdentical.add(new Tween(columnList[2], 0.25*AnimationSpeed, {fillColor: colorIdentical, lineColor: colorIdentical}));
 			seq = new Sequence();
 			seq.add(new Tween(columnList[2].getChildAt(0), 0, {visible: true}));
-			seq.add(new Tween(columnList[2].getChildAt(0), 0.25*speedCoef, {alpha: 1}));
+			seq.add(new Tween(columnList[2].getChildAt(0), 0.25*AnimationSpeed, {alpha: 1}));
 			animMatchColIdentical.add(seq);
 			seq = new Sequence();
 			seq.add(new Tween(columnList[2].getChildAt(1), 0, {visible: true}));
-			seq.add(new Tween(columnList[2].getChildAt(1), 0.25*speedCoef, {alpha: 1}));
+			seq.add(new Tween(columnList[2].getChildAt(1), 0.25*AnimationSpeed, {alpha: 1}));
 			animMatchColIdentical.add(seq);
-			animMatchColUnique.add(new Tween(columnList[0], 0.25*speedCoef, {fillColor: colorList1, lineColor: colorList1}));
+			animMatchColUnique.add(new Tween(columnList[0], 0.25*AnimationSpeed, {fillColor: colorList1, lineColor: colorList1}));
 			seq = new Sequence();
 			seq.add(new Tween(columnList[0].getChildAt(0), 0, {visible: true}));
-			seq.add(new Tween(columnList[0].getChildAt(0), 0.25*speedCoef, {alpha: 1}));
+			seq.add(new Tween(columnList[0].getChildAt(0), 0.25*AnimationSpeed, {alpha: 1}));
 			animMatchColUnique.add(seq);
 			seq = new Sequence();
 			seq.add(new Tween(columnList[0].getChildAt(1), 0, {visible: true}));
-			seq.add(new Tween(columnList[0].getChildAt(1), 0.25*speedCoef, {alpha: 1}));
+			seq.add(new Tween(columnList[0].getChildAt(1), 0.25*AnimationSpeed, {alpha: 1}));
 			animMatchColUnique.add(seq);
-			animMatchColUnique.add(new Tween(columnList[4], 0.25*speedCoef, {fillColor: colorList2, lineColor: colorList2}));
+			animMatchColUnique.add(new Tween(columnList[4], 0.25*AnimationSpeed, {fillColor: colorList2, lineColor: colorList2}));
 			seq = new Sequence();
 			seq.add(new Tween(columnList[4].getChildAt(0), 0, {visible: true}));
-			seq.add(new Tween(columnList[4].getChildAt(0), 0.25*speedCoef, {alpha: 1}));
+			seq.add(new Tween(columnList[4].getChildAt(0), 0.25*AnimationSpeed, {alpha: 1}));
 			animMatchColUnique.add(seq);
 			seq = new Sequence();
 			seq.add(new Tween(columnList[4].getChildAt(1), 0, {visible: true}));
-			seq.add(new Tween(columnList[4].getChildAt(1), 0.25*speedCoef, {alpha: 1}));
+			seq.add(new Tween(columnList[4].getChildAt(1), 0.25*AnimationSpeed, {alpha: 1}));
 			animMatchColUnique.add(seq);
-			animMatchColSimilar.add(new Tween(columnList[1], 0.25*speedCoef, {fillColor: (colorList1 + colorIdentical) / 2, lineColor: (colorList1 + colorIdentical) / 2}));
-			animMatchColSimilar.add(new Tween(columnList[1].getChildAt(0), 0.25*speedCoef, {text: model.VisibleLists[0].Name + ' - Similar'}));
-			animMatchColSimilar.add(new Tween(columnList[3], 0.25*speedCoef, {fillColor: (colorList2 + colorIdentical) / 2, lineColor: (colorList2 + colorIdentical) / 2}));
-			animMatchColSimilar.add(new Tween(columnList[3].getChildAt(0), 0.25*speedCoef, {text: model.VisibleLists[1].Name + ' - Similar'}));
+			animMatchColSimilar.add(new Tween(columnList[1], 0.25*AnimationSpeed, {fillColor: (colorList1 + colorIdentical) / 2, lineColor: (colorList1 + colorIdentical) / 2}));
+			animMatchColSimilar.add(new Tween(columnList[1].getChildAt(0), 0.25*AnimationSpeed, {text: model.VisibleLists[0].Name + ' - Similar'}));
+			animMatchColSimilar.add(new Tween(columnList[3], 0.25*AnimationSpeed, {fillColor: (colorList2 + colorIdentical) / 2, lineColor: (colorList2 + colorIdentical) / 2}));
+			animMatchColSimilar.add(new Tween(columnList[3].getChildAt(0), 0.25*AnimationSpeed, {text: model.VisibleLists[1].Name + ' - Similar'}));
 			
 			// step-by-step "reset" column animation
-			animResetColIdentical.add(new Tween(columnList[2], 0.25*speedCoef, {fillColor: colorBackground, lineColor: colorBackground}));
+			animResetColIdentical.add(new Tween(columnList[2], 0.25*AnimationSpeed, {fillColor: colorBackground, lineColor: colorBackground}));
 			seq = new Sequence();
-			seq.add(new Tween(columnList[2].getChildAt(0), 0.25*speedCoef, {alpha: 0}));
+			seq.add(new Tween(columnList[2].getChildAt(0), 0.25*AnimationSpeed, {alpha: 0}));
 			seq.add(new Tween(columnList[2].getChildAt(0), 0, {visible: false}));
 			animResetColIdentical.add(seq);
 			seq = new Sequence();
-			seq.add(new Tween(columnList[2].getChildAt(1), 0.25*speedCoef, {alpha: 0}));
+			seq.add(new Tween(columnList[2].getChildAt(1), 0.25*AnimationSpeed, {alpha: 0}));
 			seq.add(new Tween(columnList[2].getChildAt(1), 0, {visible: false}));
 			animResetColIdentical.add(seq);
 			animResetColUnique.add(new Tween(columnList[0], 0.25, {fillColor: colorBackground, lineColor: colorBackground}));
 			seq = new Sequence();
-			seq.add(new Tween(columnList[0].getChildAt(0), 0.25*speedCoef, {alpha: 0}));
+			seq.add(new Tween(columnList[0].getChildAt(0), 0.25*AnimationSpeed, {alpha: 0}));
 			seq.add(new Tween(columnList[0].getChildAt(0), 0, {visible: false}));
 			animResetColUnique.add(seq);
 			seq = new Sequence();
-			seq.add(new Tween(columnList[0].getChildAt(1), 0.25*speedCoef, {alpha: 0}));
+			seq.add(new Tween(columnList[0].getChildAt(1), 0.25*AnimationSpeed, {alpha: 0}));
 			seq.add(new Tween(columnList[0].getChildAt(1), 0, {visible: false}));
 			animResetColUnique.add(seq);
-			animResetColUnique.add(new Tween(columnList[4], 0.25*speedCoef, {fillColor: colorBackground, lineColor: colorBackground}));
+			animResetColUnique.add(new Tween(columnList[4], 0.25*AnimationSpeed, {fillColor: colorBackground, lineColor: colorBackground}));
 			seq = new Sequence();
-			seq.add(new Tween(columnList[4].getChildAt(0), 0.25*speedCoef, {alpha: 0}));
+			seq.add(new Tween(columnList[4].getChildAt(0), 0.25*AnimationSpeed, {alpha: 0}));
 			seq.add(new Tween(columnList[4].getChildAt(0), 0, {visible: false}));
 			animResetColUnique.add(seq);
 			seq = new Sequence();
-			seq.add(new Tween(columnList[4].getChildAt(1), 0.25*speedCoef, {alpha: 0}));
+			seq.add(new Tween(columnList[4].getChildAt(1), 0.25*AnimationSpeed, {alpha: 0}));
 			seq.add(new Tween(columnList[4].getChildAt(1), 0, {visible: false}));
 			animResetColUnique.add(seq);
-			animResetColSimilar.add(new Tween(columnList[1], 0.25*speedCoef, {fillColor: colorOriginal, lineColor: colorOriginal}));
-			animResetColSimilar.add(new Tween(columnList[1].getChildAt(0), 0.25*speedCoef, {text: model.VisibleLists[0].Name}));
-			animResetColSimilar.add(new Tween(columnList[3], 0.25*speedCoef, {fillColor: colorOriginal, lineColor: colorOriginal}));
-			animResetColSimilar.add(new Tween(columnList[3].getChildAt(0), 0.25*speedCoef, {text: model.VisibleLists[1].Name}));
+			animResetColSimilar.add(new Tween(columnList[1], 0.25*AnimationSpeed, {fillColor: colorOriginal, lineColor: colorOriginal}));
+			animResetColSimilar.add(new Tween(columnList[1].getChildAt(0), 0.25*AnimationSpeed, {text: model.VisibleLists[0].Name}));
+			animResetColSimilar.add(new Tween(columnList[3], 0.25*AnimationSpeed, {fillColor: colorOriginal, lineColor: colorOriginal}));
+			animResetColSimilar.add(new Tween(columnList[3].getChildAt(0), 0.25*AnimationSpeed, {text: model.VisibleLists[1].Name}));
 			
 			// add event listeners
 			for (i = 0; i < 3; i++) {
@@ -839,6 +830,15 @@ package twinlist
 				ChangeState(0);
 		}
 		
+		private function OnStateClick(event:MouseEvent):void
+		{
+			var sprite:DataSprite = event.currentTarget as DataSprite;
+			var state:int = sprite.data as int;
+			if (state == animState)
+				return;
+			ChangeState(state);
+		}
+		
 		private function StateRollOver(event:MouseEvent):void
 		{
 			var sprite:DataSprite = event.currentTarget as DataSprite;
@@ -855,15 +855,6 @@ package twinlist
 				return;
 			var text:TextSprite = sprite.getChildAt(0) as TextSprite;
 			text.color = colorText;
-		}
-		
-		private function OnStateClick(event:MouseEvent):void
-		{
-			var sprite:DataSprite = event.currentTarget as DataSprite;
-			var state:int = sprite.data as int;
-			if (state == animState)
-				return;
-			ChangeState(state);
 		}
 		
 		private function ChangeState(state:int):void
@@ -946,14 +937,22 @@ package twinlist
 		
 		private function AcceptAll(colIdx:int):void
 		{
-			if (reset)
-				model.AddActionListItems(colItems[colIdx], true);
-			else {
+			if (animState == 0) {
 				if (colIdx == 1)
 					model.AddActionListItems(model.VisibleLists[0], true);
 				else
 					model.AddActionListItems(model.VisibleLists[1], true);
-			}		
+			}
+			else if (animState == 1) {
+				if (colIdx == 1)
+					model.AddActionListItems(colItems[0].source.concat(colItems[1].source), true);
+				else if (colIdx == 3)
+					model.AddActionListItems(colItems[3].source.concat(colItems[4].source), true);
+				else
+					model.AddActionListItems(colItems[2], true);
+			}
+			else
+				model.AddActionListItems(colItems[colIdx], true);				
 		}
 		
 		private function RejectClick(event:MouseEvent):void
@@ -1033,24 +1032,73 @@ package twinlist
 				Highlight(sprite, false);
 		}
 		
-		private function get HeaderHeight():int
+		public function get RemoveAfterAction():Boolean
 		{
-			return 2 * HeaderTextHeight + 2 * TextSpacing;
+			return removeAfterAction;
+		}
+		public function set RemoveAfterAction(enabled:Boolean):void
+		{
+			removeAfterAction = enabled;
 		}
 		
-		private function get RowHeight():int
+		public function get AnimationSpeed():Number
 		{
-			return 2 * textHeight - 4 + TextSpacing;
+			return speedCoef;
+		}
+		public function set AnimationSpeed(value:Number):void
+		{
+			speedCoef = value;
 		}
 		
-		private function get HeaderTextHeight():int
+		public function get ItemFontSize():int
 		{
-			return textHeight;
+			return fontSizeItem;
+		}
+		public function set ItemFontSize(value:int):void
+		{
+			fontSizeItem = value;
+		}
+		
+		public function get HeaderFontSize():int
+		{
+			return fontSizeHeader;
+		}
+		public function set HeaderFontSize(value:int):void
+		{
+			fontSizeHeader = value;
+		}
+		
+		public function get PopupFontSize():int
+		{
+			return fontSizePopup;
+		}
+		public function set PopupFontSize(value:int):void
+		{
+			fontSizePopup = value;
+		}
+		
+		public function get GroupHeaderFontSize():int
+		{
+			return fontSizeGroupHeader;
+		}
+		public function set GroupHeaderFontSize(value:int):void
+		{
+			fontSizeGroupHeader = value;
 		}
 		
 		private function get TextSpacing():int
 		{
-			return textHeight - 2;
+			return 14;//ItemFontSize - 2;
+		}
+		
+		private function get HeaderHeight():int
+		{
+			return 2 * HeaderFontSize + 2 * TextSpacing;
+		}
+		
+		private function get RowHeight():int
+		{
+			return 2 * ItemFontSize - 4 + TextSpacing;
 		}
 		
 		private function Highlight(sprite:DataSprite, enabled:Boolean):void
@@ -1093,18 +1141,18 @@ package twinlist
 			var opt:Option = event.Data as Option;
 			switch (opt.Name) {
 				case Option.OPT_FONTSIZE:
-					textHeight = opt.Value as int;
+					ItemFontSize = opt.Value as int;
 					OnViewUpdated(event);
 					break;
 				case Option.OPT_ANIMATIONSPEED:
-					speedCoef = opt.Value as Number;
+					AnimationSpeed = opt.Value as Number;
 					UpdateAnimations();
 					break;
 				case Option.OPT_LINKIDENTICAL:
 					linkIdentical = opt.Value as Boolean;
 					break;
 				case Option.OPT_AFTERACTION:
-					removeAfterAction = opt.Value == Option.OPTVAL_REMOVE;
+					RemoveAfterAction = opt.Value == Option.OPTVAL_REMOVE;
 					OnViewUpdated(event);
 					break;
 			}
