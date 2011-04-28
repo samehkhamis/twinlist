@@ -7,6 +7,7 @@ package twinlist
 	import flare.display.LineSprite;
 	import flare.display.RectSprite;
 	import flare.display.TextSprite;
+	import flare.query.methods.update;
 	import flare.vis.Visualization;
 	import flare.vis.data.DataSprite;
 	
@@ -15,6 +16,8 @@ package twinlist
 	import flash.events.MouseEvent;
 	import flash.events.TimerEvent;
 	import flash.utils.Timer;
+	
+	import flashx.textLayout.edit.TextScrap;
 	
 	import mx.collections.ArrayCollection;
 	
@@ -32,11 +35,9 @@ package twinlist
 		[Bindable]
 		protected var vis:Visualization;
 		[Bindable]
-		public var resetBtn:Button;
+		protected var stateVis:Visualization;
 		[Bindable]
-		public var leftAnimBtn:Button;
-		[Bindable]
-		public var rightAnimBtn:Button;
+		public var animBtn:Button;
 		[Bindable]
 		public var scroller:Scroller;
 		[Bindable]
@@ -61,10 +62,10 @@ package twinlist
 		// animation
 		private var reset:Boolean;
 		private var animState:int;
-		private var animReset:Sequence;
-		private var animMerge:Array;
-		private var animSeparate:Array;
+		private var animMatch:Array;
+		private var animReset:Array;
 		private var speedCoef:Number = 1;
+		private var stateSprites:Array;
 		// grouping
 		private var groupName:String = '';
 		private var groupVisList:ArrayCollection = new ArrayCollection();
@@ -80,6 +81,8 @@ package twinlist
 		private var colorBackground:uint = 0xffffffff;
 		private var colorDiffHighlight1:uint = 0xffffff40;
 		private var colorDiffHighlight2:uint = 0xffB0B0ff;
+		private var colorStateActive:uint = 0xffdddddd;
+		private var colorStateInactive:uint = 0xfffffff;
 		// options
 		private var linkIdentical:Boolean = true;
 		private var removeAfterAction:Boolean = true;
@@ -88,7 +91,8 @@ package twinlist
 		{
 			super();
 			vis = new Visualization();
-			reset = false;
+			stateVis = new Visualization();
+			reset = true;
 			animState = 0;
 			model.addEventListener(Model.DATA_LOADED, OnDataLoaded);
 			model.addEventListener(Model.VIEW_UPDATED, OnViewUpdated);
@@ -106,11 +110,22 @@ package twinlist
 		
 		private function OnDataLoaded(event:Event):void
 		{
+			// create state visualization
+			CreateStateVis();
+			
 			// Get visList
 			visHash = CreateVisHash(model.ListViewerData);
 			
 			// create columns
-			CreateColumns();
+			columnList = CreateColumns();
+			for each (var col:Sprite in columnList) {
+				vis.addChild(col);
+			}
+			// add header horizontal lines
+			line1 = CreateHorizontalLine(1);
+			line2 = CreateHorizontalLine(2 * HeaderTextHeight + TextSpacing);
+			vis.addChild(line1);
+			vis.addChild(line2);
 			
 			// Fix x values and draw sprites
 			var sprite:DataSprite;
@@ -135,46 +150,6 @@ package twinlist
 			UpdateAnimations();
 		}
 		
-		private function CreateColumns():void
-		{
-			columnList = new ArrayCollection();
-			vis.addChild(CreateColumn(0, colorBackground, model.VisibleLists[0].Name + " - Unique"));
-			vis.addChild(CreateColumn(1, colorOriginal, model.VisibleLists[0].Name));
-			vis.addChild(CreateColumn(2, colorBackground, "Identical"));
-			vis.addChild(CreateColumn(3, colorOriginal, model.VisibleLists[1].Name));
-			vis.addChild(CreateColumn(4, colorBackground, model.VisibleLists[1].Name + " - Unique"));
-			line1 = CreateHorizontalLine(1);
-			line2 = CreateHorizontalLine(2 * HeaderTextHeight + TextSpacing);
-			vis.addChild(line1);
-			vis.addChild(line2);
-		}
-		
-		private function FixColumns():void
-		{
-			var x:int = 0;
-			var sprite:TextSprite;
-			for each (var rect:RectSprite in columnList)
-			{
-				rect.h = columnHeight;
-				rect.w = columnWidth;
-				rect.x = x;
-				x += columnWidth;
-				
-				sprite = rect.getChildAt(0) as TextSprite;
-				sprite.size = HeaderTextHeight;
-				sprite.x = columnWidth / 2;
-				
-				sprite = rect.getChildAt(1) as TextSprite;
-				sprite.size = HeaderTextHeight - 4;
-				sprite.x = columnWidth / 2;
-				sprite.y = HeaderTextHeight + 4;
-			}
-			
-			line1.x2 = 5 * columnWidth;
-			line2.x2 = 5 * columnWidth;
-			line2.y1 = line2.y2 = 2 * HeaderTextHeight + TextSpacing;
-		}
-		
 		private function OnViewUpdated(event:Event):void
 		{
 			// reset selected sprite
@@ -185,7 +160,7 @@ package twinlist
 			
 			// Fix the visualization
 			FixColumns();
-			
+	
 			canvas.invalidateDisplayList();
 			
 			// create transition animation
@@ -283,7 +258,7 @@ package twinlist
 				if (item.Identical1 != null || item.Identical2 != null)
 				{
 					if (item.Identical1 != null && (!item.Identical1.ActedOn || !RemoveAfterAction)) {
-						if (model.GroupBy)
+						if (model.GroupBy != null)
 						{
 							newValue = item.Identical1.Attributes[model.GroupBy.Name].Values[0].toString();
 							if (newValue != curValue)
@@ -306,7 +281,7 @@ package twinlist
 						l1y += RowHeight;
 					}
 					if (item.Identical2 != null && (!item.Identical2.ActedOn || !RemoveAfterAction)) {
-						if (model.GroupBy)
+						if (model.GroupBy != null)
 						{
 							newValue = item.Identical2.Attributes[model.GroupBy.Name].Values[0].toString();
 							if (newValue != curValue)
@@ -334,7 +309,7 @@ package twinlist
 				{
 					var added:Boolean = false;
 					if (item.L1Similar != null && (!item.L1Similar.ActedOn || !RemoveAfterAction)) {
-						if (model.GroupBy)
+						if (model.GroupBy != null)
 						{
 							newValue = item.L1Similar.Attributes[model.GroupBy.Name].Values[0].toString();
 							if (newValue != curValue)
@@ -357,7 +332,7 @@ package twinlist
 						added = true;
 					}
 					if (item.L2Similar != null && (!item.L2Similar.ActedOn || !RemoveAfterAction)) {
-						if (model.GroupBy)
+						if (model.GroupBy != null)
 						{
 							newValue = item.L2Similar.Attributes[model.GroupBy.Name].Values[0].toString();
 							if (newValue != curValue)
@@ -387,7 +362,7 @@ package twinlist
 				else if (item.L1Unique != null)
 				{
 					if (!item.L1Unique.ActedOn || !RemoveAfterAction) {
-						if (model.GroupBy)
+						if (model.GroupBy != null)
 						{
 							newValue = item.L1Unique.Attributes[model.GroupBy.Name].Values[0].toString();
 							if (newValue != curValue)
@@ -414,7 +389,7 @@ package twinlist
 				else if (item.L2Unique != null)
 				{
 					if (!item.L2Unique.ActedOn || !RemoveAfterAction) {
-						if (model.GroupBy)
+						if (model.GroupBy != null)
 						{
 							newValue = item.L2Unique.Attributes[model.GroupBy.Name].Values[0].toString();
 							if (newValue != curValue)
@@ -494,8 +469,8 @@ package twinlist
 			header.font = fontString;
 			header.bold = true;
 			header.letterSpacing = 2;
-			header.horizontalAnchor = TextSprite.CENTER;
-			header.x = columnWidth / 2;
+			//header.horizontalAnchor = TextSprite.CENTER;
+			header.x = 10;//columnWidth / 2;
 			header.y = 0;
 			
 			var button:TextSprite = new TextSprite("(Accept All)");
@@ -506,11 +481,9 @@ package twinlist
 			button.color = colorText;
 			button.size = HeaderTextHeight - 4;
 			button.font = fontString;
-			button.horizontalAnchor = TextSprite.CENTER;
-			button.x = columnWidth / 2;
+			//button.horizontalAnchor = TextSprite.CENTER;
+			button.x = 10;//columnWidth / 2;
 			button.y = HeaderTextHeight + 4;
-			button.backgroundBorder = true;
-			button.backgroundBorderColor = colorText;
 			button.buttonMode = true;
 			button.addEventListener(MouseEvent.ROLL_OVER, function(e:Event):void {
 				button.color = colorTextHighlighted;
@@ -527,9 +500,45 @@ package twinlist
 			rect.addChild(header);
 			rect.addChild(button);
 			rect.addEventListener(MouseEvent.MOUSE_DOWN, ItemMouseDown);
-			columnList.addItem(rect);
-			
+
 			return rect;
+		}
+		
+		private function CreateColumns():ArrayCollection
+		{
+			var colList:ArrayCollection = new ArrayCollection();
+			colList.addItem(CreateColumn(0, colorBackground, model.VisibleLists[0].Name + " - Unique"));
+			colList.addItem(CreateColumn(1, colorOriginal, model.VisibleLists[0].Name));
+			colList.addItem(CreateColumn(2, colorBackground, "Identical"));
+			colList.addItem(CreateColumn(3, colorOriginal, model.VisibleLists[1].Name));
+			colList.addItem(CreateColumn(4, colorBackground, model.VisibleLists[1].Name + " - Unique"));
+			return colList;
+		}
+		
+		private function FixColumns():void
+		{
+			var x:int = 0;
+			var sprite:TextSprite;
+			for each (var rect:RectSprite in columnList)
+			{
+				rect.h = columnHeight;
+				rect.w = columnWidth;
+				rect.x = x;
+				x += columnWidth;
+				
+				sprite = rect.getChildAt(0) as TextSprite;
+				sprite.size = HeaderTextHeight;
+				sprite.x = columnWidth / 2;
+				
+				sprite = rect.getChildAt(1) as TextSprite;
+				sprite.size = HeaderTextHeight - 4;
+				sprite.x = columnWidth / 2;
+				sprite.y = HeaderTextHeight + 4;
+			}
+			
+			line1.x2 = 5 * columnWidth;
+			line2.x2 = 5 * columnWidth;
+			line2.y1 = line2.y2 = 2 * HeaderTextHeight + TextSpacing;
 		}
 		
 		private function CreateHorizontalLine(y:int):LineSprite
@@ -624,85 +633,114 @@ package twinlist
 			timer.addEventListener(TimerEvent.TIMER, ClickTimer);
 		}
 		
+		private function CreateStateVis():void
+		{
+			var circ:DataSprite;
+			var text:TextSprite;
+			var stateText:Array = ["Separate", "Find Identical", "Find Unique", "Find Similar"];
+			var width:int = 75;
+			var w:int = 10;
+			
+			stateSprites = new Array(4);
+			for (var i:int = 0; i < stateText.length; i++) {
+				circ = new DataSprite();
+				circ.data = i;
+				circ.size = 1.5;
+				circ.fillColor = colorStateInactive;
+				circ.lineColor = colorText;
+				circ.buttonMode = true;
+				circ.x = width / 2 + w; 
+				circ.y = 20;
+				w += width + 10;
+				text = new TextSprite(stateText[i]);
+				text.font = fontString;
+				text.color = colorText;
+				text.size = 12;
+				text.buttonMode = true;
+				text.x = 0;
+				text.y = -27;
+				text.horizontalAnchor = TextSprite.CENTER;
+				circ.addChild(text);
+				stateSprites[i] = circ;
+				stateVis.addChild(circ);
+				circ.addEventListener(MouseEvent.ROLL_OVER, StateRollOver);
+				circ.addEventListener(MouseEvent.ROLL_OUT, StateRollOut);
+				circ.addEventListener(MouseEvent.CLICK, OnStateClick);
+			}
+			stateVis.update();
+		}
+		
 		private function UpdateAnimations():void
 		{
-			// iterator
+			// local vars
 			var i:int;
 			
 			// reset/merge/separate sequences
-			animReset = new Sequence();
-			animMerge = new Array(3);
-			animSeparate = new Array(3);
+			animMatch = new Array(3);
+			animReset = new Array(3);
 			for (i = 0; i < 3; i++) {
-				animMerge[i] = new Sequence();
-				animSeparate[i] = new Sequence();
-			}		
+				animMatch[i] = new Sequence();
+				animReset[i] = new Sequence();
+			}
 			
 			// parallel animations
-			var animResetCol:Parallel = new Parallel();
-			var animResetItems:Parallel = new Parallel();
-			var animMergeColIdentical:Parallel = new Parallel();
-			var animMergeColUnique:Parallel = new Parallel();
-			var animMergeColSimilar:Parallel = new Parallel();
-			var animMergeIdentical:Parallel = new Parallel();
-			var animMergeSimilar:Parallel = new Parallel();
-			var animMergeUnique:Parallel = new Parallel();
-			var animSeparateColIdentical:Parallel = new Parallel();
-			var animSeparateColUnique:Parallel = new Parallel();
-			var animSeparateColSimilar:Parallel = new Parallel();
-			var animSeparateIdentical:Parallel = new Parallel();
-			var animSeparateSimilar:Parallel = new Parallel();
-			var animSeparateUnique:Parallel = new Parallel();
+			var animMatchColIdentical:Parallel = new Parallel();
+			var animMatchColUnique:Parallel = new Parallel();
+			var animMatchColSimilar:Parallel = new Parallel();
+			var animMatchIdentical:Parallel = new Parallel();
+			var animMatchSimilar:Parallel = new Parallel();
+			var animMatchUnique:Parallel = new Parallel();
+			var animResetColIdentical:Parallel = new Parallel();
+			var animResetColUnique:Parallel = new Parallel();
+			var animResetColSimilar:Parallel = new Parallel();
+			var animResetIdentical:Parallel = new Parallel();
+			var animResetSimilar:Parallel = new Parallel();
+			var animResetUnique:Parallel = new Parallel();
 			
 			// add parallels to appropriate sequences
-			animReset.add(animResetCol);
-			animReset.add(animResetItems);
-			animMerge[0].add(animMergeColIdentical);
-			animMerge[0].add(animMergeIdentical);
-			animMerge[1].add(animMergeColUnique);
-			animMerge[1].add(animMergeUnique);
-			animMerge[2].add(animMergeColSimilar);
-			animMerge[2].add(animMergeSimilar);
-			animSeparate[0].add(animSeparateColIdentical);
-			animSeparate[0].add(animSeparateIdentical);
-			animSeparate[1].add(animSeparateColUnique);
-			animSeparate[1].add(animSeparateUnique);
-			animSeparate[2].add(animSeparateColSimilar);
-			animSeparate[2].add(animSeparateSimilar);
+			animMatch[0].add(animMatchColIdentical);
+			animMatch[0].add(animMatchIdentical);
+			animMatch[1].add(animMatchColUnique);
+			animMatch[1].add(animMatchUnique);
+			animMatch[2].add(animMatchColSimilar);
+			animMatch[2].add(animMatchSimilar);
+			animReset[0].add(animResetColIdentical);
+			animReset[0].add(animResetIdentical);
+			animReset[1].add(animResetColUnique);
+			animReset[1].add(animResetUnique);
+			animReset[2].add(animResetColSimilar);
+			animReset[2].add(animResetSimilar);
 						
 			// item animations
 			for each (var sprite:DataSprite in visHash)
 			{
-				animResetItems.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
-				
 				if (sprite.data.properties.type == 0) {
-					animMergeIdentical.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
-					animSeparateIdentical.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
+					animMatchIdentical.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
+					animResetIdentical.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
 				}
 				else if (sprite.data.properties.type == 1) {
-					animMergeSimilar.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
-					animSeparateSimilar.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
+					animMatchSimilar.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
+					animResetSimilar.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
 				}
 				else if (sprite.data.properties.type == 2) {
-					animMergeUnique.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
-					animSeparateUnique.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
+					animMatchUnique.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x2, y: sprite.data.properties.y2}));
+					animResetUnique.add(new Tween(sprite, 1*speedCoef, {x: sprite.data.properties.x1, y: sprite.data.properties.y1}));
 				}
 				
 				for (i = 0; i < sprite.numChildren; i++) {
 					var child:Sprite = sprite.getChildAt(i) as Sprite;
 					if (child is RectSprite) {
-						animResetCol.add(new Tween(child, 0.25*speedCoef, {alpha: 0}));
 						if (sprite.data.properties.type == 0) {
-							animMergeIdentical.add(new Tween(child, 1*speedCoef, {alpha: 1}));
-							animSeparateIdentical.add(new Tween(child, 1*speedCoef, {alpha: 0}));
+							animMatchIdentical.add(new Tween(child, 1*speedCoef, {alpha: 1}));
+							animResetIdentical.add(new Tween(child, 1*speedCoef, {alpha: 0}));
 						}
 						else if (sprite.data.properties.type == 1) {
-							animMergeSimilar.add(new Tween(child, 1*speedCoef, {alpha: 1}));
-							animSeparateSimilar.add(new Tween(child, 1*speedCoef, {alpha: 0}));
+							animMatchSimilar.add(new Tween(child, 1*speedCoef, {alpha: 1}));
+							animResetSimilar.add(new Tween(child, 1*speedCoef, {alpha: 0}));
 						}
 						else if (sprite.data.properties.type == 2) {
-							animMergeUnique.add(new Tween(child, 1*speedCoef, {alpha: 1}));
-							animSeparateUnique.add(new Tween(child, 1*speedCoef, {alpha: 0}));
+							animMatchUnique.add(new Tween(child, 1*speedCoef, {alpha: 1}));
+							animResetUnique.add(new Tween(child, 1*speedCoef, {alpha: 0}));
 						}
 					}
 				}
@@ -711,166 +749,179 @@ package twinlist
 			// Animate group headers
 			for each (var header:Sprite in groupVisList)
 			{
-				animMergeSimilar.add(new Tween(header, 0.5*speedCoef, {alpha: 1}));
-				animSeparateSimilar.add(new Tween(header, 0.5*speedCoef, {alpha: 0}));
-				animReset.add(new Tween(header, 0.5*speedCoef, {alpha: 0}));
+				animMatchSimilar.add(new Tween(header, 0.5*speedCoef, {alpha: 1}));
+				animResetSimilar.add(new Tween(header, 0.5*speedCoef, {alpha: 0}));
 			}
-			
-			// "reset" column animation
-			animResetCol.add(new Tween(columnList[0], 0.5*speedCoef, {fillColor: colorBackground, lineColor: colorBackground}));
-			seq = new Sequence();
-			seq.add(new Tween(columnList[0].getChildAt(0), 0.5*speedCoef, {alpha: 0}));
-			seq.add(new Tween(columnList[0].getChildAt(0), 0, {visible: false}));
-			animResetCol.add(seq);
-			seq = new Sequence();
-			seq.add(new Tween(columnList[0].getChildAt(1), 0.5*speedCoef, {alpha: 0}));
-			seq.add(new Tween(columnList[0].getChildAt(1), 0, {visible: false}));
-			animResetCol.add(seq);
-			animResetCol.add(new Tween(columnList[2], 0.5, {fillColor: colorBackground, lineColor: colorBackground}));
-			seq = new Sequence();
-			seq.add(new Tween(columnList[2].getChildAt(0), 0.5*speedCoef, {alpha: 0}));
-			seq.add(new Tween(columnList[2].getChildAt(0), 0, {visible: false}));
-			animResetCol.add(seq);
-			seq = new Sequence();
-			seq.add(new Tween(columnList[2].getChildAt(1), 0.5*speedCoef, {alpha: 0}));
-			seq.add(new Tween(columnList[2].getChildAt(1), 0, {visible: false}));
-			animResetCol.add(seq);
-			animResetCol.add(new Tween(columnList[4], 0.5*speedCoef, {fillColor: colorBackground, lineColor: colorBackground}));
-			seq = new Sequence();
-			seq.add(new Tween(columnList[4].getChildAt(0), 0.5*speedCoef, {alpha: 0}));
-			seq.add(new Tween(columnList[4].getChildAt(0), 0, {visible: false}));
-			animResetCol.add(seq);
-			seq = new Sequence();
-			seq.add(new Tween(columnList[4].getChildAt(1), 0.5*speedCoef, {alpha: 0}));
-			seq.add(new Tween(columnList[4].getChildAt(1), 0, {visible: false}));
-			animResetCol.add(seq);
-			animResetCol.add(new Tween(columnList[1], 0.5*speedCoef, {fillColor: colorOriginal, lineColor: colorOriginal}));
-			animResetCol.add(new Tween(columnList[1].getChildAt(0), 0.5*speedCoef, {text: model.VisibleLists[0].Name}));
-			animResetCol.add(new Tween(columnList[3], 0.5*speedCoef, {fillColor: colorOriginal, lineColor: colorOriginal}));
-			animResetCol.add(new Tween(columnList[3].getChildAt(0), 0.5*speedCoef, {text: model.VisibleLists[1].Name}));
-			
-			// "merge" column animation
+
+			// step-by-step "match" column animation
 			var seq:Sequence;
-			animMergeColIdentical.add(new Tween(columnList[2], 0.25*speedCoef, {fillColor: colorIdentical, lineColor: colorIdentical}));
+			animMatchColIdentical.add(new Tween(columnList[2], 0.25*speedCoef, {fillColor: colorIdentical, lineColor: colorIdentical}));
 			seq = new Sequence();
 			seq.add(new Tween(columnList[2].getChildAt(0), 0, {visible: true}));
 			seq.add(new Tween(columnList[2].getChildAt(0), 0.25*speedCoef, {alpha: 1}));
-			animMergeColIdentical.add(seq);
+			animMatchColIdentical.add(seq);
 			seq = new Sequence();
 			seq.add(new Tween(columnList[2].getChildAt(1), 0, {visible: true}));
 			seq.add(new Tween(columnList[2].getChildAt(1), 0.25*speedCoef, {alpha: 1}));
-			animMergeColIdentical.add(seq);
-			animMergeColUnique.add(new Tween(columnList[0], 0.25*speedCoef, {fillColor: colorList1, lineColor: colorList1}));
+			animMatchColIdentical.add(seq);
+			animMatchColUnique.add(new Tween(columnList[0], 0.25*speedCoef, {fillColor: colorList1, lineColor: colorList1}));
 			seq = new Sequence();
 			seq.add(new Tween(columnList[0].getChildAt(0), 0, {visible: true}));
 			seq.add(new Tween(columnList[0].getChildAt(0), 0.25*speedCoef, {alpha: 1}));
-			animMergeColUnique.add(seq);
+			animMatchColUnique.add(seq);
 			seq = new Sequence();
 			seq.add(new Tween(columnList[0].getChildAt(1), 0, {visible: true}));
 			seq.add(new Tween(columnList[0].getChildAt(1), 0.25*speedCoef, {alpha: 1}));
-			animMergeColUnique.add(seq);
-			animMergeColUnique.add(new Tween(columnList[4], 0.25*speedCoef, {fillColor: colorList2, lineColor: colorList2}));
+			animMatchColUnique.add(seq);
+			animMatchColUnique.add(new Tween(columnList[4], 0.25*speedCoef, {fillColor: colorList2, lineColor: colorList2}));
 			seq = new Sequence();
 			seq.add(new Tween(columnList[4].getChildAt(0), 0, {visible: true}));
 			seq.add(new Tween(columnList[4].getChildAt(0), 0.25*speedCoef, {alpha: 1}));
-			animMergeColUnique.add(seq);
+			animMatchColUnique.add(seq);
 			seq = new Sequence();
 			seq.add(new Tween(columnList[4].getChildAt(1), 0, {visible: true}));
 			seq.add(new Tween(columnList[4].getChildAt(1), 0.25*speedCoef, {alpha: 1}));
-			animMergeColUnique.add(seq);
-			animMergeColSimilar.add(new Tween(columnList[1], 0.25*speedCoef, {fillColor: (colorList1 + colorIdentical) / 2, lineColor: (colorList1 + colorIdentical) / 2}));
-			animMergeColSimilar.add(new Tween(columnList[1].getChildAt(0), 0.25*speedCoef, {text: model.VisibleLists[0].Name + ' - Similar'}));
-			animMergeColSimilar.add(new Tween(columnList[3], 0.25*speedCoef, {fillColor: (colorList2 + colorIdentical) / 2, lineColor: (colorList2 + colorIdentical) / 2}));
-			animMergeColSimilar.add(new Tween(columnList[3].getChildAt(0), 0.25*speedCoef, {text: model.VisibleLists[1].Name + ' - Similar'}));
+			animMatchColUnique.add(seq);
+			animMatchColSimilar.add(new Tween(columnList[1], 0.25*speedCoef, {fillColor: (colorList1 + colorIdentical) / 2, lineColor: (colorList1 + colorIdentical) / 2}));
+			animMatchColSimilar.add(new Tween(columnList[1].getChildAt(0), 0.25*speedCoef, {text: model.VisibleLists[0].Name + ' - Similar'}));
+			animMatchColSimilar.add(new Tween(columnList[3], 0.25*speedCoef, {fillColor: (colorList2 + colorIdentical) / 2, lineColor: (colorList2 + colorIdentical) / 2}));
+			animMatchColSimilar.add(new Tween(columnList[3].getChildAt(0), 0.25*speedCoef, {text: model.VisibleLists[1].Name + ' - Similar'}));
 			
-			// "separate" column animation
-			animSeparateColIdentical.add(new Tween(columnList[2], 0.25*speedCoef, {fillColor: colorBackground, lineColor: colorBackground}));
+			// step-by-step "reset" column animation
+			animResetColIdentical.add(new Tween(columnList[2], 0.25*speedCoef, {fillColor: colorBackground, lineColor: colorBackground}));
 			seq = new Sequence();
 			seq.add(new Tween(columnList[2].getChildAt(0), 0.25*speedCoef, {alpha: 0}));
 			seq.add(new Tween(columnList[2].getChildAt(0), 0, {visible: false}));
-			animSeparateColIdentical.add(seq);
+			animResetColIdentical.add(seq);
 			seq = new Sequence();
 			seq.add(new Tween(columnList[2].getChildAt(1), 0.25*speedCoef, {alpha: 0}));
 			seq.add(new Tween(columnList[2].getChildAt(1), 0, {visible: false}));
-			animSeparateColIdentical.add(seq);
-			animSeparateColUnique.add(new Tween(columnList[0], 0.25, {fillColor: colorBackground, lineColor: colorBackground}));
+			animResetColIdentical.add(seq);
+			animResetColUnique.add(new Tween(columnList[0], 0.25, {fillColor: colorBackground, lineColor: colorBackground}));
 			seq = new Sequence();
 			seq.add(new Tween(columnList[0].getChildAt(0), 0.25*speedCoef, {alpha: 0}));
 			seq.add(new Tween(columnList[0].getChildAt(0), 0, {visible: false}));
-			animSeparateColUnique.add(seq);
+			animResetColUnique.add(seq);
 			seq = new Sequence();
 			seq.add(new Tween(columnList[0].getChildAt(1), 0.25*speedCoef, {alpha: 0}));
 			seq.add(new Tween(columnList[0].getChildAt(1), 0, {visible: false}));
-			animSeparateColUnique.add(seq);
-			animSeparateColUnique.add(new Tween(columnList[4], 0.25*speedCoef, {fillColor: colorBackground, lineColor: colorBackground}));
+			animResetColUnique.add(seq);
+			animResetColUnique.add(new Tween(columnList[4], 0.25*speedCoef, {fillColor: colorBackground, lineColor: colorBackground}));
 			seq = new Sequence();
 			seq.add(new Tween(columnList[4].getChildAt(0), 0.25*speedCoef, {alpha: 0}));
 			seq.add(new Tween(columnList[4].getChildAt(0), 0, {visible: false}));
-			animSeparateColUnique.add(seq);
+			animResetColUnique.add(seq);
 			seq = new Sequence();
 			seq.add(new Tween(columnList[4].getChildAt(1), 0.25*speedCoef, {alpha: 0}));
 			seq.add(new Tween(columnList[4].getChildAt(1), 0, {visible: false}));
-			animSeparateColUnique.add(seq);
-			animSeparateColSimilar.add(new Tween(columnList[1], 0.25*speedCoef, {fillColor: colorOriginal, lineColor: colorOriginal}));
-			animSeparateColSimilar.add(new Tween(columnList[1].getChildAt(0), 0.25*speedCoef, {text: model.VisibleLists[0].Name}));
-			animSeparateColSimilar.add(new Tween(columnList[3], 0.25*speedCoef, {fillColor: colorOriginal, lineColor: colorOriginal}));
-			animSeparateColSimilar.add(new Tween(columnList[3].getChildAt(0), 0.25*speedCoef, {text: model.VisibleLists[1].Name}));
+			animResetColUnique.add(seq);
+			animResetColSimilar.add(new Tween(columnList[1], 0.25*speedCoef, {fillColor: colorOriginal, lineColor: colorOriginal}));
+			animResetColSimilar.add(new Tween(columnList[1].getChildAt(0), 0.25*speedCoef, {text: model.VisibleLists[0].Name}));
+			animResetColSimilar.add(new Tween(columnList[3], 0.25*speedCoef, {fillColor: colorOriginal, lineColor: colorOriginal}));
+			animResetColSimilar.add(new Tween(columnList[3].getChildAt(0), 0.25*speedCoef, {text: model.VisibleLists[1].Name}));
 			
 			// add event listeners
-			animReset.addEventListener(TransitionEvent.END, function(e:Event):void {
-				reset = true;
-				animState = 0;
-				resetBtn.enabled = true;
-				leftAnimBtn.enabled = true;
-				rightAnimBtn.enabled = true;
-			});
 			for (i = 0; i < 3; i++) {
-				animMerge[i].addEventListener(TransitionEvent.END, function(e:Event):void {
-					++animState;
-					reset = false;
-					resetBtn.enabled = true;
-					leftAnimBtn.enabled = true;
-					rightAnimBtn.enabled = true;
+				animMatch[i].addEventListener(TransitionEvent.START, function(e:Event):void {
+					SetState(animState+1);
 				});
-				animSeparate[i].addEventListener(TransitionEvent.END, function(e:Event):void {
-					--animState;
-					if (animState == 0)
-						reset = true;
-					resetBtn.enabled = true;
-					leftAnimBtn.enabled = true;
-					rightAnimBtn.enabled = true;
+				animReset[i].addEventListener(TransitionEvent.START, function(e:Event):void {
+					SetState(animState-1);
 				});
 			}
 		}
 		
-		protected function ResetButtonClick(event:MouseEvent):void
+		protected function AnimButtonClick(event:MouseEvent):void
 		{
 			if (reset)
-				return;
-			resetBtn.enabled = false;
-			leftAnimBtn.enabled = false;
-			rightAnimBtn.enabled = false;
-			animReset.play();
+				ChangeState(3);
+			else
+				ChangeState(0);
 		}
 		
-		protected function LeftAnimClick(event:MouseEvent):void
+		private function StateRollOver(event:MouseEvent):void
 		{
-			if (animState <= 0 || animState > 3)
+			var sprite:DataSprite = event.currentTarget as DataSprite;
+			if (sprite.data == animState)
 				return;
-			resetBtn.enabled = false;
-			leftAnimBtn.enabled = false;
-			rightAnimBtn.enabled = false;
-			animSeparate[animState-1].play();
+			var text:TextSprite = sprite.getChildAt(0) as TextSprite;
+			text.color = colorTextHighlighted;
 		}
 		
-		protected function RightAnimClick(event:MouseEvent):void
+		private function StateRollOut(event:MouseEvent):void
 		{
-			if (animState < 0 || animState >= 3)
+			var sprite:DataSprite = event.currentTarget as DataSprite;
+			if (sprite.data == animState)
 				return;
-			resetBtn.enabled = false;
-			leftAnimBtn.enabled = false;
-			rightAnimBtn.enabled = false;
-			animMerge[animState].play();
+			var text:TextSprite = sprite.getChildAt(0) as TextSprite;
+			text.color = colorText;
+		}
+		
+		private function OnStateClick(event:MouseEvent):void
+		{
+			var sprite:DataSprite = event.currentTarget as DataSprite;
+			var state:int = sprite.data as int;
+			if (state == animState)
+				return;
+			ChangeState(state);
+		}
+		
+		private function ChangeState(state:int):void
+		{
+			if (state == animState)
+				return;
+			EnableAnimButtons(false);
+			var seq:Sequence = new Sequence();
+			var i:int;
+			if (state > animState) {
+				for (i = animState; i < state; i++) {
+					seq.add(animMatch[i]);
+				}
+			}
+			else {
+				for (i = animState; i > state; i--) {
+					seq.add(animReset[i-1]);
+				}
+			}
+			seq.addEventListener(TransitionEvent.END, function(e:Event):void {
+				if (animState == 0) {
+					reset = true;
+					animBtn.label = "Match Lists";
+				}
+				else {
+					reset = false;
+					animBtn.label = "Reset View";
+				}
+				EnableAnimButtons(true);
+			});
+			seq.play();
+		}
+		
+		private function SetState(state:int):void
+		{
+			// remove highlighting from old state
+			var sprite:DataSprite = stateSprites[animState] as DataSprite;
+			sprite.fillColor = colorStateInactive;
+			var text:TextSprite = sprite.getChildAt(0) as TextSprite;
+			text.color = colorText;
+			// highlight new state
+			sprite = stateSprites[state] as DataSprite;
+			sprite.fillColor = colorStateActive;
+			text = sprite.getChildAt(0) as TextSprite;
+			text.color = colorTextHighlighted;
+			animState = state;
+			stateVis.update();
+		}
+		
+		private function EnableAnimButtons(enabled:Boolean):void
+		{
+			animBtn.enabled = enabled;
+			for (var i:int = 0; i < stateSprites.length; i++) {
+				var sprite:DataSprite = stateSprites[i] as DataSprite;
+				sprite.mouseEnabled = enabled;
+				var text:TextSprite = sprite.getChildAt(0) as TextSprite;
+				text.mouseEnabled = enabled;
+			}
 		}
 		
 		private function PopupButtonRollOver(event:MouseEvent):void
