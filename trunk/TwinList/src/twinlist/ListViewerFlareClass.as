@@ -7,7 +7,6 @@ package twinlist
 	import flare.display.LineSprite;
 	import flare.display.RectSprite;
 	import flare.display.TextSprite;
-	import flare.query.methods.update;
 	import flare.vis.Visualization;
 	import flare.vis.data.DataSprite;
 	
@@ -17,9 +16,8 @@ package twinlist
 	import flash.events.TimerEvent;
 	import flash.utils.Timer;
 	
-	import flashx.textLayout.edit.TextScrap;
-	
 	import mx.collections.ArrayCollection;
+	import mx.events.FlexEvent;
 	
 	import spark.components.Button;
 	import spark.components.Group;
@@ -104,6 +102,7 @@ package twinlist
 		{
 			// create state visualization
 			CreateStateVis();
+			//SetState(0);
 			
 			// Get visList
 			visHash = CreateVisHash(model.ListViewerData);
@@ -619,14 +618,15 @@ package twinlist
 				circ.data = i;
 				circ.size = 1.5;
 				circ.fillColor = colorStateInactive;
-				circ.lineColor = colorText;
+				circ.lineColor = colorStateActive;
+				circ.lineWidth = 2;
 				circ.buttonMode = true;
 				circ.x = width / 2 + w; 
 				circ.y = 20;
 				w += width + 10;
 				text = new TextSprite(stateText[i]);
 				text.font = fontString;
-				text.color = colorText;
+				text.color = colorStateText;
 				text.size = 12;
 				text.buttonMode = true;
 				text.x = 0;
