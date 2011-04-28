@@ -588,12 +588,12 @@ package twinlist
 			rejectBtn.font = fontString;
 			rejectBtn.color = 0xff330000;
 			rejectBtn.buttonMode = true;
-			rejectBtn.x = acceptBtn.width;
+			rejectBtn.y = acceptBtn.height;
 			rejectBtn.addEventListener(MouseEvent.MOUSE_OVER, PopupButtonRollOver);
 			rejectBtn.addEventListener(MouseEvent.MOUSE_OUT, PopupButtonRollOut);
 			rejectBtn.addEventListener(MouseEvent.MOUSE_UP, RejectClick);
 			
-			popup = new RectSprite(0, 0, rejectBtn.x + rejectBtn.width, rejectBtn.height);
+			popup = new RectSprite(0, 0, acceptBtn.width, acceptBtn.height + rejectBtn.height);
 			popup.fillColor = popup.lineColor = 0x55aaaaaa;
 			popup.alpha = 0;
 			popup.addChild(acceptBtn);
