@@ -83,6 +83,7 @@ package twinlist
 		private var colorDiffHighlight2:uint = 0xffB0B0ff;
 		private var colorStateActive:uint = 0xffdddddd;
 		private var colorStateInactive:uint = 0xfffffff;
+		private var colorStateText:uint = colorText;
 		// options
 		private var linkIdentical:Boolean = true;
 		private var removeAfterAction:Boolean = true;
@@ -149,9 +150,6 @@ package twinlist
 			// Get new visList
 			var newVisHash:Object = CreateVisHash(model.ListViewerData);
 			
-			// Fix the visualization
-			FixColumns();
-	
 			canvas.invalidateDisplayList();
 			
 			// create transition animation
@@ -189,7 +187,16 @@ package twinlist
 				vis.addChild(sprite);
 				animUpdate.add(new Tween(sprite, 0.5, {alpha: 1}));
 			}
-			
+			// fix columns
+			var x:int = 0;
+			for each (var rect:RectSprite in columnList)
+			{
+				animUpdate.add(new Tween(rect, 0.5, {w: columnWidth, h: columnHeight, x: x}));
+				x += columnWidth;				
+			}
+			animUpdate.add(new Tween(line1, 0.5, {x2: 5 * columnWidth}));
+			animUpdate.add(new Tween(line2, 0.5, {x2: 5 * columnWidth}));
+			// fix group headers
 			for each (var header:Sprite in groupVisList)
 			{
 				vis.addChild(header);
@@ -211,7 +218,7 @@ package twinlist
 				vis.removeChild(sprite);
 			}
 			visHash = newVisHash;
-			
+						
 			// Update the two animation sequences
 			UpdateAnimations();
 		}
@@ -504,32 +511,6 @@ package twinlist
 			colList.addItem(CreateColumn(3, colorOriginal, model.VisibleLists[1].Name));
 			colList.addItem(CreateColumn(4, colorBackground, model.VisibleLists[1].Name + " - Unique"));
 			return colList;
-		}
-		
-		private function FixColumns():void
-		{
-			var x:int = 0;
-			var sprite:TextSprite;
-			for each (var rect:RectSprite in columnList)
-			{
-				rect.h = columnHeight;
-				rect.w = columnWidth;
-				rect.x = x;
-				x += columnWidth;
-				
-				sprite = rect.getChildAt(0) as TextSprite;
-				sprite.size = HeaderFontSize;
-				sprite.x = 10;
-				
-				sprite = rect.getChildAt(1) as TextSprite;
-				sprite.size = HeaderFontSize - 4;
-				sprite.x = 10;
-				sprite.y = HeaderFontSize + 4;
-			}
-			
-			line1.x2 = 5 * columnWidth;
-			line2.x2 = 5 * columnWidth;
-			line2.y1 = line2.y2 = 2 * HeaderFontSize + TextSpacing;
 		}
 		
 		private function CreateHorizontalLine(y:int):LineSprite
@@ -854,7 +835,7 @@ package twinlist
 			if (sprite.data == animState)
 				return;
 			var text:TextSprite = sprite.getChildAt(0) as TextSprite;
-			text.color = colorText;
+			text.color = colorStateText;
 		}
 		
 		private function ChangeState(state:int):void
@@ -894,7 +875,7 @@ package twinlist
 			var sprite:DataSprite = stateSprites[animState] as DataSprite;
 			sprite.fillColor = colorStateInactive;
 			var text:TextSprite = sprite.getChildAt(0) as TextSprite;
-			text.color = colorText;
+			text.color = colorStateText;
 			// highlight new state
 			sprite = stateSprites[state] as DataSprite;
 			sprite.fillColor = colorStateActive;
@@ -907,11 +888,22 @@ package twinlist
 		private function EnableAnimButtons(enabled:Boolean):void
 		{
 			animBtn.enabled = enabled;
+			colorStateText = enabled ? colorText : colorTextGray;
 			for (var i:int = 0; i < stateSprites.length; i++) {
 				var sprite:DataSprite = stateSprites[i] as DataSprite;
-				sprite.mouseEnabled = enabled;
+				sprite.buttonMode = enabled;
 				var text:TextSprite = sprite.getChildAt(0) as TextSprite;
-				text.mouseEnabled = enabled;
+				text.buttonMode = enabled;
+				if (i != animState)
+					text.color = colorStateText;
+				if (enabled) {
+					sprite.addEventListener(MouseEvent.ROLL_OVER, StateRollOver);
+					sprite.addEventListener(MouseEvent.CLICK, OnStateClick);
+				}
+				else {
+					sprite.removeEventListener(MouseEvent.ROLL_OVER, StateRollOver);
+					sprite.removeEventListener(MouseEvent.CLICK, OnStateClick);
+				}
 			}
 		}
 		
