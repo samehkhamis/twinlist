@@ -34,6 +34,7 @@
 		// sorting
 		private static var defaultSort:Sort;
 		// list info
+		private var loaded:int = 0;
 		private var schema:Object;
 		private var lists:ArrayCollection;
 		private var listIdx:Object;
@@ -493,7 +494,8 @@
 		{
 			listIdx[list.Id] = lists.length;
 			lists.addItem(list);
-			if (lists.length >= 2 && hashSimilarities != null) {
+			loaded++;
+			if (loaded == 3) {
 				FinishInit();
 			}
 		}
@@ -502,7 +504,8 @@
 		{
 			// Setting similarities to hash of similarities in the model.
 			hashSimilarities = hash;
-			if (lists.length >= 2 && hashSimilarities != null) {
+			loaded++;
+			if (loaded == 3) {
 				FinishInit();
 			}
 		}
