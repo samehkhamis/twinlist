@@ -471,6 +471,7 @@ package twinlist
 			header.y = 0;
 			
 			var button:TextSprite = new TextSprite("(Accept All)");
+			button.underline = true;
 			if (index % 2 == 0) {
 				button.alpha = 0;
 				button.visible = false;
