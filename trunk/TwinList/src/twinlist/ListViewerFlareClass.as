@@ -102,7 +102,7 @@ package twinlist
 		{
 			// create state visualization
 			CreateStateVis();
-			//SetState(0);
+			SetState(0);
 			
 			// Get visList
 			visHash = CreateVisHash(model.ListViewerData);
