@@ -14,6 +14,7 @@
 	</twinlist:layout>
 	<s:HGroup>
 		<s:Label text="TwinList" fontSize="24" />
+		<mx:Spacer width="20"/>
 		<s:Button id="animBtn" label="Match Lists" width="100" click="AnimButtonClick(event)"/>
 		<s:Group width="200" height="30">
 			<flare:FlareCanvas id="stateVisCanvas" visualization="{this.stateVis}"/>
