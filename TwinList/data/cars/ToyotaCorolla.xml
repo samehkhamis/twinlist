@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list id="ToyotaCorolla" name="Toyota Corolla">
+
+	<item id="ToyotaCorolla:GasMileagempg" name="Gas Mileage: 35mpg">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Economy"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="5"/>
+		</attribute>
+	</item>
+	<item id="ToyotaCorolla:Price" name="Price: $15,600">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Economy"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="3"/>
+		</attribute>
+	</item>
+	<item id="ToyotaCorolla:Warrantymiles" name="Warranty: 60,000 miles">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Reliability"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="4"/>
+		</attribute>
+	</item>
+	<item id="ToyotaCorolla:AntilockBrakes" name="Antilock Brakes">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Safety"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="5"/>
+		</attribute>
+	</item>
+	<item id="ToyotaCorolla:CDPlayer" name="CD Player">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Features"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="1"/>
+		</attribute>
+	</item>
+	<item id="ToyotaCorolla:StyleSedan" name="Style: Sedan">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Exterior"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="2"/>
+		</attribute>
+	</item>
+	<item id="ToyotaCorolla:VehicleTheftTracking" name="Vehicle Theft Tracking">
+		<attribute name="Standard" type="Categorical">
+			<value value="Optional"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Safety"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="3"/>
+		</attribute>
+	</item>
+	<item id="ToyotaCorolla:CargoSpacecuft" name="Cargo Space: 12.3 cu ft">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Space"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="3"/>
+		</attribute>
+	</item>
+	<item id="ToyotaCorolla:PassengerVolumecuft" name="Passenger Volume: 92.10 cu ft">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Space"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="3"/>
+		</attribute>
+	</item>
+	<item id="ToyotaCorolla:PowerWindows" name="Power Windows">
+		<attribute name="Standard" type="Categorical">
+			<value value="Optional"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Features"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="1"/>
+		</attribute>
+	</item>
+</list>

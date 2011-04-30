@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list id="FordFiesta" name="Ford Fiesta">
+
+	<item id="FordFiesta:GasMileagempg" name="Gas Mileage: 42mpg">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Economy"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="5"/>
+		</attribute>
+	</item>
+	<item id="FordFiesta:Price" name="Price: $15,120">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Economy"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="3"/>
+		</attribute>
+	</item>
+	<item id="FordFiesta:Warrantymiles" name="Warranty: 60,000 miles">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Reliability"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="4"/>
+		</attribute>
+	</item>
+	<item id="FordFiesta:AntilockBrakes" name="Antilock Brakes">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Safety"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="5"/>
+		</attribute>
+	</item>
+	<item id="FordFiesta:CDPlayer" name="CD Player">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Features"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="1"/>
+		</attribute>
+	</item>
+	<item id="FordFiesta:StyleHatchback" name="Style: Hatchback">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Exterior"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="2"/>
+		</attribute>
+	</item>
+	<item id="FordFiesta:Sunroof" name="Sunroof">
+		<attribute name="Standard" type="Categorical">
+			<value value="Optional"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Exterior"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="3"/>
+		</attribute>
+	</item>
+	<item id="FordFiesta:CargoSpacecuft" name="Cargo Space: 15 cu ft">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Space"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="3"/>
+		</attribute>
+	</item>
+	<item id="FordFiesta:PassengerVolumecuft" name="Passenger Volume: 85.10 cu ft">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Space"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="3"/>
+		</attribute>
+	</item>
+	<item id="FordFiesta:PowerWindows" name="Power Windows">
+		<attribute name="Standard" type="Categorical">
+			<value value="Standard"/>
+		</attribute>
+		<attribute name="Category" type="Categorical">
+			<value value="Features"/>
+		</attribute>
+		<attribute name="Priority" type="Numerical">
+			<value value="1"/>
+		</attribute>
+	</item>
+</list>

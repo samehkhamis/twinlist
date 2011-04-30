@@ -95,7 +95,7 @@
 			SetOption(new Option(Option.OPT_AFTERACTION, Option.OPTVAL_REMOVE));
 
 			// load data
-			var mode:String = "medRec";
+			var mode:String = "cars";
 			var list1File:String = "../data/medication/list1.xml";
 			var list2File:String = "../data/medication/list2.xml";
 			var simFile:String = "../data/medication/list1_list2_similarities.xml";
@@ -115,6 +115,12 @@
 					list2File = "../data/sotu/obama09.0809.test.xml";
 					simFile= "../data/sotu/bush_08_obama_09_similarities.test.xml";
 					break;
+				case "cars":
+					list1File = "../data/cars/FordFiesta.xml";
+					list2File = "../data/cars/ToyotaCorolla.xml";
+					simFile= "../data/cars/carSimilarities.xml";
+					break;
+
 			}
 
 			//LoadCannedData();
