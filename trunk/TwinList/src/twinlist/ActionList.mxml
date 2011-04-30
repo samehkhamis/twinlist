@@ -18,6 +18,7 @@
 		<s:VerticalLayout />		
 	</twinlist:layout>
 	<!--<s:Label text="{this.listTitle}" fontSize="24"/>-->
-	<mx:AdvancedDataGrid id="dataGrid" height="100%" width="100%" borderVisible="false" rowHeight="30" verticalAlign="middle"
+	<mx:AdvancedDataGrid id="dataGrid" height="100%" width="100%"
+						 borderVisible="false" alternatingItemColors="[#ffffff, #ebf4ff]" rowHeight="30" verticalAlign="middle"
 				 dataProvider="{this.dataSource}"/>
 </twinlist:ActionListClass>
