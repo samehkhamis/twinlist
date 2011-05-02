@@ -17,9 +17,8 @@
 		<s:VerticalLayout paddingLeft="10" paddingRight="10" paddingTop="10" paddingBottom="10"/>
 	</twinlist:layout>
 	<s:HGroup>
-	  <s:Label text="Dataset:" paddingTop="5" width="80"/>
-	  <s:DropDownList id="datasetList" width="100%" selectedIndex="0" dataProvider="{this.datasetOptions}" change="OnDatasetChange(event)" 
-			  />
+		<s:Label text="Dataset:" width="120" height="25" fontSize="14"/>
+		<s:DropDownList id="datasetList" width="100%" selectedIndex="1" dataProvider="{this.datasetOptions}" change="OnDatasetChange(event)"/>
 	</s:HGroup>
 	    
 	<s:HGroup width="100%" verticalAlign="middle">

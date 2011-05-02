@@ -29,6 +29,11 @@
 		public static const VIEW_UPDATED:String = "__VIEW_UPDATED__";
 		public static const ACTION_TAKEN:String = "__ACTION_TAKEN__";
 		public static const OPTIONS_UPDATED:String = "__OPTIONS_UPDATED__";
+		// dataset strings
+		public static const DATA_CARS:String = "__DATA_CARS__";
+		public static const DATA_MED_REC:String = "__DATA_MED_REC__";
+		public static const DATA_SOTU:String = "__DATA_SOTU__";
+		public static const DATA_SOTU_TEST:String = "__DATA_SOTU_TEST__";
 		// model
 		private static var instance:Model = new Model();
 		// sorting
@@ -70,43 +75,36 @@
 		{
 			if (instance != null)
 			  throw new Error("Model can only be accessed via Model.Instance()");
-			SetDataset("medRec");
-			resetView();
-		}
-	        private function resetView():void{
-		  // init
-		  loaded = 0;
-		  lists = new ArrayCollection();
-		  listIdx = new Object();
-		  visibleListIds = new Array(2);
-		  visibleItemIds = new Object();
-		  listViewerData = new ArrayCollection();
-		  listViewerIdxHash = new Object();
-		  hashSimilarities = new ArrayCollection();
-		  acceptedItems = new ArrayCollection();
-		  rejectedItems = new ArrayCollection();
-		  visibleActionListIdx = 0;
-		  itemAttributes = new ArrayCollection();
-		  categoricalAttributes = new ArrayCollection();
-		  numericalAttributes = new ArrayCollection();
-		  defaultSort = new Sort();
-		  selectedItem = null;
-		  sizeByAttribute = null;
-		  colorByAttribute = null;
-		  groupByAttribute = null;
-		  sortByAttribute = null;
-		  filterList = new ArrayCollection();
-		  options = new Object();
 			
-		  // default options
-		  SetOption(new Option(Option.OPT_FONTSIZE, 16));
-		  SetOption(new Option(Option.OPT_LINKIDENTICAL, true));
-		  SetOption(new Option(Option.OPT_AFTERACTION, Option.OPTVAL_REMOVE));
-		  
-		  new XmlListLoader(list1File, OnReadListXmlComplete);
-		  new XmlListLoader(list2File, OnReadListXmlComplete);	
-		  new XmlSimilarityLoader(simFile,OnReadSimilarityXmlComplete);	
-		  
+			// init
+			loaded = 0;
+			lists = new ArrayCollection();
+			listIdx = new Object();
+			visibleListIds = new Array(2);
+			visibleItemIds = new Object();
+			listViewerData = new ArrayCollection();
+			listViewerIdxHash = new Object();
+			hashSimilarities = new ArrayCollection();
+			acceptedItems = new ArrayCollection();
+			rejectedItems = new ArrayCollection();
+			visibleActionListIdx = 0;
+			itemAttributes = new ArrayCollection();
+			categoricalAttributes = new ArrayCollection();
+			numericalAttributes = new ArrayCollection();
+			defaultSort = new Sort();
+			SelectedItem = null;
+			sizeByAttribute = null;
+			colorByAttribute = null;
+			groupByAttribute = null;
+			sortByAttribute = null;
+			filterList = new ArrayCollection();
+			SetDataset(DATA_MED_REC);
+
+			// default options
+			options = new Object();
+			SetOption(new Option(Option.OPT_FONTSIZE, 16));
+			SetOption(new Option(Option.OPT_LINKIDENTICAL, true));
+			SetOption(new Option(Option.OPT_AFTERACTION, Option.OPTVAL_REMOVE));			
 		}
 		
 		public static function get Instance():Model
@@ -114,33 +112,32 @@
 			return instance;
 		}
 
-	        public function SetDataset(dataset:String):void
+		public function SetDataset(dataset:String):void
 		{
-		  switch (dataset) {
-		  case "medRec":
-		    list1File = "../data/medication/list1.xml";
-		    list2File = "../data/medication/list2.xml";
-		    simFile= "../data/medication/list1_list2_similarities.xml";
-		    break;
-		  case "sotu0809":
-		    list1File = "../data/sotu/bush08.0809.xml";
-		    list2File = "../data/sotu/obama09.0809.xml";
-		    simFile= "../data/sotu/bush_08_obama_09_similarities.xml";
-		    break;
-		  case "sotu0809test":
-		    list1File = "../data/sotu/bush08.0809.test.xml";
-		    list2File = "../data/sotu/obama09.0809.test.xml";
-		    simFile= "../data/sotu/bush_08_obama_09_similarities.test.xml";
-		    break;
-		  case "cars":
-		    list1File = "../data/cars/FordFiesta.xml";
-		    list2File = "../data/cars/ToyotaCorolla.xml";
-		    simFile= "../data/cars/carSimilarities.xml";
-		    break;
-		  }
-		  resetView();
+			switch (dataset) {
+				case DATA_CARS:
+					list1File = "../data/cars/FordFiesta.xml";
+					list2File = "../data/cars/ToyotaCorolla.xml";
+					simFile= "../data/cars/carSimilarities.xml";
+					break;
+				case DATA_MED_REC:
+					list1File = "../data/medication/list1.xml";
+					list2File = "../data/medication/list2.xml";
+					simFile= "../data/medication/list1_list2_similarities.xml";
+					break;
+				case DATA_SOTU:
+					list1File = "../data/sotu/bush08.0809.xml";
+					list2File = "../data/sotu/obama09.0809.xml";
+					simFile= "../data/sotu/bush_08_obama_09_similarities.xml";
+					break;
+				case DATA_SOTU_TEST:
+					list1File = "../data/sotu/bush08.0809.test.xml";
+					list2File = "../data/sotu/obama09.0809.test.xml";
+					simFile= "../data/sotu/bush_08_obama_09_similarities.test.xml";
+					break;
+			}
+			LoadData();
 		}
-
 		
 		public function GetOption(name:String):Option
 		{
@@ -495,6 +492,38 @@
 			dispatchEvent(new TwinListEvent(VIEW_UPDATED));			
 		}
 		
+		private function Reset():void
+		{
+			loaded = 0;
+			lists = new ArrayCollection();
+			listIdx = new Object();
+			visibleListIds = new Array(2);
+			visibleItemIds = new Object();
+			listViewerData = new ArrayCollection();
+			listViewerIdxHash = new Object();
+			hashSimilarities = new ArrayCollection();
+			acceptedItems.removeAll();
+			rejectedItems.removeAll();
+			visibleActionListIdx = 0;
+			itemAttributes.removeAll();
+			categoricalAttributes.removeAll();
+			numericalAttributes.removeAll();
+			SelectedItem = null;
+			sizeByAttribute = null;
+			colorByAttribute = null;
+			groupByAttribute = null;
+			sortByAttribute = null;
+			filterList.removeAll();
+		}
+		
+		private function LoadData():void
+		{
+			Reset();
+			new XmlListLoader(list1File, OnReadListXmlComplete);
+			new XmlListLoader(list2File, OnReadListXmlComplete);	
+			new XmlSimilarityLoader(simFile, OnReadSimilarityXmlComplete);
+		}
+		
 		private function OnReadSchemaXmlComplete(schema:ListSchema):void
 		{
 			this.schema = schema;
@@ -525,7 +554,6 @@
 			SetVisibleLists(lists[0].Id, lists[1].Id);
 			//SortListViewerData();
 			dispatchEvent(new TwinListEvent(DATA_LOADED));
-			dispatchEvent(new TwinListEvent(VIEW_UPDATED));
 		}
 		
 		private function DetectAttributes():void

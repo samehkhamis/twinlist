@@ -26,7 +26,7 @@ package twinlist
 		public function OptionsPanelClass()
 		{
 			super();
-			var dataSets:Array = new Array("medRec", "cars", "sotu0809");
+			var dataSets:Array = new Array("Cars", "Medication");// , "SOTU");
 			datasetOptions = new ArrayCollection(dataSets);
 		}
 		
@@ -56,9 +56,11 @@ package twinlist
 		}
 		protected function OnDatasetChange(event:IndexChangeEvent):void
 		{
-		         model.SetDataset(datasetOptions[event.newIndex]);
+			switch (event.newIndex) {
+				case 0: model.SetDataset(Model.DATA_CARS); break;
+				case 1: model.SetDataset(Model.DATA_MED_REC); break;
+				case 2: model.SetDataset(Model.DATA_SOTU); break;
+			}
 		}
-
-
 	}
 }

@@ -7,6 +7,7 @@ package twinlist
 	import flare.display.LineSprite;
 	import flare.display.RectSprite;
 	import flare.display.TextSprite;
+	import flare.flex.vis.FlareCanvas;
 	import flare.vis.Visualization;
 	import flare.vis.data.DataSprite;
 	
@@ -32,7 +33,9 @@ package twinlist
 		protected var model:Model = Model.Instance;
 		// flare vis
 		protected var vis:Visualization;
-		protected var stateVis:Visualization;
+		public var visCanvas:FlareCanvas;
+		public var stateVis:Visualization;
+		public var stateVisCanvas:FlareCanvas;
 		// components
 		public var animBtn:Button;
 		public var scroller:Scroller;
@@ -66,7 +69,7 @@ package twinlist
 		private var stateSprites:Array;
 		// grouping
 		private var groupName:String = '';
-		private var groupVisList:ArrayCollection = new ArrayCollection();
+		private var groupVisList:ArrayCollection;
 		// colors
 		private var colorList1:uint = 0xffffffdd;
 		private var colorList2:uint = 0xffddddff;
@@ -89,10 +92,12 @@ package twinlist
 		public function ListViewerFlareClass()
 		{
 			super();
-			vis = new Visualization();
-			stateVis = new Visualization();
 			reset = true;
 			animState = 0;
+			// create state visualization
+			CreateStateVis();
+			SetState(0);			
+			// add event listeners
 			model.addEventListener(Model.DATA_LOADED, OnDataLoaded);
 			model.addEventListener(Model.VIEW_UPDATED, OnViewUpdated);
 			model.addEventListener(Model.OPTIONS_UPDATED, OnOptionsUpdated);
@@ -100,9 +105,20 @@ package twinlist
 		
 		private function OnDataLoaded(event:Event):void
 		{
-			// create state visualization
-			CreateStateVis();
-			SetState(0);
+			// reset state
+			if (!reset) {
+				SetState(0);
+				reset = true;
+				animBtn.label = "Match Lists";
+			}
+			
+			// create new visualization
+			vis = new Visualization();
+			if (visCanvas != null)
+				visCanvas.visualization = vis;
+			
+			// create group vis list
+			groupVisList = new ArrayCollection();
 			
 			// Get visList
 			visHash = CreateVisHash(model.ListViewerData);
@@ -191,6 +207,8 @@ package twinlist
 			for each (var rect:RectSprite in columnList)
 			{
 				animUpdate.add(new Tween(rect, 0.5, {w: columnWidth, h: columnHeight, x: x}));
+				animUpdate.add(new Tween(rect.getChildAt(0), 0.5, {x: columnWidth/2}));
+				animUpdate.add(new Tween(rect.getChildAt(1), 0.5, {x: columnWidth/2}));
 				x += columnWidth;				
 			}
 			animUpdate.add(new Tween(line1, 0.5, {x2: 5 * columnWidth}));
@@ -237,17 +255,19 @@ package twinlist
 			}
 			var newValue:String = '';
 			var curValue:String = '';
+			var groupValues:Object = new Object();
 			var valueCount:int = 0;
 			var idx:int = 0;
 			
 			// Remove old group sprites if group changed
 			var header:TextSprite;
-			for each (header in groupVisList)
-			{
-				vis.removeChild(header);
+			if (groupVisList != null && groupVisList.length > 0) {
+				for each (header in groupVisList)
+				{
+					vis.removeChild(header);
+				}
+				groupVisList.removeAll();
 			}
-			groupVisList.removeAll();
-			
 			
 			for each (var item:ListViewerItem in data)
 			{
@@ -466,8 +486,8 @@ package twinlist
 			header.font = fontString;
 			header.bold = true;
 			header.letterSpacing = 2;
-			//header.horizontalAnchor = TextSprite.CENTER;
-			header.x = 10;//columnWidth / 2;
+			header.horizontalAnchor = TextSprite.CENTER;
+			header.x = columnWidth / 2;
 			header.y = 0;
 			
 			var button:TextSprite = new TextSprite("(Accept All)");
@@ -479,8 +499,8 @@ package twinlist
 			button.color = colorText;
 			button.size = HeaderFontSize - 4;
 			button.font = fontString;
-			//button.horizontalAnchor = TextSprite.CENTER;
-			button.x = 10;//columnWidth / 2;
+			button.horizontalAnchor = TextSprite.CENTER;
+			button.x = columnWidth / 2;
 			button.y = HeaderFontSize + 4;
 			button.buttonMode = true;
 			button.addEventListener(MouseEvent.ROLL_OVER, function(e:Event):void {
@@ -612,6 +632,10 @@ package twinlist
 			var stateText:Array = ["Separate", "Find Identical", "Find Unique", "Find Similar"];
 			var width:int = 75;
 			var w:int = 10;
+			
+			stateVis = new Visualization();
+			if (stateVisCanvas != null)
+				stateVisCanvas.visualization = stateVis;
 			
 			stateSprites = new Array(4);
 			for (var i:int = 0; i < stateText.length; i++) {
