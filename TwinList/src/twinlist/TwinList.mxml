@@ -6,6 +6,7 @@
 	xmlns:twinlist="twinlist.*"
 	minWidth="1024" minHeight="768" pageTitle="TwinList"
 	>
+	<fx:Style source="TwinList.css"/>
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
