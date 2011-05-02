@@ -10,6 +10,12 @@
 		<attribute name="Frequency" type="Categorical">
 			<value value="daily"/>
 		</attribute>
+		<attribute name="DrugClass" type="Categorical">
+		  <value value="Supplement"/>
+		</attribute>
+		<attribute name="Symptom" type="General">
+		  <value value="Rickets"/>
+		</attribute>
 	</item>
 	<item id="patientItem2" name="Darbepoetin">
 		<attribute name="Dosage" type="Numerical" unit="mg">
@@ -20,6 +26,12 @@
 		</attribute>
 		<attribute name="Frequency" type="Categorical">
 			<value value="qFriday"/>
+		</attribute>
+		<attribute name="DrugClass" type="Categorical">
+		  <value value="ESA"/>
+		</attribute>
+		<attribute name="Symptom" type="General">
+		  <value value="Anemia"/>
 		</attribute>
 	</item>
 	<item id="patientItem3" name="Docusate Sodium">
@@ -32,6 +44,13 @@
 		<attribute name="Frequency" type="Categorical">
 			<value value="BID"/>
 		</attribute>
+		<attribute name="DrugClass" type="Categorical">
+		  <value value="Fecal softener"/>
+		</attribute>
+		<attribute name="Symptom" type="General">
+		  <value value="Constipation"/>
+		</attribute>
+
 	</item>
 	<item id="patientItem4" name="Ramipril">
 		<attribute name="Dosage" type="Numerical" unit="mg">
@@ -43,6 +62,13 @@
 		<attribute name="Frequency" type="Categorical">
 			<value value="daily"/>
 		</attribute>
+		<attribute name="DrugClass" type="Categorical">
+		  <value value="ACE Inhibitor"/>
+		</attribute>
+		<attribute name="Symptom" type="General">
+		  <value value="High Blood Pressure"/>
+		</attribute>
+
 	</item>
 	<item id="patientItem5" name="Acetaminophen">
 		<attribute name="Dosage" type="Numerical" unit="mg">
@@ -54,6 +80,13 @@
 		<attribute name="Frequency" type="Categorical">
 			<value value="q4h"/>
 		</attribute>
+		<attribute name="DrugClass" type="Categorical">
+		  <value value="Analgesic"/>
+		</attribute>
+		<attribute name="Symptom" type="General">
+		  <value value="Pain"/>
+		</attribute>
+
 	</item>
 	<item id="patientItem6" name="Calcium Carbonate">
 		<attribute name="Dosage" type="Numerical" unit="mg">
@@ -65,6 +98,13 @@
 		<attribute name="Frequency" type="Categorical">
 			<value value="TID CC"/>
 		</attribute>
+		<attribute name="DrugClass" type="Categorical">
+		  <value value="Supplement"/>
+		</attribute>
+		<attribute name="Symptom" type="General">
+		  <value value="Low Calcium"/>
+		</attribute>
+
 	</item>
 	<item id="patientItem7" name="Atorvistatin">
 		<attribute name="Dosage" type="Numerical" unit="mg">
@@ -76,6 +116,13 @@
 		<attribute name="Frequency" type="Categorical">
 			<value value="daily"/>
 		</attribute>
+		<attribute name="DrugClass" type="Categorical">
+		  <value value="Statin"/>
+		</attribute>
+		<attribute name="Symptom" type="General">
+		  <value value="High Cholesterol"/>
+		</attribute>
+
 	</item>
 	<item id="patientItem8" name="Metoprolol">
 		<attribute name="Dosage" type="Numerical" unit="mg">
@@ -87,6 +134,13 @@
 		<attribute name="Frequency" type="Categorical">
 			<value value="daily"/>
 		</attribute>
+		<attribute name="DrugClass" type="Categorical">
+		  <value value="Beta blocker"/>
+		</attribute>
+		<attribute name="Symptom" type="General">
+		  <value value="High Blood Pressure"/>
+		</attribute>
+
 	</item>
 	<item id="patientItem9" name="Aspirin">
 		<attribute name="Dosage" type="Numerical" unit="mg">
@@ -98,6 +152,14 @@
 		<attribute name="Frequency" type="Categorical">
 			<value value="daily"/>
 		</attribute>
+		<attribute name="DrugClass" type="Categorical">
+		  <value value="Analgesic"/>
+		  <value value="NSAID"/>
+		</attribute>
+		<attribute name="Symptom" type="General">
+		  <value value="Pain"/>
+		</attribute>
+
 	</item>
 	<item id="patientItem10" name="Meloxicam">
 		<attribute name="Dosage" type="Numerical" unit="mg">
@@ -109,5 +171,13 @@
 		<attribute name="Frequency" type="Categorical">
 			<value value="daily"/>
 		</attribute>
+		<attribute name="DrugClass" type="Categorical">
+		  <value value="NSAID"/>
+		  <value value="Analgesic"/>
+		</attribute>
+		<attribute name="Symptom" type="General">
+		  <value value="Pain"/>
+		</attribute>
+
 	</item>
 </list>

@@ -16,6 +16,12 @@
 	<twinlist:layout>
 		<s:VerticalLayout paddingLeft="10" paddingRight="10" paddingTop="10" paddingBottom="10"/>
 	</twinlist:layout>
+	<s:HGroup>
+	  <s:Label text="Dataset:" paddingTop="5" width="80"/>
+	  <s:DropDownList id="datasetList" width="100%" selectedIndex="0" dataProvider="{this.datasetOptions}" change="OnDatasetChange(event)" 
+			  />
+	</s:HGroup>
+	    
 	<s:HGroup width="100%" verticalAlign="middle">
 		<s:Label text="Font size" width="120" height="25" fontSize="14"/>
 		<s:NumericStepper id="nsFontSize" width="50" height="25" minimum="8" maximum="32" value="16" change="OnFontSizeChange(event)"/>
