@@ -9,14 +9,25 @@ package twinlist
 	import spark.components.NumericStepper;
 	import spark.components.RadioButtonGroup;
 
+	
+	import mx.collections.ArrayCollection;
+	import mx.events.CollectionEvent;
+	
+	import spark.components.DropDownList;
+	import spark.events.IndexChangeEvent;
+	
 	public class OptionsPanelClass extends Group
 	{
 		[Bindable]
 		protected var model:Model = Model.Instance;
 		
+	        [Bindable]
+	  protected var datasetOptions:ArrayCollection;
 		public function OptionsPanelClass()
 		{
 			super();
+			var dataSets:Array = new Array("medRec", "cars", "sotu0809");
+			datasetOptions = new ArrayCollection(dataSets);
 		}
 		
 		protected function OnFontSizeChange(event:Event):void
@@ -43,5 +54,11 @@ package twinlist
 			var tgt:RadioButtonGroup = event.target as RadioButtonGroup;
 			model.SetOption(new Option(Option.OPT_AFTERACTION, tgt.selectedValue as String));
 		}
+		protected function OnDatasetChange(event:IndexChangeEvent):void
+		{
+		         model.SetDataset(datasetOptions[event.newIndex]);
+		}
+
+
 	}
 }

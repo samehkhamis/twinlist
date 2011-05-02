@@ -58,85 +58,89 @@
 		private var groupByAttribute:AttributeDescriptor;
 		private var sortByAttribute:AttributeDescriptor;
 		private var filterList:ArrayCollection;
+	        //data
+	        private var list1File:String;
+	        private var list2File:String;
+	        private var simFile:String;
+
 		// options hashmap
 		private var options:Object;
 		
 		public function Model()
 		{
 			if (instance != null)
-				throw new Error("Model can only be accessed via Model.Instance()");
+			  throw new Error("Model can only be accessed via Model.Instance()");
+			SetDataset("medRec");
+			resetView();
+		}
+	        private function resetView():void{
+		  // init
+		  loaded = 0;
+		  lists = new ArrayCollection();
+		  listIdx = new Object();
+		  visibleListIds = new Array(2);
+		  visibleItemIds = new Object();
+		  listViewerData = new ArrayCollection();
+		  listViewerIdxHash = new Object();
+		  hashSimilarities = new ArrayCollection();
+		  acceptedItems = new ArrayCollection();
+		  rejectedItems = new ArrayCollection();
+		  visibleActionListIdx = 0;
+		  itemAttributes = new ArrayCollection();
+		  categoricalAttributes = new ArrayCollection();
+		  numericalAttributes = new ArrayCollection();
+		  defaultSort = new Sort();
+		  selectedItem = null;
+		  sizeByAttribute = null;
+		  colorByAttribute = null;
+		  groupByAttribute = null;
+		  sortByAttribute = null;
+		  filterList = new ArrayCollection();
+		  options = new Object();
 			
-			// init
-			lists = new ArrayCollection();
-			listIdx = new Object();
-			visibleListIds = new Array(2);
-			visibleItemIds = new Object();
-			listViewerData = new ArrayCollection();
-			listViewerIdxHash = new Object();
-			hashSimilarities = new ArrayCollection();
-			acceptedItems = new ArrayCollection();
-			rejectedItems = new ArrayCollection();
-			visibleActionListIdx = 0;
-			itemAttributes = new ArrayCollection();
-			categoricalAttributes = new ArrayCollection();
-			numericalAttributes = new ArrayCollection();
-			defaultSort = new Sort();
-			selectedItem = null;
-			sizeByAttribute = null;
-			colorByAttribute = null;
-			groupByAttribute = null;
-			sortByAttribute = null;
-			filterList = new ArrayCollection();
-			options = new Object();
-			
-			// default options
-			SetOption(new Option(Option.OPT_FONTSIZE, 16));
-			SetOption(new Option(Option.OPT_LINKIDENTICAL, true));
-			SetOption(new Option(Option.OPT_AFTERACTION, Option.OPTVAL_REMOVE));
-
-			// load data
-			var mode:String = "cars";
-			var list1File:String = "../data/medication/list1.xml";
-			var list2File:String = "../data/medication/list2.xml";
-			var simFile:String = "../data/medication/list1_list2_similarities.xml";
-			switch (mode) {
-				case "medRec":
-					list1File = "../data/medication/list1.xml";
-					list2File = "../data/medication/list2.xml";
-					simFile= "../data/medication/list1_list2_similarities.xml";
-					break;
-				case "sotu0809":
-					list1File = "../data/sotu/bush08.0809.xml";
-					list2File = "../data/sotu/obama09.0809.xml";
-					simFile= "../data/sotu/bush_08_obama_09_similarities.xml";
-					break;
-				case "sotu0809test":
-					list1File = "../data/sotu/bush08.0809.test.xml";
-					list2File = "../data/sotu/obama09.0809.test.xml";
-					simFile= "../data/sotu/bush_08_obama_09_similarities.test.xml";
-					break;
-				case "cars":
-					list1File = "../data/cars/FordFiesta.xml";
-					list2File = "../data/cars/ToyotaCorolla.xml";
-					simFile= "../data/cars/carSimilarities.xml";
-					break;
-
-			}
-
-			//LoadCannedData();
-			// load schema
-			//new XmlSchemaLoader("../data/medication/schema.xml", OnReadSchemaXmlComplete);
-			// load lists
-			new XmlListLoader(list1File, OnReadListXmlComplete);
-			new XmlListLoader(list2File, OnReadListXmlComplete);	
-			// load similarities
-			new XmlSimilarityLoader(simFile,OnReadSimilarityXmlComplete);	
+		  // default options
+		  SetOption(new Option(Option.OPT_FONTSIZE, 16));
+		  SetOption(new Option(Option.OPT_LINKIDENTICAL, true));
+		  SetOption(new Option(Option.OPT_AFTERACTION, Option.OPTVAL_REMOVE));
+		  
+		  new XmlListLoader(list1File, OnReadListXmlComplete);
+		  new XmlListLoader(list2File, OnReadListXmlComplete);	
+		  new XmlSimilarityLoader(simFile,OnReadSimilarityXmlComplete);	
+		  
 		}
 		
 		public static function get Instance():Model
 		{
 			return instance;
 		}
+
+	        public function SetDataset(dataset:String):void
+		{
+		  switch (dataset) {
+		  case "medRec":
+		    list1File = "../data/medication/list1.xml";
+		    list2File = "../data/medication/list2.xml";
+		    simFile= "../data/medication/list1_list2_similarities.xml";
+		    break;
+		  case "sotu0809":
+		    list1File = "../data/sotu/bush08.0809.xml";
+		    list2File = "../data/sotu/obama09.0809.xml";
+		    simFile= "../data/sotu/bush_08_obama_09_similarities.xml";
+		    break;
+		  case "sotu0809test":
+		    list1File = "../data/sotu/bush08.0809.test.xml";
+		    list2File = "../data/sotu/obama09.0809.test.xml";
+		    simFile= "../data/sotu/bush_08_obama_09_similarities.test.xml";
+		    break;
+		  case "cars":
+		    list1File = "../data/cars/FordFiesta.xml";
+		    list2File = "../data/cars/ToyotaCorolla.xml";
+		    simFile= "../data/cars/carSimilarities.xml";
+		    break;
+		  }
+		  resetView();
+		}
+
 		
 		public function GetOption(name:String):Option
 		{
@@ -521,6 +525,7 @@
 			SetVisibleLists(lists[0].Id, lists[1].Id);
 			//SortListViewerData();
 			dispatchEvent(new TwinListEvent(DATA_LOADED));
+			dispatchEvent(new TwinListEvent(VIEW_UPDATED));
 		}
 		
 		private function DetectAttributes():void
