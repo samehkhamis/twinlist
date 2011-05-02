@@ -1,0 +1,100 @@
+\documentclass{chi2009}
+\usepackage{times}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{color}
+\usepackage[pdftex]{hyperref}
+\hypersetup{%
+pdftitle={TwinList: \\ \large Visualizing List Differences},
+pdfauthor={Leonardo Max Baptista Claudino, claudino@cs.umd.edu \\
+	    Sameh Khamis, sameh@cs.umd.edu \\
+	    Ran Liu, ranliu@cs.umd.edu \\
+	    Ben London, blondon@cs.umd.edu \\
+	    Jay Pujara, jay@cs.umd.edu},
+pdfkeywords={list visualization},
+bookmarksnumbered,
+pdfstartview={FitH},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=black,
+breaklinks=true,
+}
+\newcommand{\comment}[1]{}
+\definecolor{Orange}{rgb}{1,0.5,0}
+\newcommand{\todo}[1]{\textsf{\textbf{\textcolor{Orange}{[[#1]]}}}}
+
+\pagenumbering{arabic}  % Arabic page numbers for submission.  Remove this line to eliminate page numbers for the camera ready copy
+
+\begin{document}
+% to make various LaTeX processors do the right thing with page size
+\special{papersize=8.5in,11in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\pdfpageheight}{\paperheight}
+\setlength{\pdfpagewidth}{\paperwidth}
+
+% use this command to override the default ACM copyright statement 
+% (e.g. for preprints). Remove for camera ready copy.
+\toappear{Submitted for review to CHI 2009.}
+
+\title{The Title}
+\numberofauthors{2}
+\author{
+  \alignauthor Leonardo Max Batista Claudino \\
+    \affaddr{Dept. of Computer Science, University of Maryland}\\
+    \affaddr{College Park, MD 20742}\\
+    \email{claudino@cs.umd.edu}
+  \alignauthor Sameh Khamis\\
+    \affaddr{Dept. of Computer Science, University of Maryland}\\
+    \affaddr{College Park, MD 20742}\\
+    \email{sameh@cs.umd.edu}
+  \alignauthor Ran Liu \\
+    \affaddr{Dept. of Computer Science, University of Maryland}\\
+    \affaddr{College Park, MD 20742}\\
+    \email{ranliu@cs.umd.edu}
+  \alignauthor Ben London \\
+    \affaddr{Dept. of Computer Science, University of Maryland}\\
+    \affaddr{College Park, MD 20742}\\
+    \email{blondon@cs.umd.edu}
+  \alignauthor Jay Pujara \\
+    \affaddr{Dept. of Computer Science, University of Maryland}\\
+    \affaddr{College Park, MD 20742}\\
+    \email{jay@cs.umd.edu}
+}
+
+\maketitle
+
+\begin{abstract}
+We present a novel list visualization tool named TwinList, for the purpose of list visualization and matching. Leveraging Adobe's Flex platform and the Prefuse Flare toolbox, we created a rich internet application (RIA) with dynamic animated effects. These animated transitions lead the user through the procedure of matching two lists, using color coding to highlight the similarities and differences between the two. List items can be grouped, sorted and filtered according to their attribute values, to enhance workflow. To illustrate the efficacy of the application, we conduct usability testing with several doctors and peers.
+\end{abstract}
+
+\keywords{list visualization} 
+
+\category{H.5.2}{Information Interfaces and Presentation}{Miscellaneous}[Optional sub-category]
+
+
+\section{Introduction}
+In applications involving list-based data, it is often necessary to match similar items and take some action on the list elements. One such domain is that of medical list reconciliation, in which a physician must reconcile a patient's medication from multiple prescribers.
+
+\subsection{Related Work}
+
+\section{TwinList}
+
+\subsection{ListViewer}
+
+\subsection{Controls}
+
+\subsection{Filters}
+
+\subsection{Options}
+
+\section{Usability Testing}
+
+\section{Conclusion}
+
+\bibliographystyle{abbrv}
+\bibliography{twinlist}
+
+\end{document}
