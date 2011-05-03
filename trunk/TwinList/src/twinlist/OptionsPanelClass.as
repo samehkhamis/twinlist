@@ -26,7 +26,7 @@ package twinlist
 		public function OptionsPanelClass()
 		{
 			super();
-			var dataSets:Array = new Array("Cars", "Medication");// , "SOTU");
+			var dataSets:Array = new Array("Cars", "Medication", "SOTU (big!)");
 			datasetOptions = new ArrayCollection(dataSets);
 		}
 		
