@@ -25,6 +25,7 @@ package twinlist
 	import spark.components.Scroller;
 	
 	import twinlist.list.ItemAttribute;
+	import twinlist.list.List;
 	import twinlist.list.ListItem;
 	
 	[Bindable]
@@ -42,11 +43,12 @@ package twinlist
 		public var canvas:Group;
 		// data
 		private var visHash:Object;
-		private var columnList:ArrayCollection;
+		private var columns:ArrayCollection;
 		private var line1:LineSprite;
 		private var line2:LineSprite;
 		private var rowIdxHash:Object;
-		private var colItems:Array;
+		private var colItemsMatched:Array;
+		private var colItemsSeparate:Array;
 		// selected sprite
 		private var selectedSprite:DataSprite = null;
 		private var popup:RectSprite;
@@ -124,8 +126,8 @@ package twinlist
 			visHash = CreateVisHash(model.ListViewerData);
 			
 			// create columns
-			columnList = CreateColumns();
-			for each (var col:Sprite in columnList) {
+			columns = CreateColumns();
+			for each (var col:Sprite in columns) {
 				vis.addChild(col);
 			}
 			// add header horizontal lines
@@ -204,7 +206,7 @@ package twinlist
 			}
 			// fix columns
 			var x:int = 0;
-			for each (var rect:RectSprite in columnList)
+			for each (var rect:RectSprite in columns)
 			{
 				animUpdate.add(new Tween(rect, 0.5, {w: columnWidth, h: columnHeight, x: x}));
 				animUpdate.add(new Tween(rect.getChildAt(0), 0.5, {x: columnWidth/2}));
@@ -249,10 +251,14 @@ package twinlist
 			var visHash:Object = new Object();
 			
 			rowIdxHash = new Object();
-			colItems = new Array(5);
+			colItemsMatched = new Array(5);
 			for (var i:int = 0; i < 5; i++) {
-				colItems[i] = new ArrayCollection();
+				colItemsMatched[i] = new ArrayCollection();
 			}
+			colItemsSeparate = new Array(2);
+			colItemsSeparate[0] = new ArrayCollection();
+			colItemsSeparate[1] = new ArrayCollection();
+			
 			var newValue:String = '';
 			var curValue:String = '';
 			var groupValues:Object = new Object();
@@ -274,7 +280,7 @@ package twinlist
 				var sprite:DataSprite;
 				if (item.Identical1 != null || item.Identical2 != null)
 				{
-					if (item.Identical1 != null && (!item.Identical1.ActedOn || !RemoveAfterAction)) {
+					if (item.Identical1 != null && item.Identical1.Display && (!item.Identical1.ActedOn || !RemoveAfterAction)) {
 						if (model.GroupBy != null)
 						{
 							newValue = item.Identical1.Attributes[model.GroupBy.Name].Values[0].toString();
@@ -294,10 +300,11 @@ package twinlist
 							rowIdxHash[idx] = new Array();
 						rowIdxHash[idx].push(sprite);
 						if (!linkIdentical)
-							colItems[2].addItem(item.Identical1);
+							colItemsMatched[2].addItem(item.Identical1);
+						colItemsSeparate[0].addItem(item.Identical1);
 						l1y += RowHeight;
 					}
-					if (item.Identical2 != null && (!item.Identical2.ActedOn || !RemoveAfterAction)) {
+					if (item.Identical2 != null && item.Identical2.Display && (!item.Identical2.ActedOn || !RemoveAfterAction)) {
 						if (model.GroupBy != null)
 						{
 							newValue = item.Identical2.Attributes[model.GroupBy.Name].Values[0].toString();
@@ -316,7 +323,8 @@ package twinlist
 						if (!(idx in rowIdxHash))
 							rowIdxHash[idx] = new Array();
 						rowIdxHash[idx].push(sprite);
-						colItems[2].addItem(item.Identical2);
+						colItemsMatched[2].addItem(item.Identical2);
+						colItemsSeparate[1].addItem(item.Identical2);
 						l2y += RowHeight;
 					}
 					ry += RowHeight;
@@ -325,7 +333,7 @@ package twinlist
 				else if (item.L1Similar != null || item.L2Similar != null)
 				{
 					var added:Boolean = false;
-					if (item.L1Similar != null && (!item.L1Similar.ActedOn || !RemoveAfterAction)) {
+					if (item.L1Similar != null && item.L1Similar.Display && (!item.L1Similar.ActedOn || !RemoveAfterAction)) {
 						if (model.GroupBy != null)
 						{
 							newValue = item.L1Similar.Attributes[model.GroupBy.Name].Values[0].toString();
@@ -344,11 +352,12 @@ package twinlist
 						if (!(idx in rowIdxHash))
 							rowIdxHash[idx] = new Array();
 						rowIdxHash[idx].push(sprite);
-						colItems[1].addItem(item.L1Similar);
+						colItemsMatched[1].addItem(item.L1Similar);
+						colItemsSeparate[0].addItem(item.L1Similar);
 						l1y += RowHeight;
 						added = true;
 					}
-					if (item.L2Similar != null && (!item.L2Similar.ActedOn || !RemoveAfterAction)) {
+					if (item.L2Similar != null && item.L2Similar.Display && (!item.L2Similar.ActedOn || !RemoveAfterAction)) {
 						if (model.GroupBy != null)
 						{
 							newValue = item.L2Similar.Attributes[model.GroupBy.Name].Values[0].toString();
@@ -370,7 +379,8 @@ package twinlist
 						if (!(idx in rowIdxHash))
 							rowIdxHash[idx] = new Array();
 						rowIdxHash[idx].push(sprite);
-						colItems[3].addItem(item.L2Similar);
+						colItemsMatched[3].addItem(item.L2Similar);
+						colItemsSeparate[1].addItem(item.L2Similar);
 						l2y += RowHeight;
 					}
 					ry += RowHeight;
@@ -378,7 +388,7 @@ package twinlist
 				}
 				else if (item.L1Unique != null)
 				{
-					if (!item.L1Unique.ActedOn || !RemoveAfterAction) {
+					if (item.L1Unique.Display && (!item.L1Unique.ActedOn || !RemoveAfterAction)) {
 						if (model.GroupBy != null)
 						{
 							newValue = item.L1Unique.Attributes[model.GroupBy.Name].Values[0].toString();
@@ -397,7 +407,8 @@ package twinlist
 						if (!(idx in rowIdxHash))
 							rowIdxHash[idx] = new Array();
 						rowIdxHash[idx].push(sprite);
-						colItems[0].addItem(item.L1Unique);
+						colItemsMatched[0].addItem(item.L1Unique);
+						colItemsSeparate[0].addItem(item.L1Unique);
 						l1y += RowHeight;
 						ry += RowHeight;
 						++idx;
@@ -405,7 +416,7 @@ package twinlist
 				}
 				else if (item.L2Unique != null)
 				{
-					if (!item.L2Unique.ActedOn || !RemoveAfterAction) {
+					if (item.L2Unique.Display && (!item.L2Unique.ActedOn || !RemoveAfterAction)) {
 						if (model.GroupBy != null)
 						{
 							newValue = item.L2Unique.Attributes[model.GroupBy.Name].Values[0].toString();
@@ -424,7 +435,8 @@ package twinlist
 						if (!(idx in rowIdxHash))
 							rowIdxHash[idx] = new Array();
 						rowIdxHash[idx].push(sprite);
-						colItems[4].addItem(item.L2Unique);
+						colItemsMatched[4].addItem(item.L2Unique);
+						colItemsSeparate[1].addItem(item.L2Unique);
 						l2y += RowHeight;
 						ry += RowHeight;
 						++idx;
@@ -752,70 +764,70 @@ package twinlist
 
 			// step-by-step "match" column animation
 			var seq:Sequence;
-			animMatchColIdentical.add(new Tween(columnList[2], 0.25*AnimationSpeed, {fillColor: colorIdentical, lineColor: colorIdentical}));
+			animMatchColIdentical.add(new Tween(columns[2], 0.25*AnimationSpeed, {fillColor: colorIdentical, lineColor: colorIdentical}));
 			seq = new Sequence();
-			seq.add(new Tween(columnList[2].getChildAt(0), 0, {visible: true}));
-			seq.add(new Tween(columnList[2].getChildAt(0), 0.25*AnimationSpeed, {alpha: 1}));
+			seq.add(new Tween(columns[2].getChildAt(0), 0, {visible: true}));
+			seq.add(new Tween(columns[2].getChildAt(0), 0.25*AnimationSpeed, {alpha: 1}));
 			animMatchColIdentical.add(seq);
 			seq = new Sequence();
-			seq.add(new Tween(columnList[2].getChildAt(1), 0, {visible: true}));
-			seq.add(new Tween(columnList[2].getChildAt(1), 0.25*AnimationSpeed, {alpha: 1}));
+			seq.add(new Tween(columns[2].getChildAt(1), 0, {visible: true}));
+			seq.add(new Tween(columns[2].getChildAt(1), 0.25*AnimationSpeed, {alpha: 1}));
 			animMatchColIdentical.add(seq);
-			animMatchColUnique.add(new Tween(columnList[0], 0.25*AnimationSpeed, {fillColor: colorList1, lineColor: colorList1}));
+			animMatchColUnique.add(new Tween(columns[0], 0.25*AnimationSpeed, {fillColor: colorList1, lineColor: colorList1}));
 			seq = new Sequence();
-			seq.add(new Tween(columnList[0].getChildAt(0), 0, {visible: true}));
-			seq.add(new Tween(columnList[0].getChildAt(0), 0.25*AnimationSpeed, {alpha: 1}));
+			seq.add(new Tween(columns[0].getChildAt(0), 0, {visible: true}));
+			seq.add(new Tween(columns[0].getChildAt(0), 0.25*AnimationSpeed, {alpha: 1}));
 			animMatchColUnique.add(seq);
 			seq = new Sequence();
-			seq.add(new Tween(columnList[0].getChildAt(1), 0, {visible: true}));
-			seq.add(new Tween(columnList[0].getChildAt(1), 0.25*AnimationSpeed, {alpha: 1}));
+			seq.add(new Tween(columns[0].getChildAt(1), 0, {visible: true}));
+			seq.add(new Tween(columns[0].getChildAt(1), 0.25*AnimationSpeed, {alpha: 1}));
 			animMatchColUnique.add(seq);
-			animMatchColUnique.add(new Tween(columnList[4], 0.25*AnimationSpeed, {fillColor: colorList2, lineColor: colorList2}));
+			animMatchColUnique.add(new Tween(columns[4], 0.25*AnimationSpeed, {fillColor: colorList2, lineColor: colorList2}));
 			seq = new Sequence();
-			seq.add(new Tween(columnList[4].getChildAt(0), 0, {visible: true}));
-			seq.add(new Tween(columnList[4].getChildAt(0), 0.25*AnimationSpeed, {alpha: 1}));
+			seq.add(new Tween(columns[4].getChildAt(0), 0, {visible: true}));
+			seq.add(new Tween(columns[4].getChildAt(0), 0.25*AnimationSpeed, {alpha: 1}));
 			animMatchColUnique.add(seq);
 			seq = new Sequence();
-			seq.add(new Tween(columnList[4].getChildAt(1), 0, {visible: true}));
-			seq.add(new Tween(columnList[4].getChildAt(1), 0.25*AnimationSpeed, {alpha: 1}));
+			seq.add(new Tween(columns[4].getChildAt(1), 0, {visible: true}));
+			seq.add(new Tween(columns[4].getChildAt(1), 0.25*AnimationSpeed, {alpha: 1}));
 			animMatchColUnique.add(seq);
-			animMatchColSimilar.add(new Tween(columnList[1], 0.25*AnimationSpeed, {fillColor: (colorList1 + colorIdentical) / 2, lineColor: (colorList1 + colorIdentical) / 2}));
-			animMatchColSimilar.add(new Tween(columnList[1].getChildAt(0), 0.25*AnimationSpeed, {text: model.VisibleLists[0].Name + ' - Similar'}));
-			animMatchColSimilar.add(new Tween(columnList[3], 0.25*AnimationSpeed, {fillColor: (colorList2 + colorIdentical) / 2, lineColor: (colorList2 + colorIdentical) / 2}));
-			animMatchColSimilar.add(new Tween(columnList[3].getChildAt(0), 0.25*AnimationSpeed, {text: model.VisibleLists[1].Name + ' - Similar'}));
+			animMatchColSimilar.add(new Tween(columns[1], 0.25*AnimationSpeed, {fillColor: (colorList1 + colorIdentical) / 2, lineColor: (colorList1 + colorIdentical) / 2}));
+			animMatchColSimilar.add(new Tween(columns[1].getChildAt(0), 0.25*AnimationSpeed, {text: model.VisibleLists[0].Name + ' - Similar'}));
+			animMatchColSimilar.add(new Tween(columns[3], 0.25*AnimationSpeed, {fillColor: (colorList2 + colorIdentical) / 2, lineColor: (colorList2 + colorIdentical) / 2}));
+			animMatchColSimilar.add(new Tween(columns[3].getChildAt(0), 0.25*AnimationSpeed, {text: model.VisibleLists[1].Name + ' - Similar'}));
 			
 			// step-by-step "reset" column animation
-			animResetColIdentical.add(new Tween(columnList[2], 0.25*AnimationSpeed, {fillColor: colorBackground, lineColor: colorBackground}));
+			animResetColIdentical.add(new Tween(columns[2], 0.25*AnimationSpeed, {fillColor: colorBackground, lineColor: colorBackground}));
 			seq = new Sequence();
-			seq.add(new Tween(columnList[2].getChildAt(0), 0.25*AnimationSpeed, {alpha: 0}));
-			seq.add(new Tween(columnList[2].getChildAt(0), 0, {visible: false}));
+			seq.add(new Tween(columns[2].getChildAt(0), 0.25*AnimationSpeed, {alpha: 0}));
+			seq.add(new Tween(columns[2].getChildAt(0), 0, {visible: false}));
 			animResetColIdentical.add(seq);
 			seq = new Sequence();
-			seq.add(new Tween(columnList[2].getChildAt(1), 0.25*AnimationSpeed, {alpha: 0}));
-			seq.add(new Tween(columnList[2].getChildAt(1), 0, {visible: false}));
+			seq.add(new Tween(columns[2].getChildAt(1), 0.25*AnimationSpeed, {alpha: 0}));
+			seq.add(new Tween(columns[2].getChildAt(1), 0, {visible: false}));
 			animResetColIdentical.add(seq);
-			animResetColUnique.add(new Tween(columnList[0], 0.25, {fillColor: colorBackground, lineColor: colorBackground}));
+			animResetColUnique.add(new Tween(columns[0], 0.25, {fillColor: colorBackground, lineColor: colorBackground}));
 			seq = new Sequence();
-			seq.add(new Tween(columnList[0].getChildAt(0), 0.25*AnimationSpeed, {alpha: 0}));
-			seq.add(new Tween(columnList[0].getChildAt(0), 0, {visible: false}));
+			seq.add(new Tween(columns[0].getChildAt(0), 0.25*AnimationSpeed, {alpha: 0}));
+			seq.add(new Tween(columns[0].getChildAt(0), 0, {visible: false}));
 			animResetColUnique.add(seq);
 			seq = new Sequence();
-			seq.add(new Tween(columnList[0].getChildAt(1), 0.25*AnimationSpeed, {alpha: 0}));
-			seq.add(new Tween(columnList[0].getChildAt(1), 0, {visible: false}));
+			seq.add(new Tween(columns[0].getChildAt(1), 0.25*AnimationSpeed, {alpha: 0}));
+			seq.add(new Tween(columns[0].getChildAt(1), 0, {visible: false}));
 			animResetColUnique.add(seq);
-			animResetColUnique.add(new Tween(columnList[4], 0.25*AnimationSpeed, {fillColor: colorBackground, lineColor: colorBackground}));
+			animResetColUnique.add(new Tween(columns[4], 0.25*AnimationSpeed, {fillColor: colorBackground, lineColor: colorBackground}));
 			seq = new Sequence();
-			seq.add(new Tween(columnList[4].getChildAt(0), 0.25*AnimationSpeed, {alpha: 0}));
-			seq.add(new Tween(columnList[4].getChildAt(0), 0, {visible: false}));
+			seq.add(new Tween(columns[4].getChildAt(0), 0.25*AnimationSpeed, {alpha: 0}));
+			seq.add(new Tween(columns[4].getChildAt(0), 0, {visible: false}));
 			animResetColUnique.add(seq);
 			seq = new Sequence();
-			seq.add(new Tween(columnList[4].getChildAt(1), 0.25*AnimationSpeed, {alpha: 0}));
-			seq.add(new Tween(columnList[4].getChildAt(1), 0, {visible: false}));
+			seq.add(new Tween(columns[4].getChildAt(1), 0.25*AnimationSpeed, {alpha: 0}));
+			seq.add(new Tween(columns[4].getChildAt(1), 0, {visible: false}));
 			animResetColUnique.add(seq);
-			animResetColSimilar.add(new Tween(columnList[1], 0.25*AnimationSpeed, {fillColor: colorOriginal, lineColor: colorOriginal}));
-			animResetColSimilar.add(new Tween(columnList[1].getChildAt(0), 0.25*AnimationSpeed, {text: model.VisibleLists[0].Name}));
-			animResetColSimilar.add(new Tween(columnList[3], 0.25*AnimationSpeed, {fillColor: colorOriginal, lineColor: colorOriginal}));
-			animResetColSimilar.add(new Tween(columnList[3].getChildAt(0), 0.25*AnimationSpeed, {text: model.VisibleLists[1].Name}));
+			animResetColSimilar.add(new Tween(columns[1], 0.25*AnimationSpeed, {fillColor: colorOriginal, lineColor: colorOriginal}));
+			animResetColSimilar.add(new Tween(columns[1].getChildAt(0), 0.25*AnimationSpeed, {text: model.VisibleLists[0].Name}));
+			animResetColSimilar.add(new Tween(columns[3], 0.25*AnimationSpeed, {fillColor: colorOriginal, lineColor: colorOriginal}));
+			animResetColSimilar.add(new Tween(columns[3].getChildAt(0), 0.25*AnimationSpeed, {text: model.VisibleLists[1].Name}));
 			
 			// add event listeners
 			for (i = 0; i < 3; i++) {
@@ -956,20 +968,20 @@ package twinlist
 		{
 			if (animState == 0) {
 				if (colIdx == 1)
-					model.AddActionListItems(model.VisibleLists[0], true);
+					model.AddActionListItems(colItemsSeparate[0], true);
 				else
-					model.AddActionListItems(model.VisibleLists[1], true);
+					model.AddActionListItems(colItemsSeparate[1], true);
 			}
 			else if (animState == 1) {
 				if (colIdx == 1)
-					model.AddActionListItems(colItems[0].source.concat(colItems[1].source), true);
+					model.AddActionListItems(colItemsMatched[0].source.concat(colItemsMatched[1].source), true);
 				else if (colIdx == 3)
-					model.AddActionListItems(colItems[3].source.concat(colItems[4].source), true);
+					model.AddActionListItems(colItemsMatched[3].source.concat(colItemsMatched[4].source), true);
 				else
-					model.AddActionListItems(colItems[2], true);
+					model.AddActionListItems(colItemsMatched[2], true);
 			}
 			else
-				model.AddActionListItems(colItems[colIdx], true);				
+				model.AddActionListItems(colItemsMatched[colIdx], true);				
 		}
 		
 		private function RejectClick(event:MouseEvent):void

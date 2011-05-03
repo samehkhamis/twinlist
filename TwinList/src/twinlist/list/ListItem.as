@@ -5,19 +5,32 @@ package twinlist.list
 	[Bindable]
 	public class ListItem
 	{
+		private var listId:String;
 		private var id:String;
 		private var name:String;
 		private var attributes:Object;
 		private var nameUnique:Boolean;
 		private var actedOn:Boolean;
+		private var display:Boolean;
 		
 		public function ListItem(id:String, name:String = "")
 		{
+			ListId = null;
 			Id = id;
 			Name = name;
 			attributes = new Object();
 			NameUnique = false;
 			ActedOn = false;
+			Display = true;
+		}
+		
+		public function get ListId():String
+		{
+			return listId;
+		}
+		public function set ListId(value:String):void
+		{
+			listId = value;
 		}
 		
 		public function get Id():String
@@ -59,6 +72,15 @@ package twinlist.list
 		public function set ActedOn(value:Boolean):void
 		{
 			actedOn = value;
+		}
+		
+		public function get Display():Boolean
+		{
+			return display;
+		}
+		public function set Display(value:Boolean):void
+		{
+			display = value;
 		}
 				
 		public function toString():String

@@ -43,8 +43,8 @@
 		private var schema:Object;
 		private var lists:ArrayCollection;
 		private var listIdx:Object;
+		private var itemTwinHash:Object;
 		private var visibleListIds:Array;
-		private var visibleItemIds:Object;
 		private var listViewerData:ArrayCollection;
 		private var listViewerIdxHash:Object;
 		private var hashSimilarities:Object;
@@ -63,11 +63,11 @@
 		private var groupByAttribute:AttributeDescriptor;
 		private var sortByAttribute:AttributeDescriptor;
 		private var filterList:ArrayCollection;
-	        //data
-	        private var list1File:String;
-	        private var list2File:String;
-	        private var simFile:String;
-
+		//data
+		private var list1File:String;
+		private var list2File:String;
+		private var simFile:String;
+		
 		// options hashmap
 		private var options:Object;
 		
@@ -80,8 +80,8 @@
 			loaded = 0;
 			lists = new ArrayCollection();
 			listIdx = new Object();
+			itemTwinHash = new Object();
 			visibleListIds = new Array(2);
-			visibleItemIds = new Object();
 			listViewerData = new ArrayCollection();
 			listViewerIdxHash = new Object();
 			hashSimilarities = new ArrayCollection();
@@ -211,7 +211,7 @@
 			}
 			item.ActedOn = true;
 			if (GetOption(Option.OPT_LINKIDENTICAL).Value) {
-				var twin:ListItem = FindListViewerTwin(item);
+				var twin:ListItem = FindItemTwin(item);
 				if (twin != null)
 					twin.ActedOn = true;
 			}
@@ -243,7 +243,7 @@
 			}
 			if (GetOption(Option.OPT_LINKIDENTICAL).Value) {
 				for each (item in items) {
-					twin = FindListViewerTwin(item);
+					twin = FindItemTwin(item);
 					if (twin != null)
 						twin.ActedOn = true;
 				}
@@ -271,7 +271,7 @@
 			}
 			item.ActedOn = false;
 			if (GetOption(Option.OPT_LINKIDENTICAL).Value) {
-				var twin:ListItem = FindListViewerTwin(item);
+				var twin:ListItem = FindItemTwin(item);
 				if (twin != null)
 					twin.ActedOn = false;
 			}
@@ -382,11 +382,6 @@
 			return [lists[listIdx[visibleListIds[0]]], lists[listIdx[visibleListIds[1]]]];
 		}
 		
-		public function get VisibleItemIds():Object
-		{
-			return visibleItemIds;
-		}
-		
 		public function SetVisibleLists(id1:String, id2:String):void
 		{
 			visibleListIds[0] = id1;
@@ -406,25 +401,32 @@
 					for each (var f:IFilter in Filters) {
 						keep &&= f.Apply(item);
 					}
-					if (keep)
-						newLists[i].addItem(item);
+					item.Display = keep;
+//					if (keep)
+//						newLists[i].addItem(item);
 				}
 			}
-			ReconcileLists(newLists[0], newLists[1]);
-			if (SortBy != null || GroupBy != null)
-				SortListViewerData();
-			else {
-				RefreshView();
-			}
+			RefreshView();
+//			ReconcileLists(newLists[0], newLists[1]);
+//			if (SortBy != null || GroupBy != null)
+//				SortListViewerData();
+//			else {
+//				RefreshView();
+//			}
 		}
 		
-		private function FindListViewerTwin(item:ListItem):ListItem
+		private function FindItemTwin(item:ListItem):ListItem
 		{
-			var lvi:ListViewerItem = listViewerData[listViewerIdxHash[item.Id]];
-			if (lvi.Identical1 != null && lvi.Identical1.Id != item.Id)
-				return lvi.Identical1;
-			else if (lvi.Identical2 != null && lvi.Identical2.Id != item.Id)
-				return lvi.Identical2;
+			if (item.Id in itemTwinHash)
+				return itemTwinHash[item.Id];
+//			if (item.Id in listViewerIdxHash)
+//			{
+//				var lvi:ListViewerItem = listViewerData[listViewerIdxHash[item.Id]];
+//				if (lvi.Identical1 != null && lvi.Identical1.Id != item.Id)
+//					return lvi.Identical1;
+//				else if (lvi.Identical2 != null && lvi.Identical2.Id != item.Id)
+//					return lvi.Identical2;
+//			}
 			return null;
 		}
 		
@@ -486,7 +488,7 @@
 		
 		private function RefreshView():void
 		{
-			if (SelectedItem != null && !(SelectedItem.Id in visibleItemIds))
+			if (SelectedItem != null && !SelectedItem.Display)
 				SelectedItem = null;
 			listViewerData.refresh();
 			dispatchEvent(new TwinListEvent(VIEW_UPDATED));			
@@ -497,8 +499,8 @@
 			loaded = 0;
 			lists = new ArrayCollection();
 			listIdx = new Object();
+			itemTwinHash = new Object();
 			visibleListIds = new Array(2);
-			visibleItemIds = new Object();
 			listViewerData = new ArrayCollection();
 			listViewerIdxHash = new Object();
 			hashSimilarities = new ArrayCollection();
@@ -531,9 +533,11 @@
 
 		private function OnReadListXmlComplete(list:List):void
 		{
+			// update index hash and add to lists
 			listIdx[list.Id] = lists.length;
 			lists.addItem(list);
 			loaded++;
+			// check for data load complete
 			if (loaded == 3) {
 				FinishInit();
 			}
@@ -544,6 +548,7 @@
 			// Setting similarities to hash of similarities in the model.
 			hashSimilarities = hash;
 			loaded++;
+			// check for data load complete
 			if (loaded == 3) {
 				FinishInit();
 			}
@@ -552,7 +557,6 @@
 		private function FinishInit():void
 		{
 			SetVisibleLists(lists[0].Id, lists[1].Id);
-			//SortListViewerData();
 			dispatchEvent(new TwinListEvent(DATA_LOADED));
 		}
 		
@@ -615,44 +619,47 @@
 		
 		private function ReconcileLists(list1:List, list2:List):void
 		{
-			visibleItemIds = new Object();
 			listViewerIdxHash = new Object();
 			listViewerData.removeAll();
 			// hash item IDs in either list
 			var map1:Object = new Object();
 			var map2:Object = new Object();
-			var item:ListItem;
-			for each (item in list1) {
-				map1[item.Id] = item;
-			}
-			for each (item in list2) {
-				map2[item.Id] = item;
+			{
+				var item:ListItem;
+				for each (item in list1) {
+					map1[item.Id] = item;
+				}
+				for each (item in list2) {
+					map2[item.Id] = item;
+				}
 			}
 			// iterate over similarity hash and find corresponding items
 			var item1:ListItem;
 			var item2:ListItem;
-			var listViewerItem:ListViewerItem;
+			var lvi:ListViewerItem;
 			var idx:int = 0;
 			for each (var simItem:SimilarityItem in hashSimilarities) {
-				listViewerItem = new ListViewerItem();
-				listViewerItem.RowIndex = idx;
+				lvi = new ListViewerItem();
+				lvi.RowIndex = idx;
 				if (simItem.Type == SimilarityItem.IDENTICAL) {
 					// identical
 					item1 = map1[simItem.L1Id] as ListItem;
 					if (item1 != null) {
-						listViewerItem.Identical1 = item1;
-						visibleItemIds[item1.Id] = item1;
+						lvi.Identical1 = item1;
 						listViewerIdxHash[item1.Id] = idx;
 					}
 					item2 = map2[simItem.L2Id] as ListItem;
 					if (item2 != null) {
-						listViewerItem.Identical2 = item2;
-						visibleItemIds[item2.Id] = item2;
+						lvi.Identical2 = item2;
 						listViewerIdxHash[item2.Id] = idx;
 					}
-					if (item1 != null || item2 != null) {
-						listViewerData.addItem(listViewerItem);
+					if (lvi.Identical1 != null || lvi.Identical2 != null) {
+						listViewerData.addItem(lvi);
 						++idx;
+					}
+					if (item1 != null && item2 != null) {
+						itemTwinHash[item1.Id] = item2;
+						itemTwinHash[item2.Id] = item1;
 					}
 				}
 				else if (simItem.Type == SimilarityItem.SIMILAR) {
@@ -666,8 +673,7 @@
 							else
 								item1.Attributes[diff.Name].Unique = true;
 						}
-						listViewerItem.L1Similar = item1;
-						visibleItemIds[item1.Id] = item1;
+						lvi.L1Similar = item1;
 						listViewerIdxHash[item1.Id] = idx;
 					}
 					item2 = map2[simItem.L2Id] as ListItem;
@@ -678,158 +684,36 @@
 							else
 								item2.Attributes[diff.Name].Unique = true;
 						}
-						listViewerItem.L2Similar = item2;
-						visibleItemIds[item2.Id] = item2;
+						lvi.L2Similar = item2;
 						listViewerIdxHash[item2.Id] = idx;
 					}
-					if (item1 != null || item2 != null) {
-						listViewerData.addItem(listViewerItem);
+					if (lvi.L1Similar != null || lvi.L2Similar != null) {
+						listViewerData.addItem(lvi);
 						++idx;
 					}
 				}
 				else {
 					// unique
 					if (simItem.L1Id != "") {
-						item1 = map1[simItem.L1Id];
+						item1 = map1[simItem.L1Id] as ListItem;
 						if (item1 != null) {
-							listViewerItem.L1Unique = item1;
-							visibleItemIds[item1.Id] = item1;
+							lvi.L1Unique = item1;
 							listViewerIdxHash[item1.Id] = idx;
-							listViewerData.addItem(listViewerItem);
+							listViewerData.addItem(lvi);
 							++idx;
 						}
 					}
 					else {
-						item2 = map2[simItem.L2Id];
+						item2 = map2[simItem.L2Id] as ListItem;
 						if (item2 != null) {
-							listViewerItem.L2Unique = item2;
-							visibleItemIds[item2.Id] = item2;
+							lvi.L2Unique = item2;
 							listViewerIdxHash[item2.Id] = idx;
-							listViewerData.addItem(listViewerItem);
+							listViewerData.addItem(lvi);
 							++idx;
 						}
 					}
 				}
 			}
 		}
-		
-		private function LoadCannedData():void
-		{
-			// CANNED DATA
-			// list 1
-			var list1:List = new List("list1", "Patient");
-			var item:ListItem = new ListItem("list1id1", "Calcitrol");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["0.25mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
-			list1.addItem(item);
-			item = new ListItem("list1id2", "Darbepoetin");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["60mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["SC"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["qFriday"]);
-			list1.addItem(item);
-			item = new ListItem("list1id3", "Docusate Sodium");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["100mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["BID"]);
-			list1.addItem(item);
-			item = new ListItem("list1id4", "Ramipril");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["5mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
-			list1.addItem(item);
-			item = new ListItem("list1id5", "Acetaminophen");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["325mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["q4h"]);
-			list1.addItem(item);
-			item = new ListItem("list1id6", "Calcium Carbonate");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["500mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["TID CC"]);
-			list1.addItem(item);
-			item = new ListItem("list1id7", "Atorvistatin");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["40mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
-			list1.addItem(item);
-			item = new ListItem("list1id8", "Metoprolol");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["50mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
-			list1.addItem(item);
-			item = new ListItem("list1id9", "Aspirin");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["81mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
-			list1.addItem(item);
-			item = new ListItem("list1id10", "Meloxicam");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["7.5mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
-			list1.addItem(item);
-			listIdx[list1.Id] = lists.length;
-			lists.addItem(list1);
-			// list 2
-			var list2:List = new List("list2", "Hospital");
-			item = new ListItem("list2id1", "Calcitrol");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["0.25mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
-			list2.addItem(item);
-			item = new ListItem("list2id2", "Darbepoetin");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["60mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["SC"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["qFriday"]);
-			list2.addItem(item);
-			item = new ListItem("list2id3", "Docusate Sodium");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["100mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["BID"]);
-			list2.addItem(item);
-			item = new ListItem("list2id4", "Ramipril");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["5mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
-			list2.addItem(item);
-			item = new ListItem("list2id5", "Acetaminophen");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["325mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["q4h"]);
-			list2.addItem(item);
-			item = new ListItem("list2id6", "Calcium Carbonate");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["1000mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["TID CC"]);
-			list2.addItem(item);
-			item = new ListItem("list2id7", "Atorvistatin");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["60mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
-			list2.addItem(item);
-			item = new ListItem("list2id8", "Metoprolol");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["100mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["BID"]);			
-			list2.addItem(item);
-			item = new ListItem("list2id9", "Ferrous Gloconate");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["300mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["TID"]);
-			list2.addItem(item);
-			item = new ListItem("list2id10", "Omeprazole");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["40mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
-			list2.addItem(item);
-			item = new ListItem("list2id11", "Ciproflaxocin");
-			item.Attributes["Dosage"] = new ItemAttribute("Dosage", ["500mg"]);
-			item.Attributes["Form"] = new ItemAttribute("Form", ["PO"]);
-			item.Attributes["Frequency"] = new ItemAttribute("Frequency", ["Daily"]);
-			list2.addItem(item);
-			listIdx[list2.Id] = lists.length;
-			lists.addItem(list2);
-			FinishInit();
-		}
-	}		
+	}
 }
