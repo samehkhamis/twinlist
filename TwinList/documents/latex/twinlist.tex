@@ -80,10 +80,22 @@ We present a novel list visualization tool named TwinList, for the purpose of li
 
 \section{Introduction}
 In applications involving list-based data, it is often necessary to match similar items and take some action on the list elements. One such domain is that of medical list reconciliation, in which a physician must reconcile a patient's medication from multiple prescribers.
-
 \subsection{Related Work}
 
 \section{TwinList}
+TwinList is a novel list visualization tool, with the purpose of showing the similarity and difference of two lists. It can be used in many cases where the comparison of two lists of items is required. The major task that TwinList support is medication reconciliation, comparing a patient's medication orders to all of the medications that a patient has been taking\cite{JCAHO-2006}.  However, the application for Twinlist is not only for medication reconciliation, but also for general list data, for example, comparing two lists of words used in the State of The Union speech by Bush and Obama. 
+
+TwinList interface consists four major components: the list viewer, controlling panel, accept/reject list and detail panel, as shown in (Figure~\ref{interface}).
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=1.1\linewidth]{interface}
+\end{center}
+   \caption{TwinList interface}
+   \label{interface}
+\end{figure}
+
 
 \subsection{ListViewer}
 
