@@ -25,7 +25,6 @@ package twinlist.xml
 		
 		private function ReadXml(loader:URLLoader, callback:Function):void
 		{
-			
 			var xml:XML = XML(loader.data);
 			var listId:String = xml.attribute("id");
 			var listName:String = xml.attribute("name");
@@ -34,6 +33,7 @@ package twinlist.xml
 				var itemId:String = itemXml.attribute("id");
 				var itemName:String = itemXml.attribute("name");
 				var item:ListItem = new ListItem(itemId, itemName);
+				item.ListId = listId;
 				for each (var attrXml:XML in itemXml.children()) {
 					var attrName:String = attrXml.attribute("name");
 					var attr:ItemAttribute = new ItemAttribute(attrName);
