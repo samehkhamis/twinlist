@@ -90,22 +90,23 @@ We present a novel list visualization tool named $\TwinList$, for the purpose of
 \category{H.5.2}{Information Interfaces and Presentation}{Miscellaneous}
 
 \section{Introduction}
-In applications involving list-based data, it is often necessary to match similar items and take some action on the list elements. One such domain is that of medical list reconciliation, in which a physician must reconcile a patient's medication from multiple prescribers. Another application might be comparing bag-of-words data from multiple text corpora.
+In applications involving list-based data, it is often necessary to match similar items and take some action on the list elements. One such domain is that of medical list reconciliation, in which a physician must reconcile a patient's medication from multiple prescribers. Another application might be exploratory analysis of bag-of-words data from multiple text corpora. In both contexts, it is necessary to categorize entries as identical, unique or ``similar". \todo{finish}
 
 \subsection{Related Work}
+\todo{Does anyone want to take a crack at this?}
 
 \section{TwinList}
 $\TwinList$ is a novel list visualization tool for the purpose of illustrating the similarities and differences between two lists. It can be used in many cases where the comparison of two lists of items is required. The primary application that $\TwinList$ supports is that of medication list reconciliation: comparing and reconciling multiple medications that have been prescribed to a patient from multiple sources\cite{JCAHO-2006}. However, $\TwinList$ is equally adept in other applications, such as comparing bag-of-words lists or visualizing \todo{Jay, what is that bio data you have?}. 
 
 $\TwinList$ interface consists of four major components: the $\ListViewer$, $\Controls$, $\AcceptedRejected$ lists and $\Details$, as shown in (Figure~\ref{fig:interface}).
 
-%\begin{figure}
-%\begin{center}
-%\includegraphics[width=1.1\linewidth]{interface}
-%\end{center}
-%   \caption{$\TwinList$ interface}
-%   \label{fig:interface}
-%\end{figure}
+\begin{figure}
+\begin{center}
+\includegraphics[width=1.1\linewidth]{interface}
+\end{center}
+   \caption{$\TwinList$ interface}
+   \label{fig:interface}
+\end{figure}
 
 \subsection{ListViewer}
 

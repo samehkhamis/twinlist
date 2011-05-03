@@ -33,7 +33,6 @@
 		public static const DATA_CARS:String = "__DATA_CARS__";
 		public static const DATA_MED_REC:String = "__DATA_MED_REC__";
 		public static const DATA_SOTU:String = "__DATA_SOTU__";
-		public static const DATA_SOTU_TEST:String = "__DATA_SOTU_TEST__";
 		// model
 		private static var instance:Model = new Model();
 		// sorting
@@ -129,11 +128,6 @@
 					list1File = "../data/sotu/bush08.0809.xml";
 					list2File = "../data/sotu/obama09.0809.xml";
 					simFile= "../data/sotu/bush_08_obama_09_similarities.xml";
-					break;
-				case DATA_SOTU_TEST:
-					list1File = "../data/sotu/bush08.0809.test.xml";
-					list2File = "../data/sotu/obama09.0809.test.xml";
-					simFile= "../data/sotu/bush_08_obama_09_similarities.test.xml";
 					break;
 			}
 			LoadData();
