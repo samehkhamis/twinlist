@@ -13,8 +13,8 @@ package twinlist
 	
 	public class ControlsPanelClass extends Group
 	{
-		public static const SORT_ASCEND:int = 0;
-		public static const SORT_DESCEND:int = 1;
+		public static const SORT_ASCEND:Boolean = true;
+		public static const SORT_DESCEND:Boolean = false;
 		[Bindable]
 		protected var model:Model = Model.Instance;
 		[Bindable]
@@ -35,6 +35,10 @@ package twinlist
 		public var rbgGroupByAscend:RadioButtonGroup;
 		[Bindable]
 		public var rbgSortByAscend:RadioButtonGroup;
+		[Bindable]
+		public var groupByAscend:Group;
+		[Bindable]
+		public var sortByAscend:Group;
 		
 		public function ControlsPanelClass()
 		{
@@ -51,6 +55,12 @@ package twinlist
 			model.ItemAttributes.addEventListener(CollectionEvent.COLLECTION_CHANGE, function(e:Event):void {
 				generalOptions = CreateOptionsList(model.ItemAttributes);
 			});
+			model.addEventListener(Model.DATA_LOADED, function(e:Event):void {
+				rbgGroupByAscend.selectedValue = SORT_ASCEND;
+				rbgSortByAscend.selectedValue = SORT_ASCEND;
+				groupByAscend.enabled = false;
+				sortByAscend.enabled = false;
+			});
 		}
 		
 		protected function OnDropDownChange(event:IndexChangeEvent):void
@@ -65,10 +75,12 @@ package twinlist
 					model.ColorBy = categoricalOptions[event.newIndex];
 					break;
 				case groupByList:
-					model.GroupBy = categoricalOptions[event.newIndex];
+					model.SetGroupBy(categoricalOptions[event.newIndex], rbgGroupByAscend.selectedValue);
+					groupByAscend.enabled = event.newIndex != 0;
 					break;
 				case sortByList:
-					model.SortBy = generalOptions[event.newIndex];
+					model.SetSortBy(generalOptions[event.newIndex], rbgSortByAscend.selectedValue);
+					sortByAscend.enabled = event.newIndex != 0;
 					break;
 			}
 		}
@@ -78,8 +90,10 @@ package twinlist
 			var rbg:RadioButtonGroup = event.target as RadioButtonGroup;
 			switch (rbg) {
 				case rbgGroupByAscend:
+					model.SetGroupBy(categoricalOptions[groupByList.selectedIndex], rbg.selectedValue);
 					break;
 				case rbgSortByAscend:
+					model.SetSortBy(generalOptions[sortByList.selectedIndex], rbg.selectedValue);
 					break;
 			}
 		}

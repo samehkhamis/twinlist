@@ -20,9 +20,9 @@ package twinlist
 	{
 		[Bindable]
 		protected var model:Model = Model.Instance;
+		[Bindable]
+		protected var datasetOptions:ArrayCollection;
 		
-	        [Bindable]
-	  protected var datasetOptions:ArrayCollection;
 		public function OptionsPanelClass()
 		{
 			super();
