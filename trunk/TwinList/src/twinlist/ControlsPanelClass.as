@@ -7,10 +7,14 @@ package twinlist
 	
 	import spark.components.DropDownList;
 	import spark.components.Group;
+	import spark.components.RadioButtonGroup;
+	import spark.components.ToggleButton;
 	import spark.events.IndexChangeEvent;
 	
 	public class ControlsPanelClass extends Group
 	{
+		public static const SORT_ASCEND:int = 0;
+		public static const SORT_DESCEND:int = 1;
 		[Bindable]
 		protected var model:Model = Model.Instance;
 		[Bindable]
@@ -19,6 +23,18 @@ package twinlist
 		protected var numericalOptions:ArrayCollection;
 		[Bindable]
 		protected var generalOptions:ArrayCollection;
+		[Bindable]
+		public var sizeByList:DropDownList;
+		[Bindable]
+		public var colorByList:DropDownList;
+		[Bindable]
+		public var groupByList:DropDownList;
+		[Bindable]
+		public var sortByList:DropDownList;
+		[Bindable]
+		public var rbgGroupByAscend:RadioButtonGroup;
+		[Bindable]
+		public var rbgSortByAscend:RadioButtonGroup;
 		
 		public function ControlsPanelClass()
 		{
@@ -37,26 +53,33 @@ package twinlist
 			});
 		}
 		
-		protected function OnChange(event:IndexChangeEvent):void {
-
+		protected function OnDropDownChange(event:IndexChangeEvent):void
+		{
 			// Based on selected control will set the SortBy, GroupBy or ... of the model and refresh the list view.
 			var dd:DropDownList = event.target as DropDownList;
-			switch (dd.id) {
-				case "SizeByList":
-					//Debug.log("ColorByList");
+			switch (dd) {
+				case sizeByList:
 					model.SizeBy = numericalOptions[event.newIndex];
 					break;
-				case "ColorByList":
-					//Debug.log("ColorByList");
+				case colorByList:
 					model.ColorBy = categoricalOptions[event.newIndex];
 					break;
-				case "groupByList":
-					//Debug.log("GroupByList");
+				case groupByList:
 					model.GroupBy = categoricalOptions[event.newIndex];
 					break;
-				case "sortByList":
-					//Debug.log("SortByList");
+				case sortByList:
 					model.SortBy = generalOptions[event.newIndex];
+					break;
+			}
+		}
+		
+		protected function OnAscendDescendChange(event:Event):void
+		{
+			var rbg:RadioButtonGroup = event.target as RadioButtonGroup;
+			switch (rbg) {
+				case rbgGroupByAscend:
+					break;
+				case rbgSortByAscend:
 					break;
 			}
 		}

@@ -107,6 +107,10 @@ package twinlist
 		
 		private function OnDataLoaded(event:Event):void
 		{
+			// invalidate canvas to update scrolling
+			if (canvas != null)
+				canvas.invalidateDisplayList();
+			
 			// reset state
 			if (!reset) {
 				SetState(0);
@@ -132,7 +136,7 @@ package twinlist
 			}
 			// add header horizontal lines
 			line1 = CreateHorizontalLine(1);
-			line2 = CreateHorizontalLine(2 * HeaderFontSize + TextSpacing);
+			line2 = CreateHorizontalLine(3 * HeaderFontSize + TextSpacing);
 			vis.addChild(line1);
 			vis.addChild(line2);
 			
@@ -161,13 +165,14 @@ package twinlist
 		
 		private function OnViewUpdated(event:Event):void
 		{
+			// invalidate canvas to update scrolling
+			canvas.invalidateDisplayList();
+			
 			// reset selected sprite
 			selectedSprite = null;
 			
 			// Get new visList
 			var newVisHash:Object = CreateVisHash(model.ListViewerData);
-			
-			canvas.invalidateDisplayList();
 			
 			// create transition animation
 			var animUpdate:Parallel = new Parallel();
@@ -262,7 +267,6 @@ package twinlist
 			var newValue:String = '';
 			var curValue:String = '';
 			var groupValues:Object = new Object();
-			var valueCount:int = 0;
 			var idx:int = 0;
 			
 			// Remove old group sprites if group changed
@@ -291,7 +295,6 @@ package twinlist
 								
 								curValue = newValue;
 								ry += TextSpacing;
-								valueCount++;
 							}
 						}
 						sprite = CreateItemSprite(item.Identical1, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 2, y2: ry, type: 0});
@@ -315,7 +318,6 @@ package twinlist
 								
 								curValue = newValue;
 								ry += TextSpacing;
-								valueCount++;
 							}
 						}
 						sprite = CreateItemSprite(item.Identical2, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 2, y2: ry, type: 0});
@@ -344,7 +346,6 @@ package twinlist
 								
 								curValue = newValue;
 								ry += TextSpacing;
-								valueCount++;
 							}
 						}
 						sprite = CreateItemSprite(item.L1Similar, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 1, y2: ry, type: 1});
@@ -371,7 +372,6 @@ package twinlist
 								
 								curValue = newValue;
 								ry += TextSpacing;
-								valueCount++;
 							}
 						}
 						sprite = CreateItemSprite(item.L2Similar, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 3, y2: ry, type: 1});
@@ -399,7 +399,6 @@ package twinlist
 								
 								curValue = newValue;
 								ry += TextSpacing;
-								valueCount++;
 							}
 						}
 						sprite = CreateItemSprite(item.L1Unique, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 0, y2: ry, type: 2});
@@ -427,7 +426,6 @@ package twinlist
 								
 								curValue = newValue;
 								ry += TextSpacing;
-								valueCount++;
 							}
 						}
 						sprite = CreateItemSprite(item.L2Unique, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 4, y2: ry, type: 2});
@@ -451,8 +449,7 @@ package twinlist
 					calculatedColumnWidth = sprite.getChildAt(0).width;
 			}
 			columnWidth = calculatedColumnWidth + 40;
-			columnHeight = HeaderHeight + model.ListViewerData.length * RowHeight + valueCount * (TextSpacing + 3) + TextSpacing;
-			
+			columnHeight = HeaderHeight + ry;
 			
 			// Change group line width
 			for each (header in groupVisList)
@@ -486,7 +483,7 @@ package twinlist
 			return header;
 		}
 		
-		private function CreateColumn(index:int, color:int, title:String):RectSprite
+		private function CreateColumn(index:int, color:int, title:String, colWidth:int, colHeight:int):RectSprite
 		{
 			var header:TextSprite = new TextSprite(title);
 			if (index % 2 == 0) {
@@ -499,7 +496,7 @@ package twinlist
 			header.bold = true;
 			header.letterSpacing = 2;
 			header.horizontalAnchor = TextSprite.CENTER;
-			header.x = columnWidth / 2;
+			header.x = colWidth / 2;
 			header.y = 0;
 			
 			var button:TextSprite = new TextSprite("(Accept All)");
@@ -512,8 +509,8 @@ package twinlist
 			button.size = HeaderFontSize - 4;
 			button.font = fontString;
 			button.horizontalAnchor = TextSprite.CENTER;
-			button.x = columnWidth / 2;
-			button.y = HeaderFontSize + 4;
+			button.x = colWidth / 2;
+			button.y = 2*HeaderFontSize + 4;
 			button.buttonMode = true;
 			button.addEventListener(MouseEvent.ROLL_OVER, function(e:Event):void {
 				button.color = colorTextHighlighted;
@@ -525,7 +522,7 @@ package twinlist
 				AcceptAll(index);
 			});
 			
-			var rect:RectSprite = new RectSprite(index * columnWidth, 0, columnWidth, columnHeight);
+			var rect:RectSprite = new RectSprite(index * colWidth, 0, colWidth, colHeight);
 			rect.fillColor = rect.lineColor = color;
 			rect.addChild(header);
 			rect.addChild(button);
@@ -537,11 +534,11 @@ package twinlist
 		private function CreateColumns():ArrayCollection
 		{
 			var colList:ArrayCollection = new ArrayCollection();
-			colList.addItem(CreateColumn(0, colorBackground, model.VisibleLists[0].Name + " - Unique"));
-			colList.addItem(CreateColumn(1, colorOriginal, model.VisibleLists[0].Name));
-			colList.addItem(CreateColumn(2, colorBackground, "Identical"));
-			colList.addItem(CreateColumn(3, colorOriginal, model.VisibleLists[1].Name));
-			colList.addItem(CreateColumn(4, colorBackground, model.VisibleLists[1].Name + " - Unique"));
+			colList.addItem(CreateColumn(0, colorBackground, model.VisibleLists[0].Name + "\nUnique", columnWidth, columnHeight));
+			colList.addItem(CreateColumn(1, colorOriginal, model.VisibleLists[0].Name, columnWidth, columnHeight));
+			colList.addItem(CreateColumn(2, colorBackground, "Identical", columnWidth, columnHeight));
+			colList.addItem(CreateColumn(3, colorOriginal, model.VisibleLists[1].Name, columnWidth, columnHeight));
+			colList.addItem(CreateColumn(4, colorBackground, model.VisibleLists[1].Name + "\nUnique", columnWidth, columnHeight));
 			return colList;
 		}
 		
@@ -792,9 +789,9 @@ package twinlist
 			seq.add(new Tween(columns[4].getChildAt(1), 0.25*AnimationSpeed, {alpha: 1}));
 			animMatchColUnique.add(seq);
 			animMatchColSimilar.add(new Tween(columns[1], 0.25*AnimationSpeed, {fillColor: (colorList1 + colorIdentical) / 2, lineColor: (colorList1 + colorIdentical) / 2}));
-			animMatchColSimilar.add(new Tween(columns[1].getChildAt(0), 0.25*AnimationSpeed, {text: model.VisibleLists[0].Name + ' - Similar'}));
+			animMatchColSimilar.add(new Tween(columns[1].getChildAt(0), 0.25*AnimationSpeed, {text: model.VisibleLists[0].Name + '\nSimilar'}));
 			animMatchColSimilar.add(new Tween(columns[3], 0.25*AnimationSpeed, {fillColor: (colorList2 + colorIdentical) / 2, lineColor: (colorList2 + colorIdentical) / 2}));
-			animMatchColSimilar.add(new Tween(columns[3].getChildAt(0), 0.25*AnimationSpeed, {text: model.VisibleLists[1].Name + ' - Similar'}));
+			animMatchColSimilar.add(new Tween(columns[3].getChildAt(0), 0.25*AnimationSpeed, {text: model.VisibleLists[1].Name + '\nSimilar'}));
 			
 			// step-by-step "reset" column animation
 			animResetColIdentical.add(new Tween(columns[2], 0.25*AnimationSpeed, {fillColor: colorBackground, lineColor: colorBackground}));
@@ -1122,7 +1119,7 @@ package twinlist
 		
 		private function get HeaderHeight():int
 		{
-			return 2 * HeaderFontSize + 2 * TextSpacing;
+			return 3 * HeaderFontSize + 2 * TextSpacing;
 		}
 		
 		private function get RowHeight():int
