@@ -60,7 +60,9 @@
 		private var sizeByAttribute:AttributeDescriptor;
 		private var colorByAttribute:AttributeDescriptor;
 		private var groupByAttribute:AttributeDescriptor;
+		private var groupByAscending:Boolean;
 		private var sortByAttribute:AttributeDescriptor;
+		private var sortByAscending:Boolean;
 		private var filterList:ArrayCollection;
 		//data
 		private var list1File:String;
@@ -95,7 +97,9 @@
 			sizeByAttribute = null;
 			colorByAttribute = null;
 			groupByAttribute = null;
+			groupByAscending = ControlsPanelClass.SORT_ASCEND;
 			sortByAttribute = null;
+			sortByAscending = ControlsPanelClass.SORT_ASCEND;
 			filterList = new ArrayCollection();
 			SetDataset(DATA_MED_REC);
 
@@ -324,9 +328,10 @@
 		{
 			return groupByAttribute;
 		}
-		public function set GroupBy(attributeName:AttributeDescriptor):void
+		public function SetGroupBy(attributeName:AttributeDescriptor, ascending:Boolean = true):void
 		{
 			groupByAttribute = attributeName;
+			groupByAscending = ascending;
 			SortListViewerData();
 		}
 		
@@ -334,9 +339,10 @@
 		{
 			return sortByAttribute;
 		}
-		public function set SortBy(attributeName:AttributeDescriptor):void
+		public function SetSortBy(attributeName:AttributeDescriptor, ascending:Boolean = true):void
 		{
 			sortByAttribute = attributeName;
+			sortByAscending = ascending;
 			SortListViewerData();
 		}
 		
@@ -451,6 +457,8 @@
 					val2 = item2.Attributes[groupByAttribute.Name].Values[0];		
 				}
 				sortVal = defaultSort.compareFunction.call(null, val1, val2, fields);
+				if (!groupByAscending)
+					sortVal *= -1;
 			}
 			if (sortVal != 0)
 				return sortVal;
@@ -464,6 +472,8 @@
 					val2 = item2.Attributes[sortByAttribute.Name].Values[0];		
 				}
 				sortVal = defaultSort.compareFunction.call(null, val1, val2, fields);
+				if (!sortByAscending)
+					sortVal *= -1;
 			}
 			return sortVal;
 		}
@@ -508,7 +518,9 @@
 			sizeByAttribute = null;
 			colorByAttribute = null;
 			groupByAttribute = null;
+			groupByAscending = ControlsPanelClass.SORT_ASCEND;
 			sortByAttribute = null;
+			sortByAscending = ControlsPanelClass.SORT_ASCEND;
 			filterList.removeAll();
 		}
 		

@@ -31,7 +31,7 @@
 		<s:DropDownList id="groupByList" width="100%" selectedIndex="0"
 						dataProvider="{this.categoricalOptions}" change="OnDropDownChange(event)"
 						/>
-		<s:VGroup>
+		<s:VGroup id="groupByAscend" enabled="false">
 			<s:RadioButton id="rbGroupByAscend" group="{rbgGroupByAscend}" label="Ascending" value="{SORT_ASCEND}" selected="true"/>
 			<s:RadioButton id="rbGroupByDescend" group="{rbgGroupByAscend}" label="Descending" value="{SORT_DESCEND}"/>
 		</s:VGroup>
@@ -42,7 +42,7 @@
 		<s:DropDownList id="sortByList" width="100%" selectedIndex="0"
 						dataProvider="{this.generalOptions}" change="OnDropDownChange(event)"
 						/>
-		<s:VGroup>
+		<s:VGroup id="sortByAscend" enabled="false">
 			<s:RadioButton id="rbSortByAscend" group="{rbgSortByAscend}" label="Ascending" value="{SORT_ASCEND}" selected="true"/>
 			<s:RadioButton id="rbSortByDescend" group="{rbgSortByAscend}" label="Descending" value="{SORT_DESCEND}"/>
 		</s:VGroup>
