@@ -161,6 +161,22 @@ A filter can be enabled and disabled via a checkbox displayed to the right of it
 \end{figure}
 
 \subsection{Options}
+The \Options~ allows the user to control the following global application behavior:
+\begin{itemize}
+\item \textit{Dataset}: selects and loads a dataset from the three demo sets.\footnote{In future versions, the user will be allowed to upload a dataset using our proprietary XML schema.} Upon changing the dataset, the application will be reset, except for the \Options.
+\item \textit{Font size}: sets the size of the font used to display item names in the \ListViewer. Note that the attribute text font size is relative to that of the name, though slightly smaller to reduce clutter.
+\item \textit{Animation speed}: controls the relative speed of the animations in the \ListViewer. The speedup is defined as $2^\alpha$, where $\alpha$ is the slider value. Thus, a value of $\alpha = +1$ will double the speed and a value of $\alpha = -1$ will reduce it by $1/2$.
+\item \textit{Link identical items}: determines how identical items are treated in the \ListViewer. When linked (the default), highlighting affects both items and accepting/rejecting either will hide the other from the \ListViewer. When unlinked, they are considered completely separate items.\footnote{Unlinking identical items implies that both items can be accepted or rejected, independent of the other.}
+\item \textit{After item accept/reject}: determines the behavior of the \ListViewer~ after accepting or rejecting an item. \textit{Gray out} will simply gray the text and disable mouse actions; \textit{Remove} will hide the item from the \ListViewer.
+\end{itemize}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=1\linewidth]{img/options.png}
+\end{center}
+   \caption{A detail of the \Options.}
+   \label{fig:options}
+\end{figure}
 
 \section{Evaluation}
 Our goal was to deliver a working prototype, not a finished, fully-functional application. As such, we are more concerned with qualitative than quantitative feedback on the features of our visualization system at this point. According to the categorization proposed by Lam et al~\cite{lam-bertini-isenberg-plaisant-carpendale-2011}, the evaluation scenario best matching our present purposes is the \textit{User Experience (UE)} test case. The goal of the following experiments is to observe how users react to the visualization and interaction features offered by \TwinList. We will use their feedback to improve the system's design in future versions.
