@@ -1,10 +1,12 @@
 package twinlist {
 	
+	import flash.events.Event;
 	import flash.events.MouseEvent;
 	
 	import mx.events.FlexEvent;
 	
 	import spark.components.*;
+	
 	import twinlist.list.AttributeDescriptor;
 	import twinlist.list.ItemAttribute;
 	
@@ -23,23 +25,31 @@ package twinlist {
 		{
 			super();
 			addEventListener(FlexEvent.CREATION_COMPLETE, OnInitComplete);
+			model.addEventListener(Model.DATA_LOADED, function(e:Event):void {
+				CreateFilters();
+			});
 		}
 		
 		private function OnInitComplete(event:FlexEvent):void
 		{
 			removeEventListener(FlexEvent.CREATION_COMPLETE, OnInitComplete);
-
 			// add listeners to buttons
 			enableAllBtn.addEventListener(MouseEvent.CLICK, function(e:Event):void {
-				setAllFilters(true);
+				SetAllFilters(true);
 			});
 			disableAllBtn.addEventListener(MouseEvent.CLICK, function(e:Event):void {
-				setAllFilters(false);
+				SetAllFilters(false);
 			});
 			clearAllBtn.addEventListener(MouseEvent.CLICK, function(e:Event):void {
-				clearAllFilters();
+				ClearAllFilters();
 			});
-			// add a listener for each attribute
+			CreateFilters();
+		}
+		
+		private function CreateFilters():void
+		{
+			if (filterComponents != null)
+				RemoveFilters();
 			filterComponents = new Object();
 			var fc:FilterComponentClass;
 			for each (var attri:AttributeDescriptor in model.ItemAttributes) {
@@ -52,14 +62,20 @@ package twinlist {
 			}
 		}
 		
-		private function setAllFilters (option:Boolean): void
+		private function RemoveFilters():void
+		{
+			filterGroup.removeAllElements();
+			filterComponents = new Object();
+		}
+		
+		private function SetAllFilters (option:Boolean): void
 		{
 			for each (var fc:FilterComponentClass in filterComponents) {
 				fc.Checked = option;
 			}
 		}
 		
-		private function clearAllFilters(): void
+		private function ClearAllFilters(): void
 		{
 			for each (var fc:FilterComponentClass in filterComponents) {
 				fc.ClearAll();
