@@ -103,9 +103,9 @@ A core problem shared by these applications is that data is in the form of two l
 
 Our goal was to design a visualization that allows users to quickly answer the dual questions ``What is the same between these two lists?'' and ``What is different between these two lists?'', quickly, accurately and effortlessly. We address these aspects of the list comparison problem in our visualization tool, \TwinList. Using a spatial organization of data, we provide an intuitive way for users to quickly differentiate between items that are the same and those that differ in two lists of data. We abstract complicated similarity logic by categorizing items as ``identical'' when they are the same in both lists, ``unique'' when they appear in only one lists, and ``similar'' when the same item has different attributes in each list. We map these three categories to a workflow and use animation to help users understand each step of the list comparison process. In addition, \TwinList~ provides sorting, filtering, and grouping functionality to allow users to explore different aspects of the data. Finally, the application supports choosing items that are relevant or irrelevant, helping users reach a strong conclusion. 
 
+\TwinList's interface consists of four major components: the \ListViewer, \Tools, \AcceptedRejected~ lists and \Details, as shown in (Figure~\ref{fig:interface}). The \ListViewer, located in the upper left corner of the interface, is where the list matching visualization will be performed. The initialized view displays two separated lists loaded from XML files. The \Tools, in the upper right corner, displays the \Controls, \Options~ and \Filters, which can be made visible one at a time by selecting the appropriate tab. If an item in the \ListViewer~ is selected, its detail information will be shown in the \Details~ in the lower right corner. \TwinList~ is not merely meant for visualization; it also allows users to take action. List items can be accepted or rejected, whereupon they will appear in the \AcceptedRejected~ lists.
 
-
-\begin{figure*}[!ht]
+\begin{figure*}[t]
 \begin{center}
 \includegraphics[width=1\linewidth]{img/interface2.png}
 \end{center}
@@ -133,8 +133,6 @@ To visualize the and similarity and difference of two lists, a five-column list 
 
 The identical items, both the name and attributes are the same, will be shown in the center column(green). The unique items that only appeared in the first list will be shown in the leftmost column(yellow). The items that are unique to the other list then will be shown in the rightmost column (slate blue). Then all the similar items will be placed in the Similar columns and the difference will be highlighted in the visualization. For example, in Figure~\ref{fig:interface}, Acetaminophen, Calcitrol and Darbepoetin appeared on both lists, so they are placed in the center green column. Atorvistatin appeared in both lists. However the dosage of the two are different, 40mg on the patient list, and 60mg on the E.R. list. The different dosages are highlighted. Aspirin is unique to the patient list, so it is placed in the leftmost column.
 
-
-
 \subsubsection{Matching Animation}
 To emphasize the three different matching sets, the items move into their corresponding groups through an animation sequence. The animation sequence ends up matching the two lists through three steps:
 \begin{enumerate}
@@ -147,7 +145,7 @@ The animation sequence can be viewed step by step using the animation buttons at
 
 Figure~\ref{fig:animation} shows how the three animation steps alter the view of the \ListViewer~ and accentuate the \Identical, \Unique, and \Similar~ items in each step.
 
-\begin{figure*}
+\begin{figure*}[t]
 \begin{center}
 \includegraphics[width=1\linewidth]{img/anim_arrows.png}
 \end{center}
@@ -158,7 +156,7 @@ Figure~\ref{fig:animation} shows how the three animation steps alter the view of
 \subsubsection{Details on demand}
 When the user click on an item, it's detail information will be shown in the \Details~, shown in Figure~\ref{fig:details}. Although user can see every attribute value in the \ListViewer, we still intend to have a separated \Details. This details panel give the potential of further edit the presentation of list items. For example, doctor can choose to only show the dosage, frequency and form of the medication and not to show drug class and symptom information, because they might be very familiar with most of the medications. They can still check the detail information on drug class and symptom in the  \Details~. We are not provide this feature in the current version.
 
-\begin{figure}
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=1\linewidth]{img/details.png}
 \end{center}
@@ -169,18 +167,19 @@ When the user click on an item, it's detail information will be shown in the \De
 \subsubsection{Action taking}
 
 Once the list matching is performed, the user can see the similarity and difference clearly. \TwinList support user to take actions about the list items. This feature is especially useful for medication reconciliation, for doctors will need to make decisions after examined the list items on both lists. If a user left click and hold, a menu with two options will show up and user can choose which action to take for that particular item (Figure~\ref{fig:menu}). The item selected is then added to the \AcceptReject (Figure~\ref{fig:acceptlist}). The selected item in then remove from the \ListViewer. User can choose to either gray out or the added item in the \Options. 
-The action can be reversed by click on the Remove button in \AcceptReject~, the item will be removed and reappear in the \ListViewer. This is also consistent with "Permit easy reversal of actions" \cite{shneiderman}of the design guideline. 
-\begin{figure}
+The action can be reversed by click on the Remove button in \AcceptReject~, the item will be removed and reappear in the \ListViewer. This is also consistent with "Permit easy reversal of actions" \cite{shneiderman}of the design guideline
+
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=1\linewidth]{img/menu.png}
 \end{center}
    \caption{A detail of the action menu.}
    \label{fig:menu}
-\end{figure}\begin{figure}
+\end{figure}
 
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=0.5\linewidth]{img/acceptlist.png}
-
 \end{center}
    \caption{A detail of the added medicine in \AcceptReject.}
    \label{fig:acceptlist}
@@ -198,7 +197,7 @@ As of the submission of this paper, the \SizeBy~ and \ColorBy~ functionality is 
 
 For an example of the usefulness of these features, consider the following scenario in the context of analyzing the State of the Union addresses. One might begin by grouping items (words) by their part of speech (assuming part of speech is an attribute). To further organize the display, one might then sort items by name (i.e. alphabetical ordering). The former lets the user analyze syntactical patterns, while the latter enables quick lookup of particular keywords. One can go even further, sizing words by their TF-IDF value, to reveal lexical patterns, similar to a Wordle\cite{Viegas2009}. In the context of medication list reconciliation, one might wish to group by drug class, size by dosage and color by frequency.
  
-\begin{figure}
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=1\linewidth]{img/controls.png}
 \end{center}
@@ -213,7 +212,7 @@ Filters come in two classes: categorical and numerical. Categorical filters can 
 
 A filter can be enabled and disabled via a checkbox displayed to the right of it. Enabling a filter implies that it is active. When a filter is disabled, it has no effect on the \ListViewer, no matter which values or bounds are set. The \textit{Select All} and \textit{Clear All} buttons select or deselect all options in a categorical filter, where selection is demarcated by highlighting. A selected value is kept in the visualization. In a numerical filter, both \textit{Select All} and \textit{Clear All} simply reset the bounds.
 
-\begin{figure}
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=1\linewidth]{img/filters.png}
 \end{center}
@@ -231,7 +230,7 @@ The \Options~ allows the user to control the following global application behavi
 \item \textit{After item accept/reject}: determines the behavior of the \ListViewer~ after accepting or rejecting an item. \textit{Gray out} will simply gray the text and disable mouse actions; \textit{Remove} will hide the item from the \ListViewer.
 \end{itemize}
 
-\begin{figure}
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=1\linewidth]{img/options.png}
 \end{center}
