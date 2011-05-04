@@ -41,6 +41,7 @@ breaklinks=true,
 \newcommand{\SortBy}{\textit{Sort By}}
 \newcommand{\Similar}{\textit{Similar}}
 \newcommand{\Identical}{\textit{Identical}}
+\newcommand{\Unique}{\textit{Unique}}
 
 \pagenumbering{arabic}  % Arabic page numbers for submission.  Remove this line to eliminate page numbers for the camera ready copy
 
@@ -123,11 +124,29 @@ The specific problem of list comparison as we have framed has relatively little 
 \subsubsection{The five-column list placement}
 To visualize the and similarity and difference of two lists, a five-column list placement is used in \TwinList. We used a different color tone to separate the two lists. That is, the items in the yellowish color columns are belong to the first list, while the ones in bluish columns are belong to the other list. 
 
-The identical items, both the name and attributes are the same, will be shown in the center column(green). The unique items that only appeared in the first list will be shown in the leftmost column(yellow). The items that are unique to the other list then will be shown in the rightmost column(slate blue). Then all the similar items will be placed in the Similar columns and the difference will be highlighted in the visualization. For example, in Figure~\ref{fig:interface}, Acetaminophen, Calcitrol and Darbepoetin appeared on both lists, so they are placed in the center green column. Atorvistatin appeared in both lists. However the dosage of the two are different, 40mg on the patient list, and 60mg on the E.R. list. The different dosages are highlighted. Aspirin is unique to the patient list, so it is placed in the leftmost colomn.
+The identical items, both the name and attributes are the same, will be shown in the center column(green). The unique items that only appeared in the first list will be shown in the leftmost column(yellow). The items that are unique to the other list then will be shown in the rightmost column (slate blue). Then all the similar items will be placed in the Similar columns and the difference will be highlighted in the visualization. For example, in Figure~\ref{fig:interface}, Acetaminophen, Calcitrol and Darbepoetin appeared on both lists, so they are placed in the center green column. Atorvistatin appeared in both lists. However the dosage of the two are different, 40mg on the patient list, and 60mg on the E.R. list. The different dosages are highlighted. Aspirin is unique to the patient list, so it is placed in the leftmost column.
 
 
 
 \subsubsection{Matching Animation}
+To emphasize the three different matching sets, the items move into their corresponding groups through an animation sequence. The animation sequence ends up matching the two lists through three steps:
+\begin{enumerate}
+\item The \Identical~ items moving into the middle column, and the column is highlighted.
+\item The \Unique~ items move into the first and last columns, and the two columns are highlighted.
+\item The \Similar~ items move into the middle column with their differences highlighted, and the column is highlighted.
+\end{enumerate}
+
+The animation sequence can be viewed step by step using the animation buttons at the top. The \textit{Match Lists} button at the top runs the entire animation sequence, and clicking \textit{Reset View} afterwards reverts the entire animation sequence to the original list with the two lists separated. The animation speed can be adjusted through the \Options.
+
+Figure~\ref{fig:animation} shows how the three animation steps alter the view of the \ListViewer~ and accentuate the \Identical, \Unique, and \Similar~ items in each step.
+
+\begin{figure*}
+\begin{center}
+\includegraphics[width=1\linewidth]{img/anim_arrows.png}
+\end{center}
+   \caption{An animation sequence matching two lists of prescription drugs. The original \ListViewer~ is shown at the top left. In the top right, the \Identical~ items were found. The \Unique~ items are found next in the bottom left view. Finally, the \Similar~ items are matched with their differences highlighted in the bottom right view.}
+   \label{fig:animation}
+\end{figure*}
 
 \subsection{Controls}
 The \Controls, depicted in Figure~\ref{fig:controls}, contains functionality for organizing and manipulating the the \ListViewer~ visualization. This includes the following components:
