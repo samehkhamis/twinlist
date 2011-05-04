@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list id="obama09" name="obama09 List">
+
+	<item id="obama09:reinvestment" name="reinvestment">
+		<attribute name="Frequency" type="Numerical">
+			<value value="1"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical">
+			<value value="0.00017"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical">
+			<value value="0.693"/>
+		</attribute>
+	</item>
+	<item id="obama09:proven" name="proven">
+		<attribute name="Frequency" type="Numerical">
+			<value value="1"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical">
+			<value value="0.00017"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical">
+			<value value="0.693"/>
+		</attribute>
+	</item>
+	<item id="obama09:learned" name="learned">
+		<attribute name="Frequency" type="Numerical">
+			<value value="1"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical">
+			<value value="0.00017"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical">
+			<value value="0.693"/>
+		</attribute>
+	</item>
+	<item id="obama09:issue" name="issue">
+		<attribute name="Frequency" type="Numerical">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical">
+			<value value="0.00116"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:stamp" name="stamp">
+		<attribute name="Frequency" type="Numerical">
+			<value value="1"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical">
+			<value value="0.00017"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical">
+			<value value="0.693"/>
+		</attribute>
+	</item>
+</list>

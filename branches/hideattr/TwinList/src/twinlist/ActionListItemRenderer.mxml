@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<twinlist:ActionListItemRendererClass
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns:twinlist="twinlist.*"
+	width="100%" height="100%" 
+	>
+	<fx:Declarations>
+	</fx:Declarations>
+	<s:Button x="0" y="0" id="btn" label="Remove" visible="{ColumnName==ActionListClass.BUTTON_COL}" click="PutBack(event)"/>
+	<s:Label x="0" y="0" id="lbl" backgroundAlpha="0" fontSize="16"
+			 text="{this.label}" visible="{ColumnName!=ActionListClass.BUTTON_COL}"
+			 paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5"/>
+</twinlist:ActionListItemRendererClass>

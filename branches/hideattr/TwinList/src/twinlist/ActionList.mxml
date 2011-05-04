@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<twinlist:ActionListClass
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns:twinlist="twinlist.*"
+	width="100%" height="100%">
+	<fx:Declarations>
+		<mx:Glow id="glow"
+				 duration="1000" repeatCount="1"
+				 color="0xffff00" strength="2"
+				 alphaFrom="1" alphaTo="0"
+				 blurXFrom="20" blurXTo="0"
+				 blurYFrom="20" blurYTo="0"
+				 />
+	</fx:Declarations>
+	<twinlist:layout>
+		<s:VerticalLayout />		
+	</twinlist:layout>
+	<!--<s:Label text="{this.listTitle}" fontSize="24"/>-->
+	<mx:AdvancedDataGrid id="dataGrid" height="100%" width="100%"
+						 borderVisible="false" alternatingItemColors="[#ffffff, #ebf4ff]" rowHeight="30" verticalAlign="middle"
+				 dataProvider="{this.dataSource}"/>
+</twinlist:ActionListClass>

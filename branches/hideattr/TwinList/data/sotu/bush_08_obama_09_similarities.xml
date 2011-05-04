@@ -1,0 +1,2507 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<SimilarityList>
+	<SimilarityPair>
+		<L1ID>bush08:these</L1ID>
+		<L2ID>obama09:these</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00441</L1Diff>
+			<L2Diff>0.00265</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:you</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:congress</L1ID>
+		<L2ID>obama09:congress</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00476</L1Diff>
+			<L2Diff>0.00166</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:both</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:put</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:my</L1ID>
+		<L2ID>obama09:my</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:many</L1ID>
+		<L2ID>obama09:many</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00176</L1Diff>
+			<L2Diff>0.00083</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:buy</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:issue</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:see</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:violence</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:million</L1ID>
+		<L2ID>obama09:million</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00071</L1Diff>
+			<L2Diff>0.00132</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:reform</L1ID>
+		<L2ID>obama09:reform</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00106</L1Diff>
+			<L2Diff>0.00182</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:taken</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:business</L1ID>
+		<L2ID>obama09:business</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:power</L1ID>
+		<L2ID>obama09:power</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:peace</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:give</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:life</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:decisions</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:history</L1ID>
+		<L2ID>obama09:history</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:what</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:chamber</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:military</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:them</L1ID>
+		<L2ID>obama09:them</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00458</L1Diff>
+			<L2Diff>0.00166</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:tonight</L1ID>
+		<L2ID>obama09:tonight</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00141</L1Diff>
+			<L2Diff>0.00199</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:technology</L1ID>
+		<L2ID>obama09:technology</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00088</L1Diff>
+			<L2Diff>0.00066</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:again</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:economic</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:expanding</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:steps</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:energy</L1ID>
+		<L2ID>obama09:energy</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00088</L1Diff>
+			<L2Diff>0.00232</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:effort</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:system</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:militia</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:time</L1ID>
+		<L2ID>obama09:time</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00141</L1Diff>
+			<L2Diff>0.00265</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:trust</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:still</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:all</L1ID>
+		<L2ID>obama09:all</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:she</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:programs</L1ID>
+		<L2ID>obama09:programs</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:iraqi</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:act</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:when</L1ID>
+		<L2ID>obama09:when</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:pass</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:businesses</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:college</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:every</L1ID>
+		<L2ID>obama09:every</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00071</L1Diff>
+			<L2Diff>0.00331</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:health</L1ID>
+		<L2ID>obama09:health</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00123</L1Diff>
+			<L2Diff>0.00331</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:can</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:where</L1ID>
+		<L2ID>obama09:where</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00088</L1Diff>
+			<L2Diff>0.00166</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:land</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:provide</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:lead</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:way</L1ID>
+		<L2ID>obama09:way</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:recovery</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:relief</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:would</L1ID>
+		<L2ID>obama09:would</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:fact</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:restore</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:no</L1ID>
+		<L2ID>obama09:no</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00088</L1Diff>
+			<L2Diff>0.00215</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:americas</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:seen</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:record</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:future</L1ID>
+		<L2ID>obama09:future</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00229</L1Diff>
+			<L2Diff>0.00166</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:address</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:stand</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:only</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:me</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:values</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:by</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:goal</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:confronting</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:support</L1ID>
+		<L2ID>obama09:support</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00141</L1Diff>
+			<L2Diff>0.00083</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:women</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:century</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:care</L1ID>
+		<L2ID>obama09:care</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00088</L1Diff>
+			<L2Diff>0.00298</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:democracy</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:get</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:global</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:back</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:empower</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:border</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:there</L1ID>
+		<L2ID>obama09:there</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00123</L1Diff>
+			<L2Diff>0.00215</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:as</L1ID>
+		<L2ID>obama09:as</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00247</L1Diff>
+			<L2Diff>0.00414</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:why</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:thats</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:largest</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:market</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:debate</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:know</L1ID>
+		<L2ID>obama09:know</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00071</L1Diff>
+			<L2Diff>0.00414</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:fight</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:opportunity</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:housing</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:taking</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:america</L1ID>
+		<L2ID>obama09:america</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00529</L1Diff>
+			<L2Diff>0.00298</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:has</L1ID>
+		<L2ID>obama09:has</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:children</L1ID>
+		<L2ID>obama09:children</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:day</L1ID>
+		<L2ID>obama09:day</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00071</L1Diff>
+			<L2Diff>0.00182</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:problems</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:growing</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:out</L1ID>
+		<L2ID>obama09:out</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00106</L1Diff>
+			<L2Diff>0.00182</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:deficit</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:al</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:people</L1ID>
+		<L2ID>obama09:people</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00511</L1Diff>
+			<L2Diff>0.00348</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:tell</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:family</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:behind</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:must</L1ID>
+		<L2ID>obama09:must</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00511</L1Diff>
+			<L2Diff>0.00248</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:number</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:meet</L1ID>
+		<L2ID>obama09:meet</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00088</L1Diff>
+			<L2Diff>0.00149</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:developing</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:protect</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:into</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:budget</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:bad</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:good</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:called</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:invest</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:create</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:education</L1ID>
+		<L2ID>obama09:education</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00071</L1Diff>
+			<L2Diff>0.00232</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:terror</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:afford</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:work</L1ID>
+		<L2ID>obama09:work</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:spending</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:enemies</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:single</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:now</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:schools</L1ID>
+		<L2ID>obama09:schools</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:american</L1ID>
+		<L2ID>obama09:american</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:attacks</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:state</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:down</L1ID>
+		<L2ID>obama09:down</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00071</L1Diff>
+			<L2Diff>0.00132</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:about</L1ID>
+		<L2ID>obama09:about</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00106</L1Diff>
+			<L2Diff>0.00215</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:new</L1ID>
+		<L2ID>obama09:new</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:government</L1ID>
+		<L2ID>obama09:government</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00194</L1Diff>
+			<L2Diff>0.00116</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:show</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:longterm</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:how</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:those</L1ID>
+		<L2ID>obama09:those</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00106</L1Diff>
+			<L2Diff>0.00182</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:united</L1ID>
+		<L2ID>obama09:united</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:other</L1ID>
+		<L2ID>obama09:other</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:continue</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:vital</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:ever</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:send</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:even</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:administration</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:states</L1ID>
+		<L2ID>obama09:states</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00088</L1Diff>
+			<L2Diff>0.00066</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:up</L1ID>
+		<L2ID>obama09:up</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00212</L1Diff>
+			<L2Diff>0.00149</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:words</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:been</L1ID>
+		<L2ID>obama09:been</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:say</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:should</L1ID>
+		<L2ID>obama09:should</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00106</L1Diff>
+			<L2Diff>0.00066</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:call</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:together</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:recession</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:challenges</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:earmarks</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:increase</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:was</L1ID>
+		<L2ID>obama09:was</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:results</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:debt</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:markets</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:another</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:which</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:come</L1ID>
+		<L2ID>obama09:come</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00194</L1Diff>
+			<L2Diff>0.00099</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:if</L1ID>
+		<L2ID>obama09:if</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00141</L1Diff>
+			<L2Diff>0.00215</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:save</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:millions</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:keep</L1ID>
+		<L2ID>obama09:keep</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00141</L1Diff>
+			<L2Diff>0.00083</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:better</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:own</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:plan</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:also</L1ID>
+		<L2ID>obama09:also</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:each</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:fighting</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:deny</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:freedom</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:weve</L1ID>
+		<L2ID>obama09:weve</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00317</L1Diff>
+			<L2Diff>0.00199</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:your</L1ID>
+		<L2ID>obama09:your</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:security</L1ID>
+		<L2ID>obama09:security</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00176</L1Diff>
+			<L2Diff>0.00066</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:confidence</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:but</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:promise</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:too</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:over</L1ID>
+		<L2ID>obama09:over</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00159</L1Diff>
+			<L2Diff>0.00083</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:leaders</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:hope</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:federal</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:spend</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:forces</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:men</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:already</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:agreement</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:it</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:progress</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:last</L1ID>
+		<L2ID>obama09:last</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00229</L1Diff>
+			<L2Diff>0.00083</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:build</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:members</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:right</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:crisis</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:banks</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:today</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:dont</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:qaida</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:necessary</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:were</L1ID>
+		<L2ID>obama09:were</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00247</L1Diff>
+			<L2Diff>0.00149</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:law</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:next</L1ID>
+		<L2ID>obama09:next</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00088</L1Diff>
+			<L2Diff>0.00166</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:off</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:economy</L1ID>
+		<L2ID>obama09:economy</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00106</L1Diff>
+			<L2Diff>0.00364</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:like</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:funding</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:past</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:legislation</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:citizens</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:safe</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:cost</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:liberty</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:iraqis</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:passed</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:ask</L1ID>
+		<L2ID>obama09:ask</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00212</L1Diff>
+			<L2Diff>0.00083</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:fellow</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:receive</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:changed</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:nations</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:worse</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:taxes</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:half</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:they</L1ID>
+		<L2ID>obama09:they</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:terrorists</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:lending</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:money</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:war</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:cut</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:run</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:free</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:growth</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:us</L1ID>
+		<L2ID>obama09:us</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00423</L1Diff>
+			<L2Diff>0.00314</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:extremists</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:make</L1ID>
+		<L2ID>obama09:make</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00088</L1Diff>
+			<L2Diff>0.00232</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:tax</L1ID>
+		<L2ID>obama09:tax</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:across</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:through</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:well</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:while</L1ID>
+		<L2ID>obama09:while</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00088</L1Diff>
+			<L2Diff>0.00066</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:coming</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:allow</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:because</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:troops</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:americans</L1ID>
+		<L2ID>obama09:americans</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:cannot</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:clear</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:responsibility</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:not</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:take</L1ID>
+		<L2ID>obama09:take</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00071</L1Diff>
+			<L2Diff>0.00132</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:years</L1ID>
+		<L2ID>obama09:years</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:who</L1ID>
+		<L2ID>obama09:who</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00282</L1Diff>
+			<L2Diff>0.00414</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:president</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:its</L1ID>
+		<L2ID>obama09:its</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00123</L1Diff>
+			<L2Diff>0.00331</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:surge</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:loans</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:one</L1ID>
+		<L2ID>obama09:one</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:some</L1ID>
+		<L2ID>obama09:some</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00106</L1Diff>
+			<L2Diff>0.00149</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:with</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:here</L1ID>
+		<L2ID>obama09:here</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00071</L1Diff>
+			<L2Diff>0.00232</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:lebanon</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:mission</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:do</L1ID>
+		<L2ID>obama09:do</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00194</L1Diff>
+			<L2Diff>0.00281</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:from</L1ID>
+		<L2ID>obama09:from</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:helping</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:school</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:home</L1ID>
+		<L2ID>obama09:home</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:asked</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:country</L1ID>
+		<L2ID>obama09:country</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:any</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:renewable</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:job</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:prosperity</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:finally</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:ahead</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:financial</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:live</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:iraq</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:sense</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:more</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:times</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:an</L1ID>
+		<L2ID>obama09:an</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00159</L1Diff>
+			<L2Diff>0.00348</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:year</L1ID>
+		<L2ID>obama09:year</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00423</L1Diff>
+			<L2Diff>0.00166</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:against</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:made</L1ID>
+		<L2ID>obama09:made</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:ensure</L1ID>
+		<L2ID>obama09:ensure</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:met</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:yet</L1ID>
+		<L2ID>obama09:yet</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00141</L1Diff>
+			<L2Diff>0.00066</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:workers</L1ID>
+		<L2ID>obama09:workers</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:need</L1ID>
+		<L2ID>obama09:need</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00106</L1Diff>
+			<L2Diff>0.00149</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:medical</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:jobs</L1ID>
+		<L2ID>obama09:jobs</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00088</L1Diff>
+			<L2Diff>0.00232</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:let</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:or</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:iran</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:could</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:nuclear</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:before</L1ID>
+		<L2ID>obama09:before</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:once</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:so</L1ID>
+		<L2ID>obama09:so</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00494</L1Diff>
+			<L2Diff>0.00331</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:enemy</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:clean</L1ID>
+		<L2ID>obama09:clean</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00071</L1Diff>
+			<L2Diff>0.00099</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:end</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:leading</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:be</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:families</L1ID>
+		<L2ID>obama09:families</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:nation</L1ID>
+		<L2ID>obama09:nation</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00317</L1Diff>
+			<L2Diff>0.00166</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:most</L1ID>
+		<L2ID>obama09:most</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00141</L1Diff>
+			<L2Diff>0.00099</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:world</L1ID>
+		<L2ID>obama09:world</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00229</L1Diff>
+			<L2Diff>0.00166</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:afghanistan</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:never</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:high</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:saw</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:bring</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:at</L1ID>
+		<L2ID>obama09:at</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00264</L1Diff>
+			<L2Diff>0.00166</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:help</L1ID>
+		<L2ID>obama09:help</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00317</L1Diff>
+			<L2Diff>0.00132</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:long</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:begin</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:ability</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:restart</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:had</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:first</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:stop</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:credit</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:working</L1ID>
+		<L2ID>obama09:working</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00088</L1Diff>
+			<L2Diff>0.00066</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID></L1ID>
+		<L2ID>obama09:without</L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:trade</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:than</L1ID>
+		<L2ID>obama09:than</L2ID>
+		<Type>0</Type> <!-- Identical -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:lives</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:just</L1ID>
+		<L2ID>obama09:just</L2ID>
+		<Type>1</Type>
+		<Diffs>1</Diffs>
+		<Difference>
+			<attrdiff>
+			<Name>Relative-Frequency</Name>
+			<L1Diff>0.00071</L1Diff>
+			<L2Diff>0.00149</L2Diff>
+			</attrdiff>
+		</Difference>
+	</SimilarityPair>
+	<SimilarityPair>
+		<L1ID>bush08:agreements</L1ID>
+		<L2ID></L2ID>
+		<Type>2</Type> <!-- Unique -->
+		<Diffs>0</Diffs>
+	</SimilarityPair>
+</SimilarityList>

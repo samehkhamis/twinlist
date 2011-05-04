@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project name="TwinList" basedir="." default="help">
+	<property name="APP_NAME" value="TwinList"/>
+	<property name="LOCALE" value="en_US"/>
+	<property name="FLEX_HOME" value="/home/puuj/Downloads/flex_sdk_4/"/>
+	
+	<taskdef resource="flexTasks.tasks"
+		classpath="libs/flexTasks.jar"/>
+	
+	<target name="help">
+		<echo message="Usage instructions:"/>
+		<echo message="---------------------"/>
+		<echo message="ant all        --> builds release and debug"/>
+		<echo message="ant clean      --> deletes output for debug and release"/>
+		<echo message="ant debug      --> builds release only"/>
+		<echo message="ant release    --> builds debug only"/>
+		<echo message="ant run        --> runs release in a browser window (Windows only)"/>
+	</target>
+
+	<target name="build" depends="release" />
+	<target name="all" depends="debug,release" />
+	
+	<target name="run">
+		<exec executable="cmd" osfamily="Windows" spawn="true">
+			<arg value="/C start bin-release/${APP_NAME}.html"/>
+		</exec>
+	</target>
+	
+	<target name="release">
+		<mxmlc file="src/twinlist/${APP_NAME}.mxml"
+			output="bin-release/${APP_NAME}.swf"
+			keep-generated-actionscript="false"
+			incremental="true"
+			locale="en_US"
+			target-player="10.0.0">
+			<load-config filename="${FLEX_HOME}/frameworks/flex-config.xml"/>
+			<source-path path-element="src"/>
+			<source-path path-element="${FLEX_HOME}/frameworks"/>
+			<compiler.library-path dir="${FLEX_HOME}/frameworks/libs" append="true">
+				<include name="framework.swc"/>
+			</compiler.library-path>
+			<compiler.library-path dir="libs" append="true">
+				<include name="flare.swc"/>
+			</compiler.library-path>
+		</mxmlc>
+		<html-wrapper
+			title="${APP_NAME}"
+			file="${APP_NAME}.html"
+			height="100%"
+			width="100%"
+			bgcolor="0xFFFFFF"
+			application="${APP_NAME}"
+			swf="${APP_NAME}"
+			history="true"
+			express-install="true"
+			output="bin-release"/>
+	</target>
+	
+	<target name="debug">
+		<mxmlc file="src/twinlist/${APP_NAME}.mxml"
+			output="bin-debug/${APP_NAME}.swf"
+			keep-generated-actionscript="false"
+			incremental="true"
+			locale="en_US"
+			target-player="10.0.0"
+			debug="true">
+			<load-config filename="${FLEX_HOME}/frameworks/flex-config.xml"/>
+			<source-path path-element="src"/>
+			<source-path path-element="${FLEX_HOME}/frameworks"/>
+			<compiler.library-path dir="${FLEX_HOME}/frameworks/libs" append="true">
+				<include name="framework.swc"/>
+			</compiler.library-path>
+			<compiler.library-path dir="libs" append="true">
+				<include name="flare.swc"/>
+			</compiler.library-path>
+		</mxmlc>
+		<html-wrapper
+			title="${APP_NAME}"
+			file="${APP_NAME}.html"
+			height="100%"
+			width="100%"
+			bgcolor="0xFFFFFF"
+			application="${APP_NAME}"
+			swf="${APP_NAME}"
+			history="true"
+			express-install="true"
+			output="bin-debug"/>
+	</target>
+	
+	<target name="clean">
+		<delete dir="bin-release/generated" />
+		<delete dir="bin-debug/generated" />
+		<delete>
+			<fileset dir="bin-release" includes="${APP_NAME}.swf" />
+			<fileset dir="bin-release" includes="${APP_NAME}.html" />
+			<fileset dir="bin-debug" includes="${APP_NAME}.swf" />
+			<fileset dir="bin-debug" includes="${APP_NAME}.html" />
+		</delete>
+	</target>
+</project>

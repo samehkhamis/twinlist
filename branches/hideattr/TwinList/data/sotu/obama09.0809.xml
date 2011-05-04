@@ -1,0 +1,2303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list id="obama09" name="Obama '09">
+
+	<item id="obama09:debt" name="debt">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="4.158"/>
+		</attribute>
+	</item>
+	<item id="obama09:these" name="these">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="16"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00265"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:congress" name="congress">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00166"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:another" name="another">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:come" name="come">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:my" name="my">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:put" name="put">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00149"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:many" name="many">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:buy" name="buy">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="4.158"/>
+		</attribute>
+	</item>
+	<item id="obama09:issue" name="issue">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00116"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:see" name="see">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:if" name="if">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="13"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00215"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:save" name="save">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:million" name="million">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:reform" name="reform">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00182"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:keep" name="keep">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:business" name="business">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:power" name="power">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00116"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:plan" name="plan">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="21"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00348"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:also" name="also">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="16"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00265"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:each" name="each">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00116"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:history" name="history">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00116"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:what" name="what">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00166"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:chamber" name="chamber">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:them" name="them">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00166"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:tonight" name="tonight">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="12"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00199"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:weve" name="weve">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="12"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00199"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:your" name="your">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="15"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00248"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:security" name="security">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:technology" name="technology">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:again" name="again">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00116"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="4.851"/>
+		</attribute>
+	</item>
+	<item id="obama09:confidence" name="confidence">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00116"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:promise" name="promise">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:too" name="too">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:economic" name="economic">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:energy" name="energy">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="14"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00232"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:effort" name="effort">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:over" name="over">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:system" name="system">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00116"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:time" name="time">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="16"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00265"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:spend" name="spend">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="obama09:still" name="still">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:all" name="all">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="15"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00248"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:she" name="she">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="obama09:already" name="already">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:programs" name="programs">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:when" name="when">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00182"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:businesses" name="businesses">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00116"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:last" name="last">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:college" name="college">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00166"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:every" name="every">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="20"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00331"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:health" name="health">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="20"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00331"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:where" name="where">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00166"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:right" name="right">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:banks" name="banks">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00166"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="6.930"/>
+		</attribute>
+	</item>
+	<item id="obama09:crisis" name="crisis">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00182"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="7.623"/>
+		</attribute>
+	</item>
+	<item id="obama09:provide" name="provide">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:dont" name="dont">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00182"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:necessary" name="necessary">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="obama09:were" name="were">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00149"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:lead" name="lead">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="obama09:way" name="way">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:next" name="next">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00166"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:recovery" name="recovery">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00182"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="7.623"/>
+		</attribute>
+	</item>
+	<item id="obama09:would" name="would">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:fact" name="fact">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="obama09:restore" name="restore">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="obama09:off" name="off">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:no" name="no">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="13"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00215"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:economy" name="economy">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="22"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00364"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:like" name="like">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:future" name="future">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00166"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:address" name="address">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:stand" name="stand">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:cost" name="cost">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00182"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:only" name="only">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00116"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:me" name="me">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00149"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:values" name="values">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="obama09:ask" name="ask">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:by" name="by">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="20"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00331"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:receive" name="receive">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="obama09:goal" name="goal">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:worse" name="worse">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="obama09:support" name="support">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:they" name="they">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="19"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00314"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:century" name="century">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:lending" name="lending">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="5.544"/>
+		</attribute>
+	</item>
+	<item id="obama09:money" name="money">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00166"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:care" name="care">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="18"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00298"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:war" name="war">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:cut" name="cut">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:get" name="get">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00116"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:us" name="us">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="19"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00314"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:make" name="make">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="14"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00232"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:global" name="global">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:back" name="back">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:tax" name="tax">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00166"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:through" name="through">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:well" name="well">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:there" name="there">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="13"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00215"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:while" name="while">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:as" name="as">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="25"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00414"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:because" name="because">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="23"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00381"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:why" name="why">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="13"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00215"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:thats" name="thats">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="15"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00248"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="10.395"/>
+		</attribute>
+	</item>
+	<item id="obama09:largest" name="largest">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="4.158"/>
+		</attribute>
+	</item>
+	<item id="obama09:market" name="market">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:know" name="know">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="25"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00414"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:americans" name="americans">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="14"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00232"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:opportunity" name="opportunity">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:has" name="has">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="19"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00314"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:america" name="america">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="18"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00298"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:responsibility" name="responsibility">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00166"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:cannot" name="cannot">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="5.544"/>
+		</attribute>
+	</item>
+	<item id="obama09:children" name="children">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00149"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:take" name="take">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:who" name="who">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="25"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00414"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:years" name="years">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="15"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00248"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:day" name="day">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00182"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:president" name="president">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:its" name="its">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="20"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00331"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:problems" name="problems">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="obama09:out" name="out">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00182"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:deficit" name="deficit">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00149"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="6.237"/>
+		</attribute>
+	</item>
+	<item id="obama09:loans" name="loans">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="obama09:people" name="people">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="21"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00348"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:one" name="one">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00182"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:tell" name="tell">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="obama09:some" name="some">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00149"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:with" name="with">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="24"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00397"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:family" name="family">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="obama09:here" name="here">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="14"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00232"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:must" name="must">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="15"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00248"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:meet" name="meet">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00149"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:do" name="do">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="17"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00281"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:budget" name="budget">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="13"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00215"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:bad" name="bad">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="obama09:from" name="from">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="24"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00397"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:school" name="school">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00116"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:helping" name="helping">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:home" name="home">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:called" name="called">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:invest" name="invest">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="4.158"/>
+		</attribute>
+	</item>
+	<item id="obama09:country" name="country">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="12"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00199"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:education" name="education">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="14"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00232"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:afford" name="afford">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:any" name="any">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:work" name="work">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00149"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:renewable" name="renewable">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:job" name="job">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:prosperity" name="prosperity">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:single" name="single">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="obama09:finally" name="finally">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="obama09:financial" name="financial">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="4.158"/>
+		</attribute>
+	</item>
+	<item id="obama09:schools" name="schools">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:sense" name="sense">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="obama09:american" name="american">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="26"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00430"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:times" name="times">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:an" name="an">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="21"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00348"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:year" name="year">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00166"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:made" name="made">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:ensure" name="ensure">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00116"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:workers" name="workers">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:yet" name="yet">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:need" name="need">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00149"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:jobs" name="jobs">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="14"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00232"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:about" name="about">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="13"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00215"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:new" name="new">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="21"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00348"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:down" name="down">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:before" name="before">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:so" name="so">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="20"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00331"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:once" name="once">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00116"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:government" name="government">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00116"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:how" name="how">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00182"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:longterm" name="longterm">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="4.158"/>
+		</attribute>
+	</item>
+	<item id="obama09:clean" name="clean">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:end" name="end">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:those" name="those">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00182"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:other" name="other">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:united" name="united">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:families" name="families">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:nation" name="nation">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00166"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:ever" name="ever">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:send" name="send">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:even" name="even">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00166"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:most" name="most">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:states" name="states">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:world" name="world">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00166"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:up" name="up">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00149"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:words" name="words">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:never" name="never">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:high" name="high">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00116"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:been" name="been">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:bring" name="bring">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:say" name="say">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:should" name="should">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:at" name="at">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00166"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:help" name="help">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:begin" name="begin">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:recession" name="recession">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="4.158"/>
+		</attribute>
+	</item>
+	<item id="obama09:restart" name="restart">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00083"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="obama09:first" name="first">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:challenges" name="challenges">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:credit" name="credit">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00099"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:working" name="working">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:without" name="without">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00066"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:than" name="than">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="12"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00199"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:just" name="just">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00149"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="obama09:was" name="was">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00132"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+</list>

@@ -1,0 +1,2556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list id="bush08" name="Bush '08">
+
+	<item id="bush08:these" name="these">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="25"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00441"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:markets" name="markets">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:you" name="you">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="26"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00458"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:congress" name="congress">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="27"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00476"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:both" name="both">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:which" name="which">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:come" name="come">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00194"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:my" name="my">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:many" name="many">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00176"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:if" name="if">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00141"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:violence" name="violence">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="bush08:million" name="million">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:millions" name="millions">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:reform" name="reform">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:taken" name="taken">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="bush08:better" name="better">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00141"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="5.544"/>
+		</attribute>
+	</item>
+	<item id="bush08:keep" name="keep">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00141"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:business" name="business">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:power" name="power">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:own" name="own">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:peace" name="peace">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00141"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:give" name="give">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:life" name="life">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:also" name="also">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="17"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00300"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:decisions" name="decisions">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:history" name="history">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:fighting" name="fighting">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00141"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:military" name="military">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="4.158"/>
+		</attribute>
+	</item>
+	<item id="bush08:deny" name="deny">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="4.158"/>
+		</attribute>
+	</item>
+	<item id="bush08:them" name="them">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="26"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00458"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:tonight" name="tonight">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00141"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:freedom" name="freedom">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00159"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:weve" name="weve">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="18"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00317"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:your" name="your">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="14"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00247"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:technology" name="technology">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:security" name="security">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00176"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:but" name="but">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00194"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:expanding" name="expanding">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:steps" name="steps">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:energy" name="energy">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:over" name="over">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00159"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:leaders" name="leaders">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00159"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="6.237"/>
+		</attribute>
+	</item>
+	<item id="bush08:militia" name="militia">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="bush08:time" name="time">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00141"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:trust" name="trust">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="17"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00300"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:federal" name="federal">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00159"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:hope" name="hope">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00194"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:all" name="all">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="15"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00264"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:men" name="men">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:forces" name="forces">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="13"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00229"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:programs" name="programs">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:iraqi" name="iraqi">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="12"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00212"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="8.316"/>
+		</attribute>
+	</item>
+	<item id="bush08:agreement" name="agreement">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00176"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="6.930"/>
+		</attribute>
+	</item>
+	<item id="bush08:act" name="act">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:when" name="when">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="12"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00212"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:pass" name="pass">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00159"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:it" name="it">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="22"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00388"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:progress" name="progress">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:last" name="last">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="13"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00229"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:every" name="every">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:health" name="health">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:build" name="build">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00159"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:can" name="can">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="20"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00353"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:where" name="where">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:land" name="land">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="bush08:members" name="members">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:today" name="today">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:qaida" name="qaida">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00141"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:were" name="were">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="14"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00247"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:next" name="next">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:law" name="law">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:way" name="way">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00159"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:relief" name="relief">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="bush08:would" name="would">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:no" name="no">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:americas" name="americas">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:economy" name="economy">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:seen" name="seen">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:record" name="record">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="bush08:funding" name="funding">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00141"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:future" name="future">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="13"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00229"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:past" name="past">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00194"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="7.623"/>
+		</attribute>
+	</item>
+	<item id="bush08:legislation" name="legislation">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:citizens" name="citizens">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00159"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:safe" name="safe">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:liberty" name="liberty">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00141"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="5.544"/>
+		</attribute>
+	</item>
+	<item id="bush08:iraqis" name="iraqis">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="bush08:passed" name="passed">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:fellow" name="fellow">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="bush08:ask" name="ask">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="12"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00212"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:changed" name="changed">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="bush08:nations" name="nations">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:confronting" name="confronting">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="bush08:half" name="half">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:taxes" name="taxes">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:support" name="support">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00141"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:women" name="women">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:they" name="they">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="19"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00335"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:terrorists" name="terrorists">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="14"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00247"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:care" name="care">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:run" name="run">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:democracy" name="democracy">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="bush08:growth" name="growth">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:free" name="free">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00159"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:us" name="us">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="24"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00423"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:make" name="make">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:extremists" name="extremists">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="4.851"/>
+		</attribute>
+	</item>
+	<item id="bush08:tax" name="tax">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00141"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:empower" name="empower">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00194"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="7.623"/>
+		</attribute>
+	</item>
+	<item id="bush08:border" name="border">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="bush08:across" name="across">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:there" name="there">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:while" name="while">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:as" name="as">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="14"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00247"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:coming" name="coming">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:allow" name="allow">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:debate" name="debate">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:know" name="know">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:fight" name="fight">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="4.851"/>
+		</attribute>
+	</item>
+	<item id="bush08:americans" name="americans">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00194"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:troops" name="troops">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00159"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:clear" name="clear">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:housing" name="housing">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:taking" name="taking">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:america" name="america">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="30"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00529"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:has" name="has">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="15"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00264"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:not" name="not">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="20"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00353"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:children" name="children">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00141"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:take" name="take">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:who" name="who">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="16"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00282"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:years" name="years">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00194"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:day" name="day">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:its" name="its">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:growing" name="growing">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:out" name="out">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:surge" name="surge">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="bush08:al" name="al">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00194"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:people" name="people">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="29"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00511"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:one" name="one">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00159"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:some" name="some">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:behind" name="behind">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:here" name="here">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:must" name="must">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="29"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00511"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:lebanon" name="lebanon">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="bush08:number" name="number">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:mission" name="mission">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="bush08:meet" name="meet">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:do" name="do">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00194"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:developing" name="developing">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="bush08:protect" name="protect">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:into" name="into">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00141"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:good" name="good">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="10"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00176"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:from" name="from">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="18"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00317"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:asked" name="asked">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:home" name="home">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:create" name="create">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:country" name="country">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="12"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00212"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:education" name="education">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:terror" name="terror">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="4.158"/>
+		</attribute>
+	</item>
+	<item id="bush08:work" name="work">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:spending" name="spending">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:enemies" name="enemies">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="bush08:ahead" name="ahead">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:now" name="now">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00194"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:live" name="live">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:schools" name="schools">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:iraq" name="iraq">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="21"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00370"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:american" name="american">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="20"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00353"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:more" name="more">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="22"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00388"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:year" name="year">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="24"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00423"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:an" name="an">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00159"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:made" name="made">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:against" name="against">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:attacks" name="attacks">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="bush08:met" name="met">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:ensure" name="ensure">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:workers" name="workers">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:yet" name="yet">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00141"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:need" name="need">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:state" name="state">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:jobs" name="jobs">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:medical" name="medical">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="bush08:iran" name="iran">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="bush08:or" name="or">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00194"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:let" name="let">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00159"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:nuclear" name="nuclear">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:could" name="could">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:down" name="down">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:about" name="about">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:new" name="new">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="25"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00441"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:before" name="before">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:government" name="government">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00194"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:so" name="so">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="28"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00494"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:show" name="show">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:enemy" name="enemy">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="4.851"/>
+		</attribute>
+	</item>
+	<item id="bush08:clean" name="clean">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:leading" name="leading">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="bush08:those" name="those">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:united" name="united">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:be" name="be">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="19"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00335"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:other" name="other">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:families" name="families">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:continue" name="continue">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:vital" name="vital">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="3.465"/>
+		</attribute>
+	</item>
+	<item id="bush08:nation" name="nation">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="18"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00317"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:most" name="most">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="8"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00141"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:administration" name="administration">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:states" name="states">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:world" name="world">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="13"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00229"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:afghanistan" name="afghanistan">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:up" name="up">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="12"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00212"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:saw" name="saw">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="bush08:been" name="been">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:long" name="long">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:help" name="help">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="18"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00317"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:at" name="at">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="15"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00264"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:should" name="should">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:call" name="call">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="6"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00106"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="4.158"/>
+		</attribute>
+	</item>
+	<item id="bush08:together" name="together">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="9"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00159"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:ability" name="ability">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:had" name="had">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:stop" name="stop">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:earmarks" name="earmarks">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:increase" name="increase">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:working" name="working">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="5"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00088"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:than" name="than">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="11"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00194"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:trade" name="trade">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="4.851"/>
+		</attribute>
+	</item>
+	<item id="bush08:lives" name="lives">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:just" name="just">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:was" name="was">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="7"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00123"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+	<item id="bush08:agreements" name="agreements">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="2.772"/>
+		</attribute>
+	</item>
+	<item id="bush08:results" name="results">
+		<attribute name="Frequency" type="Numerical" unit="Freq">
+			<value value="4"/>
+		</attribute>
+		<attribute name="Relative-Frequency" type="Numerical" unit="RFreq">
+			<value value="0.00071"/>
+		</attribute>
+		<attribute name="TF-IDF" type="Numerical" unit="TFIDF">
+			<value value="0.000"/>
+		</attribute>
+	</item>
+</list>
