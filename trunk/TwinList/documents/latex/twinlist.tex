@@ -107,7 +107,8 @@ Our goal was to design a visualization that allows users to quickly answer the d
 The specific problem of list comparison as we have framed has relatively little research. Research in areas such as visualizing text corpora and set membership have resulted in relevant work that provided a basis for extending visualization techniques to novel problem areas.  Collins et al.\cite{collins2009parallel} use tag clouds drawn from text to compare several lists, using size to indicate frequency and giving a good overview of each document. Subsequent work also extends this approach to use spatial positioning to make it easier to find unique values\cite{conwaytuscon11}. One drawback of such approaches is that they are less relevant when comparing specific list items, particularly when attributes are important for comparison. Another approach that is well-studied is the comparison of sets of data. For example, Venn Diagrams have long been used to show areas of similarity and difference, and provide a way to query for a specific group of similarities and differences\cite{kestler2005generalized}. While we prototyped a solution using Venn Diagrams, they ultimately did not fulfil all the needs of our target applications. Work on animation and attribute navigation provided inspiration to our approach as well. Chevalier et al. \cite{diffmation10} use animation and highlighting to show differences between different document revisions, which draws visual attention to differences between documents. Approaches to show and quickly navigate through list attributes, such as \cite{Chimera:1992:VBI:142750.142817} and \cite{Masui98lensbar} were part of our initial designs, but did not solve the core problem of list comparison.
 
 \section{TwinList}
-\TwinList~ is a novel list visualization tool for the purpose of illustrating the similarities and differences between two lists. It can be used in many cases where the comparison of two lists of items is required. The primary application that \TwinList~ supports is that of medication list reconciliation: comparing and reconciling multiple medications that have been prescribed to a patient from multiple sources\cite{JCAHO-2006}. However, \TwinList~ is equally adept in other applications, such as comparing bag-of-words lists or visualizing gene activity in different types of human tissue, such as normal brain tissue and brain tumor tissue.
+\TwinList~ is a novel list visualization tool for the purpose of illustrating the similarities and differences between two lists. It can be used in many cases where the comparison of two lists of items is required. The primary application that \TwinList~ supports is that of medication list reconciliation: comparing and reconciling multiple medications that have been prescribed to a patient from multiple sources\cite{JCAHO-2006}. However, \TwinList~ is equally adept in other applications, such as comparing bag-of-words lists or visualizing gene activity in different types of human tissue, such as normal brain tissue and brain tumor tissue. The design guideline we used is “Eight Golden Rules of Interface Design”  proposed by Ben Shneiderman and Catherine Plaisant \cite{shneiderman}.
+
 
 \TwinList's interface consists of four major components: the \ListViewer, \Tools, \AcceptedRejected~ lists and \Details, as shown in (Figure~\ref{fig:interface}). The \ListViewer, located in the upper left corner of the interface, is where the list matching visualization will be performed. The initialized view displays two separated lists loaded from XML files. The \Tools, in the upper right corner, displays the \Controls, \Options~ and \Filters, which can be made visible one at a time by selecting the appropriate tab. If an item in the \ListViewer~ is selected, its detail information will be shown in the \Details~ in the lower right corner. \TwinList~ is not merely meant for visualization; it also allows users to take action. List items can be accepted or rejected, whereupon they will appear in the \AcceptedRejected~ lists.
 
@@ -120,7 +121,8 @@ The specific problem of list comparison as we have framed has relatively little 
 \end{figure*}
 
 \subsection{ListViewer}
- 
+ \ListViewer is the most important component in \TwinList. It is where the list matching visualization is performed. Once the user clicked on the Match List button, the list matching will be performed.
+
 \subsubsection{The five-column list placement}
 To visualize the and similarity and difference of two lists, a five-column list placement is used in \TwinList. We used a different color tone to separate the two lists. That is, the items in the yellowish color columns are belong to the first list, while the ones in bluish columns are belong to the other list. 
 
@@ -147,6 +149,37 @@ Figure~\ref{fig:animation} shows how the three animation steps alter the view of
    \caption{An animation sequence matching two lists of prescription drugs. The original \ListViewer~ is shown at the top left. In the top right, the \Identical~ items were found. The \Unique~ items are found next in the bottom left view. Finally, the \Similar~ items are matched with their differences highlighted in the bottom right view.}
    \label{fig:animation}
 \end{figure*}
+
+\subsubsection{Details on demand}
+When the user click on an item, it's detail information will be shown in the \Details~, shown in Figure~\ref{fig:details}. Although user can see every attribute value in the \ListViewer, we still intend to have a separated \Details. This details panel give the potential of further edit the presentation of list items. For example, doctor can choose to only show the dosage, frequency and form of the medication and not to show drug class and symptom information, because they might be very familiar with most of the medications. They can still check the detail information on drug class and symptom in the  \Details~. We are not provide this feature in the current version.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=1\linewidth]{img/details.png}
+\end{center}
+   \caption{\Details.}
+   \label{fig:details}
+\end{figure}
+
+\subsubsection{Action taking}
+
+Once the list matching is performed, the user can see the similarity and difference clearly. \TwinList support user to take actions about the list items. This feature is especially useful for medication reconciliation, for doctors will need to make decisions after examined the list items on both lists. If a user left click and hold, a menu with two options will show up and user can choose which action to take for that particular item (Figure~\ref{fig:menu}). The item selected is then added to the \AcceptReject (Figure~\ref{fig:acceptlist}). The selected item in then remove from the \ListViewer. User can choose to either gray out or the added item in the \Options. 
+The action can be reversed by click on the Remove button in \AcceptReject~, the item will be removed and reappear in the \ListViewer. This is also consistent with "Permit easy reversal of actions" \cite{shneiderman}of the design guideline. 
+\begin{figure}
+\begin{center}
+\includegraphics[width=1\linewidth]{img/menu.png}
+\end{center}
+   \caption{A detail of the action menu.}
+   \label{fig:menu}
+\end{figure}\begin{figure}
+
+\begin{center}
+\includegraphics[width=0.5\linewidth]{img/acceptlist.png}
+
+\end{center}
+   \caption{A detail of the added medicine in \AcceptReject.}
+   \label{fig:acceptlist}
+\end{figure}
 
 \subsection{Controls}
 The \Controls, depicted in Figure~\ref{fig:controls}, contains functionality for organizing and manipulating the the \ListViewer~ visualization. This includes the following components:
