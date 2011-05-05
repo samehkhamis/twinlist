@@ -1,0 +1,1252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list id="kidnormal" name="Kidney Normal">
+
+	<item id="kidnormal:1552937sat" name="1552937sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.21965300429176"/>
+		</attribute>		</item>
+	<item id="kidnormal:1553749at" name="1553749at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.68044659818501"/>
+		</attribute>		</item>
+	<item id="kidnormal:1553750aat" name="1553750aat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.57545934602725"/>
+		</attribute>		</item>
+	<item id="kidnormal:1553947at" name="1553947at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.13823574106253"/>
+		</attribute>		</item>
+	<item id="kidnormal:1554082aat" name="1554082aat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.57279051302892"/>
+		</attribute>		</item>
+	<item id="kidnormal:1567213at" name="1567213at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.69080378111144"/>
+		</attribute>		</item>
+	<item id="kidnormal:200021at" name="200021at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.9856286488995"/>
+		</attribute>		</item>
+	<item id="kidnormal:200031sat" name="200031sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.8236636853646"/>
+		</attribute>		</item>
+	<item id="kidnormal:200062sat" name="200062sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.8094894815700"/>
+		</attribute>		</item>
+	<item id="kidnormal:200095xat" name="200095xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.7876556033532"/>
+		</attribute>		</item>
+	<item id="kidnormal:200689xat" name="200689xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.2891579987829"/>
+		</attribute>		</item>
+	<item id="kidnormal:200717xat" name="200717xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.2483222890598"/>
+		</attribute>		</item>
+	<item id="kidnormal:200748sat" name="200748sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.5002881973871"/>
+		</attribute>		</item>
+	<item id="kidnormal:200819sat" name="200819sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.8178892187249"/>
+		</attribute>		</item>
+	<item id="kidnormal:201026at" name="201026at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.82814693923008"/>
+		</attribute>		</item>
+	<item id="kidnormal:201033xat" name="201033xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.5482198038136"/>
+		</attribute>		</item>
+	<item id="kidnormal:201049sat" name="201049sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.6561561481493"/>
+		</attribute>		</item>
+	<item id="kidnormal:201163sat" name="201163sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.2538537517779"/>
+		</attribute>		</item>
+	<item id="kidnormal:201217xat" name="201217xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.931186695127"/>
+		</attribute>		</item>
+	<item id="kidnormal:201254xat" name="201254xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.8028111630398"/>
+		</attribute>		</item>
+	<item id="kidnormal:201429sat" name="201429sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="20.3149510657534"/>
+		</attribute>		</item>
+	<item id="kidnormal:201492sat" name="201492sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="20.6912570306466"/>
+		</attribute>		</item>
+	<item id="kidnormal:203519sat" name="203519sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.61654331429051"/>
+		</attribute>		</item>
+	<item id="kidnormal:203597sat" name="203597sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.01576635804351"/>
+		</attribute>		</item>
+	<item id="kidnormal:204507sat" name="204507sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.12019434717203"/>
+		</attribute>		</item>
+	<item id="kidnormal:204892xat" name="204892xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="20.6352430486784"/>
+		</attribute>		</item>
+	<item id="kidnormal:205061sat" name="205061sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.06514867725188"/>
+		</attribute>		</item>
+	<item id="kidnormal:206752sat" name="206752sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.13850116853036"/>
+		</attribute>		</item>
+	<item id="kidnormal:207783xat" name="207783xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.7001479210781"/>
+		</attribute>		</item>
+	<item id="kidnormal:208856xat" name="208856xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.5191407566157"/>
+		</attribute>		</item>
+	<item id="kidnormal:209314sat" name="209314sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.18547853751654"/>
+		</attribute>		</item>
+	<item id="kidnormal:209701at" name="209701at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.56229214329057"/>
+		</attribute>		</item>
+	<item id="kidnormal:209875sat" name="209875sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.3306038615365"/>
+		</attribute>		</item>
+	<item id="kidnormal:210098sat" name="210098sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.78101139797063"/>
+		</attribute>		</item>
+	<item id="kidnormal:210685sat" name="210685sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.15660251131645"/>
+		</attribute>		</item>
+	<item id="kidnormal:211345xat" name="211345xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.3154739594070"/>
+		</attribute>		</item>
+	<item id="kidnormal:211628xat" name="211628xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.4267924977824"/>
+		</attribute>		</item>
+	<item id="kidnormal:211720xat" name="211720xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.5822479100453"/>
+		</attribute>		</item>
+	<item id="kidnormal:211943xat" name="211943xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.0532081726547"/>
+		</attribute>		</item>
+	<item id="kidnormal:212039xat" name="212039xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.7581591151499"/>
+		</attribute>		</item>
+	<item id="kidnormal:212220at" name="212220at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.11627830548940"/>
+		</attribute>		</item>
+	<item id="kidnormal:212284xat" name="212284xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="20.1731075704484"/>
+		</attribute>		</item>
+	<item id="kidnormal:212563at" name="212563at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.41552162743307"/>
+		</attribute>		</item>
+	<item id="kidnormal:212654at" name="212654at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.956825514694682"/>
+		</attribute>		</item>
+	<item id="kidnormal:212869xat" name="212869xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.415065893082"/>
+		</attribute>		</item>
+	<item id="kidnormal:212877at" name="212877at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.52750794058936"/>
+		</attribute>		</item>
+	<item id="kidnormal:212881at" name="212881at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.02585578871578"/>
+		</attribute>		</item>
+	<item id="kidnormal:213080xat" name="213080xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.9519491219848"/>
+		</attribute>		</item>
+	<item id="kidnormal:213477xat" name="213477xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.1695376887624"/>
+		</attribute>		</item>
+	<item id="kidnormal:213583xat" name="213583xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.4362173881720"/>
+		</attribute>		</item>
+	<item id="kidnormal:213588xat" name="213588xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.2228411093262"/>
+		</attribute>		</item>
+	<item id="kidnormal:213741sat" name="213741sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.31897601962279"/>
+		</attribute>		</item>
+	<item id="kidnormal:213890xat" name="213890xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.4184247619218"/>
+		</attribute>		</item>
+	<item id="kidnormal:214313sat" name="214313sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.71221017913395"/>
+		</attribute>		</item>
+	<item id="kidnormal:214327xat" name="214327xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.0167659102550"/>
+		</attribute>		</item>
+	<item id="kidnormal:215011at" name="215011at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.19629324771238"/>
+		</attribute>		</item>
+	<item id="kidnormal:215963xat" name="215963xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.4272122968807"/>
+		</attribute>		</item>
+	<item id="kidnormal:216379xat" name="216379xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.4228948669112"/>
+		</attribute>		</item>
+	<item id="kidnormal:216520sat" name="216520sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.7559744352055"/>
+		</attribute>		</item>
+	<item id="kidnormal:217094sat" name="217094sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.08239415267297"/>
+		</attribute>		</item>
+	<item id="kidnormal:217398xat" name="217398xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.0929731780229"/>
+		</attribute>		</item>
+	<item id="kidnormal:218951sat" name="218951sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.67783386780901"/>
+		</attribute>		</item>
+	<item id="kidnormal:219470xat" name="219470xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.893642600472003"/>
+		</attribute>		</item>
+	<item id="kidnormal:221475sat" name="221475sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.4154426271823"/>
+		</attribute>		</item>
+	<item id="kidnormal:221960sat" name="221960sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-2.41713875547368"/>
+		</attribute>		</item>
+	<item id="kidnormal:222082at" name="222082at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.40235301847307"/>
+		</attribute>		</item>
+	<item id="kidnormal:222508sat" name="222508sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.881972720087815"/>
+		</attribute>		</item>
+	<item id="kidnormal:222837sat" name="222837sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.33543867769832"/>
+		</attribute>		</item>
+	<item id="kidnormal:223457at" name="223457at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.16468299506197"/>
+		</attribute>		</item>
+	<item id="kidnormal:224164at" name="224164at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.17571740186324"/>
+		</attribute>		</item>
+	<item id="kidnormal:225316at" name="225316at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.24945410794045"/>
+		</attribute>		</item>
+	<item id="kidnormal:225319sat" name="225319sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.13905371038178"/>
+		</attribute>		</item>
+	<item id="kidnormal:225451at" name="225451at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.31562432537960"/>
+		</attribute>		</item>
+	<item id="kidnormal:225483at" name="225483at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.11492142411886"/>
+		</attribute>		</item>
+	<item id="kidnormal:225617at" name="225617at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.888447822172859"/>
+		</attribute>		</item>
+	<item id="kidnormal:225970at" name="225970at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.66153250366014"/>
+		</attribute>		</item>
+	<item id="kidnormal:226082sat" name="226082sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.92493208787381"/>
+		</attribute>		</item>
+	<item id="kidnormal:226475at" name="226475at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.46826457437043"/>
+		</attribute>		</item>
+	<item id="kidnormal:226794at" name="226794at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.63524237269925"/>
+		</attribute>		</item>
+	<item id="kidnormal:226972sat" name="226972sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.17688277954389"/>
+		</attribute>		</item>
+	<item id="kidnormal:229204at" name="229204at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.73849898424943"/>
+		</attribute>		</item>
+	<item id="kidnormal:229563sat" name="229563sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.3894312613808"/>
+		</attribute>		</item>
+	<item id="kidnormal:230629sat" name="230629sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.785975486942052"/>
+		</attribute>		</item>
+	<item id="kidnormal:231061at" name="231061at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.03744867712965"/>
+		</attribute>		</item>
+	<item id="kidnormal:231200at" name="231200at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.49875236296636"/>
+		</attribute>		</item>
+	<item id="kidnormal:235227at" name="235227at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.31755547874256"/>
+		</attribute>		</item>
+	<item id="kidnormal:236132at" name="236132at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.28937871650487"/>
+		</attribute>		</item>
+	<item id="kidnormal:238704at" name="238704at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.13220801580319"/>
+		</attribute>		</item>
+	<item id="kidnormal:1552286at" name="1552286at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.737911120979633"/>
+		</attribute>		</item>
+	<item id="kidnormal:1553212at" name="1553212at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.833434120555206"/>
+		</attribute>		</item>
+	<item id="kidnormal:1555272at" name="1555272at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-2.34814522140006"/>
+		</attribute>		</item>
+	<item id="kidnormal:1555467aat" name="1555467aat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.66508544426541"/>
+		</attribute>		</item>
+	<item id="kidnormal:1555653at" name="1555653at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.2688773362796"/>
+		</attribute>		</item>
+	<item id="kidnormal:200025sat" name="200025sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.8578309148250"/>
+		</attribute>		</item>
+	<item id="kidnormal:200674sat" name="200674sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.8848098315207"/>
+		</attribute>		</item>
+	<item id="kidnormal:200795at" name="200795at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="15.290038333412"/>
+		</attribute>		</item>
+	<item id="kidnormal:200926at" name="200926at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.9708183612787"/>
+		</attribute>		</item>
+	<item id="kidnormal:201257xat" name="201257xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.1630307149801"/>
+		</attribute>		</item>
+	<item id="kidnormal:201293xat" name="201293xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.4426935501448"/>
+		</attribute>		</item>
+	<item id="kidnormal:201427sat" name="201427sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.2713627302114"/>
+		</attribute>		</item>
+	<item id="kidnormal:201625sat" name="201625sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.00991385592006976"/>
+		</attribute>		</item>
+	<item id="kidnormal:203064sat" name="203064sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.750737616050513"/>
+		</attribute>		</item>
+	<item id="kidnormal:203107xat" name="203107xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.2069654345211"/>
+		</attribute>		</item>
+	<item id="kidnormal:203653sat" name="203653sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.54955541179744"/>
+		</attribute>		</item>
+	<item id="kidnormal:204133at" name="204133at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.799483761325974"/>
+		</attribute>		</item>
+	<item id="kidnormal:204217sat" name="204217sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.71943713564379"/>
+		</attribute>		</item>
+	<item id="kidnormal:205486at" name="205486at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.776894372290682"/>
+		</attribute>		</item>
+	<item id="kidnormal:205799sat" name="205799sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.4616260496394"/>
+		</attribute>		</item>
+	<item id="kidnormal:206038sat" name="206038sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.889924332322537"/>
+		</attribute>		</item>
+	<item id="kidnormal:206108sat" name="206108sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.71316805562567"/>
+		</attribute>		</item>
+	<item id="kidnormal:206559xat" name="206559xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="20.7426464370389"/>
+		</attribute>		</item>
+	<item id="kidnormal:208363sat" name="208363sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.52447855940974"/>
+		</attribute>		</item>
+	<item id="kidnormal:208904sat" name="208904sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.7665853408058"/>
+		</attribute>		</item>
+	<item id="kidnormal:209258sat" name="209258sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.167764424131636"/>
+		</attribute>		</item>
+	<item id="kidnormal:209771xat" name="209771xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.3057038047362"/>
+		</attribute>		</item>
+	<item id="kidnormal:209811at" name="209811at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.641346415323728"/>
+		</attribute>		</item>
+	<item id="kidnormal:211073xat" name="211073xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.8952024332388"/>
+		</attribute>		</item>
+	<item id="kidnormal:211358sat" name="211358sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.56669181936527"/>
+		</attribute>		</item>
+	<item id="kidnormal:211983xat" name="211983xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.9320774750747"/>
+		</attribute>		</item>
+	<item id="kidnormal:212578xat" name="212578xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.1281133163566"/>
+		</attribute>		</item>
+	<item id="kidnormal:212581xat" name="212581xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.0872654728308"/>
+		</attribute>		</item>
+	<item id="kidnormal:212788xat" name="212788xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.5380109733131"/>
+		</attribute>		</item>
+	<item id="kidnormal:212882at" name="212882at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.673631229868112"/>
+		</attribute>		</item>
+	<item id="kidnormal:212901sat" name="212901sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.446496610328102"/>
+		</attribute>		</item>
+	<item id="kidnormal:212988xat" name="212988xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.8065605203866"/>
+		</attribute>		</item>
+	<item id="kidnormal:213347xat" name="213347xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.8738792653086"/>
+		</attribute>		</item>
+	<item id="kidnormal:213409sat" name="213409sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.66395909671755"/>
+		</attribute>		</item>
+	<item id="kidnormal:213453xat" name="213453xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.7830196750311"/>
+		</attribute>		</item>
+	<item id="kidnormal:213494sat" name="213494sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.52072894755306"/>
+		</attribute>		</item>
+	<item id="kidnormal:213669at" name="213669at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.59401311387831"/>
+		</attribute>		</item>
+	<item id="kidnormal:213705at" name="213705at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.56975658331355"/>
+		</attribute>		</item>
+	<item id="kidnormal:213867xat" name="213867xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.2156735930457"/>
+		</attribute>		</item>
+	<item id="kidnormal:213935at" name="213935at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.693839088931849"/>
+		</attribute>		</item>
+	<item id="kidnormal:214143xat" name="214143xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.4599538324783"/>
+		</attribute>		</item>
+	<item id="kidnormal:214395xat" name="214395xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-2.03300947346211"/>
+		</attribute>		</item>
+	<item id="kidnormal:214414xat" name="214414xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.17375382692"/>
+		</attribute>		</item>
+	<item id="kidnormal:215038sat" name="215038sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.340841927107009"/>
+		</attribute>		</item>
+	<item id="kidnormal:215886xat" name="215886xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.315606375549832"/>
+		</attribute>		</item>
+	<item id="kidnormal:215905sat" name="215905sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.94672689894378"/>
+		</attribute>		</item>
+	<item id="kidnormal:217740xat" name="217740xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.2885911113383"/>
+		</attribute>		</item>
+	<item id="kidnormal:218110at" name="218110at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.66366098333105"/>
+		</attribute>		</item>
+	<item id="kidnormal:219219at" name="219219at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.625793979888391"/>
+		</attribute>		</item>
+	<item id="kidnormal:220703at" name="220703at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.64981946507156"/>
+		</attribute>		</item>
+	<item id="kidnormal:221607xat" name="221607xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.1430708949146"/>
+		</attribute>		</item>
+	<item id="kidnormal:221798xat" name="221798xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.7077570032745"/>
+		</attribute>		</item>
+	<item id="kidnormal:221849sat" name="221849sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.82206634510147"/>
+		</attribute>		</item>
+	<item id="kidnormal:222233sat" name="222233sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.358151620997072"/>
+		</attribute>		</item>
+	<item id="kidnormal:222748sat" name="222748sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.940387355949027"/>
+		</attribute>		</item>
+	<item id="kidnormal:222873sat" name="222873sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.7775136583922"/>
+		</attribute>		</item>
+	<item id="kidnormal:223292sat" name="223292sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.984544431357562"/>
+		</attribute>		</item>
+	<item id="kidnormal:224594xat" name="224594xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.2354698008418"/>
+		</attribute>		</item>
+	<item id="kidnormal:224930xat" name="224930xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.5728311428161"/>
+		</attribute>		</item>
+	<item id="kidnormal:226131sat" name="226131sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.2001245924976"/>
+		</attribute>		</item>
+	<item id="kidnormal:226201at" name="226201at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.716029808459457"/>
+		</attribute>		</item>
+	<item id="kidnormal:226328at" name="226328at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.56069420130397"/>
+		</attribute>		</item>
+	<item id="kidnormal:226539sat" name="226539sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.77005425580877"/>
+		</attribute>		</item>
+	<item id="kidnormal:226729at" name="226729at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.567253049438972"/>
+		</attribute>		</item>
+	<item id="kidnormal:230747sat" name="230747sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.51265544526761"/>
+		</attribute>		</item>
+	<item id="kidnormal:231999at" name="231999at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.662288969428064"/>
+		</attribute>		</item>
+	<item id="kidnormal:232149sat" name="232149sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.78778053444798"/>
+		</attribute>		</item>
+	<item id="kidnormal:235136at" name="235136at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.58927742116617"/>
+		</attribute>		</item>
+	<item id="kidnormal:236023at" name="236023at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.772821406198129"/>
+		</attribute>		</item>
+	<item id="kidnormal:44040at" name="44040at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.67715615754997"/>
+		</attribute>		</item>
+	<item id="kidnormal:1552307aat" name="1552307aat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.63244643592191"/>
+		</attribute>		</item>
+	<item id="kidnormal:1553567sat" name="1553567sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.2856374791169"/>
+		</attribute>		</item>
+	<item id="kidnormal:1554153aat" name="1554153aat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.77808976935800"/>
+		</attribute>		</item>
+	<item id="kidnormal:1554415at" name="1554415at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.56216898021430"/>
+		</attribute>		</item>
+	<item id="kidnormal:1558166at" name="1558166at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.62244858080534"/>
+		</attribute>		</item>
+	<item id="kidnormal:1564746at" name="1564746at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-2.00275910492457"/>
+		</attribute>		</item>
+	<item id="kidnormal:1567997xat" name="1567997xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.53669956605048"/>
+		</attribute>		</item>
+	<item id="kidnormal:1570552at" name="1570552at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-2.154614865153"/>
+		</attribute>		</item>
+	<item id="kidnormal:200018at" name="200018at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.9155491491541"/>
+		</attribute>		</item>
+	<item id="kidnormal:200088xat" name="200088xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.6125281796487"/>
+		</attribute>		</item>
+	<item id="kidnormal:200633at" name="200633at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.9572044860943"/>
+		</attribute>		</item>
+	<item id="kidnormal:200725xat" name="200725xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.1632113271647"/>
+		</attribute>		</item>
+	<item id="kidnormal:200763sat" name="200763sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.9087942938138"/>
+		</attribute>		</item>
+	<item id="kidnormal:200801xat" name="200801xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.2796715338861"/>
+		</attribute>		</item>
+	<item id="kidnormal:200809xat" name="200809xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.8815284425947"/>
+		</attribute>		</item>
+	<item id="kidnormal:200908sat" name="200908sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.82583101700508"/>
+		</attribute>		</item>
+	<item id="kidnormal:200963xat" name="200963xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.1137719462757"/>
+		</attribute>		</item>
+	<item id="kidnormal:201072sat" name="201072sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.435067383524785"/>
+		</attribute>		</item>
+	<item id="kidnormal:201182sat" name="201182sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.574423419743774"/>
+		</attribute>		</item>
+	<item id="kidnormal:201348at" name="201348at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="20.8355824482122"/>
+		</attribute>		</item>
+	<item id="kidnormal:201553sat" name="201553sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.6575925724401"/>
+		</attribute>		</item>
+	<item id="kidnormal:202029xat" name="202029xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.3256112355447"/>
+		</attribute>		</item>
+	<item id="kidnormal:202402sat" name="202402sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.62061614710561"/>
+		</attribute>		</item>
+	<item id="kidnormal:203012xat" name="203012xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.5210185734941"/>
+		</attribute>		</item>
+	<item id="kidnormal:203034sat" name="203034sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.8855344003337"/>
+		</attribute>		</item>
+	<item id="kidnormal:203178at" name="203178at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.7290441457276"/>
+		</attribute>		</item>
+	<item id="kidnormal:203532xat" name="203532xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.0414551988020158"/>
+		</attribute>		</item>
+	<item id="kidnormal:204014at" name="204014at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.60775536496149"/>
+		</attribute>		</item>
+	<item id="kidnormal:204102sat" name="204102sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.1160241850863"/>
+		</attribute>		</item>
+	<item id="kidnormal:204705xat" name="204705xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.3495217914627"/>
+		</attribute>		</item>
+	<item id="kidnormal:204899sat" name="204899sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.73158787194183"/>
+		</attribute>		</item>
+	<item id="kidnormal:205248at" name="205248at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.67479064340335"/>
+		</attribute>		</item>
+	<item id="kidnormal:205363at" name="205363at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.2821679834244"/>
+		</attribute>		</item>
+	<item id="kidnormal:205380at" name="205380at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.7460191445622"/>
+		</attribute>		</item>
+	<item id="kidnormal:205626sat" name="205626sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.3136369286366"/>
+		</attribute>		</item>
+	<item id="kidnormal:205719sat" name="205719sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.2485393517127"/>
+		</attribute>		</item>
+	<item id="kidnormal:205851at" name="205851at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.382371664677397"/>
+		</attribute>		</item>
+	<item id="kidnormal:206054at" name="206054at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.0061800122373"/>
+		</attribute>		</item>
+	<item id="kidnormal:206716at" name="206716at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="20.4480024747529"/>
+		</attribute>		</item>
+	<item id="kidnormal:208107sat" name="208107sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.61359967720188"/>
+		</attribute>		</item>
+	<item id="kidnormal:208383sat" name="208383sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.4564541564483"/>
+		</attribute>		</item>
+	<item id="kidnormal:208645sat" name="208645sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.0600161117573"/>
+		</attribute>		</item>
+	<item id="kidnormal:208695sat" name="208695sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.1497272109317"/>
+		</attribute>		</item>
+	<item id="kidnormal:208825xat" name="208825xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.6912523107053"/>
+		</attribute>		</item>
+	<item id="kidnormal:208834xat" name="208834xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.5291556906095"/>
+		</attribute>		</item>
+	<item id="kidnormal:208929xat" name="208929xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="15.9307380119372"/>
+		</attribute>		</item>
+	<item id="kidnormal:208980sat" name="208980sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.5164019304861"/>
+		</attribute>		</item>
+	<item id="kidnormal:209057xat" name="209057xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.78569661847653"/>
+		</attribute>		</item>
+	<item id="kidnormal:209071sat" name="209071sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="12.5524964040255"/>
+		</attribute>		</item>
+	<item id="kidnormal:209094at" name="209094at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.9953089214265"/>
+		</attribute>		</item>
+	<item id="kidnormal:209140xat" name="209140xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.0874211619186"/>
+		</attribute>		</item>
+	<item id="kidnormal:209204at" name="209204at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.564581380465118"/>
+		</attribute>		</item>
+	<item id="kidnormal:209743sat" name="209743sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.62927595468332"/>
+		</attribute>		</item>
+	<item id="kidnormal:209927sat" name="209927sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.59529157097446"/>
+		</attribute>		</item>
+	<item id="kidnormal:210289at" name="210289at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.3810593516141"/>
+		</attribute>		</item>
+	<item id="kidnormal:210612sat" name="210612sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.50096834940677"/>
+		</attribute>		</item>
+	<item id="kidnormal:210646xat" name="210646xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.0547423334301"/>
+		</attribute>		</item>
+	<item id="kidnormal:211087xat" name="211087xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.53762291504150"/>
+		</attribute>		</item>
+	<item id="kidnormal:211115xat" name="211115xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.51862494373576"/>
+		</attribute>		</item>
+	<item id="kidnormal:211272sat" name="211272sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.70497372273443"/>
+		</attribute>		</item>
+	<item id="kidnormal:211296xat" name="211296xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.0804426698141"/>
+		</attribute>		</item>
+	<item id="kidnormal:211357sat" name="211357sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="20.7016494823184"/>
+		</attribute>		</item>
+	<item id="kidnormal:211600at" name="211600at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.3725088403650"/>
+		</attribute>		</item>
+	<item id="kidnormal:211956sat" name="211956sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.8311070290017"/>
+		</attribute>		</item>
+	<item id="kidnormal:211959at" name="211959at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.2468473788184"/>
+		</attribute>		</item>
+	<item id="kidnormal:212537xat" name="212537xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="15.7569962998815"/>
+		</attribute>		</item>
+	<item id="kidnormal:212734xat" name="212734xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.1950663585415"/>
+		</attribute>		</item>
+	<item id="kidnormal:212790xat" name="212790xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.7776837680510"/>
+		</attribute>		</item>
+	<item id="kidnormal:212810sat" name="212810sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.64232435575192"/>
+		</attribute>		</item>
+	<item id="kidnormal:213084xat" name="213084xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.5420966357484"/>
+		</attribute>		</item>
+	<item id="kidnormal:213087sat" name="213087sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.90876606751113"/>
+		</attribute>		</item>
+	<item id="kidnormal:213179at" name="213179at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.978162576333533"/>
+		</attribute>		</item>
+	<item id="kidnormal:213187xat" name="213187xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.0839589260518"/>
+		</attribute>		</item>
+	<item id="kidnormal:213256at" name="213256at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-2.00725653861856"/>
+		</attribute>		</item>
+	<item id="kidnormal:213414sat" name="213414sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="15.5717281936449"/>
+		</attribute>		</item>
+	<item id="kidnormal:213564xat" name="213564xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.3588958081151"/>
+		</attribute>		</item>
+	<item id="kidnormal:213718at" name="213718at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.34133630189507"/>
+		</attribute>		</item>
+	<item id="kidnormal:214000sat" name="214000sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.50230620427328"/>
+		</attribute>		</item>
+	<item id="kidnormal:214001xat" name="214001xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-2.06001131174450"/>
+		</attribute>		</item>
+	<item id="kidnormal:214003xat" name="214003xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.1679060929981"/>
+		</attribute>		</item>
+	<item id="kidnormal:214091sat" name="214091sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.8463723557713"/>
+		</attribute>		</item>
+	<item id="kidnormal:214629xat" name="214629xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.2038054135433"/>
+		</attribute>		</item>
+	<item id="kidnormal:214659xat" name="214659xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.195452978466789"/>
+		</attribute>		</item>
+	<item id="kidnormal:215313xat" name="215313xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="15.407888172381"/>
+		</attribute>		</item>
+	<item id="kidnormal:216231sat" name="216231sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="15.9542703107240"/>
+		</attribute>		</item>
+	<item id="kidnormal:216323xat" name="216323xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.83463431941595"/>
+		</attribute>		</item>
+	<item id="kidnormal:216733sat" name="216733sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.6642716494253"/>
+		</attribute>		</item>
+	<item id="kidnormal:216913sat" name="216913sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.57915513654636"/>
+		</attribute>		</item>
+	<item id="kidnormal:217238sat" name="217238sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="22.0138104023288"/>
+		</attribute>		</item>
+	<item id="kidnormal:217297sat" name="217297sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.61933525118201"/>
+		</attribute>		</item>
+	<item id="kidnormal:218148at" name="218148at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.95494034581254"/>
+		</attribute>		</item>
+	<item id="kidnormal:218908at" name="218908at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.0727539099602018"/>
+		</attribute>		</item>
+	<item id="kidnormal:219594at" name="219594at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-2.00499357797587"/>
+		</attribute>		</item>
+	<item id="kidnormal:219629at" name="219629at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-2.19188502339749"/>
+		</attribute>		</item>
+	<item id="kidnormal:219997sat" name="219997sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.807792163094665"/>
+		</attribute>		</item>
+	<item id="kidnormal:220281at" name="220281at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.4965437235809"/>
+		</attribute>		</item>
+	<item id="kidnormal:220946sat" name="220946sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.0205531123148670"/>
+		</attribute>		</item>
+	<item id="kidnormal:221563at" name="221563at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.66375770048689"/>
+		</attribute>		</item>
+	<item id="kidnormal:221889at" name="221889at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.8137531320297"/>
+		</attribute>		</item>
+	<item id="kidnormal:222011sat" name="222011sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.585529534788215"/>
+		</attribute>		</item>
+	<item id="kidnormal:222547at" name="222547at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.53457320483663"/>
+		</attribute>		</item>
+	<item id="kidnormal:222612at" name="222612at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.100208565022449"/>
+		</attribute>		</item>
+	<item id="kidnormal:222729at" name="222729at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.61761764403777"/>
+		</attribute>		</item>
+	<item id="kidnormal:223265at" name="223265at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.82126443674985"/>
+		</attribute>		</item>
+	<item id="kidnormal:224037at" name="224037at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.76431506837857"/>
+		</attribute>		</item>
+	<item id="kidnormal:224372at" name="224372at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="20.0253008146095"/>
+		</attribute>		</item>
+	<item id="kidnormal:224465sat" name="224465sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.558256689829733"/>
+		</attribute>		</item>
+	<item id="kidnormal:224863at" name="224863at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.78758986337942"/>
+		</attribute>		</item>
+	<item id="kidnormal:224924at" name="224924at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.66349339284627"/>
+		</attribute>		</item>
+	<item id="kidnormal:225118at" name="225118at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.58698386596527"/>
+		</attribute>		</item>
+	<item id="kidnormal:225187at" name="225187at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.131296486426743"/>
+		</attribute>		</item>
+	<item id="kidnormal:225246at" name="225246at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.66310068878668"/>
+		</attribute>		</item>
+	<item id="kidnormal:225738at" name="225738at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.98484087489193"/>
+		</attribute>		</item>
+	<item id="kidnormal:225800at" name="225800at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.73012281349108"/>
+		</attribute>		</item>
+	<item id="kidnormal:225965at" name="225965at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.51773277773001"/>
+		</attribute>		</item>
+	<item id="kidnormal:226306at" name="226306at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.70623772188844"/>
+		</attribute>		</item>
+	<item id="kidnormal:226643sat" name="226643sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.64245054088000"/>
+		</attribute>		</item>
+	<item id="kidnormal:226648at" name="226648at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.297973437668651"/>
+		</attribute>		</item>
+	<item id="kidnormal:227245at" name="227245at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.20666499424321"/>
+		</attribute>		</item>
+	<item id="kidnormal:228245sat" name="228245sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.50488032676328"/>
+		</attribute>		</item>
+	<item id="kidnormal:228250at" name="228250at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.86323952538079"/>
+		</attribute>		</item>
+	<item id="kidnormal:228433at" name="228433at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.248593110809370"/>
+		</attribute>		</item>
+	<item id="kidnormal:228449at" name="228449at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.216129259107413"/>
+		</attribute>		</item>
+	<item id="kidnormal:228512at" name="228512at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.729816762871747"/>
+		</attribute>		</item>
+	<item id="kidnormal:228813at" name="228813at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.918328479833318"/>
+		</attribute>		</item>
+	<item id="kidnormal:228990at" name="228990at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-2.03371515061623"/>
+		</attribute>		</item>
+	<item id="kidnormal:229304sat" name="229304sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-2.09048771446169"/>
+		</attribute>		</item>
+	<item id="kidnormal:229399at" name="229399at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="2.21249823047476"/>
+		</attribute>		</item>
+	<item id="kidnormal:229491at" name="229491at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.68975391364435"/>
+		</attribute>		</item>
+	<item id="kidnormal:229644at" name="229644at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.54660431507211"/>
+		</attribute>		</item>
+	<item id="kidnormal:229684sat" name="229684sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.62619467182350"/>
+		</attribute>		</item>
+	<item id="kidnormal:230554at" name="230554at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.7085726563738"/>
+		</attribute>		</item>
+	<item id="kidnormal:230777sat" name="230777sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.60708457898375"/>
+		</attribute>		</item>
+	<item id="kidnormal:232219xat" name="232219xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.149867564008745"/>
+		</attribute>		</item>
+	<item id="kidnormal:233167at" name="233167at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="1.04944303429585"/>
+		</attribute>		</item>
+	<item id="kidnormal:234976xat" name="234976xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.55223804134421"/>
+		</attribute>		</item>
+	<item id="kidnormal:235154at" name="235154at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.493160219414585"/>
+		</attribute>		</item>
+	<item id="kidnormal:237058xat" name="237058xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.0242525629916"/>
+		</attribute>		</item>
+	<item id="kidnormal:238800sat" name="238800sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.54047707589263"/>
+		</attribute>		</item>
+	<item id="kidnormal:240983sat" name="240983sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.86763307924892"/>
+		</attribute>		</item>
+	<item id="kidnormal:241955at" name="241955at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.834228823947615"/>
+		</attribute>		</item>
+	<item id="kidnormal:243786at" name="243786at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.62705370104359"/>
+		</attribute>		</item>
+	<item id="kidnormal:32402sat" name="32402sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.98025239812995"/>
+		</attribute>		</item>
+	<item id="kidnormal:33148at" name="33148at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.144043340113530"/>
+		</attribute>		</item>
+	<item id="kidnormal:34408at" name="34408at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.54144152591703"/>
+		</attribute>		</item>
+	<item id="kidnormal:45653at" name="45653at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.65904294115479"/>
+		</attribute>		</item>
+	<item id="kidnormal:50314iat" name="50314iat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.51049327468621"/>
+		</attribute>		</item>
+	<item id="kidnormal:66053at" name="66053at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.241107021503873"/>
+		</attribute>		</item>
+	<item id="kidnormal:91952at" name="91952at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.79881076626885"/>
+		</attribute>		</item>
+</list>

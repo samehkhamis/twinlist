@@ -89,6 +89,7 @@ package twinlist
 		private var colorStateText:uint = colorText;
 		// options
 		private var linkIdentical:Boolean = true;
+		private var attribIdentical:Boolean = false;
 		private var removeAfterAction:Boolean = true;
 		
 		public function ListViewerFlareClass()
@@ -187,7 +188,7 @@ package twinlist
 				if (model.SelectedItem != null && model.SelectedItem.Id == sprite.data.item.Id) {
 					selectedSprite = sprite;
 					Highlight(sprite, enabled);
-				}
+			}
 				sprite.data.properties.x1 *= columnWidth;
 				sprite.data.properties.x2 *= columnWidth;
 				var stateThresh:int;
@@ -282,6 +283,7 @@ package twinlist
 			for each (var item:ListViewerItem in data)
 			{
 				var sprite:DataSprite;
+				var ident1Shown:Boolean = false;
 				if (item.Identical1 != null || item.Identical2 != null)
 				{
 					if (item.Identical1 != null && item.Identical1.Display && (!item.Identical1.ActedOn || !RemoveAfterAction)) {
@@ -292,10 +294,12 @@ package twinlist
 							{
 								header = CreateGroupHeader(newValue, ry);
 								groupVisList.addItem(header);
-								
 								curValue = newValue;
 								ry += TextSpacing;
 							}
+						}
+						if(!attribIdentical && animState>0){
+						  ident1Shown = true;
 						}
 						sprite = CreateItemSprite(item.Identical1, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 2, y2: ry, type: 0});
 						visHash[item.Identical1.Id] = sprite;
@@ -320,7 +324,7 @@ package twinlist
 								ry += TextSpacing;
 							}
 						}
-						sprite = CreateItemSprite(item.Identical2, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 2, y2: ry, type: 0});
+						sprite = CreateItemSprite(item.Identical2, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 2, y2: ry, type: 0}, !ident1Shown);
 						visHash[item.Identical2.Id] = sprite;
 						if (!(idx in rowIdxHash))
 							rowIdxHash[idx] = new Array();
@@ -555,7 +559,7 @@ package twinlist
 			return line;
 		}
 		
-		private function CreateItemSprite(item:ListItem, listIdx:int, properties:Object):DataSprite
+	        private function CreateItemSprite(item:ListItem, listIdx:int, properties:Object, showAttr:Boolean = true):DataSprite
 		{
 			var sprite:DataSprite = new DataSprite();
 			sprite.renderer = null;
@@ -582,20 +586,27 @@ package twinlist
 		
 			var x:int = 0;
 			var attrText:TextSprite;
-			for each (var attr:ItemAttribute in item.Attributes) {
-				attrText = new TextSprite(attr.ValuesString());
-				attrText.color = item.ActedOn ? colorTextGray : colorText;
-				attrText.size = ItemFontSize - 4;
-				attrText.font = fontString;
-				attrText.x = x;
-				attrText.y = ItemFontSize + 4;
-				if (attr.Unique) {
-					highlight = CreateDiffHighlight(attrText, listIdx);
-					highlight.alpha = animState == 3 ? 1 : 0;
-					sprite.addChild(highlight);
-				}
-				sprite.addChild(attrText);
-				x += attrText.width;
+
+			var attributesToRender:ArrayCollection = model.ShownAttributes;
+			if(showAttr){
+			  for each (var attr:ItemAttribute in item.Attributes) {
+			      if(!attributesToRender.contains(attr.Name)) {
+				continue;
+			      }
+			      attrText = new TextSprite(attr.ValuesString());
+			      attrText.color = item.ActedOn ? colorTextGray : colorText;
+			      attrText.size = ItemFontSize - 4;
+			      attrText.font = fontString;
+			      attrText.x = x;
+			      attrText.y = ItemFontSize + 4;
+			      if (attr.Unique) {
+				highlight = CreateDiffHighlight(attrText, listIdx);
+				highlight.alpha = animState == 3 ? 1 : 0;
+				sprite.addChild(highlight);
+			      }
+			      sprite.addChild(attrText);
+			      x += attrText.width;
+			    }
 			}
 			
 			return sprite;
@@ -1176,6 +1187,10 @@ package twinlist
 					break;
 				case Option.OPT_LINKIDENTICAL:
 					linkIdentical = opt.Value as Boolean;
+					break;
+				case Option.OPT_ATTRIBIDENTICAL:
+					attribIdentical = opt.Value as Boolean;
+					OnViewUpdated(event)
 					break;
 				case Option.OPT_AFTERACTION:
 					RemoveAfterAction = opt.Value == Option.OPTVAL_REMOVE;

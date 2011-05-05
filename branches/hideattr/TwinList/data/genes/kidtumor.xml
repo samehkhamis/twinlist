@@ -1,0 +1,1252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list id="kidtumor" name="Kidney Tumor">
+
+	<item id="kidtumor:1552937sat" name="1552937sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.27155148831868"/>
+		</attribute>		</item>
+	<item id="kidtumor:1553749at" name="1553749at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.81323095761719"/>
+		</attribute>		</item>
+	<item id="kidtumor:1553750aat" name="1553750aat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.16778659976208"/>
+		</attribute>		</item>
+	<item id="kidtumor:1553947at" name="1553947at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.40703607219195"/>
+		</attribute>		</item>
+	<item id="kidtumor:1554082aat" name="1554082aat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.24269832711481"/>
+		</attribute>		</item>
+	<item id="kidtumor:1567213at" name="1567213at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.9336760341261"/>
+		</attribute>		</item>
+	<item id="kidtumor:200021at" name="200021at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.1548643462775"/>
+		</attribute>		</item>
+	<item id="kidtumor:200031sat" name="200031sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.6252384499835"/>
+		</attribute>		</item>
+	<item id="kidtumor:200062sat" name="200062sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.1038537001925"/>
+		</attribute>		</item>
+	<item id="kidtumor:200095xat" name="200095xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.0533467133026"/>
+		</attribute>		</item>
+	<item id="kidtumor:200689xat" name="200689xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.0450179508133"/>
+		</attribute>		</item>
+	<item id="kidtumor:200717xat" name="200717xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.5101211060404"/>
+		</attribute>		</item>
+	<item id="kidtumor:200748sat" name="200748sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.6957725889464"/>
+		</attribute>		</item>
+	<item id="kidtumor:200819sat" name="200819sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.0609821968249"/>
+		</attribute>		</item>
+	<item id="kidtumor:201026at" name="201026at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.95681049416677"/>
+		</attribute>		</item>
+	<item id="kidtumor:201033xat" name="201033xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.6120274416598"/>
+		</attribute>		</item>
+	<item id="kidtumor:201049sat" name="201049sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.7006124438930"/>
+		</attribute>		</item>
+	<item id="kidtumor:201163sat" name="201163sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.0087859803882"/>
+		</attribute>		</item>
+	<item id="kidtumor:201217xat" name="201217xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.6059319057139"/>
+		</attribute>		</item>
+	<item id="kidtumor:201254xat" name="201254xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.8695314882996"/>
+		</attribute>		</item>
+	<item id="kidtumor:201429sat" name="201429sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="20.4476824043964"/>
+		</attribute>		</item>
+	<item id="kidtumor:201492sat" name="201492sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="20.6577410303438"/>
+		</attribute>		</item>
+	<item id="kidtumor:203519sat" name="203519sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.980257847580266"/>
+		</attribute>		</item>
+	<item id="kidtumor:203597sat" name="203597sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.45496157524982"/>
+		</attribute>		</item>
+	<item id="kidtumor:204507sat" name="204507sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.54978833130768"/>
+		</attribute>		</item>
+	<item id="kidtumor:204892xat" name="204892xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="20.4664340887420"/>
+		</attribute>		</item>
+	<item id="kidtumor:205061sat" name="205061sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.27482549149394"/>
+		</attribute>		</item>
+	<item id="kidtumor:206752sat" name="206752sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.28625540751696"/>
+		</attribute>		</item>
+	<item id="kidtumor:207783xat" name="207783xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.6156907643408"/>
+		</attribute>		</item>
+	<item id="kidtumor:208856xat" name="208856xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.5892623087785"/>
+		</attribute>		</item>
+	<item id="kidtumor:209314sat" name="209314sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.90343060936639"/>
+		</attribute>		</item>
+	<item id="kidtumor:209701at" name="209701at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.14864750969092"/>
+		</attribute>		</item>
+	<item id="kidtumor:209875sat" name="209875sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.493971508014"/>
+		</attribute>		</item>
+	<item id="kidtumor:210098sat" name="210098sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.65953333473988"/>
+		</attribute>		</item>
+	<item id="kidtumor:210685sat" name="210685sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.47279470213612"/>
+		</attribute>		</item>
+	<item id="kidtumor:211345xat" name="211345xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.0924740692005"/>
+		</attribute>		</item>
+	<item id="kidtumor:211628xat" name="211628xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.1684962188089"/>
+		</attribute>		</item>
+	<item id="kidtumor:211720xat" name="211720xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.6263588530106"/>
+		</attribute>		</item>
+	<item id="kidtumor:211943xat" name="211943xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.2086244973272"/>
+		</attribute>		</item>
+	<item id="kidtumor:212039xat" name="212039xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.4746260070761"/>
+		</attribute>		</item>
+	<item id="kidtumor:212220at" name="212220at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.52814285054101"/>
+		</attribute>		</item>
+	<item id="kidtumor:212284xat" name="212284xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="20.0588130441931"/>
+		</attribute>		</item>
+	<item id="kidtumor:212563at" name="212563at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.34307959091075"/>
+		</attribute>		</item>
+	<item id="kidtumor:212654at" name="212654at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.27126950069079"/>
+		</attribute>		</item>
+	<item id="kidtumor:212869xat" name="212869xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.3891556774265"/>
+		</attribute>		</item>
+	<item id="kidtumor:212877at" name="212877at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.23445981628775"/>
+		</attribute>		</item>
+	<item id="kidtumor:212881at" name="212881at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.43024384929198"/>
+		</attribute>		</item>
+	<item id="kidtumor:213080xat" name="213080xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.7211062389480"/>
+		</attribute>		</item>
+	<item id="kidtumor:213477xat" name="213477xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.9239757404482"/>
+		</attribute>		</item>
+	<item id="kidtumor:213583xat" name="213583xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.1460163244844"/>
+		</attribute>		</item>
+	<item id="kidtumor:213588xat" name="213588xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.9060298607948"/>
+		</attribute>		</item>
+	<item id="kidtumor:213741sat" name="213741sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.42163613402796"/>
+		</attribute>		</item>
+	<item id="kidtumor:213890xat" name="213890xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.4074738939070"/>
+		</attribute>		</item>
+	<item id="kidtumor:214313sat" name="214313sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.74613162206237"/>
+		</attribute>		</item>
+	<item id="kidtumor:214327xat" name="214327xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.2512968109302"/>
+		</attribute>		</item>
+	<item id="kidtumor:215011at" name="215011at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.47639933982733"/>
+		</attribute>		</item>
+	<item id="kidtumor:215963xat" name="215963xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.3368271851301"/>
+		</attribute>		</item>
+	<item id="kidtumor:216379xat" name="216379xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.9567526987994"/>
+		</attribute>		</item>
+	<item id="kidtumor:216520sat" name="216520sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.9180405417142"/>
+		</attribute>		</item>
+	<item id="kidtumor:217094sat" name="217094sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.39726765856549"/>
+		</attribute>		</item>
+	<item id="kidtumor:217398xat" name="217398xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.3888530173245"/>
+		</attribute>		</item>
+	<item id="kidtumor:218951sat" name="218951sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.46812974675675"/>
+		</attribute>		</item>
+	<item id="kidtumor:219470xat" name="219470xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.47672107906143"/>
+		</attribute>		</item>
+	<item id="kidtumor:221475sat" name="221475sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.2219392463431"/>
+		</attribute>		</item>
+	<item id="kidtumor:221960sat" name="221960sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-2.20588269054499"/>
+		</attribute>		</item>
+	<item id="kidtumor:222082at" name="222082at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.36426583481709"/>
+		</attribute>		</item>
+	<item id="kidtumor:222508sat" name="222508sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.40749138707036"/>
+		</attribute>		</item>
+	<item id="kidtumor:222837sat" name="222837sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.43178068521195"/>
+		</attribute>		</item>
+	<item id="kidtumor:223457at" name="223457at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.29574229359020"/>
+		</attribute>		</item>
+	<item id="kidtumor:224164at" name="224164at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.38593967160183"/>
+		</attribute>		</item>
+	<item id="kidtumor:225316at" name="225316at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.28438470194702"/>
+		</attribute>		</item>
+	<item id="kidtumor:225319sat" name="225319sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.30016008104768"/>
+		</attribute>		</item>
+	<item id="kidtumor:225451at" name="225451at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.30960782253374"/>
+		</attribute>		</item>
+	<item id="kidtumor:225483at" name="225483at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.44323935588082"/>
+		</attribute>		</item>
+	<item id="kidtumor:225617at" name="225617at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.47853987988123"/>
+		</attribute>		</item>
+	<item id="kidtumor:225970at" name="225970at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.32142166375269"/>
+		</attribute>		</item>
+	<item id="kidtumor:226082sat" name="226082sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.39591739332487"/>
+		</attribute>		</item>
+	<item id="kidtumor:226475at" name="226475at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.63465898656147"/>
+		</attribute>		</item>
+	<item id="kidtumor:226794at" name="226794at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.53741364616166"/>
+		</attribute>		</item>
+	<item id="kidtumor:226972sat" name="226972sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.31609571717414"/>
+		</attribute>		</item>
+	<item id="kidtumor:229204at" name="229204at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.85099287396086"/>
+		</attribute>		</item>
+	<item id="kidtumor:229563sat" name="229563sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.3438968328515"/>
+		</attribute>		</item>
+	<item id="kidtumor:230629sat" name="230629sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.56459017593934"/>
+		</attribute>		</item>
+	<item id="kidtumor:231061at" name="231061at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.43124973304910"/>
+		</attribute>		</item>
+	<item id="kidtumor:231200at" name="231200at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.35809787337243"/>
+		</attribute>		</item>
+	<item id="kidtumor:235227at" name="235227at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.32516504986790"/>
+		</attribute>		</item>
+	<item id="kidtumor:236132at" name="236132at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.50203595622301"/>
+		</attribute>		</item>
+	<item id="kidtumor:238704at" name="238704at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.37827753256024"/>
+		</attribute>		</item>
+	<item id="kidtumor:1552286at" name="1552286at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.39179977836183"/>
+		</attribute>		</item>
+	<item id="kidtumor:1553212at" name="1553212at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.43716198009426"/>
+		</attribute>		</item>
+	<item id="kidtumor:1555272at" name="1555272at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.30147630388487"/>
+		</attribute>		</item>
+	<item id="kidtumor:1555467aat" name="1555467aat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.658335598140805"/>
+		</attribute>		</item>
+	<item id="kidtumor:1555653at" name="1555653at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.6017068575463"/>
+		</attribute>		</item>
+	<item id="kidtumor:200025sat" name="200025sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.3941830058079"/>
+		</attribute>		</item>
+	<item id="kidtumor:200674sat" name="200674sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.808025783057"/>
+		</attribute>		</item>
+	<item id="kidtumor:200795at" name="200795at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.3938659072125"/>
+		</attribute>		</item>
+	<item id="kidtumor:200926at" name="200926at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.2954260229904"/>
+		</attribute>		</item>
+	<item id="kidtumor:201257xat" name="201257xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.4958814684471"/>
+		</attribute>		</item>
+	<item id="kidtumor:201293xat" name="201293xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.1259423527384"/>
+		</attribute>		</item>
+	<item id="kidtumor:201427sat" name="201427sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.2266451446682"/>
+		</attribute>		</item>
+	<item id="kidtumor:201625sat" name="201625sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.53579608152932"/>
+		</attribute>		</item>
+	<item id="kidtumor:203064sat" name="203064sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.45733583653864"/>
+		</attribute>		</item>
+	<item id="kidtumor:203107xat" name="203107xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.7961079282719"/>
+		</attribute>		</item>
+	<item id="kidtumor:203653sat" name="203653sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.637923945368908"/>
+		</attribute>		</item>
+	<item id="kidtumor:204133at" name="204133at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.34366722081383"/>
+		</attribute>		</item>
+	<item id="kidtumor:204217sat" name="204217sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.17104369337099"/>
+		</attribute>		</item>
+	<item id="kidtumor:205486at" name="205486at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.28554729955129"/>
+		</attribute>		</item>
+	<item id="kidtumor:205799sat" name="205799sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.3261625836002"/>
+		</attribute>		</item>
+	<item id="kidtumor:206038sat" name="206038sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.29909343150116"/>
+		</attribute>		</item>
+	<item id="kidtumor:206108sat" name="206108sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.719761600350251"/>
+		</attribute>		</item>
+	<item id="kidtumor:206559xat" name="206559xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="20.2556597494378"/>
+		</attribute>		</item>
+	<item id="kidtumor:208363sat" name="208363sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.841150420335412"/>
+		</attribute>		</item>
+	<item id="kidtumor:208904sat" name="208904sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.4950609482219"/>
+		</attribute>		</item>
+	<item id="kidtumor:209258sat" name="209258sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.65008175415617"/>
+		</attribute>		</item>
+	<item id="kidtumor:209771xat" name="209771xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.9883219587807"/>
+		</attribute>		</item>
+	<item id="kidtumor:209811at" name="209811at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.38678077898490"/>
+		</attribute>		</item>
+	<item id="kidtumor:211073xat" name="211073xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.5654061276634"/>
+		</attribute>		</item>
+	<item id="kidtumor:211358sat" name="211358sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.103187611777197"/>
+		</attribute>		</item>
+	<item id="kidtumor:211983xat" name="211983xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.2670938712746"/>
+		</attribute>		</item>
+	<item id="kidtumor:212578xat" name="212578xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.8171932662639"/>
+		</attribute>		</item>
+	<item id="kidtumor:212581xat" name="212581xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.6672654474555"/>
+		</attribute>		</item>
+	<item id="kidtumor:212788xat" name="212788xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.9468291763428"/>
+		</attribute>		</item>
+	<item id="kidtumor:212882at" name="212882at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.27260354080198"/>
+		</attribute>		</item>
+	<item id="kidtumor:212901sat" name="212901sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.53288707463751"/>
+		</attribute>		</item>
+	<item id="kidtumor:212988xat" name="212988xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.0172950109649"/>
+		</attribute>		</item>
+	<item id="kidtumor:213347xat" name="213347xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.2494785912361"/>
+		</attribute>		</item>
+	<item id="kidtumor:213409sat" name="213409sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.959653077263589"/>
+		</attribute>		</item>
+	<item id="kidtumor:213453xat" name="213453xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.3294876076389"/>
+		</attribute>		</item>
+	<item id="kidtumor:213494sat" name="213494sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.03720661338433"/>
+		</attribute>		</item>
+	<item id="kidtumor:213669at" name="213669at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.05636984623846"/>
+		</attribute>		</item>
+	<item id="kidtumor:213705at" name="213705at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.226828475687243"/>
+		</attribute>		</item>
+	<item id="kidtumor:213867xat" name="213867xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.8555238249681"/>
+		</attribute>		</item>
+	<item id="kidtumor:213935at" name="213935at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.31301819539332"/>
+		</attribute>		</item>
+	<item id="kidtumor:214143xat" name="214143xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.0084235243808"/>
+		</attribute>		</item>
+	<item id="kidtumor:214395xat" name="214395xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.02017579716"/>
+		</attribute>		</item>
+	<item id="kidtumor:214414xat" name="214414xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="14.8698238706041"/>
+		</attribute>		</item>
+	<item id="kidtumor:215038sat" name="215038sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.39244534086402"/>
+		</attribute>		</item>
+	<item id="kidtumor:215886xat" name="215886xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.29852867297281"/>
+		</attribute>		</item>
+	<item id="kidtumor:215905sat" name="215905sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.63893435388957"/>
+		</attribute>		</item>
+	<item id="kidtumor:217740xat" name="217740xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.7910224722553"/>
+		</attribute>		</item>
+	<item id="kidtumor:218110at" name="218110at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.895158990237223"/>
+		</attribute>		</item>
+	<item id="kidtumor:219219at" name="219219at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.28943172149691"/>
+		</attribute>		</item>
+	<item id="kidtumor:220703at" name="220703at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.31338611359163"/>
+		</attribute>		</item>
+	<item id="kidtumor:221607xat" name="221607xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.4421594593294"/>
+		</attribute>		</item>
+	<item id="kidtumor:221798xat" name="221798xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.2413497107161"/>
+		</attribute>		</item>
+	<item id="kidtumor:221849sat" name="221849sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.19977276054064"/>
+		</attribute>		</item>
+	<item id="kidtumor:222233sat" name="222233sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.31254530003574"/>
+		</attribute>		</item>
+	<item id="kidtumor:222748sat" name="222748sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.39190988448113"/>
+		</attribute>		</item>
+	<item id="kidtumor:222873sat" name="222873sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.38894920649764"/>
+		</attribute>		</item>
+	<item id="kidtumor:223292sat" name="223292sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.72475197912443"/>
+		</attribute>		</item>
+	<item id="kidtumor:224594xat" name="224594xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.7806727573625"/>
+		</attribute>		</item>
+	<item id="kidtumor:224930xat" name="224930xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.1701545960926"/>
+		</attribute>		</item>
+	<item id="kidtumor:226131sat" name="226131sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.7469485029300"/>
+		</attribute>		</item>
+	<item id="kidtumor:226201at" name="226201at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.30201826560093"/>
+		</attribute>		</item>
+	<item id="kidtumor:226328at" name="226328at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.90292952696246"/>
+		</attribute>		</item>
+	<item id="kidtumor:226539sat" name="226539sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.35439025780751"/>
+		</attribute>		</item>
+	<item id="kidtumor:226729at" name="226729at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.55259960637277"/>
+		</attribute>		</item>
+	<item id="kidtumor:230747sat" name="230747sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.21432290375985"/>
+		</attribute>		</item>
+	<item id="kidtumor:231999at" name="231999at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.43236405757043"/>
+		</attribute>		</item>
+	<item id="kidtumor:232149sat" name="232149sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.782514332652683"/>
+		</attribute>		</item>
+	<item id="kidtumor:235136at" name="235136at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.866674376987565"/>
+		</attribute>		</item>
+	<item id="kidtumor:236023at" name="236023at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.3839747235179"/>
+		</attribute>		</item>
+	<item id="kidtumor:44040at" name="44040at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.935605102499137"/>
+		</attribute>		</item>
+	<item id="kidtumor:1552307aat" name="1552307aat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.570157465245215"/>
+		</attribute>		</item>
+	<item id="kidtumor:1553567sat" name="1553567sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.9658669207230"/>
+		</attribute>		</item>
+	<item id="kidtumor:1554153aat" name="1554153aat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.999714746292013"/>
+		</attribute>		</item>
+	<item id="kidtumor:1554415at" name="1554415at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.580593439343226"/>
+		</attribute>		</item>
+	<item id="kidtumor:1558166at" name="1558166at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.460061215141756"/>
+		</attribute>		</item>
+	<item id="kidtumor:1564746at" name="1564746at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.639713723794718"/>
+		</attribute>		</item>
+	<item id="kidtumor:1567997xat" name="1567997xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.481149584807222"/>
+		</attribute>		</item>
+	<item id="kidtumor:1570552at" name="1570552at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.659944119076287"/>
+		</attribute>		</item>
+	<item id="kidtumor:200018at" name="200018at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.9293799017378"/>
+		</attribute>		</item>
+	<item id="kidtumor:200088xat" name="200088xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.4355931085094"/>
+		</attribute>		</item>
+	<item id="kidtumor:200633at" name="200633at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.0591333466627"/>
+		</attribute>		</item>
+	<item id="kidtumor:200725xat" name="200725xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.0043959188838"/>
+		</attribute>		</item>
+	<item id="kidtumor:200763sat" name="200763sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.5275266271616"/>
+		</attribute>		</item>
+	<item id="kidtumor:200801xat" name="200801xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.1059383975624"/>
+		</attribute>		</item>
+	<item id="kidtumor:200809xat" name="200809xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.5974526544522"/>
+		</attribute>		</item>
+	<item id="kidtumor:200908sat" name="200908sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.0412680716488318"/>
+		</attribute>		</item>
+	<item id="kidtumor:200963xat" name="200963xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.2003599403866"/>
+		</attribute>		</item>
+	<item id="kidtumor:201072sat" name="201072sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.41505779716878"/>
+		</attribute>		</item>
+	<item id="kidtumor:201182sat" name="201182sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.46022367549588"/>
+		</attribute>		</item>
+	<item id="kidtumor:201348at" name="201348at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.1063608386958"/>
+		</attribute>		</item>
+	<item id="kidtumor:201553sat" name="201553sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="15.6512783205690"/>
+		</attribute>		</item>
+	<item id="kidtumor:202029xat" name="202029xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.6251464951236"/>
+		</attribute>		</item>
+	<item id="kidtumor:202402sat" name="202402sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.55896955618307"/>
+		</attribute>		</item>
+	<item id="kidtumor:203012xat" name="203012xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.1523923094390"/>
+		</attribute>		</item>
+	<item id="kidtumor:203034sat" name="203034sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.7466478252977"/>
+		</attribute>		</item>
+	<item id="kidtumor:203178at" name="203178at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="11.9725619933810"/>
+		</attribute>		</item>
+	<item id="kidtumor:203532xat" name="203532xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.41768312941305"/>
+		</attribute>		</item>
+	<item id="kidtumor:204014at" name="204014at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="1.36433313219444"/>
+		</attribute>		</item>
+	<item id="kidtumor:204102sat" name="204102sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.1190850241629"/>
+		</attribute>		</item>
+	<item id="kidtumor:204705xat" name="204705xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="5.19456776608317"/>
+		</attribute>		</item>
+	<item id="kidtumor:204899sat" name="204899sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.160864930094980"/>
+		</attribute>		</item>
+	<item id="kidtumor:205248at" name="205248at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.64846410987294"/>
+		</attribute>		</item>
+	<item id="kidtumor:205363at" name="205363at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="10.3690377375189"/>
+		</attribute>		</item>
+	<item id="kidtumor:205380at" name="205380at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="12.466249540301"/>
+		</attribute>		</item>
+	<item id="kidtumor:205626sat" name="205626sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="1.19631945351390"/>
+		</attribute>		</item>
+	<item id="kidtumor:205719sat" name="205719sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="4.97914838597661"/>
+		</attribute>		</item>
+	<item id="kidtumor:205851at" name="205851at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.47242546171447"/>
+		</attribute>		</item>
+	<item id="kidtumor:206054at" name="206054at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="1.79809790951256"/>
+		</attribute>		</item>
+	<item id="kidtumor:206716at" name="206716at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="1.48496585758598"/>
+		</attribute>		</item>
+	<item id="kidtumor:208107sat" name="208107sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.722703918688717"/>
+		</attribute>		</item>
+	<item id="kidtumor:208383sat" name="208383sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="9.83234286502185"/>
+		</attribute>		</item>
+	<item id="kidtumor:208645sat" name="208645sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.7952774879405"/>
+		</attribute>		</item>
+	<item id="kidtumor:208695sat" name="208695sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.0958538786086"/>
+		</attribute>		</item>
+	<item id="kidtumor:208825xat" name="208825xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.2733468945499"/>
+		</attribute>		</item>
+	<item id="kidtumor:208834xat" name="208834xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.3515950220210"/>
+		</attribute>		</item>
+	<item id="kidtumor:208929xat" name="208929xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.4437467976277"/>
+		</attribute>		</item>
+	<item id="kidtumor:208980sat" name="208980sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.9239179702376"/>
+		</attribute>		</item>
+	<item id="kidtumor:209057xat" name="209057xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="2.98540000764279"/>
+		</attribute>		</item>
+	<item id="kidtumor:209071sat" name="209071sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.2283020819243"/>
+		</attribute>		</item>
+	<item id="kidtumor:209094at" name="209094at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="14.1806284224728"/>
+		</attribute>		</item>
+	<item id="kidtumor:209140xat" name="209140xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.0692110076858"/>
+		</attribute>		</item>
+	<item id="kidtumor:209204at" name="209204at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.83583316218314"/>
+		</attribute>		</item>
+	<item id="kidtumor:209743sat" name="209743sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.609155911478156"/>
+		</attribute>		</item>
+	<item id="kidtumor:209927sat" name="209927sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.528651163990507"/>
+		</attribute>		</item>
+	<item id="kidtumor:210289at" name="210289at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="10.2994876084196"/>
+		</attribute>		</item>
+	<item id="kidtumor:210612sat" name="210612sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.151774864568288"/>
+		</attribute>		</item>
+	<item id="kidtumor:210646xat" name="210646xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.9894928500252"/>
+		</attribute>		</item>
+	<item id="kidtumor:211087xat" name="211087xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.508564571052753"/>
+		</attribute>		</item>
+	<item id="kidtumor:211115xat" name="211115xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.215251145310699"/>
+		</attribute>		</item>
+	<item id="kidtumor:211272sat" name="211272sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.330126261327430"/>
+		</attribute>		</item>
+	<item id="kidtumor:211296xat" name="211296xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.9635372838523"/>
+		</attribute>		</item>
+	<item id="kidtumor:211357sat" name="211357sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="5.34030618501157"/>
+		</attribute>		</item>
+	<item id="kidtumor:211600at" name="211600at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.9488546475379"/>
+		</attribute>		</item>
+	<item id="kidtumor:211956sat" name="211956sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.8618477896472"/>
+		</attribute>		</item>
+	<item id="kidtumor:211959at" name="211959at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="13.9880934601836"/>
+		</attribute>		</item>
+	<item id="kidtumor:212537xat" name="212537xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.1310637673778"/>
+		</attribute>		</item>
+	<item id="kidtumor:212734xat" name="212734xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.5789287783584"/>
+		</attribute>		</item>
+	<item id="kidtumor:212790xat" name="212790xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.8127057068903"/>
+		</attribute>		</item>
+	<item id="kidtumor:212810sat" name="212810sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.80902609639213"/>
+		</attribute>		</item>
+	<item id="kidtumor:213084xat" name="213084xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.3734539575774"/>
+		</attribute>		</item>
+	<item id="kidtumor:213087sat" name="213087sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.0348044784958437"/>
+		</attribute>		</item>
+	<item id="kidtumor:213179at" name="213179at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-2.18525195196783"/>
+		</attribute>		</item>
+	<item id="kidtumor:213187xat" name="213187xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.0153042154916"/>
+		</attribute>		</item>
+	<item id="kidtumor:213256at" name="213256at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.387655755224597"/>
+		</attribute>		</item>
+	<item id="kidtumor:213414sat" name="213414sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.1038867937610"/>
+		</attribute>		</item>
+	<item id="kidtumor:213564xat" name="213564xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="15.1826989057401"/>
+		</attribute>		</item>
+	<item id="kidtumor:213718at" name="213718at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.33132899197646"/>
+		</attribute>		</item>
+	<item id="kidtumor:214000sat" name="214000sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.886113828238016"/>
+		</attribute>		</item>
+	<item id="kidtumor:214001xat" name="214001xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.0527120623587408"/>
+		</attribute>		</item>
+	<item id="kidtumor:214003xat" name="214003xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.6437426886758"/>
+		</attribute>		</item>
+	<item id="kidtumor:214091sat" name="214091sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="13.9941367611295"/>
+		</attribute>		</item>
+	<item id="kidtumor:214629xat" name="214629xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="16.1681283088913"/>
+		</attribute>		</item>
+	<item id="kidtumor:214659xat" name="214659xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.37996984476280"/>
+		</attribute>		</item>
+	<item id="kidtumor:215313xat" name="215313xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="17.3214291288278"/>
+		</attribute>		</item>
+	<item id="kidtumor:216231sat" name="216231sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="18.1945105789127"/>
+		</attribute>		</item>
+	<item id="kidtumor:216323xat" name="216323xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.642634086939087"/>
+		</attribute>		</item>
+	<item id="kidtumor:216733sat" name="216733sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="10.9354799020222"/>
+		</attribute>		</item>
+	<item id="kidtumor:216913sat" name="216913sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.800961394159202"/>
+		</attribute>		</item>
+	<item id="kidtumor:217238sat" name="217238sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="4.51354339965120"/>
+		</attribute>		</item>
+	<item id="kidtumor:217297sat" name="217297sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.0693265728393972"/>
+		</attribute>		</item>
+	<item id="kidtumor:218148at" name="218148at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.92333295776866"/>
+		</attribute>		</item>
+	<item id="kidtumor:218908at" name="218908at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.39046270358060"/>
+		</attribute>		</item>
+	<item id="kidtumor:219594at" name="219594at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.436639711826708"/>
+		</attribute>		</item>
+	<item id="kidtumor:219629at" name="219629at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.25380208608837"/>
+		</attribute>		</item>
+	<item id="kidtumor:219997sat" name="219997sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.47006658586696"/>
+		</attribute>		</item>
+	<item id="kidtumor:220281at" name="220281at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="1.47279145619419"/>
+		</attribute>		</item>
+	<item id="kidtumor:220946sat" name="220946sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.87160741943726"/>
+		</attribute>		</item>
+	<item id="kidtumor:221563at" name="221563at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.166466732055276"/>
+		</attribute>		</item>
+	<item id="kidtumor:221889at" name="221889at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.446471883777862"/>
+		</attribute>		</item>
+	<item id="kidtumor:222011sat" name="222011sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.31812646445587"/>
+		</attribute>		</item>
+	<item id="kidtumor:222547at" name="222547at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.682009772116622"/>
+		</attribute>		</item>
+	<item id="kidtumor:222612at" name="222612at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.31778893924325"/>
+		</attribute>		</item>
+	<item id="kidtumor:222729at" name="222729at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.64783191837732"/>
+		</attribute>		</item>
+	<item id="kidtumor:223265at" name="223265at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.391564574845837"/>
+		</attribute>		</item>
+	<item id="kidtumor:224037at" name="224037at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.954543460268015"/>
+		</attribute>		</item>
+	<item id="kidtumor:224372at" name="224372at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="19.5896132513102"/>
+		</attribute>		</item>
+	<item id="kidtumor:224465sat" name="224465sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.81431476731462"/>
+		</attribute>		</item>
+	<item id="kidtumor:224863at" name="224863at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.330030474701406"/>
+		</attribute>		</item>
+	<item id="kidtumor:224924at" name="224924at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.829131935967164"/>
+		</attribute>		</item>
+	<item id="kidtumor:225118at" name="225118at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.358021265252151"/>
+		</attribute>		</item>
+	<item id="kidtumor:225187at" name="225187at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.87129361159977"/>
+		</attribute>		</item>
+	<item id="kidtumor:225246at" name="225246at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.738253301457804"/>
+		</attribute>		</item>
+	<item id="kidtumor:225738at" name="225738at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.132566859286729"/>
+		</attribute>		</item>
+	<item id="kidtumor:225800at" name="225800at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.922693750037034"/>
+		</attribute>		</item>
+	<item id="kidtumor:225965at" name="225965at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.443694549023337"/>
+		</attribute>		</item>
+	<item id="kidtumor:226306at" name="226306at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.700837665441276"/>
+		</attribute>		</item>
+	<item id="kidtumor:226643sat" name="226643sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.294553175813317"/>
+		</attribute>		</item>
+	<item id="kidtumor:226648at" name="226648at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.41370389189456"/>
+		</attribute>		</item>
+	<item id="kidtumor:227245at" name="227245at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.49605860347049"/>
+		</attribute>		</item>
+	<item id="kidtumor:228245sat" name="228245sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.736155602039708"/>
+		</attribute>		</item>
+	<item id="kidtumor:228250at" name="228250at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="0.775880687194209"/>
+		</attribute>		</item>
+	<item id="kidtumor:228433at" name="228433at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.63012866386237"/>
+		</attribute>		</item>
+	<item id="kidtumor:228449at" name="228449at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.27610470072707"/>
+		</attribute>		</item>
+	<item id="kidtumor:228512at" name="228512at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.27180228045413"/>
+		</attribute>		</item>
+	<item id="kidtumor:228813at" name="228813at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.29382623452234"/>
+		</attribute>		</item>
+	<item id="kidtumor:228990at" name="228990at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.496625976970996"/>
+		</attribute>		</item>
+	<item id="kidtumor:229304sat" name="229304sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.746865278095684"/>
+		</attribute>		</item>
+	<item id="kidtumor:229399at" name="229399at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.64552200342236"/>
+		</attribute>		</item>
+	<item id="kidtumor:229491at" name="229491at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.788428279627202"/>
+		</attribute>		</item>
+	<item id="kidtumor:229644at" name="229644at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.02794008546583"/>
+		</attribute>		</item>
+	<item id="kidtumor:229684sat" name="229684sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.696271285276057"/>
+		</attribute>		</item>
+	<item id="kidtumor:230554at" name="230554at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="12.1248959677287"/>
+		</attribute>		</item>
+	<item id="kidtumor:230777sat" name="230777sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.706138292916275"/>
+		</attribute>		</item>
+	<item id="kidtumor:232219xat" name="232219xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.36820767789417"/>
+		</attribute>		</item>
+	<item id="kidtumor:233167at" name="233167at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.31457538741876"/>
+		</attribute>		</item>
+	<item id="kidtumor:234976xat" name="234976xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.514943318001528"/>
+		</attribute>		</item>
+	<item id="kidtumor:235154at" name="235154at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.77393560886679"/>
+		</attribute>		</item>
+	<item id="kidtumor:237058xat" name="237058xat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="12.3027228838189"/>
+		</attribute>		</item>
+	<item id="kidtumor:238800sat" name="238800sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.400976294061819"/>
+		</attribute>		</item>
+	<item id="kidtumor:240983sat" name="240983sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.171773356541181"/>
+		</attribute>		</item>
+	<item id="kidtumor:241955at" name="241955at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.87707902976497"/>
+		</attribute>		</item>
+	<item id="kidtumor:243786at" name="243786at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.18188673454490"/>
+		</attribute>		</item>
+	<item id="kidtumor:32402sat" name="32402sat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.929775665819126"/>
+		</attribute>		</item>
+	<item id="kidtumor:33148at" name="33148at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.62700685461933"/>
+		</attribute>		</item>
+	<item id="kidtumor:34408at" name="34408at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.704452840821102"/>
+		</attribute>		</item>
+	<item id="kidtumor:45653at" name="45653at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.172410075328649"/>
+		</attribute>		</item>
+	<item id="kidtumor:50314iat" name="50314iat">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.296238595672185"/>
+		</attribute>		</item>
+	<item id="kidtumor:66053at" name="66053at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-1.43665051267112"/>
+		</attribute>		</item>
+	<item id="kidtumor:91952at" name="91952at">
+		<attribute name="Mean Z-score" type="Numerical">
+			<value value="-0.755696369844576"/>
+		</attribute>		</item>
+</list>

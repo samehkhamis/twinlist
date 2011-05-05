@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<SimilarityList>
+		<SimilarityPair>
+			<L1ID>kidnormal:213187xat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:214003xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+ 		<SimilarityPair>
+			<L1ID>kidnormal:217238sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:204892xat</L1ID>
+			<L2ID>kidtumor:204892xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:200021at</L1ID>
+			<L2ID>kidtumor:200021at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+	</SimilarityList>
