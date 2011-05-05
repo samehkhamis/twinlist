@@ -47,9 +47,24 @@
 		<s:Label text="Link identical items:" fontSize="14"/>
 		<s:CheckBox id="cbLinkIdentical" change="OnLinkIdenticalChange(event)" selected="true"/>		
 	</s:HGroup>
+	<s:HGroup>
+		<s:Label text="Show identical Attributes:" fontSize="14"/>
+		<s:CheckBox id="cbAttribIdentical" change="OnAttribIdenticalChange(event)" selected="false"/>		
+	</s:HGroup>
 	<mx:Spacer height="10"/>
 	<s:Label text="After item accept/reject:" fontSize="14"/>
 	<s:RadioButton id="rbGray" group="{rbgAfterAction}" label="Gray out" value="{Option.OPTVAL_GRAYOUT}"/>
 	<s:RadioButton id="rbRemove" group="{rbgAfterAction}" label="Remove" value="{Option.OPTVAL_REMOVE}" selected="true"/>
 	<mx:Spacer height="10"/>
+	<s:Label text="Attributes shown in ListViewer:" fontSize="14"/>
+	<s:VGroup>
+	  <s:Scroller width="100%" height="100%">
+	    <s:VGroup id="shownItemsGroup" width="100%" height="100%"/>
+	  </s:Scroller>
+	  <s:HGroup>
+	    <s:Button id="selectAllAttribBtn" label="All" width="80"/>
+	    <s:Button id="clearAllAttribBtn" label="None" width="80"/>
+	  </s:HGroup>
+	</s:VGroup>
+	<mx:Spacer height="10"/> 
 </twinlist:OptionsPanelClass>
