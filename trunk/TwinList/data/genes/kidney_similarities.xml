@@ -1,0 +1,2400 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<SimilarityList>
+		<SimilarityPair>
+			<L1ID>kidnormal:213187xat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:214003xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:217238sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:209094at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:201553sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:212810sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1554415at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:208825xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:211272sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:222011sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:229491at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:220281at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:205719sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:216231sat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:208107sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:200963xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:243786at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:228990at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:205248at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:209140xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:224863at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:229684sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213564xat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:233167at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1570552at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:202029xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:224372at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:219629at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:216733sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:228245sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:205363at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:211956sat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:204899sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:241955at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:232219xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:203178at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:216323xat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:218908at</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:218148at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:205626sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1564746at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:203012xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:66053at</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:220946sat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:225738at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:221563at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:229399at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:200633at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:227245at</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:225246at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:203034sat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:209071sat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213256at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:200801xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:215313xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:240983sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:209743sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:204014at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:200763sat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:223265at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:211087xat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:213414sat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:208695sat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:208834xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:200018at</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:230554at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:222612at</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:225118at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213718at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:225187at</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:211959at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:214629xat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:229644at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:228813at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:226648at</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:203532xat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:226643sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:224037at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:228512at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:202402sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:45653at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:210289at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:33148at</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:34408at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:214000sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:91952at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:212537xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:213179at</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1553567sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:222729at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:211296xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:235154at</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:201182sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:212734xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:237058xat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:234976xat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:205851at</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:228433at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:208980sat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:200088xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:210612sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:50314iat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:200908sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:217297sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:228449at</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:201348at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:214001xat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:211600at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:208383sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:209204at</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:225800at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:226306at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:221889at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1567997xat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:205380at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:212790xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:228250at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:238800sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:219594at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:210646xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:206054at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:214091sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:230777sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:208645sat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1554153aat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:209057xat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213087sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:222547at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:224465sat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:32402sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:225965at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:229304sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:224924at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:211115xat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:204102sat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:211357sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:200809xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:216913sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:213084xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:208929xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:204705xat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:200725xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1552307aat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:214659xat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:209927sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID></L1ID>
+			<L2ID>kidtumor:219997sat</L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:206716at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1558166at</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:201072sat</L1ID>
+			<L2ID></L2ID>
+			<Type>2</Type> <!-- Unique -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1552286at</L1ID>
+			<L2ID>kidtumor:1552286at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.737911120979633</L1Diff>
+					<L2Diff>-1.39179977836183</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:209811at</L1ID>
+			<L2ID>kidtumor:209811at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.641346415323728</L1Diff>
+					<L2Diff>-1.38678077898490</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:209771xat</L1ID>
+			<L2ID>kidtumor:209771xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>17.3057038047362</L1Diff>
+					<L2Diff>17.9883219587807</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:235136at</L1ID>
+			<L2ID>kidtumor:235136at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.58927742116617</L1Diff>
+					<L2Diff>-0.866674376987565</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:226539sat</L1ID>
+			<L2ID>kidtumor:226539sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.77005425580877</L1Diff>
+					<L2Diff>-1.35439025780751</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:200674sat</L1ID>
+			<L2ID>kidtumor:200674sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>16.8848098315207</L1Diff>
+					<L2Diff>17.808025783057</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:203653sat</L1ID>
+			<L2ID>kidtumor:203653sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.54955541179744</L1Diff>
+					<L2Diff>-0.637923945368908</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:206108sat</L1ID>
+			<L2ID>kidtumor:206108sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.71316805562567</L1Diff>
+					<L2Diff>-0.719761600350251</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:236023at</L1ID>
+			<L2ID>kidtumor:236023at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.772821406198129</L1Diff>
+					<L2Diff>-1.3839747235179</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213867xat</L1ID>
+			<L2ID>kidtumor:213867xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>18.2156735930457</L1Diff>
+					<L2Diff>18.8555238249681</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:212901sat</L1ID>
+			<L2ID>kidtumor:212901sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.446496610328102</L1Diff>
+					<L2Diff>-1.53288707463751</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:208904sat</L1ID>
+			<L2ID>kidtumor:208904sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>16.7665853408058</L1Diff>
+					<L2Diff>17.4950609482219</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:212988xat</L1ID>
+			<L2ID>kidtumor:212988xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>17.8065605203866</L1Diff>
+					<L2Diff>17.0172950109649</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:200025sat</L1ID>
+			<L2ID>kidtumor:200025sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>16.8578309148250</L1Diff>
+					<L2Diff>17.3941830058079</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:220703at</L1ID>
+			<L2ID>kidtumor:220703at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.64981946507156</L1Diff>
+					<L2Diff>-1.31338611359163</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1553212at</L1ID>
+			<L2ID>kidtumor:1553212at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.833434120555206</L1Diff>
+					<L2Diff>-1.43716198009426</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:214414xat</L1ID>
+			<L2ID>kidtumor:214414xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>17.17375382692</L1Diff>
+					<L2Diff>14.8698238706041</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213705at</L1ID>
+			<L2ID>kidtumor:213705at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.56975658331355</L1Diff>
+					<L2Diff>0.226828475687243</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:214143xat</L1ID>
+			<L2ID>kidtumor:214143xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>17.4599538324783</L1Diff>
+					<L2Diff>18.0084235243808</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:226729at</L1ID>
+			<L2ID>kidtumor:226729at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.567253049438972</L1Diff>
+					<L2Diff>-1.55259960637277</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:201293xat</L1ID>
+			<L2ID>kidtumor:201293xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>16.4426935501448</L1Diff>
+					<L2Diff>17.1259423527384</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:232149sat</L1ID>
+			<L2ID>kidtumor:232149sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.78778053444798</L1Diff>
+					<L2Diff>-0.782514332652683</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:226201at</L1ID>
+			<L2ID>kidtumor:226201at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.716029808459457</L1Diff>
+					<L2Diff>-1.30201826560093</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:200926at</L1ID>
+			<L2ID>kidtumor:200926at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>18.9708183612787</L1Diff>
+					<L2Diff>19.2954260229904</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:222233sat</L1ID>
+			<L2ID>kidtumor:222233sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.358151620997072</L1Diff>
+					<L2Diff>-1.31254530003574</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:201427sat</L1ID>
+			<L2ID>kidtumor:201427sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>19.2713627302114</L1Diff>
+					<L2Diff>18.2266451446682</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:212581xat</L1ID>
+			<L2ID>kidtumor:212581xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>18.0872654728308</L1Diff>
+					<L2Diff>18.6672654474555</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:223292sat</L1ID>
+			<L2ID>kidtumor:223292sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.984544431357562</L1Diff>
+					<L2Diff>-1.72475197912443</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:206559xat</L1ID>
+			<L2ID>kidtumor:206559xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>20.7426464370389</L1Diff>
+					<L2Diff>20.2556597494378</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:205799sat</L1ID>
+			<L2ID>kidtumor:205799sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>19.4616260496394</L1Diff>
+					<L2Diff>17.3261625836002</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:231999at</L1ID>
+			<L2ID>kidtumor:231999at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.662288969428064</L1Diff>
+					<L2Diff>-1.43236405757043</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:212578xat</L1ID>
+			<L2ID>kidtumor:212578xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>17.1281133163566</L1Diff>
+					<L2Diff>17.8171932662639</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:215905sat</L1ID>
+			<L2ID>kidtumor:215905sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.94672689894378</L1Diff>
+					<L2Diff>-1.63893435388957</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213669at</L1ID>
+			<L2ID>kidtumor:213669at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.59401311387831</L1Diff>
+					<L2Diff>-1.05636984623846</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:203064sat</L1ID>
+			<L2ID>kidtumor:203064sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.750737616050513</L1Diff>
+					<L2Diff>-1.45733583653864</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:204217sat</L1ID>
+			<L2ID>kidtumor:204217sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.71943713564379</L1Diff>
+					<L2Diff>-1.17104369337099</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:211073xat</L1ID>
+			<L2ID>kidtumor:211073xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>18.8952024332388</L1Diff>
+					<L2Diff>18.5654061276634</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:224594xat</L1ID>
+			<L2ID>kidtumor:224594xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>18.2354698008418</L1Diff>
+					<L2Diff>18.7806727573625</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:215038sat</L1ID>
+			<L2ID>kidtumor:215038sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.340841927107009</L1Diff>
+					<L2Diff>-1.39244534086402</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:212788xat</L1ID>
+			<L2ID>kidtumor:212788xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>19.5380109733131</L1Diff>
+					<L2Diff>18.9468291763428</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1555653at</L1ID>
+			<L2ID>kidtumor:1555653at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>19.2688773362796</L1Diff>
+					<L2Diff>18.6017068575463</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:212882at</L1ID>
+			<L2ID>kidtumor:212882at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.673631229868112</L1Diff>
+					<L2Diff>-1.27260354080198</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:205486at</L1ID>
+			<L2ID>kidtumor:205486at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.776894372290682</L1Diff>
+					<L2Diff>-1.28554729955129</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213347xat</L1ID>
+			<L2ID>kidtumor:213347xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>17.8738792653086</L1Diff>
+					<L2Diff>18.2494785912361</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:208363sat</L1ID>
+			<L2ID>kidtumor:208363sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.52447855940974</L1Diff>
+					<L2Diff>-0.841150420335412</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:221798xat</L1ID>
+			<L2ID>kidtumor:221798xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>17.7077570032745</L1Diff>
+					<L2Diff>18.2413497107161</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:214395xat</L1ID>
+			<L2ID>kidtumor:214395xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-2.03300947346211</L1Diff>
+					<L2Diff>-1.02017579716</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1555467aat</L1ID>
+			<L2ID>kidtumor:1555467aat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.66508544426541</L1Diff>
+					<L2Diff>-0.658335598140805</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213494sat</L1ID>
+			<L2ID>kidtumor:213494sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.52072894755306</L1Diff>
+					<L2Diff>-1.03720661338433</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:222873sat</L1ID>
+			<L2ID>kidtumor:222873sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.7775136583922</L1Diff>
+					<L2Diff>-1.38894920649764</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1555272at</L1ID>
+			<L2ID>kidtumor:1555272at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-2.34814522140006</L1Diff>
+					<L2Diff>-1.30147630388487</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213935at</L1ID>
+			<L2ID>kidtumor:213935at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.693839088931849</L1Diff>
+					<L2Diff>-1.31301819539332</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:221607xat</L1ID>
+			<L2ID>kidtumor:221607xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>18.1430708949146</L1Diff>
+					<L2Diff>17.4421594593294</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:206038sat</L1ID>
+			<L2ID>kidtumor:206038sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.889924332322537</L1Diff>
+					<L2Diff>-1.29909343150116</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:224930xat</L1ID>
+			<L2ID>kidtumor:224930xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>17.5728311428161</L1Diff>
+					<L2Diff>18.1701545960926</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:219219at</L1ID>
+			<L2ID>kidtumor:219219at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.625793979888391</L1Diff>
+					<L2Diff>-1.28943172149691</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:211358sat</L1ID>
+			<L2ID>kidtumor:211358sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.56669181936527</L1Diff>
+					<L2Diff>-0.103187611777197</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:201625sat</L1ID>
+			<L2ID>kidtumor:201625sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>0.00991385592006976</L1Diff>
+					<L2Diff>-1.53579608152932</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:222748sat</L1ID>
+			<L2ID>kidtumor:222748sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.940387355949027</L1Diff>
+					<L2Diff>-1.39190988448113</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:204133at</L1ID>
+			<L2ID>kidtumor:204133at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.799483761325974</L1Diff>
+					<L2Diff>-1.34366722081383</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:203107xat</L1ID>
+			<L2ID>kidtumor:203107xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>18.2069654345211</L1Diff>
+					<L2Diff>18.7961079282719</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:226131sat</L1ID>
+			<L2ID>kidtumor:226131sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>18.2001245924976</L1Diff>
+					<L2Diff>18.7469485029300</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:221849sat</L1ID>
+			<L2ID>kidtumor:221849sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.82206634510147</L1Diff>
+					<L2Diff>-1.19977276054064</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:200795at</L1ID>
+			<L2ID>kidtumor:200795at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>15.290038333412</L1Diff>
+					<L2Diff>17.3938659072125</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213409sat</L1ID>
+			<L2ID>kidtumor:213409sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.66395909671755</L1Diff>
+					<L2Diff>-0.959653077263589</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:215886xat</L1ID>
+			<L2ID>kidtumor:215886xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-0.315606375549832</L1Diff>
+					<L2Diff>-1.29852867297281</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:218110at</L1ID>
+			<L2ID>kidtumor:218110at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.66366098333105</L1Diff>
+					<L2Diff>-0.895158990237223</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213453xat</L1ID>
+			<L2ID>kidtumor:213453xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>17.7830196750311</L1Diff>
+					<L2Diff>18.3294876076389</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:226328at</L1ID>
+			<L2ID>kidtumor:226328at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.56069420130397</L1Diff>
+					<L2Diff>-0.90292952696246</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:211983xat</L1ID>
+			<L2ID>kidtumor:211983xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>17.9320774750747</L1Diff>
+					<L2Diff>17.2670938712746</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:217740xat</L1ID>
+			<L2ID>kidtumor:217740xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>18.2885911113383</L1Diff>
+					<L2Diff>18.7910224722553</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:230747sat</L1ID>
+			<L2ID>kidtumor:230747sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.51265544526761</L1Diff>
+					<L2Diff>-1.21432290375985</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:209258sat</L1ID>
+			<L2ID>kidtumor:209258sat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>0.167764424131636</L1Diff>
+					<L2Diff>-1.65008175415617</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:44040at</L1ID>
+			<L2ID>kidtumor:44040at</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>-1.67715615754997</L1Diff>
+					<L2Diff>-0.935605102499137</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:201257xat</L1ID>
+			<L2ID>kidtumor:201257xat</L2ID>
+			<Type>1</Type> <!-- Similar -->
+			<Diffs>1</Diffs>
+			<Difference>
+				<attrdiff>
+					<Name>Mean Z-score</Name>
+					<L1Diff>19.1630307149801</L1Diff>
+					<L2Diff>19.4958814684471</L2Diff>
+				</attrdiff>
+			</Difference>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:226475at</L1ID>
+			<L2ID>kidtumor:226475at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:201026at</L1ID>
+			<L2ID>kidtumor:201026at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:226972sat</L1ID>
+			<L2ID>kidtumor:226972sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:221475sat</L1ID>
+			<L2ID>kidtumor:221475sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:215963xat</L1ID>
+			<L2ID>kidtumor:215963xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213588xat</L1ID>
+			<L2ID>kidtumor:213588xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:226082sat</L1ID>
+			<L2ID>kidtumor:226082sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:207783xat</L1ID>
+			<L2ID>kidtumor:207783xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:201033xat</L1ID>
+			<L2ID>kidtumor:201033xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:215011at</L1ID>
+			<L2ID>kidtumor:215011at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:212877at</L1ID>
+			<L2ID>kidtumor:212877at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:200062sat</L1ID>
+			<L2ID>kidtumor:200062sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:212284xat</L1ID>
+			<L2ID>kidtumor:212284xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:212654at</L1ID>
+			<L2ID>kidtumor:212654at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:204507sat</L1ID>
+			<L2ID>kidtumor:204507sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:200819sat</L1ID>
+			<L2ID>kidtumor:200819sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:229204at</L1ID>
+			<L2ID>kidtumor:229204at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:201217xat</L1ID>
+			<L2ID>kidtumor:201217xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:238704at</L1ID>
+			<L2ID>kidtumor:238704at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:230629sat</L1ID>
+			<L2ID>kidtumor:230629sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:211720xat</L1ID>
+			<L2ID>kidtumor:211720xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:221960sat</L1ID>
+			<L2ID>kidtumor:221960sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:201429sat</L1ID>
+			<L2ID>kidtumor:201429sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:225617at</L1ID>
+			<L2ID>kidtumor:225617at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:203519sat</L1ID>
+			<L2ID>kidtumor:203519sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213741sat</L1ID>
+			<L2ID>kidtumor:213741sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:212869xat</L1ID>
+			<L2ID>kidtumor:212869xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:223457at</L1ID>
+			<L2ID>kidtumor:223457at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:222837sat</L1ID>
+			<L2ID>kidtumor:222837sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:219470xat</L1ID>
+			<L2ID>kidtumor:219470xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:218951sat</L1ID>
+			<L2ID>kidtumor:218951sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:200748sat</L1ID>
+			<L2ID>kidtumor:200748sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:201163sat</L1ID>
+			<L2ID>kidtumor:201163sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:212563at</L1ID>
+			<L2ID>kidtumor:212563at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:211628xat</L1ID>
+			<L2ID>kidtumor:211628xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213080xat</L1ID>
+			<L2ID>kidtumor:213080xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:203597sat</L1ID>
+			<L2ID>kidtumor:203597sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:200717xat</L1ID>
+			<L2ID>kidtumor:200717xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1553750aat</L1ID>
+			<L2ID>kidtumor:1553750aat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:201254xat</L1ID>
+			<L2ID>kidtumor:201254xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213890xat</L1ID>
+			<L2ID>kidtumor:213890xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:225483at</L1ID>
+			<L2ID>kidtumor:225483at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:222508sat</L1ID>
+			<L2ID>kidtumor:222508sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:209875sat</L1ID>
+			<L2ID>kidtumor:209875sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:206752sat</L1ID>
+			<L2ID>kidtumor:206752sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:200095xat</L1ID>
+			<L2ID>kidtumor:200095xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213477xat</L1ID>
+			<L2ID>kidtumor:213477xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:217094sat</L1ID>
+			<L2ID>kidtumor:217094sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:231061at</L1ID>
+			<L2ID>kidtumor:231061at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:209701at</L1ID>
+			<L2ID>kidtumor:209701at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:205061sat</L1ID>
+			<L2ID>kidtumor:205061sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:210098sat</L1ID>
+			<L2ID>kidtumor:210098sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:209314sat</L1ID>
+			<L2ID>kidtumor:209314sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1567213at</L1ID>
+			<L2ID>kidtumor:1567213at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1553749at</L1ID>
+			<L2ID>kidtumor:1553749at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1552937sat</L1ID>
+			<L2ID>kidtumor:1552937sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:235227at</L1ID>
+			<L2ID>kidtumor:235227at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:216379xat</L1ID>
+			<L2ID>kidtumor:216379xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:212039xat</L1ID>
+			<L2ID>kidtumor:212039xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:224164at</L1ID>
+			<L2ID>kidtumor:224164at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:200031sat</L1ID>
+			<L2ID>kidtumor:200031sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:214327xat</L1ID>
+			<L2ID>kidtumor:214327xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:222082at</L1ID>
+			<L2ID>kidtumor:222082at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:216520sat</L1ID>
+			<L2ID>kidtumor:216520sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:231200at</L1ID>
+			<L2ID>kidtumor:231200at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:226794at</L1ID>
+			<L2ID>kidtumor:226794at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:236132at</L1ID>
+			<L2ID>kidtumor:236132at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:211345xat</L1ID>
+			<L2ID>kidtumor:211345xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:217398xat</L1ID>
+			<L2ID>kidtumor:217398xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:201492sat</L1ID>
+			<L2ID>kidtumor:201492sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:200689xat</L1ID>
+			<L2ID>kidtumor:200689xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:210685sat</L1ID>
+			<L2ID>kidtumor:210685sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:225316at</L1ID>
+			<L2ID>kidtumor:225316at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:201049sat</L1ID>
+			<L2ID>kidtumor:201049sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:211943xat</L1ID>
+			<L2ID>kidtumor:211943xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:212881at</L1ID>
+			<L2ID>kidtumor:212881at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:225451at</L1ID>
+			<L2ID>kidtumor:225451at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:225970at</L1ID>
+			<L2ID>kidtumor:225970at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:213583xat</L1ID>
+			<L2ID>kidtumor:213583xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:208856xat</L1ID>
+			<L2ID>kidtumor:208856xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:229563sat</L1ID>
+			<L2ID>kidtumor:229563sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1554082aat</L1ID>
+			<L2ID>kidtumor:1554082aat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:225319sat</L1ID>
+			<L2ID>kidtumor:225319sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:1553947at</L1ID>
+			<L2ID>kidtumor:1553947at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:214313sat</L1ID>
+			<L2ID>kidtumor:214313sat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:212220at</L1ID>
+			<L2ID>kidtumor:212220at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:204892xat</L1ID>
+			<L2ID>kidtumor:204892xat</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+		<SimilarityPair>
+			<L1ID>kidnormal:200021at</L1ID>
+			<L2ID>kidtumor:200021at</L2ID>
+			<Type>0</Type> <!-- Identical -->
+			<Diffs>0</Diffs>
+		</SimilarityPair>
+	</SimilarityList>

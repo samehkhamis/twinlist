@@ -6,6 +6,7 @@ package twinlist
 		public static const OPT_FONTSIZE:String = "__FONT_SIZE__";
 		public static const OPT_ANIMATIONSPEED:String = "__ANIM_SPEED__";
 		public static const OPT_LINKIDENTICAL:String = "__LINK_IDENTICAL__";
+		public static const OPT_ATTRIBIDENTICAL:String = "__ATTRIB_IDENTICAL__";
 		public static const OPT_AFTERACTION:String = "__AFTER_ACTION__";
 		public static const OPTVAL_GRAYOUT:String = "__GRAYOUT__";
 		public static const OPTVAL_REMOVE:String = "__REMOVE__";
