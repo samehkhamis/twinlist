@@ -11,7 +11,7 @@ package twinlist
 
 	public class CategoricalFilterComponent extends FilterComponent
 	{
-		private var lb:spark.components.List;
+		private var lb:List;
 		
 		public function CategoricalFilterComponent(attribute:AttributeDescriptor)
 		{

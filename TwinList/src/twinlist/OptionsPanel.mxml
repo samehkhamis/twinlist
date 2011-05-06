@@ -16,40 +16,51 @@
 	<twinlist:layout>
 		<s:VerticalLayout paddingLeft="10" paddingRight="10" paddingTop="10" paddingBottom="10"/>
 	</twinlist:layout>
-	<s:HGroup>
-		<s:Label text="Dataset:" width="120" height="25" fontSize="14"/>
-		<s:DropDownList id="datasetList" width="100%" selectedIndex="1" dataProvider="{this.datasetOptions}" change="OnDatasetChange(event)"/>
-	</s:HGroup>
-	    
-	<s:HGroup width="100%" verticalAlign="middle">
-		<s:Label text="Font size" width="120" height="25" fontSize="14"/>
-		<s:NumericStepper id="nsFontSize" width="50" height="25" minimum="8" maximum="32" value="16" change="OnFontSizeChange(event)"/>
-	</s:HGroup>
-	<mx:Spacer height="10"/>
-	<s:HGroup width="100%" verticalAlign="middle">
-		<s:Label text="Animation speed" width="120" height="25" fontSize="14"/>
-		<mx:HSlider id="hsAnimSpeed" width="120" minimum="-2" maximum="2" value="0" tickInterval="1" labels="{['-2','-1','0','+1','+2']}"
-					liveDragging="false" change="OnAnimSpeedChange(event)" snapInterval="0"/>
-	</s:HGroup>
-	<mx:Spacer height="10"/>
-	<!--
-	<s:HGroup width="100%">
-		<s:Label text="Font Color" fontSize="14"/>
-		<mx:ColorPicker/>
-	</s:HGroup>
-	<s:Label text="Auto include:" fontSize="14" verticalAlign="top"/>
-	<s:CheckBox label="Identical items"/>
-	<s:CheckBox label="All List1 items"/>
-	<s:CheckBox label="All List2 items"/>
-	<mx:Spacer height="10"/>
-	-->
-	<s:HGroup>
-		<s:Label text="Link identical items:" fontSize="14"/>
-		<s:CheckBox id="cbLinkIdentical" change="OnLinkIdenticalChange(event)" selected="true"/>		
-	</s:HGroup>
-	<mx:Spacer height="10"/>
-	<s:Label text="After item accept/reject:" fontSize="14"/>
-	<s:RadioButton id="rbGray" group="{rbgAfterAction}" label="Gray out" value="{Option.OPTVAL_GRAYOUT}"/>
-	<s:RadioButton id="rbRemove" group="{rbgAfterAction}" label="Remove" value="{Option.OPTVAL_REMOVE}" selected="true"/>
-	<mx:Spacer height="10"/>
+	<s:Scroller width="100%" height="100%">
+		<s:VGroup>
+			<s:HGroup>
+				<s:Label text="Dataset:" width="120" height="25" fontSize="14"/>
+				<s:DropDownList id="datasetList" width="100%" selectedIndex="1" dataProvider="{this.datasetOptions}" change="OnDatasetChange(event)"/>
+			</s:HGroup>
+			<s:HGroup width="100%" verticalAlign="middle">
+				<s:Label text="Font size" width="120" height="25" fontSize="14"/>
+				<s:NumericStepper id="nsFontSize" width="50" height="25" minimum="8" maximum="32" value="16" change="OnFontSizeChange(event)"/>
+			</s:HGroup>
+			<mx:Spacer height="10"/>
+			<s:HGroup width="100%" verticalAlign="middle">
+				<s:Label text="Animation speed" width="120" height="25" fontSize="14"/>
+				<mx:HSlider id="hsAnimSpeed" width="120" minimum="-2" maximum="2" value="0" tickInterval="1" labels="{['-2','-1','0','+1','+2']}"
+							liveDragging="false" change="OnAnimSpeedChange(event)" snapInterval="0"/>
+			</s:HGroup>
+			<mx:Spacer height="10"/>
+			<!--
+			<s:HGroup width="100%">
+			<s:Label text="Font Color" fontSize="14"/>
+			<mx:ColorPicker/>
+			</s:HGroup>
+			<s:Label text="Auto include:" fontSize="14" verticalAlign="top"/>
+			<s:CheckBox label="Identical items"/>
+			<s:CheckBox label="All List1 items"/>
+			<s:CheckBox label="All List2 items"/>
+			<mx:Spacer height="10"/>
+			-->
+			<s:HGroup>
+				<s:Label text="Link identical items:" fontSize="14"/>
+				<s:CheckBox id="cbLinkIdentical" change="OnLinkIdenticalChange(event)" selected="true"/>		
+			</s:HGroup>
+			<s:HGroup>
+				<s:Label text="Show identical Attributes:" fontSize="14"/>
+				<s:CheckBox id="cbAttribIdentical" change="OnAttribIdenticalChange(event)" selected="false"/>		
+			</s:HGroup>
+			<mx:Spacer height="10"/>
+			<s:Label text="After item accept/reject:" fontSize="14"/>
+			<s:RadioButton id="rbGray" group="{rbgAfterAction}" label="Gray out" value="{Option.OPTVAL_GRAYOUT}"/>
+			<s:RadioButton id="rbRemove" group="{rbgAfterAction}" label="Remove" value="{Option.OPTVAL_REMOVE}" selected="true"/>
+			<mx:Spacer height="10"/>
+			<s:Label text="Attributes shown in ListViewer:" fontSize="14"/>
+			<twinlist:AttributeFilterComponent id="attrFilter" Attributes="{model.AllAttributes}"/>
+			<s:VGroup id="shownAttributesGroup" width="100%" height="100%"/>
+			<mx:Spacer height="10"/> 
+		</s:VGroup>
+	</s:Scroller>
 </twinlist:OptionsPanelClass>
