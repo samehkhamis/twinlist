@@ -3,23 +3,21 @@ package twinlist
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	
-	import mx.controls.HSlider;
-
-	import spark.components.Button;
-        import spark.components.CheckBox;
-        import spark.components.Group;
-        import spark.components.NumericStepper;
-        import spark.components.RadioButtonGroup;
-
-
-	import twinlist.list.AttributeDescriptor;
-	import twinlist.list.ItemAttribute;
-	
 	import mx.collections.ArrayCollection;
+	import mx.controls.HSlider;
 	import mx.events.CollectionEvent;
 	import mx.events.FlexEvent;
+	
+	import spark.components.Button;
+	import spark.components.CheckBox;
+	import spark.components.Group;
+	import spark.components.NumericStepper;
+	import spark.components.RadioButtonGroup;
 	import spark.events.IndexChangeEvent;
 	import spark.layouts.VerticalLayout;
+	
+	import twinlist.list.AttributeDescriptor;
+	import twinlist.list.ItemAttribute;
 	
 	
 	public class OptionsPanelClass extends Group
@@ -28,52 +26,23 @@ package twinlist
 		protected var model:Model = Model.Instance;
 		[Bindable]
 		protected var datasetOptions:ArrayCollection;
-	        [Bindable]
-	        public var shownItemsGroup:Object;
-	        private var shownItemComponent:AttributeFilterComponentClass;
-		public var selectAllAttribBtn:Button;
-		public var clearAllAttribBtn:Button
-
+		[Bindable]
+		public var attrFilter:AttributeFilterComponent;
+		
 		public function OptionsPanelClass()
 		{
 			super();
-			addEventListener(FlexEvent.CREATION_COMPLETE,OnInitComplete);
-			addEventListener(Model.DATA_LOADED, function(e:Event):void {
-			    GenerateShownItems();
-			  }); 
 			var dataSets:Array = new Array("Cars", "Medication", "SOTU", "Genes (Kidney)");
 			datasetOptions = new ArrayCollection(dataSets);
 		}
 		
-	        private function GenerateShownItems():void
-	        {
-		  if(shownItemComponent != null){
-		    shownItemsGroup.removeAllElements();
-		  }
-		  shownItemComponent = new AttributeFilterComponentClass(model.AllAttributes);
-		  shownItemsGroup.addElement(shownItemComponent);
-		}
-
-		private function OnInitComplete(event:Event):void
-		{
-		  removeEventListener(FlexEvent.CREATION_COMPLETE, OnInitComplete);
-		  GenerateShownItems();
-		  selectAllAttribBtn.addEventListener(MouseEvent.CLICK, function(e:Event):void {
-		      shownItemComponent.SelectAll();
-		    });
-		  clearAllAttribBtn.addEventListener(MouseEvent.CLICK, function(e:Event):void {
-		      shownItemComponent.ClearAll();
-		    });
-
-		}
-
 		protected function OnFontSizeChange(event:Event):void
 		{
 			var tgt:NumericStepper = event.target as NumericStepper;
 			model.SetOption(new Option(Option.OPT_FONTSIZE, tgt.value));
 		}
 		
-	  
+		
 		protected function OnAnimSpeedChange(event:Event):void
 		{
 			var tgt:HSlider = event.target as HSlider;
@@ -86,7 +55,7 @@ package twinlist
 			var tgt:CheckBox = event.target as CheckBox;
 			model.SetOption(new Option(Option.OPT_LINKIDENTICAL, tgt.selected));
 		}
-
+		
 		protected function OnAttribIdenticalChange(event:Event):void
 		{
 			var tgt:CheckBox = event.target as CheckBox;
@@ -98,6 +67,7 @@ package twinlist
 			var tgt:RadioButtonGroup = event.target as RadioButtonGroup;
 			model.SetOption(new Option(Option.OPT_AFTERACTION, tgt.selectedValue as String));
 		}
+		
 		protected function OnDatasetChange(event:IndexChangeEvent):void
 		{
 			switch (event.newIndex) {

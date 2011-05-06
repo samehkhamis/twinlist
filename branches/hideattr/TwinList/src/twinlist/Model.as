@@ -1,4 +1,4 @@
-	package twinlist
+package twinlist
 {	
 	import com.carlcalderon.arthropod.Debug;
 	
@@ -78,7 +78,7 @@
 		public function Model()
 		{
 			if (instance != null)
-			  throw new Error("Model can only be accessed via Model.Instance()");
+				throw new Error("Model can only be accessed via Model.Instance()");
 			
 			// init
 			loaded = 0;
@@ -107,7 +107,7 @@
 			sortByAscending = ControlsPanelClass.SORT_ASCEND;
 			filterList = new ArrayCollection();
 			SetDataset(DATA_MED_REC);
-
+			
 			// default options
 			options = new Object();
 			SetOption(new Option(Option.OPT_FONTSIZE, 16));
@@ -120,7 +120,7 @@
 		{
 			return instance;
 		}
-
+		
 		public function SetDataset(dataset:String):void
 		{
 			switch (dataset) {
@@ -144,7 +144,6 @@
 					list2File = "../data/genes/kidtumor.xml";
 					simFile= "../data/genes/kidney_similarities.xml";
 					break;
-
 			}
 			LoadData();
 		}
@@ -312,23 +311,24 @@
 		{
 			return categoricalAttributes;
 		}
-
-	        public function get ShownAttributes():ArrayCollection
+		
+		public function get ShownAttributes():ArrayCollection
 		{
 			return shownAttributes;
 		}
-
-	        public function set ShownAttributes(newAttributes:ArrayCollection):void
+		
+		public function set ShownAttributes(newAttributes:ArrayCollection):void
 		{
-		  shownAttributes=newAttributes;
+			shownAttributes = newAttributes;
+			RefreshView();
 		}
 		
-	        public function get AllAttributes():ArrayCollection
+		public function get AllAttributes():ArrayCollection
 		{
 			return allAttributes;
 		}
-	   
-
+		
+		
 		public function get NumericalAttributes():ArrayCollection
 		{
 			return numericalAttributes;
@@ -430,31 +430,23 @@
 						keep &&= f.Apply(item);
 					}
 					item.Display = keep;
-//					if (keep)
-//						newLists[i].addItem(item);
 				}
 			}
 			RefreshView();
-//			ReconcileLists(newLists[0], newLists[1]);
-//			if (SortBy != null || GroupBy != null)
-//				SortListViewerData();
-//			else {
-//				RefreshView();
-//			}
+		}
+		
+		public function RefreshView():void
+		{
+			if (SelectedItem != null && !SelectedItem.Display)
+				SelectedItem = null;
+			listViewerData.refresh();
+			dispatchEvent(new TwinListEvent(VIEW_UPDATED));			
 		}
 		
 		private function FindItemTwin(item:ListItem):ListItem
 		{
 			if (item.Id in itemTwinHash)
 				return itemTwinHash[item.Id];
-//			if (item.Id in listViewerIdxHash)
-//			{
-//				var lvi:ListViewerItem = listViewerData[listViewerIdxHash[item.Id]];
-//				if (lvi.Identical1 != null && lvi.Identical1.Id != item.Id)
-//					return lvi.Identical1;
-//				else if (lvi.Identical2 != null && lvi.Identical2.Id != item.Id)
-//					return lvi.Identical2;
-//			}
 			return null;
 		}
 		
@@ -518,19 +510,6 @@
 				return listViewerItem.L2Unique;
 		}
 		
-	  public function Redraw():void {
-	    RefreshView();
-
-	  }
-
-		private function RefreshView():void
-		{
-			if (SelectedItem != null && !SelectedItem.Display)
-				SelectedItem = null;
-			listViewerData.refresh();
-			dispatchEvent(new TwinListEvent(VIEW_UPDATED));			
-		}
-		
 		private function Reset():void
 		{
 			loaded = 0;
@@ -571,7 +550,7 @@
 		{
 			this.schema = schema;
 		}
-
+		
 		private function OnReadListXmlComplete(list:List):void
 		{
 			// update index hash and add to lists
@@ -654,8 +633,8 @@
 				sort.sort(ad.Values.source);
 				itemAttributes.addItem(ad);
 				if(name != "Name") {
-				  shownAttributes.addItem(name);
-				  allAttributes.addItem(name);
+					shownAttributes.addItem(name);
+					allAttributes.addItem(name);
 				}
 				switch (ad.Type) {
 					case ItemAttribute.TYPE_CATEGORICAL: categoricalAttributes.addItem(ad); break;
