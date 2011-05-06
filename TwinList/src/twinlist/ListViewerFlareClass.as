@@ -188,7 +188,7 @@ package twinlist
 				if (model.SelectedItem != null && model.SelectedItem.Id == sprite.data.item.Id) {
 					selectedSprite = sprite;
 					Highlight(sprite, enabled);
-			}
+				}
 				sprite.data.properties.x1 *= columnWidth;
 				sprite.data.properties.x2 *= columnWidth;
 				var stateThresh:int;
@@ -243,7 +243,7 @@ package twinlist
 				vis.removeChild(sprite);
 			}
 			visHash = newVisHash;
-						
+			
 			// Update the two animation sequences
 			UpdateAnimations();
 		}
@@ -298,8 +298,8 @@ package twinlist
 								ry += TextSpacing;
 							}
 						}
-						if(!attribIdentical && animState>0){
-						  ident1Shown = true;
+						if (!attribIdentical && animState > 0) {
+							ident1Shown = true;
 						}
 						sprite = CreateItemSprite(item.Identical1, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 2, y2: ry, type: 0});
 						visHash[item.Identical1.Id] = sprite;
@@ -531,7 +531,7 @@ package twinlist
 			rect.addChild(header);
 			rect.addChild(button);
 			rect.addEventListener(MouseEvent.MOUSE_DOWN, ItemMouseDown);
-
+			
 			return rect;
 		}
 		
@@ -559,7 +559,7 @@ package twinlist
 			return line;
 		}
 		
-	        private function CreateItemSprite(item:ListItem, listIdx:int, properties:Object, showAttr:Boolean = true):DataSprite
+		private function CreateItemSprite(item:ListItem, listIdx:int, properties:Object, showAttr:Boolean = true):DataSprite
 		{
 			var sprite:DataSprite = new DataSprite();
 			sprite.renderer = null;
@@ -583,30 +583,30 @@ package twinlist
 				sprite.addChild(highlight);
 			}
 			sprite.addChild(nameText);
-		
+			
 			var x:int = 0;
 			var attrText:TextSprite;
-
+			
 			var attributesToRender:ArrayCollection = model.ShownAttributes;
 			if(showAttr){
-			  for each (var attr:ItemAttribute in item.Attributes) {
-			      if(!attributesToRender.contains(attr.Name)) {
-				continue;
-			      }
-			      attrText = new TextSprite(attr.ValuesString());
-			      attrText.color = item.ActedOn ? colorTextGray : colorText;
-			      attrText.size = ItemFontSize - 4;
-			      attrText.font = fontString;
-			      attrText.x = x;
-			      attrText.y = ItemFontSize + 4;
-			      if (attr.Unique) {
-				highlight = CreateDiffHighlight(attrText, listIdx);
-				highlight.alpha = animState == 3 ? 1 : 0;
-				sprite.addChild(highlight);
-			      }
-			      sprite.addChild(attrText);
-			      x += attrText.width;
-			    }
+				for each (var attr:ItemAttribute in item.Attributes) {
+					if (!attributesToRender.contains(attr.Name)) {
+						continue;
+					}
+					attrText = new TextSprite(attr.ValuesString());
+					attrText.color = item.ActedOn ? colorTextGray : colorText;
+					attrText.size = ItemFontSize - 4;
+					attrText.font = fontString;
+					attrText.x = x;
+					attrText.y = ItemFontSize + 4;
+					if (attr.Unique) {
+						highlight = CreateDiffHighlight(attrText, listIdx);
+						highlight.alpha = animState == 3 ? 1 : 0;
+						sprite.addChild(highlight);
+					}
+					sprite.addChild(attrText);
+					x += attrText.width;
+				}
 			}
 			
 			return sprite;
@@ -727,7 +727,7 @@ package twinlist
 			animReset[1].add(animResetUnique);
 			animReset[2].add(animResetColSimilar);
 			animReset[2].add(animResetSimilar);
-						
+			
 			// item animations
 			for each (var sprite:DataSprite in visHash)
 			{
@@ -762,14 +762,14 @@ package twinlist
 					}
 				}
 			}
-
+			
 			// Animate group headers
 			for each (var header:Sprite in groupVisList)
 			{
 				animMatchSimilar.add(new Tween(header, 0.5*AnimationSpeed, {alpha: 1}));
 				animResetSimilar.add(new Tween(header, 0.5*AnimationSpeed, {alpha: 0}));
 			}
-
+			
 			// step-by-step "match" column animation
 			var seq:Sequence;
 			animMatchColIdentical.add(new Tween(columns[2], 0.25*AnimationSpeed, {fillColor: colorIdentical, lineColor: colorIdentical}));
@@ -1165,7 +1165,7 @@ package twinlist
 				}
 			}
 		}
-
+		
 		private function CreateDiffHighlight(sprite:TextSprite, listIdx:int):RectSprite
 		{
 			var highlight:RectSprite = new RectSprite(sprite.x, sprite.y, sprite.width, sprite.height);
