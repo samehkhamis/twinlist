@@ -43,7 +43,8 @@ package twinlist
 		private var schema:Object;
 		private var lists:ArrayCollection;
 		private var listIdx:Object;
-		private var itemTwinHash:Object;
+		private var itemIdenticalHash:Object;
+		private var itemSimilarHash:Object;
 		private var visibleListIds:Array;
 		private var listViewerData:ArrayCollection;
 		private var listViewerIdxHash:Object;
@@ -84,7 +85,8 @@ package twinlist
 			loaded = 0;
 			lists = new ArrayCollection();
 			listIdx = new Object();
-			itemTwinHash = new Object();
+			itemIdenticalHash = new Object();
+			itemSimilarHash = new Object();
 			visibleListIds = new Array(2);
 			listViewerData = new ArrayCollection();
 			listViewerIdxHash = new Object();
@@ -112,7 +114,8 @@ package twinlist
 			options = new Object();
 			SetOption(new Option(Option.OPT_FONTSIZE, 16));
 			SetOption(new Option(Option.OPT_LINKIDENTICAL, true));
-			SetOption(new Option(Option.OPT_ATTRIBIDENTICAL, false));
+			SetOption(new Option(Option.OPT_LINKSIMILAR, true));
+			SetOption(new Option(Option.OPT_ATTRIDENTICAL, false));
 			SetOption(new Option(Option.OPT_AFTERACTION, Option.OPTVAL_REMOVE));			
 		}
 		
@@ -206,23 +209,32 @@ package twinlist
 		
 		public function AddActionListItem(item:ListItem, accepted:Boolean):void
 		{
+			if (item.ActedOn)
+				return;
 			if (accepted) {
-				if (AcceptedListContains(item) >= 0)
-					return;
 				acceptedItems.addItemAt(item, 0);
 				visibleActionListIdx = 0;
 			}
 			else {
-				if (RejectedListContains(item) >= 0)
-					return;
 				rejectedItems.addItemAt(item, 0);
 				visibleActionListIdx = 1;
 			}
 			item.ActedOn = true;
 			if (GetOption(Option.OPT_LINKIDENTICAL).Value) {
-				var twin:ListItem = FindItemTwin(item);
-				if (twin != null)
-					twin.ActedOn = true;
+				var identicalItem:ListItem = FindIdenticalItem(item);
+				// if identical item found, then mark as acted on
+				if (identicalItem != null)
+					identicalItem.ActedOn = true;
+			}
+			if (GetOption(Option.OPT_LINKSIMILAR).Value) {
+				var similarItem:ListItem = FindSimilarItem(item);
+				// if similar item found, and similar item has not been acted on,
+				// and if the given item was accepted, then reject the similar item.
+				// (Converse does not hold for rejected items.)
+				if (similarItem != null && !similarItem.ActedOn && accepted) {
+					rejectedItems.addItemAt(similarItem, 0);
+					similarItem.ActedOn = true;
+				}
 			}
 			dispatchEvent(new TwinListEvent(ACTION_TAKEN));
 			RefreshView();
@@ -231,10 +243,10 @@ package twinlist
 		public function AddActionListItems(items:IList, accepted:Boolean):void
 		{
 			var item:ListItem;
-			var twin:ListItem;
+			var other:ListItem;
 			if (accepted) {
 				for each (item in items) {
-					if (AcceptedListContains(item) >= 0)
+					if (item.ActedOn)
 						continue;
 					acceptedItems.addItemAt(item, 0);
 					item.ActedOn = true;
@@ -243,7 +255,7 @@ package twinlist
 			}
 			else {
 				for each (item in items) {
-					if (RejectedListContains(item) >= 0)
+					if (item.ActedOn)
 						continue;
 					rejectedItems.addItemAt(item, 0);
 					item.ActedOn = true;
@@ -252,9 +264,18 @@ package twinlist
 			}
 			if (GetOption(Option.OPT_LINKIDENTICAL).Value) {
 				for each (item in items) {
-					twin = FindItemTwin(item);
-					if (twin != null)
-						twin.ActedOn = true;
+					other = FindIdenticalItem(item);
+					if (other != null)
+						other.ActedOn = true;
+				}
+			}
+			if (GetOption(Option.OPT_LINKSIMILAR).Value) {
+				for each (item in items) {
+					other = FindSimilarItem(item);
+					if (other != null && !other.ActedOn && accepted) {
+						rejectedItems.addItemAt(other, 0);
+						other.ActedOn = true;
+					}
 				}
 			}
 			dispatchEvent(new TwinListEvent(ACTION_TAKEN));
@@ -280,7 +301,7 @@ package twinlist
 			}
 			item.ActedOn = false;
 			if (GetOption(Option.OPT_LINKIDENTICAL).Value) {
-				var twin:ListItem = FindItemTwin(item);
+				var twin:ListItem = FindIdenticalItem(item);
 				if (twin != null)
 					twin.ActedOn = false;
 			}
@@ -443,10 +464,17 @@ package twinlist
 			dispatchEvent(new TwinListEvent(VIEW_UPDATED));			
 		}
 		
-		private function FindItemTwin(item:ListItem):ListItem
+		private function FindIdenticalItem(item:ListItem):ListItem
 		{
-			if (item.Id in itemTwinHash)
-				return itemTwinHash[item.Id];
+			if (item.Id in itemIdenticalHash)
+				return itemIdenticalHash[item.Id];
+			return null;
+		}
+		
+		private function FindSimilarItem(item:ListItem):ListItem
+		{
+			if (item.Id in itemSimilarHash)
+				return itemSimilarHash[item.Id];
 			return null;
 		}
 		
@@ -515,7 +543,8 @@ package twinlist
 			loaded = 0;
 			lists = new ArrayCollection();
 			listIdx = new Object();
-			itemTwinHash = new Object();
+			itemIdenticalHash = new Object();
+			itemSimilarHash = new Object();
 			visibleListIds = new Array(2);
 			listViewerData = new ArrayCollection();
 			listViewerIdxHash = new Object();
@@ -684,8 +713,8 @@ package twinlist
 						++idx;
 					}
 					if (item1 != null && item2 != null) {
-						itemTwinHash[item1.Id] = item2;
-						itemTwinHash[item2.Id] = item1;
+						itemIdenticalHash[item1.Id] = item2;
+						itemIdenticalHash[item2.Id] = item1;
 					}
 				}
 				else if (simItem.Type == SimilarityItem.SIMILAR) {
@@ -716,6 +745,10 @@ package twinlist
 					if (lvi.L1Similar != null || lvi.L2Similar != null) {
 						listViewerData.addItem(lvi);
 						++idx;
+					}
+					if (item1 != null && item2 != null) {
+						itemSimilarHash[item1.Id] = item2;
+						itemSimilarHash[item2.Id] = item1;
 					}
 				}
 				else {

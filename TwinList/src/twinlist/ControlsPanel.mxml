@@ -12,39 +12,46 @@
 		<s:RadioButtonGroup id="rbgGroupByAscend" change="OnAscendDescendChange(event)"/>
 		<s:RadioButtonGroup id="rbgSortByAscend" change="OnAscendDescendChange(event)"/>
 	</fx:Declarations>
-	<s:HGroup>
-		<s:Label text="Size by:" paddingTop="5" width="80"/>
-		<s:DropDownList id="sizeByList" width="100%" selectedIndex="0"
-						dataProvider="{this.numericalOptions}" change="OnDropDownChange(event)"
-						/>
-	</s:HGroup>
-	<mx:Spacer height="10"/>
-	<s:HGroup>
-		<s:Label text="Color by:" paddingTop="5" width="80"/>
-		<s:DropDownList id="colorByList" width="100%" selectedIndex="0"
-						dataProvider="{this.categoricalOptions}" change="OnDropDownChange(event)"
-						/>
-	</s:HGroup>
-	<mx:Spacer height="10"/>
-	<s:HGroup>
-		<s:Label text="Group by:" paddingTop="5" width="80"/>
-		<s:DropDownList id="groupByList" width="100%" selectedIndex="0"
-						dataProvider="{this.categoricalOptions}" change="OnDropDownChange(event)"
-						/>
-		<s:VGroup id="groupByAscend" enabled="false">
-			<s:RadioButton id="rbGroupByAscend" group="{rbgGroupByAscend}" label="Ascending" value="{SORT_ASCEND}" selected="true"/>
-			<s:RadioButton id="rbGroupByDescend" group="{rbgGroupByAscend}" label="Descending" value="{SORT_DESCEND}"/>
+	<s:Scroller width="100%" height="100%">
+		<s:VGroup width="100%" height="100%">
+			<s:HGroup>
+				<s:Label text="Size by:" paddingTop="5" width="80"/>
+				<s:DropDownList id="sizeByList" width="100%" selectedIndex="0"
+								dataProvider="{this.numericalOptions}" change="OnDropDownChange(event)"
+								/>
+			</s:HGroup>
+			<mx:Spacer height="10"/>
+			<s:HGroup>
+				<s:Label text="Color by:" paddingTop="5" width="80"/>
+				<s:DropDownList id="colorByList" width="100%" selectedIndex="0"
+								dataProvider="{this.categoricalOptions}" change="OnDropDownChange(event)"
+								/>
+			</s:HGroup>
+			<mx:Spacer height="10"/>
+			<s:HGroup>
+				<s:Label text="Group by:" paddingTop="5" width="80"/>
+				<s:DropDownList id="groupByList" width="100%" selectedIndex="0"
+								dataProvider="{this.categoricalOptions}" change="OnDropDownChange(event)"
+								/>
+				<s:VGroup id="groupByAscend" enabled="false">
+					<s:RadioButton id="rbGroupByAscend" group="{rbgGroupByAscend}" label="Ascending" value="{SORT_ASCEND}" selected="true"/>
+					<s:RadioButton id="rbGroupByDescend" group="{rbgGroupByAscend}" label="Descending" value="{SORT_DESCEND}"/>
+				</s:VGroup>
+			</s:HGroup>
+			<mx:Spacer height="10"/>
+			<s:HGroup>
+				<s:Label text="Sort by:" paddingTop="5" width="80"/>
+				<s:DropDownList id="sortByList" width="100%" selectedIndex="0"
+								dataProvider="{this.generalOptions}" change="OnDropDownChange(event)"
+								/>
+				<s:VGroup id="sortByAscend" enabled="false">
+					<s:RadioButton id="rbSortByAscend" group="{rbgSortByAscend}" label="Ascending" value="{SORT_ASCEND}" selected="true"/>
+					<s:RadioButton id="rbSortByDescend" group="{rbgSortByAscend}" label="Descending" value="{SORT_DESCEND}"/>
+				</s:VGroup>
+			</s:HGroup>
+			<mx:Spacer height="10"/> 
+			<s:Label text="Attributes shown in ListViewer:" fontSize="14"/>
+			<twinlist:AttributeFilterComponent id="attrFilter" Attributes="{model.AllAttributes}"/>
 		</s:VGroup>
-	</s:HGroup>
-	<mx:Spacer height="10"/>
-	<s:HGroup>
-		<s:Label text="Sort by:" paddingTop="5" width="80"/>
-		<s:DropDownList id="sortByList" width="100%" selectedIndex="0"
-						dataProvider="{this.generalOptions}" change="OnDropDownChange(event)"
-						/>
-		<s:VGroup id="sortByAscend" enabled="false">
-			<s:RadioButton id="rbSortByAscend" group="{rbgSortByAscend}" label="Ascending" value="{SORT_ASCEND}" selected="true"/>
-			<s:RadioButton id="rbSortByDescend" group="{rbgSortByAscend}" label="Descending" value="{SORT_DESCEND}"/>
-		</s:VGroup>
-	</s:HGroup>
+	</s:Scroller>
 </twinlist:ControlsPanelClass>

@@ -27,24 +27,24 @@ package twinlist
 			lb.addEventListener(IndexChangeEvent.CHANGE, OnChange);
 			addElementAt(lb, 0);
 			filter = new CategoricalAttributeFilter(attribute.Name);
+			SetAll(true);
 		}
 		
-		override public function SelectAll():void
+		override public function SetAll(selected:Boolean):void
 		{
-			var allIdx:Vector.<int> = new Vector.<int>(Attribute.Values.length);
-			for (var i:int = 0; i < allIdx.length; i++) {
-				allIdx[i] = i;
+			if (selected) {
+				var allIdx:Vector.<int> = new Vector.<int>(Attribute.Values.length);
+				for (var i:int = 0; i < allIdx.length; i++) {
+					allIdx[i] = i;
+				}
+				lb.selectedIndices = allIdx;
+				(filter as CategoricalAttributeFilter).Values = Attribute.Values.toArray();
 			}
-			lb.selectedIndices = allIdx;
-			(filter as CategoricalAttributeFilter).Values = Attribute.Values.toArray();
-			super.SelectAll();
-		}
-		
-		override public function ClearAll():void
-		{
-			lb.selectedIndex = -1;
-			(filter as CategoricalAttributeFilter).Values = new Array();
-			super.ClearAll();
+			else {
+				lb.selectedIndex = -1;
+				(filter as CategoricalAttributeFilter).Values = new Array();
+			}
+			super.SetAll(selected);
 		}
 		
 		override protected function OnChange(event:Event):void
