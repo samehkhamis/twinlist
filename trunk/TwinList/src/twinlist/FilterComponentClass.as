@@ -50,13 +50,7 @@ package twinlist {
 			EnableFilter(checked);
 		}
 		
-		public function SelectAll():void
-		{
-			if (Checked)
-				model.FilterListViewerData();
-		}
-		
-		public function ClearAll():void
+		public function SetAll(selected:Boolean):void
 		{
 			if (Checked)
 				model.FilterListViewerData();
@@ -74,10 +68,10 @@ package twinlist {
 				EnableFilter(cb.selected);
 			});
 			selectAllBtn.addEventListener(MouseEvent.CLICK, function(e:Event):void {
-				SelectAll();
+				SetAll(true);
 			});
 			clearAllBtn.addEventListener(MouseEvent.CLICK, function(e:Event):void {
-				ClearAll();
+				SetAll(false);
 			});
 		}
 

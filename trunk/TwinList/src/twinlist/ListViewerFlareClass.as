@@ -11,14 +11,19 @@ package twinlist
 	import flare.vis.Visualization;
 	import flare.vis.data.DataSprite;
 	
+	import flash.display.DisplayObject;
+	import flash.display.Loader;
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.events.TimerEvent;
+	import flash.net.URLRequest;
 	import flash.utils.Timer;
 	
 	import mx.collections.ArrayCollection;
 	import mx.events.FlexEvent;
+	
+	import org.osmf.content.ContentLoader;
 	
 	import spark.components.Button;
 	import spark.components.Group;
@@ -89,7 +94,7 @@ package twinlist
 		private var colorStateText:uint = colorText;
 		// options
 		private var linkIdentical:Boolean = true;
-		private var attribIdentical:Boolean = false;
+		private var attrIdentical:Boolean = false;
 		private var removeAfterAction:Boolean = true;
 		
 		public function ListViewerFlareClass()
@@ -298,7 +303,7 @@ package twinlist
 								ry += TextSpacing;
 							}
 						}
-						if (!attribIdentical && animState > 0) {
+						if (!attrIdentical && animState > 0) {
 							ident1Shown = true;
 						}
 						sprite = CreateItemSprite(item.Identical1, 0, {rowIdx: idx, x1: 1, y1: l1y, x2: 2, y2: ry, type: 0});
@@ -651,14 +656,18 @@ package twinlist
 			var text:TextSprite;
 			var stateText:Array = ["Separate", "Find Identical", "Find Unique", "Find Similar"];
 			var width:int = 75;
-			var w:int = 10;
+			var w:int;
+			var i:int;
 			
+			// create new visualization
 			stateVis = new Visualization();
 			if (stateVisCanvas != null)
 				stateVisCanvas.visualization = stateVis;
 			
+			// create states
+			w = 10;
 			stateSprites = new Array(4);
-			for (var i:int = 0; i < stateText.length; i++) {
+			for (i = 0; i < stateText.length; i++) {
 				circ = new DataSprite();
 				circ.data = i;
 				circ.size = 1.5;
@@ -668,7 +677,6 @@ package twinlist
 				circ.buttonMode = true;
 				circ.x = width / 2 + w; 
 				circ.y = 20;
-				w += width + 10;
 				text = new TextSprite(stateText[i]);
 				text.font = fontString;
 				text.color = colorStateText;
@@ -683,6 +691,7 @@ package twinlist
 				circ.addEventListener(MouseEvent.ROLL_OVER, StateRollOver);
 				circ.addEventListener(MouseEvent.ROLL_OUT, StateRollOut);
 				circ.addEventListener(MouseEvent.CLICK, OnStateClick);
+				w += width + 10;
 			}
 			stateVis.update();
 		}
@@ -1173,6 +1182,20 @@ package twinlist
 			return highlight
 		}
 		
+		private function FindDuplicateRowIndex(sprite:DataSprite):DataSprite
+		{
+			if (sprite == null || sprite.data.properties.type != 0)
+				return null;
+			var idx:int = sprite.data.properties.rowIdx;
+			var item1:ListItem = sprite.data.item as ListItem;
+			for each (var other:DataSprite in rowIdxHash[idx]) {
+				var item2:ListItem = other.data.item as ListItem;
+				if (sprite.data.properties.rowIdx == other.data.properties.rowIdx && item1.Id != item2.Id)
+					return other;
+			}
+			return null;
+		}
+		
 		private function OnOptionsUpdated(event:TwinListEvent):void
 		{
 			var opt:Option = event.Data as Option;
@@ -1188,8 +1211,8 @@ package twinlist
 				case Option.OPT_LINKIDENTICAL:
 					linkIdentical = opt.Value as Boolean;
 					break;
-				case Option.OPT_ATTRIBIDENTICAL:
-					attribIdentical = opt.Value as Boolean;
+				case Option.OPT_ATTRIDENTICAL:
+					attrIdentical = opt.Value as Boolean;
 					OnViewUpdated(event)
 					break;
 				case Option.OPT_AFTERACTION:
@@ -1197,20 +1220,6 @@ package twinlist
 					OnViewUpdated(event);
 					break;
 			}
-		}
-		
-		private function FindDuplicateRowIndex(sprite:DataSprite):DataSprite
-		{
-			if (sprite == null || sprite.data.properties.type != 0)
-				return null;
-			var idx:int = sprite.data.properties.rowIdx;
-			var item1:ListItem = sprite.data.item as ListItem;
-			for each (var other:DataSprite in rowIdxHash[idx]) {
-				var item2:ListItem = other.data.item as ListItem;
-				if (sprite.data.properties.rowIdx == other.data.properties.rowIdx && item1.Id != item2.Id)
-					return other;
-			}
-			return null;
 		}
 	}
 }

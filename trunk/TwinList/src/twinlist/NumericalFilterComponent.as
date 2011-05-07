@@ -43,24 +43,15 @@ package twinlist
 			filter = new NumericalFilter(attribute.Name, minVal, maxVal);
 		}
 		
-		override public function SelectAll():void
+		override public function SetAll(selected:Boolean):void
 		{
 			slider.values = [slider.minimum, slider.maximum];
 			var f:NumericalFilter = filter as NumericalFilter;
 			f.MinValue = slider.minimum;
 			f.MaxValue = slider.maximum;
-			super.SelectAll();
+			super.SetAll(selected);
 		}
-		
-		override public function ClearAll():void
-		{
-			slider.values = [slider.minimum, slider.maximum];
-			var f:NumericalFilter = filter as NumericalFilter;
-			f.MinValue = slider.minimum;
-			f.MaxValue = slider.maximum;
-			super.ClearAll();
-		}
-		
+
 		override protected function OnChange(event:Event):void
 		{
 			var f:NumericalFilter = filter as NumericalFilter;

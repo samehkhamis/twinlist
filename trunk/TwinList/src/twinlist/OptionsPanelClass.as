@@ -26,8 +26,6 @@ package twinlist
 		protected var model:Model = Model.Instance;
 		[Bindable]
 		protected var datasetOptions:ArrayCollection;
-		[Bindable]
-		public var attrFilter:AttributeFilterComponent;
 		
 		public function OptionsPanelClass()
 		{
@@ -56,10 +54,16 @@ package twinlist
 			model.SetOption(new Option(Option.OPT_LINKIDENTICAL, tgt.selected));
 		}
 		
+		protected function OnLinkSimilarChange(event:Event):void
+		{
+			var tgt:CheckBox = event.target as CheckBox;
+			model.SetOption(new Option(Option.OPT_LINKSIMILAR, tgt.selected));
+		}
+		
 		protected function OnAttribIdenticalChange(event:Event):void
 		{
 			var tgt:CheckBox = event.target as CheckBox;
-			model.SetOption(new Option(Option.OPT_ATTRIBIDENTICAL, tgt.selected));
+			model.SetOption(new Option(Option.OPT_ATTRIDENTICAL, tgt.selected));
 		}
 		
 		protected function OnAfterActionChange(event:Event):void

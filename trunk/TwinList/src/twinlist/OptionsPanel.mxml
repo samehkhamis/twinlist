@@ -17,7 +17,7 @@
 		<s:VerticalLayout paddingLeft="10" paddingRight="10" paddingTop="10" paddingBottom="10"/>
 	</twinlist:layout>
 	<s:Scroller width="100%" height="100%">
-		<s:VGroup>
+		<s:VGroup width="100%" height="100%">
 			<s:HGroup>
 				<s:Label text="Dataset:" width="120" height="25" fontSize="14"/>
 				<s:DropDownList id="datasetList" width="100%" selectedIndex="1" dataProvider="{this.datasetOptions}" change="OnDatasetChange(event)"/>
@@ -33,20 +33,13 @@
 							liveDragging="false" change="OnAnimSpeedChange(event)" snapInterval="0"/>
 			</s:HGroup>
 			<mx:Spacer height="10"/>
-			<!--
-			<s:HGroup width="100%">
-			<s:Label text="Font Color" fontSize="14"/>
-			<mx:ColorPicker/>
-			</s:HGroup>
-			<s:Label text="Auto include:" fontSize="14" verticalAlign="top"/>
-			<s:CheckBox label="Identical items"/>
-			<s:CheckBox label="All List1 items"/>
-			<s:CheckBox label="All List2 items"/>
-			<mx:Spacer height="10"/>
-			-->
 			<s:HGroup>
 				<s:Label text="Link identical items:" fontSize="14"/>
 				<s:CheckBox id="cbLinkIdentical" change="OnLinkIdenticalChange(event)" selected="true"/>		
+			</s:HGroup>
+			<s:HGroup>
+				<s:Label text="Link similar items:" fontSize="14"/>
+				<s:CheckBox id="cbLinkSimilar" change="OnLinkSimilarChange(event)" selected="true"/>		
 			</s:HGroup>
 			<s:HGroup>
 				<s:Label text="Show identical Attributes:" fontSize="14"/>
@@ -57,10 +50,6 @@
 			<s:RadioButton id="rbGray" group="{rbgAfterAction}" label="Gray out" value="{Option.OPTVAL_GRAYOUT}"/>
 			<s:RadioButton id="rbRemove" group="{rbgAfterAction}" label="Remove" value="{Option.OPTVAL_REMOVE}" selected="true"/>
 			<mx:Spacer height="10"/>
-			<s:Label text="Attributes shown in ListViewer:" fontSize="14"/>
-			<twinlist:AttributeFilterComponent id="attrFilter" Attributes="{model.AllAttributes}"/>
-			<s:VGroup id="shownAttributesGroup" width="100%" height="100%"/>
-			<mx:Spacer height="10"/> 
 		</s:VGroup>
 	</s:Scroller>
 </twinlist:OptionsPanelClass>

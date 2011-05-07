@@ -16,7 +16,7 @@ package twinlist {
 		protected var model:Model = Model.Instance;
 		public var enableAllBtn:Button;
 		public var disableAllBtn:Button;
-		public var clearAllBtn:Button;
+		public var resetAllBtn:Button;
 		[Bindable]
 		public var filterGroup:VGroup;
 		private var filterComponents:Object;
@@ -40,8 +40,8 @@ package twinlist {
 			disableAllBtn.addEventListener(MouseEvent.CLICK, function(e:Event):void {
 				SetAllFilters(false);
 			});
-			clearAllBtn.addEventListener(MouseEvent.CLICK, function(e:Event):void {
-				ClearAllFilters();
+			resetAllBtn.addEventListener(MouseEvent.CLICK, function(e:Event):void {
+				ResetAllFilters();
 			});
 			CreateFilters();
 		}
@@ -68,17 +68,17 @@ package twinlist {
 			filterComponents = new Object();
 		}
 		
-		private function SetAllFilters (option:Boolean): void
+		private function SetAllFilters(option:Boolean): void
 		{
 			for each (var fc:FilterComponentClass in filterComponents) {
 				fc.Checked = option;
 			}
 		}
 		
-		private function ClearAllFilters(): void
+		private function ResetAllFilters(): void
 		{
 			for each (var fc:FilterComponentClass in filterComponents) {
-				fc.ClearAll();
+				fc.SetAll(true);
 			}
 		}
 	}
