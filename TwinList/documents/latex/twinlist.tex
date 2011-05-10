@@ -127,6 +127,17 @@ Our final design also incorporates the \textit{Eight Golden Rules of Interface D
 
 Within the medical community, there has been much research \cite{JCAHO-2006} \cite{icutool03} highlighting the need for improved medication reconciliation. Preventable Adverse Drug Events (PADEs) are involved in 19\% of post-treatment complications. Trials of medication reconciliation policies show dramatic results. In one study, 94\% of patients had medication errors, of which a medication reconciliation process eliminated nearly all \cite{icutool03}. Although medication reconciliation has seen such  success, visualization tools for this procedure are still in their infancy. Our discussions with physicians suggested that many do not have adequate tools or a well-specified workflow for medication reconciliation. 
 
+\section{Implementation}
+The first decision in developing an application is the intended form of deployment. This essentially boils down to either a desktop application or a web application. The former offers greater functionality and performance; the latter offers greater cross-platform compatibility and accessibility, since it is available through any internet-enabled computer. Favoring compatibility and accessibility, we chose the latter.
+
+We chose Adobe's Flex framework for rich internet application (RIA) development, primarily because of its animation capabilities and functional, attractive visual components. The decision to use a Flash-based technology does come at some disadvantages: it is not as performant as AJAX (asynchronous JavaScript and XML), it cannot be indexed by search engines and it is currently incompatible with Apple's iOS mobile platform. Nonetheless, we felt that the benefits outweighed these drawbacks.
+
+Our initial prototype used Flex's default \textsf{DataGrid} component to demonstrate the efficacy of the \ListViewer's five-column layout. To create the final version, we leveraged the Prefuse Flare toolkit for Flash. The Flare toolkit includes a number of stylish stock visualizations, as well as an extensive API for animation that wraps the Flash core library. Though our visualization did not fit into any of the standard visualizations, we were able to create it using this API.
+
+\TwinList's data model is entirely data-driven. All names and attributes are automatically derived from the input data. All list data is loaded from XML files, which follow a custom schema. It should be noted that the \TwinList~ application does not compute the similarity between items; this is entirely determined by a similarity file (also a custom XML schema), which must exist for every pair of lists being analyzed. The similarity file dictates which items are deemed identical, similar or unique, as well as how similar items differ.
+
+The current version of \TwinList does not support loading user-provided datasets; instead, datasets can be selected from a predefined demonstration set via a drop-down menu in the \Options. We intend to add the functionality to upload datasets in a future version.
+
 \section{TwinList}
 \TwinList~ is a novel list visualization tool for the purpose of illustrating the similarities and differences between two lists. It can be used in many scenarios in which the comparison of two lists of items is required. The primary application that \TwinList~ supports is that of medication list reconciliation. However, \TwinList~ is equally adept in other applications, such as comparing bag-of-words lists or visualizing gene activity in brain tissue.
 
