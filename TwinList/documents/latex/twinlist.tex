@@ -90,7 +90,12 @@ breaklinks=true,
 \maketitle
 
 \begin{abstract}
-We present a novel visualization tool, \TwinList, for the purpose of list visualization and matching. Leveraging Adobe's Flex platform and the Prefuse Flare toolbox, we created a rich internet application (RIA) with dynamic animated effects. These animated transitions lead the user through the procedure of matching two lists, using color coding to highlight the similarities and differences between the two. List items can be grouped, sorted and filtered according to their attribute values, to enhance workflow. To illustrate the efficacy of the application, we conduct usability testing for different applications with several domain experts and peers.
+Comparing lists of data is a common element in applications ranging from choosing between products to reconciling medications prescribed to a patient. We present a novel visualization tool, \TwinList, for the purpose of list visualization and matching. Our tool helps users identify those items that are unique, identical, and similar between two lists of data using spatial position, color and dynamic animated effects. 
+To support a strong decision process, we provide the ability to select (and reject) items that are important to a conclusion. List items can be grouped, sorted and filtered according to their attribute values, allowing users to organize their analysis of the data. Usability tests conducted with domain experts and peers validate the usefulness of our spatial layout and use of color, but suggests future work for designing animation interactions.
+%Leveraging Adobe's Flex platform and the Prefuse Flare toolbox, we created a rich internet application (RIA) with dynamic animated effects. These animated transitions lead the user through the procedure of matching two lists, using color coding to highlight the similarities and differences between the two. 
+
+
+%To illustrate the efficacy of the application, we conduct usability testing for different applications with several domain experts and peers.
 \end{abstract}
 
 \keywords{list visualization, medication list reconciliation} 
@@ -317,7 +322,8 @@ The most prominent insights from these experiments were:
 %\item While exploring the filters, A. N. S. was confused by the attribute descriptions in the drop down menu. To her, terms such as ``priority ()" would appear more as a function call rather than an attribute name. She suggested that we should use more understandable wording for the attributes during the preprocessing the data.
 \item A. N. S. was very impressed with the filter options but did not like the fact that the viewer changes size after filtering. This is a side-effect of the automatic sizing that could be removed in future iterations.
 \end{itemize}
-
+\subsection{Key Evaluation Insights and Changes}
+All of the participants in the user evaluation study reacted favorably to the overall concept of \TwinList. Users had differing interactions and reactions to the matching animation, which may indicate an area where additional work or research is necessary. Many suggestions focused on details that were beyond the scope of our prototype, but could be easily addressed in a final version. One feature that both domain experts requested was the ability to control the attributes shown in the \ListViewer, and we subsequently added a control to allow users to select the attributes shown. Another unexpected interaction cited by the domain experts was that accepting a similar or identical item in one list would always imply rejecting its counterpart in the other list. By adding options and intelligently setting their default values, we were able to provide this interaction while still offering users the ability to control the behavior when accepting and rejecting items. 
 
 \section{Conclusions and Further Directions}
 Our goal was to create a list comparison tool to assist list matching for many applications, with a particular focus on medication list reconciliation. We designed an intuitive spacial organization for differentiating identical and unique items, as well as highlighting the differences in similar items. The use of animation reinforces the user's understanding of this layout and emphasizes the procedural aspect of list matching. The included filtering, grouping and sorting tools allow the user to thoroughly explore a dataset.
@@ -335,13 +341,5 @@ Reviewers Leslie Milton, Adil Yalcin, Hsueh-Chien Cheng, Emre Sefer, Kotaro Hara
 \bibliographystyle{abbrv}
 \bibliography{twinlist}
 
-\section{Credits}
-\begin{description}
-\item{Jay Pujara:} Wiki organization and meeting notes, initial prototype of the ``List Placement'' approach, UI storyboard/mockups for presentation to doctors, medication metadata, dataset wrangling for Cars/SOTU/Genes, \TwinList Controls/Options features, writeup contributions: Introduction, Related Work, TwinList, Conclusion.
-\item{Ben London:}
-\item{Ran Liu:}
-\item{Sameh Khamis:}
-\item{Leo Claudino:}
-\end{description}
 
 \end{document}
