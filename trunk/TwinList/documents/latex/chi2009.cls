@@ -405,7 +405,7 @@
 %\def\email#1{{{\eaddfnt{\vskip 4pt#1}}}}
 \def\email#1{{{\eaddfnt{#1}}}} % 00-09-07 job
 
-\def\addauthorsection{\ifnum\originalaucount>3
+\def\addauthorsection{\ifnum\originalaucount>6
     \section{Additional Authors}\the\addauthors
   \fi}
 
