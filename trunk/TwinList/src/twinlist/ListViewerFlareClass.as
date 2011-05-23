@@ -66,7 +66,8 @@ package twinlist
 		private var fontSizeHeader:int = 16;
 		private var fontSizePopup:int = 16;
 		private var fontSizeGroupHeader:int = 12;
-		private var fontString:String = "Sans Serif";
+		private var fontStringGroupHeader:String = "sans serif";
+		private var fontString:String = "Arial";
 		// animation
 		private var reset:Boolean;
 		private var animState:int;
@@ -92,10 +93,11 @@ package twinlist
 		private var colorStateActive:uint = 0xffdddddd;
 		private var colorStateInactive:uint = 0xfffffff;
 		private var colorStateText:uint = colorText;
+		private var colorGroupHeader:uint = 0xff000000;
 		// options
 		private var linkIdentical:Boolean = true;
 		private var attrIdentical:Boolean = false;
-		private var removeAfterAction:Boolean = true;
+		private var removeAfterAction:Boolean = false;
 		
 		public function ListViewerFlareClass()
 		{
@@ -226,6 +228,7 @@ package twinlist
 			}
 			animUpdate.add(new Tween(line1, 0.5, {x2: 5 * columnWidth}));
 			animUpdate.add(new Tween(line2, 0.5, {x2: 5 * columnWidth}));
+	
 			// fix group headers
 			for each (var header:Sprite in groupVisList)
 			{
@@ -233,7 +236,7 @@ package twinlist
 				if (animState == 3)
 					animUpdate.add(new Tween(header, 0.5, {alpha: 1}));
 			}
-			
+		
 			// Update display and animate
 			animUpdate.addEventListener(TransitionEvent.END, function(e:Event):void {
 				OnTransitionComplete(newVisHash);
@@ -457,7 +460,7 @@ package twinlist
 				if (sprite.getChildAt(0).width > calculatedColumnWidth)
 					calculatedColumnWidth = sprite.getChildAt(0).width;
 			}
-			columnWidth = calculatedColumnWidth + 40;
+			columnWidth = calculatedColumnWidth ;
 			columnHeight = HeaderHeight + ry;
 			
 			// Change group line width
@@ -472,18 +475,22 @@ package twinlist
 		private function CreateGroupHeader(value:String, y:int):TextSprite
 		{
 			var line:LineSprite = new LineSprite();
-			line.lineColor = colorText;
+			line.lineColor = colorGroupHeader;
 			line.x1 = 0;
-			line.y1 = HeaderFontSize;
+		//	line.y1 = HeaderFontSize;
+			line.y1  = 0;
 			line.x2 = 0;
-			line.y2 = HeaderFontSize;
-			line.lineWidth = 2;
+		//	line.y2 = HeaderFontSize;
+			line.y2 =0;
+			line.lineWidth = 1;
 			
 			var header:TextSprite = new TextSprite(value);
-			header.font = fontString;
-			header.color = colorText;
+			header.font = fontStringGroupHeader;
+			header.italic = true;
+			header.color = colorGroupHeader;
 			header.size = GroupHeaderFontSize;
-			header.letterSpacing = 2;
+			
+			header.letterSpacing = 0;
 			header.x = 0;
 			header.y = y;
 			header.alpha = 0;

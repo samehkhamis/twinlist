@@ -39,6 +39,7 @@ package twinlist
 		// sorting
 		private static var defaultSort:Sort;
 		// list info
+		public var isMedical:Boolean = false;
 		private var loaded:int = 0;
 		private var schema:Object;
 		private var lists:ArrayCollection;
@@ -131,21 +132,25 @@ package twinlist
 					list1File = "../data/cars/FordFiesta.xml";
 					list2File = "../data/cars/ToyotaCorolla.xml";
 					simFile= "../data/cars/carSimilarities.xml";
+					isMedical = false;
 					break;
 				case DATA_MED_REC:
 					list1File = "../data/medication/list1.xml";
 					list2File = "../data/medication/list2.xml";
 					simFile= "../data/medication/list1_list2_similarities.xml";
+					isMedical = true;
 					break;
 				case DATA_SOTU:
 					list1File = "../data/sotu/bush08.0809.xml";
 					list2File = "../data/sotu/obama09.0809.xml";
 					simFile= "../data/sotu/bush_08_obama_09_similarities.xml";
+					isMedical = false;
 					break;
 				case DATA_GENES_KIDNEY:
 					list1File = "../data/genes/kidnormal.xml";
 					list2File = "../data/genes/kidtumor.xml";
 					simFile= "../data/genes/kidney_similarities.xml";
+					isMedical = false;
 					break;
 			}
 			LoadData();

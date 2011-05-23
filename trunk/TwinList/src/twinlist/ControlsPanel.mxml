@@ -49,9 +49,9 @@
 					<s:RadioButton id="rbSortByDescend" group="{rbgSortByAscend}" label="Descending" value="{SORT_DESCEND}"/>
 				</s:VGroup>
 			</s:HGroup>
-			<mx:Spacer height="10"/> 
-			<s:Label text="Attributes shown in ListViewer:" fontSize="14"/>
-			<twinlist:AttributeFilterComponent id="attrFilter" Attributes="{model.AllAttributes}"/>
+			<!--	<mx:Spacer height="10"/> 
+				<s:Label text="Attributes shown in ListViewer:" fontSize="12"/>
+			<twinlist:AttributeFilterComponent id="attrFilter" Attributes="{model.AllAttributes}"/>-->
 		</s:VGroup>
 	</s:Scroller>
 </twinlist:ControlsPanelClass>

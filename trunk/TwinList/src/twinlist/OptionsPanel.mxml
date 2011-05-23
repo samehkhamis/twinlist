@@ -47,9 +47,13 @@
 			</s:HGroup>
 			<mx:Spacer height="10"/>
 			<s:Label text="After item accept/reject:" fontSize="14"/>
-			<s:RadioButton id="rbGray" group="{rbgAfterAction}" label="Gray out" value="{Option.OPTVAL_GRAYOUT}"/>
-			<s:RadioButton id="rbRemove" group="{rbgAfterAction}" label="Remove" value="{Option.OPTVAL_REMOVE}" selected="true"/>
+			<s:RadioButton id="rbGray" group="{rbgAfterAction}" label="Gray out" value="{Option.OPTVAL_GRAYOUT}" selected="true"/>
+			<s:RadioButton id="rbRemove" group="{rbgAfterAction}" label="Remove" value="{Option.OPTVAL_REMOVE}" />
 			<mx:Spacer height="10"/>
+			<s:Label text="Attributes shown in ListViewer:" fontSize="12"/>
+			<twinlist:AttributeFilterComponent id="attrFilter" Attributes="{model.AllAttributes}"/>
 		</s:VGroup>
+	
+		
 	</s:Scroller>
 </twinlist:OptionsPanelClass>

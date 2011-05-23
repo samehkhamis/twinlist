@@ -10,7 +10,7 @@
 	<s:layout>
 		<s:HorizontalLayout paddingLeft="10" paddingRight="10" paddingTop="10" paddingBottom="10"/>
 	</s:layout>
-	<mx:TabNavigator id="tabDock" width="100%" height="100%" borderVisible="false">
+	<mx:TabNavigator id="tabDock" width="100%" height="100%" borderVisible="false"  selectedIndex="2">
 		<s:NavigatorContent id="controlsPanel" label="Controls" width="100%" height="100%">
 			<twinlist:ControlsPanel/>
 		</s:NavigatorContent>
@@ -18,7 +18,7 @@
 			<twinlist:FilterPanel/>
 		</s:NavigatorContent>
 		<s:NavigatorContent id="optionsPanel" label="Options" width="100%" height="100%">
-			<twinlist:OptionsPanel/>
+			<twinlist:OptionsPanel width="666"/>
 		</s:NavigatorContent>
 	</mx:TabNavigator>
 </s:Group>

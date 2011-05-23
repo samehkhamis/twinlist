@@ -3,6 +3,7 @@ package twinlist
 	import flash.events.Event;
 	
 	import mx.collections.ArrayCollection;
+	import mx.collections.Sort;
 	import mx.containers.*;
 	import mx.core.*;
 	import mx.events.FlexEvent;
@@ -39,7 +40,14 @@ package twinlist
 		public function set Attributes(attributes:ArrayCollection):void
 		{
 			this.attributes = attributes;
-			SelectAll();
+			this.attributes.sort = new Sort();
+			this.attributes.refresh();
+			if(model.isMedical == true){
+				MedicationSelection();
+			}else{
+				SelectAll();
+			}
+		
 		}
 		
 		protected function OnSelectAll(event:Event):void
@@ -61,7 +69,24 @@ package twinlist
 			attrToShow = new ArrayCollection(values);
 			model.ShownAttributes = attrToShow;
 		}
-		
+		//just a temporal function for the demo
+		private function MedicationSelection():void
+		{
+			
+			var medIdx:Vector.<int> = new Vector.<int>(3);
+			medIdx[0] =0;
+			medIdx[1] =2;
+			medIdx[2] =3;
+			lb.selectedIndices = medIdx;
+			var values:Array = new Array(medIdx.length);
+			for (var j:int = 0; j < medIdx.length; j++) {
+				values[j] = attributes[medIdx[j]];
+			}
+			//var allIdx:Vector.<int> = new Vector.<int>(attributes.length);
+			
+			attrToShow = new ArrayCollection(values);
+			model.ShownAttributes = attrToShow;
+		}
 		private function SelectAll():void
 		{
 			var allIdx:Vector.<int> = new Vector.<int>(attributes.length);
