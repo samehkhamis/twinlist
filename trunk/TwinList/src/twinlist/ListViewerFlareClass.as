@@ -263,6 +263,7 @@ package twinlist
 			var l2y:int = HeaderHeight;
 			var ry:int = HeaderHeight;
 			
+			
 			var visHash:Object = new Object();
 			
 			rowIdxHash = new Object();
@@ -293,6 +294,7 @@ package twinlist
 			{
 				var sprite:DataSprite;
 				var ident1Shown:Boolean = false;
+				var pairAdded:Boolean = false;
 				if (item.Identical1 != null || item.Identical2 != null)
 				{
 					if (item.Identical1 != null && item.Identical1.Display && (!item.Identical1.ActedOn || !RemoveAfterAction)) {
@@ -319,8 +321,11 @@ package twinlist
 							colItemsMatched[2].addItem(item.Identical1);
 						colItemsSeparate[0].addItem(item.Identical1);
 						l1y += RowHeight;
+						//ry += RowHeight;
+						pairAdded = true;
 					}
-					if (item.Identical2 != null && item.Identical2.Display && (!item.Identical2.ActedOn || !RemoveAfterAction)) {
+					
+					 if (item.Identical2 != null && item.Identical2.Display && (!item.Identical2.ActedOn || !RemoveAfterAction)) {
 						if (model.GroupBy != null)
 						{
 							newValue = item.Identical2.Attributes[model.GroupBy.Name].Values[0].toString();
@@ -330,7 +335,7 @@ package twinlist
 								groupVisList.addItem(header);
 								
 								curValue = newValue;
-								ry += TextSpacing;
+							//	ry += TextSpacing;
 							}
 						}
 						sprite = CreateItemSprite(item.Identical2, 1, {rowIdx: idx, x1: 3, y1: l2y, x2: 2, y2: ry, type: 0}, !ident1Shown);
@@ -341,8 +346,11 @@ package twinlist
 						colItemsMatched[2].addItem(item.Identical2);
 						colItemsSeparate[1].addItem(item.Identical2);
 						l2y += RowHeight;
+						if(pairAdded)
+							ry += RowHeight;
+						
 					}
-					ry += RowHeight;
+				//	ry += RowHeight;
 					++idx;
 				}
 				else if (item.L1Similar != null || item.L2Similar != null)
@@ -370,15 +378,16 @@ package twinlist
 						colItemsSeparate[0].addItem(item.L1Similar);
 						l1y += RowHeight;
 						added = true;
+					//	ry += RowHeight;
 					}
-					if (item.L2Similar != null && item.L2Similar.Display && (!item.L2Similar.ActedOn || !RemoveAfterAction)) {
+					 if (item.L2Similar != null && item.L2Similar.Display && (!item.L2Similar.ActedOn || !RemoveAfterAction)) {
 						if (model.GroupBy != null)
 						{
 							newValue = item.L2Similar.Attributes[model.GroupBy.Name].Values[0].toString();
 							if (newValue != curValue)
 							{
-								if (added)
-									ry += RowHeight;
+							//	if (added)
+							//		ry += RowHeight;
 								
 								header = CreateGroupHeader(newValue, ry);
 								groupVisList.addItem(header);
@@ -395,8 +404,11 @@ package twinlist
 						colItemsMatched[3].addItem(item.L2Similar);
 						colItemsSeparate[1].addItem(item.L2Similar);
 						l2y += RowHeight;
+					//	ry += RowHeight;
+						added= true;
 					}
-					ry += RowHeight;
+					 if(added)
+						ry += RowHeight;
 					++idx;
 				}
 				else if (item.L1Unique != null)
