@@ -73,6 +73,7 @@ package twinlist.list
 		{
 			actedOn = value;
 		}
+	
 		
 		public function get Display():Boolean
 		{

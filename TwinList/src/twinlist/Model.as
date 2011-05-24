@@ -219,10 +219,13 @@ package twinlist
 			if (accepted) {
 				acceptedItems.addItemAt(item, 0);
 				visibleActionListIdx = 0;
+			
+		
 			}
 			else {
 				rejectedItems.addItemAt(item, 0);
 				visibleActionListIdx = 1;
+			
 			}
 			item.ActedOn = true;
 			if (GetOption(Option.OPT_LINKIDENTICAL).Value) {
@@ -230,6 +233,7 @@ package twinlist
 				// if identical item found, then mark as acted on
 				if (identicalItem != null)
 					identicalItem.ActedOn = true;
+			
 			}
 			if (GetOption(Option.OPT_LINKSIMILAR).Value) {
 				var similarItem:ListItem = FindSimilarItem(item);
@@ -239,6 +243,7 @@ package twinlist
 				if (similarItem != null && !similarItem.ActedOn && accepted) {
 					rejectedItems.addItemAt(similarItem, 0);
 					similarItem.ActedOn = true;
+		
 				}
 			}
 			dispatchEvent(new TwinListEvent(ACTION_TAKEN));
@@ -255,6 +260,7 @@ package twinlist
 						continue;
 					acceptedItems.addItemAt(item, 0);
 					item.ActedOn = true;
+		
 				}
 				visibleActionListIdx = 0;
 			}
@@ -264,6 +270,8 @@ package twinlist
 						continue;
 					rejectedItems.addItemAt(item, 0);
 					item.ActedOn = true;
+					
+		
 				}
 				visibleActionListIdx = 1;
 			}
@@ -272,6 +280,7 @@ package twinlist
 					other = FindIdenticalItem(item);
 					if (other != null)
 						other.ActedOn = true;
+			
 				}
 			}
 			if (GetOption(Option.OPT_LINKSIMILAR).Value) {
@@ -280,6 +289,7 @@ package twinlist
 					if (other != null && !other.ActedOn && accepted) {
 						rejectedItems.addItemAt(other, 0);
 						other.ActedOn = true;
+					
 					}
 				}
 			}
@@ -305,10 +315,12 @@ package twinlist
 				visibleActionListIdx = 1;
 			}
 			item.ActedOn = false;
+		
 			if (GetOption(Option.OPT_LINKIDENTICAL).Value) {
 				var twin:ListItem = FindIdenticalItem(item);
 				if (twin != null)
 					twin.ActedOn = false;
+		
 			}
 			dispatchEvent(new TwinListEvent(ACTION_TAKEN));
 			RefreshView();
