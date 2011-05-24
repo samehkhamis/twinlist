@@ -94,6 +94,7 @@ package twinlist
 		private var colorStateInactive:uint = 0xfffffff;
 		private var colorStateText:uint = colorText;
 		private var colorGroupHeader:uint = 0xff000000;
+		private var colortest:uint = 0xffdddddd;
 		// options
 		private var linkIdentical:Boolean = true;
 		private var attrIdentical:Boolean = false;
@@ -586,9 +587,31 @@ package twinlist
 			
 			var nameText:TextSprite = new TextSprite(item.Name);
 			var highlight:RectSprite;
-			nameText.color = item.ActedOn ? colorTextGray : colorText;
+			//nameText.color = item.ActedOn ? colorTextGray : colorText;
+			////
+			if(item.ActedOn){
+				/*	if(item.Accepted){
+					nameText.color =colorTextGray;
+				}else{
+					nameText.color = colortest;
+					
+					
+				}
+			}else{
+				nameText.color = colorText;*/
+				nameText.color =colorTextGray;
+				if(model.AcceptedListContains(item)!=-1){
+					nameText.underline = true;
+				}else if(model.RejectedListContains(item)!=-1){
+					var crossout:TextSprite = new TextSprite("X");
+					nameText.addChild(crossout);
+				}
+			} 
+			
+			
 			nameText.size = ItemFontSize;
 			nameText.font = fontString;
+			
 			if (item.NameUnique) {
 				highlight = CreateDiffHighlight(nameText, listIdx);
 				highlight.alpha = animState == 3 ? 1 : 0;
