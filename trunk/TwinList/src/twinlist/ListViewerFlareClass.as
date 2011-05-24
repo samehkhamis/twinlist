@@ -587,18 +587,9 @@ package twinlist
 			
 			var nameText:TextSprite = new TextSprite(item.Name);
 			var highlight:RectSprite;
-			//nameText.color = item.ActedOn ? colorTextGray : colorText;
-			////
+			
 			if(item.ActedOn){
-				/*	if(item.Accepted){
-					nameText.color =colorTextGray;
-				}else{
-					nameText.color = colortest;
-					
-					
-				}
-			}else{
-				nameText.color = colorText;*/
+				
 				nameText.color =colorTextGray;
 				if(model.AcceptedListContains(item)!=-1){
 					nameText.underline = true;
@@ -606,6 +597,8 @@ package twinlist
 					var crossout:TextSprite = new TextSprite("X");
 					nameText.addChild(crossout);
 				}
+			}else{
+				nameText.color = colorText;
 			} 
 			
 			
